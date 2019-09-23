@@ -69,5 +69,5 @@ class CapitalisedClassNames
 + **And one in bold for good measure**
 
 
-Here's an embedded image or animated GIF - put this into your step as a placehodler and make sure you add a description of what you want to go here to the asset document!
+Here's an embedded image or animated GIF - put this into your step as a placeholder and make sure you add a description of what you want to go here to the asset document!
 ![Alt text describing an image - you can get your production manager to sort this out](https://s3-eu-west-1.amazonaws.com/rpf-futurelearn/placeholder.png)
