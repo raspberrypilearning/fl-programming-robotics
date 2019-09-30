@@ -23,4 +23,3 @@ Robots can make use of electric motors to provide power to components by convert
 Other types of actuators include pneumatic or hydraulic, which produce a force using pressure from air or liquids respectively to control the movement of components. For example, a hydraulic leg of a robot contains pressurised liquid that can be released by opening a valve which emits a force to extend the piston attached to the leg. The valve would be then be closed again and the pressure aloud to build so this process can be repeated.
 
 
-
