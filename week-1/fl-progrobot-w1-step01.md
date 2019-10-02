@@ -28,33 +28,36 @@ Course breakdown
 **Basic buggy**
 
 + Raspberry Pi 3 or 4
-+ Motor controller board
++ Motor controller board (1 minimum)
 + DC motors (2 minimum)
 + Wheels (2 minimum)
++ Ball caster (unless using more than 2 wheels)
 + Ultrasonic distance sensor (between 1-2)
 + Line following sensor (between 1-3)
-+ Jumper leads or wire
-+ Battery holder
-+ Batteries
++ Jumper leads (female-female and male-female) or wire
++ AA battery holder for 4 AA batteries (1 per motor controller board)
++ AA batteries (x4 per motor controller board)
++ A USB battery pack (to power the Raspberry Pi)
 + Screwdriver
 + A small cardboard box for the chassis (can be plastic, wood, metal etc.)
 
-The ultrasonic distance sensor and line following sensor are required for week 2 and week 3 respectively.
+The ultrasonic distance sensor and line following sensor are required for week 2 and week 3 respectively. 
+
+A ball caster is usually necessary if your buggy has two wheels to balance it and aid with movement.
 
 **Optional extras**
 
-+ Ball caster
-+ Tracks or legs
-+ USB charge/discharge board or USB power bank
-+ PID line following array sensor
-+ LEDs
-+ Adhesives (duct tape, putty, glue etc.)
++ Adhesives (duct tape / electrical tape, putty, glue etc.)
++ Velcro tape
++ Cable ties
 + Soldering iron and solder
 + Wire strippers
 + Threading tool
 + Screws
-
-A ball caster is usually necessary if your buggy has two wheels to balance it and aid with movement.
++ Tracks or legs
++ USB charge/discharge board (for a motor controller board)
++ PID line following array sensor
++ LEDs
 
 #### Software
 

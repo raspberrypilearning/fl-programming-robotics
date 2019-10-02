@@ -11,7 +11,7 @@ Robots are now an integral part of modern life and are set to be even more promi
 
 ### What makes a robot a robot?
 
-Robots in todays age come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to clearing infections inside a person using antibacterial nanobots. But defining what a robot actually **is** can be tricky; ask five roboticists and you are likely to get five different answers! 
+Robots in todays age come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to landing on Mars. But defining what a robot actually **is** can be tricky; ask five roboticists and you are likely to get five different answers! 
 
 Nevertheless, there are some common features that most robots share:
 
@@ -37,7 +37,7 @@ Key to the success of Shakey and its successors was the ability to automate task
 
 ### Automation in action
 
-Being able to process data and act on this information almost instantly with minimal human interaction is one of the reasons that technology, and indeed robotics, has advanced so much in the last few decades. All robots will be able to perform some actions autonomously, whether it is a robotic arm that twists the lids onto jars of jam in an assembly line or a drone that is able to return home to the location it took off from.  
+The ability to process data and act on this information almost instantly with minimal human interaction is one of the major advancements of technology, and indeed robotics, in the last few decades. All robots will be able to perform some actions autonomously, whether it is a robotic arm that twists the lids onto jars of jam in an assembly line or a drone that is able to return home to the location it took off from.  
 
 The level of autonomy a robot is capable of depends on how it is designed to interact with the world. Some are closely controlled by human operators, such as medical robots that assist surgeons with performing operations. These types of robots enhance a surgeon's ability to make very precise incisions that would be difficult without this assistance. It can also allow surgeons to operate remotely from another hospital, or even another country entirely!
 
