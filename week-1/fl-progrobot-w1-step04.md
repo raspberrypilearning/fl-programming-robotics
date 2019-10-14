@@ -31,7 +31,7 @@ Just like people and animals, robots are able to sense the physical world so the
 
 The first truly mobile robot with the ability to sense its environment was "Shakey" which was developed at Stanford University between 1966 and 1972. It was capable of navigating various obstacles inside a room using a TV camera and an infrared range finder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a pre-programmed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remember and adjust these actions for future tasks. This led to advances in artificial intelligence and pathfinding.
 
-![Shakey was the first robot that could map a picture of a room using it sensors and move around objects autonomously.](images/2_4-Shakey.jpg)
+![Shakey was the first robot that could map a picture of a room using it sensors and move around objects autonomously.](images/1_4-Shakey.jpg)
 
 Key to the success of Shakey and its successors was the ability to automate tasks, whether by following a pre-defined series of instructions or learning from previous interactions. 
 
@@ -41,7 +41,7 @@ The ability to process data and act on this information almost instantly with mi
 
 The level of autonomy a robot is capable of depends on how it is designed to interact with the world. Some are closely controlled by human operators, such as medical robots that assist surgeons with performing operations. These types of robots enhance a surgeon's ability to make very precise incisions that would be difficult without this assistance. It can also allow surgeons to operate remotely from another hospital, or even another country entirely!
 
-![A surgeon using a robotic assistant to perform surgery on a patient.](images/2_4-robotic-surgery.jpg)
+![A surgeon using a robotic assistant to perform surgery on a patient.](images/1_4-robotic-surgery.jpg)
 
 On the opposite end of the scale, other robots are much more autonomous and rely on minimal human interaction. Consider a robot vacuum cleaner: it will use sensors to move around the room whilst avoiding furniture and map the areas it has visited to ensure it has covered the entire room. Some even have the ability to automatically find a charging station and empty themselves in a designated bin. 
 
