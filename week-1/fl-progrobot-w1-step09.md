@@ -5,11 +5,11 @@ Related links:
 Related files:
 )
 
-#### Questions ####
-
-+ Should voltage, current etc. be discussed here or in the GPIO step or both?
-+ Should I discuss the Raspberry Pi / microcontroller first?
-+ Is it necessary to go into more detail about pneumatic and hydraulic systems?
+[comment]: # (
+Should voltage, current etc. be discussed here or in the GPIO step or both?
+Should I discuss the Raspberry Pi / microcontroller first?
+Is it necessary to go into more detail about pneumatic and hydraulic systems?
+)
 
 ## Mobile robots
 

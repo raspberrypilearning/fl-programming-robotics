@@ -8,3 +8,8 @@ Related files:
 ## General Purpose Input and Output pins / (on the Raspberry Pi) 
 
 Intro
+
+### 
+
+### Discussion
+
