@@ -7,7 +7,6 @@ Related files:
 
 [comment]: # (
 Should voltage, current etc. be discussed here or in the GPIO step or both?
-Should I discuss the Raspberry Pi / microcontroller first?
 Is it necessary to go into more detail about pneumatic and hydraulic systems?
 )
 
@@ -25,7 +24,7 @@ The type of movements a robot can make depends on the **actuators** used. Actuat
 
 Just like the muscles in our body, actuators need a control signal to know when to act and a source of energy to exert a force. In mechanical systems, there are three main types of energy sources: electrical, pneumatic, and hydraulic. 
 
-![Animated GIF of an actuator receiving a control signal and energy source to then generate a force.](images/1_5-actuator-diagram.jpeg)
+![Animated GIF of an actuator receiving a control signal and energy source to then generate a force.](images/1_9-actuator-diagram.jpeg)
 
 ### Electric motors
 
@@ -38,13 +37,13 @@ Three of the most common types of electric motors used in robotics are DC, stepp
 <!-- Check correctness. Move to the end or next step. -->
 A motor controller board will have pins or screw terminals for connecting a motor to it. A DC motor needs two pins or terminals for it to work and a servo motor needs four pins or terminals.
 
-![A motor controller board with four out screw terminals for connecting to an electric motor.](images/1_5-motor-controller-board.jpg)
+![A motor controller board with four out screw terminals for connecting to an electric motor.](images/1_9-motor-controller-board.jpg)
 
 #### DC motors
 
 A DC (Direct Current) motor, is relatively simple to control and cheap to manufacture. The speed and direction that the motor rotates depends on the voltage supplied. Providing a motor with a voltage will make it spin in one direction, whilst reversing the voltage makes it spin in the opposite direction. The higher the voltage, the faster the motor will turn and vice versa. 
 
-![A DC motor](images/1_5-DC-motor.jpg)
+![A DC motor](images/1_9-DC-motor.jpg)
 
 DC motors can rotate at very high speeds but their major downside is that they are not as good as other types of motor at performing precise movements. Nevertheless, many devices use DC motors for a whole host of applications, for example spinning the fans of a computer and the propellers of a drone. 
 
@@ -52,7 +51,7 @@ DC motors can rotate at very high speeds but their major downside is that they a
 
 A stepper motor moves in small *steps* so it can perform very accurate and discrete movements. Whilst the motor is supplied a voltage, it rotates by a fixed amount per step which are much smaller increments than a DC motor. 
 
-![A stepper motor](images/1_5-stepper-motor.jpg)
+![A stepper motor](images/1_9-stepper-motor.jpg)
 
 Stepper motors can also produce more torque (the amount of force) at lower speeds than DC motors. This means stepper motors are excellent in devices that require precise positioning and speed control, such as 3D printers and camera lenses.
 
@@ -60,7 +59,7 @@ Stepper motors can also produce more torque (the amount of force) at lower speed
 
 Servo motors are used to control precise *angular* movements and accurate rotations. Some servo motors rotate within a 180 degree range but others are designed to continuously rotate. 
 
-![A servo motor](images/1_5-servo-motor.jpg)
+![A servo motor](images/1_9-servo-motor.jpg)
 
 The gears inside a servo motor are designed so they produce a higher torque at higher speeds, meaning that more energy is turned into force rather than speed. This is useful in applications where a large amount of force is required, such as the steering in a remote controlled car and robotic arms. 
 
@@ -68,7 +67,7 @@ The gears inside a servo motor are designed so they produce a higher torque at h
 
 Pneumatic and hydraulic actuators use pressurised air or liquid respectively to produce a force and generate movement. For example, a hydraulic actuator can be used to power the joint of a robotic leg; the pressurised liquid is released by opening a valve, thereby exerting a force that extends the leg. The valve can then be closed, which allows the pressure to build up again so this process can be repeated.
 
-![A four legged robot support system used to carry equipment.](images/1_5-four-legged-robot.jpg)
+![A four legged robot support system used to carry equipment.](images/1_9-four-legged-robot.jpg)
 
 ### Discussion
 
