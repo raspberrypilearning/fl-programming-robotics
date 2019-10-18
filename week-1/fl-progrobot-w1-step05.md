@@ -5,109 +5,75 @@ Related links:
 Related files:
 )
 
+#### Questions ####
+
++ Should voltage, current etc. be discussed here or in the GPIO step or both?
++ Should I discuss the Raspberry Pi / microcontroller first?
++ Is it necessary to go into more detail about pneumatic and hydraulic systems?
+
 ## Mobile robots
 
-In this step, the different ways that robots can move is discussed
+This step covers the different ways that robots can move using actuators, which convert energy into a force much like the muscles in our body do.
 
 ### How do robots move?
 
-Nearly all robots will have a movable body of some description. This could be a fully mobile entity that uses motorised wheels or tracks to navigate the environment. It also describes the components that are built from many moveable segments held together by adjustable joints, such as a robotic arm. 
+Nearly all robots will have a movable body of some description. This could be a fully mobile entity that uses motorised wheels or tracks to navigate the environment. It also describes the components that are built from many moveable segments held together by adjustable joints, such as robotic arms. 
 
 <!-- Microcontroller / Raspberry Pi -->
 
 The type of movements a robot can make depends on the **actuators** used. Actuators convert energy into motion, much like the muscle systems of animals. Some are great for moving things with large forces whilst others are better at controlled, precise movements. Choosing what actuators to include in your robot depends on the requirements.
 
-Just like our muscles, actuators need a control signal to know when to act and a source of energy to exert a force. In mechanical systems, there are three types of energy sources: electrical, pneumatic, and hydraulic. 
+Just like the muscles in our body, actuators need a control signal to know when to act and a source of energy to exert a force. In mechanical systems, there are three main types of energy sources: electrical, pneumatic, and hydraulic. 
 
 ![Animated GIF of an actuator receiving a control signal and energy source to then generate a force.](images/1_5-actuator-diagram.jpeg)
 
-### Electrical motors / energy
+### Electric motors
 
-Motors use a power supply to convert electrical energy into a mechanical force.
+Electric motors use a power supply to convert electrical energy into a mechanical force. The amount of energy that can be transferred to a component is based on the voltage. In the next step, I will go into more detail about the amount of volts that your components and Raspberry Pi can handle without damaging the hardware. For now, you can consider the voltage as the amount of electrical energy that is available; the more voltage the motor receives, the faster it goes!
 
-The electric power per second (measured in watts) is the electric potential (the voltage) multiplied by the amount of moving electric charge (the current).
+Every electric motor needs some kind of controller to start and stop the motor and connect to a power source. **Motor controller boards**, like the one you will use when creating the robot buggy, can also have other useful features such as regulating the speed of motors. These boards contain an **H-bridge**, which is a simple circuit that allows you to drive motors forwards and backwards depending on the flow of electricity.
 
-The more voltage / power applied to the motor, the faster it goes. If the power supplies less voltage, it will spin slower / at that speed.
+Three of the most common types of electric motors used in robotics are DC, stepper, and servo motors. 
 
+<!-- Check correctness. Move to the end or next step. -->
+A motor controller board will have pins or screw terminals for connecting a motor to it. A DC motor needs two pins or terminals for it to work and a servo motor needs four pins or terminals.
 
-**Motor controller boards**, like the one you will use when creating the robot buggy, contain an **H-bridge** as well as other useful components such as powering the batteries. An H-bridge is a simple circuit that allows you to drive motors forwards and backwards depending on the flow of current.
-
-
-<!-- Power supplies -->
-
-
-Three of the most common types of motors used in robotics are DC, stepper and servo motors. 
+![A motor controller board with four out screw terminals for connecting to an electric motor.](images/1_5-motor-controller-board.jpg)
 
 #### DC motors
 
-A direct current motor, or DC motor, is relatively simple to control and cheap to manufacture. The speed and direction that the motor rotates depends on the voltage supplied. Providing a motor with a voltage will make it spin in one direction, whilst reversing the voltage makes it spin in the opposite direction. The higher the voltage, the faster the motor will turn and vice versa. 
+A DC (Direct Current) motor, is relatively simple to control and cheap to manufacture. The speed and direction that the motor rotates depends on the voltage supplied. Providing a motor with a voltage will make it spin in one direction, whilst reversing the voltage makes it spin in the opposite direction. The higher the voltage, the faster the motor will turn and vice versa. 
 
-<!-- Limitations of voltage allowed? -->
+![A DC motor](images/1_5-DC-motor.jpg)
 
-DC motors can rotate at very high speeds but their major downside is that they are not as good as other types of motor at performing precise movements. Nevertheless, many devices use DC motors for a whole host of applications, such as spinning computer fans and the propellers of a drone. 
+DC motors can rotate at very high speeds but their major downside is that they are not as good as other types of motor at performing precise movements. Nevertheless, many devices use DC motors for a whole host of applications, for example spinning the fans of a computer and the propellers of a drone. 
 
 #### Stepper motors
 
-A stepper motor moves in small steps so it can perform very accurate and discrete movements. When the motor is supplied a voltage, it rotates by a fixed amount in "steps" which are much smaller increments than a DC motor. 
+A stepper motor moves in small *steps* so it can perform very accurate and discrete movements. Whilst the motor is supplied a voltage, it rotates by a fixed amount per step which are much smaller increments than a DC motor. 
 
-Stepper motors can also produce more torque (the amount of force) at low speeds which means they are excellent in devices that require precise positioning and speed control, such as 3D printers and camera lenses.
+![A stepper motor](images/1_5-stepper-motor.jpg)
+
+Stepper motors can also produce more torque (the amount of force) at lower speeds than DC motors. This means stepper motors are excellent in devices that require precise positioning and speed control, such as 3D printers and camera lenses.
 
 #### Servo motors
 
-Servo: +ve angle (e.g. axel and a real car) -ve doesn’t go all the way round
+Servo motors are used to control precise *angular* movements and accurate rotations. Some servo motors rotate within a 180 degree range but others are designed to continuously rotate. 
 
-Servo motors are used to control very precise angular movements. Many servo motors rotate within a 180 degree range but others are designed to continuously rotate. 
+![A servo motor](images/1_5-servo-motor.jpg)
 
-Typical / original servo motors contain stoppers to limit the rotation of the motor to 180 degrees but...
+The gears inside a servo motor are designed so they produce a higher torque at higher speeds, meaning that more energy is turned into force rather than speed. This is useful in applications where a large amount of force is required, such as the steering in a remote controlled car and robotic arms. 
 
+### Pneumatic and hydraulic actuators
 
-The gears inside a servo motor are designed so they produce a higher torque at higher speeds, meaning that more energy is turned into force rather than speed.
+Pneumatic and hydraulic actuators use pressurised air or liquid respectively to produce a force and generate movement. For example, a hydraulic actuator can be used to power the joint of a robotic leg; the pressurised liquid is released by opening a valve, thereby exerting a force that extends the leg. The valve can then be closed, which allows the pressure to build up again so this process can be repeated.
 
-This is useful in applications where a large amount of force is required, such as the steering in a toy car
-
-
-### 
-
-
-Other types of actuators include pneumatic or hydraulic, which produce a force using pressure from air or liquids respectively to control the movement of components. For example, a hydraulic leg of a robot contains pressurised liquid that can be released by opening a valve which emits a force to extend the piston attached to the leg. The valve would be then be closed again and the pressure aloud to build so this process can be repeated.
-
-### Examples ###
-
-motors, pumps, switches and valves
-
-
-### Hard and soft actuators?
-
-Link to the replication of animals and human movements / behaviour.
-
-
-### Mobile robotics
-
-One of the first truly mobile robots was the Stanford Cart which started life in 1960 with the goal of controlling a rover on the moon from Earth. 
-
-
- one of the pioneers of autonomous vehicles and helped shape the technology behind driverless cars.
-
-
-- Stanford Cart (1960), "Shakey (1966) A not-inaccurate name for a trembling machine developed between 1966 and 1972. It was the first truly perceptive and mobile robot, capable of navigating obstacles in a room."
-
-- Asimo (2000) Honda’s first humanoid robot
-
-
-"To make things more concrete, consider BigDog, a rough-terrain quadruped robot developed by U.S. firm Boston Dynamics. BigDog uses sensors to measure the position of its leg joints and the forces applied on them. It also uses gyroscopes and an inertial measurement unit (IMU) to keep track of its position in relation to the ground. Based on that information, BigDog’s computer calculates which hydraulic actuators it should activate to move the robotic legs.
-
-As BigDog takes a step, it’s continually (several thousand times per second) updating its sensor, computer, and actuator information in a feedback loop that allows the robot to autonomously walk, trot, climb hills, and step over obstacles.
-
-To build BigDog, Boston Dynamics engineers studied how real animals run and balance, and they used some of those ideas to design the robot’s sensing, computing, and actuation systems, combining these three components in a feedback loop."
-
-
-### Other
-
-as well as an intricate system of adjustable joints
-
-There are three categories of actuator: electrical motors, pneumatic systems, and hydraulic systems.
-
+![A four legged robot support system used to carry equipment.](images/1_5-four-legged-robot.jpg)
 
 ### Discussion
 
-+ Can you think of any other mobile robots? How could 
++ What other examples of devices can you think of that use actuators to produce movement?
+
++ What type of electric motor do you think would be most suitable for powering the wheels of a robot buggy?
+
+Share your thoughts in the comments section below.

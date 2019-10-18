@@ -49,8 +49,8 @@ Many robots are somewhere in the middle between fully autonomous and human contr
 
 ### Discussion
 
-*What are some of the robots that you interact with, either directly or indirectly?*
++ What are some of the robots that you interact with, either directly or indirectly?
 
-*Which sector do you think robotics will have the biggest impact in the future? Why is that?*
++ Which sector do you think robotics will have the biggest impact in the future? Why is that?
 
 Share your thoughts in the comments section below.
