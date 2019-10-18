@@ -29,7 +29,7 @@ Just like the muscles in our body, actuators need a control signal to know when 
 
 ### Electric motors
 
-Electric motors use a power supply to convert electrical energy into a mechanical force. The amount of energy that can be transferred to a component is based on the voltage. In the next step, I will go into more detail about the amount of volts that your components and Raspberry Pi can handle without damaging the hardware. For now, you can consider the voltage as the amount of electrical energy that is available; the more voltage the motor receives, the faster it goes!
+Electric motors use a power supply to convert electrical energy into a mechanical force. The amount of energy that can be transferred to a component is based on the voltage, measured in volts. In the next step, I will go into more detail about the amount of volts that your components and Raspberry Pi can handle without damaging the hardware. For now, all you need to know is that the higher the voltage that the motor receives, the faster it goes!
 
 Every electric motor needs some kind of controller to start and stop the motor and connect to a power source. **Motor controller boards**, like the one you will use when creating the robot buggy, can also have other useful features such as regulating the speed of motors. These boards contain an **H-bridge**, which is a simple circuit that allows you to drive motors forwards and backwards depending on the flow of electricity.
 
