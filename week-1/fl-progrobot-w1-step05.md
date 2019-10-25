@@ -27,7 +27,7 @@ The GPIO pins are located along the top edge of the board. Most models of the Ra
 
 The Raspberry Pi Zero models have unpopulated pins, so there are holes where the GPIO header is located instead of physical pins. This means you need to add a header that includes the pins yourself.  
 
-[comment]: # (picture?)
+[comment]: # (picture of Raspberry Pi Zero?)
 
 Early models of the Raspberry Pi A and B compromise of a shorter header of 26 pins and look like this:
 
@@ -51,13 +51,9 @@ The numbering of the GPIO pins is not in numerical order so there is no easy way
 
 The amount of voltage that a pin can handle is labelled on the reference guide. There are two 5V pins and two 3V3 pins present on the board, as well as a number of ground pins (0V), which are unconfigurable. The remaining pins are all general purpose 3V3 pins, meaning outputs are set to 3.3 Volts and inputs are tolerant of 3.3 Volts.
 
-#### Outputs
+A GPIO pin designated as an output pin can be set to high (3.3V) or low (0V). If the voltage is high, power is supplied to the component connected to that pin. If the voltage is low, no power will be provided to that component. 
 
-A GPIO pin designated as an output pin can be set to high (3V3) or low (0V).
-
-#### Inputs
-
-A GPIO pin designated as an input pin can be read as high (3V3) or low (0V). This is made easier with the use of internal pull-up or pull-down resistors. Pins GPIO2 and GPIO3 have fixed pull-up resistors, but for other pins this can be configured in software.
+A GPIO pin designated as an input pin can be read as high when it is near 3.3V or low while it is near 0V. That means that a voltage above 1.8V will read as high on a GPIO pin.
 
 #### A word of caution
 
