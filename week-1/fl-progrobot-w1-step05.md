@@ -7,7 +7,7 @@ Related files:
 
 ## Raspberry Pi and general-purpose input/output
 
-Robots can sense and interact with the environment through a wide range of components, which usually rely on a computer or microcontroller to process information and make decisions. This is where the Raspberry Pi and the general-purpose input/output (GPIO) pins come into play.
+Robots can sense and interact with the environment through a wide range of components. This usually involves a computer or microcontroller in order to process information and make decisions. This is where the Raspberry Pi and the general-purpose input/output (GPIO) pins come into play.
 
 ### Controlling robots using the Raspberry Pi
 
