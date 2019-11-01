@@ -27,7 +27,7 @@ Course breakdown
 
 **Basic buggy**
 
-+ Raspberry Pi 3 or 4
++ Raspberry Pi 3B, 3B+ or 4
 + Motor controller board (1 minimum)
 + DC motors (2 minimum)
 + Wheels (2 minimum)
@@ -39,7 +39,12 @@ Course breakdown
 + AA batteries (x4 per motor controller board)
 + A USB battery pack (to power the Raspberry Pi)
 + Screwdriver
++ Soldering iron and solder
 + A small cardboard box for the chassis (can be plastic, wood, metal etc.)
+
+**Using a soldering iron can be a bit daunting at first but if you are new to soldering or even if you are a veteran solderer, [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) will provide you with some quick tips and tricks. **
+
+A Raspberry Pi model 3B or above is recommended as you can connect to it over Wifi or Bluetooth without an adapted which will help when programming the buggy.
 
 The ultrasonic distance sensor and line following sensor are required for week 2 and week 3 respectively. 
 
@@ -50,7 +55,6 @@ A ball caster is usually necessary if your buggy has two wheels to balance it an
 + Adhesives (duct tape / electrical tape, putty, glue etc.)
 + Velcro tape
 + Cable ties
-+ Soldering iron and solder
 + Wire strippers
 + Threading tool
 + Screws
