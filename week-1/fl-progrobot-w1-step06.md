@@ -15,7 +15,7 @@ For this step you will need the following items:
 
 + DC motors (2 x minimum)
 + Motor controller board
-+ Raspberry Pi
+<!-- + Raspberry Pi -->
 + AA battery holder (for 4 x AA batteries)
 + 4 x AA batteries
 + Jumper leads (male-male, female-male)
@@ -29,8 +29,6 @@ You may also need:
 + Wire strippers
 
 **Using a soldering iron can be a bit daunting at first but if you are new to soldering or even if you are a veteran solderer, [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) will provide you with some quick tips and tricks.**
-
-<!-- If you need any help / share your frustrations-->
 
 ![Picture of parts](images/)
 
@@ -72,9 +70,9 @@ A motor controller board will have pins or screw terminals for connecting a moto
 
 ![A motor controller board with four out screw terminals for connecting to an electric motor.](images/1_5-motor-controller-board.jpg)
 
-Using a screwdriver, loosen the screws in the terminal blocks labeled OUT1, OUT2, OUT3, and OUT4. Have a look at the documentation for your board if your labels are different. 
+Using a screwdriver, loosen the screws in the terminal blocks labeled **OUT1**, **OUT2**, **OUT3**, and **OUT4**. Have a look at the documentation for your board if your labels are different. 
 
-Strip the ends of the wires (you can snip off the male or female ends if you need to). Insert the stripped ends of one motor into the OUT1 and OUT2 terminals and the stripped ends of the second motor into the OUT3 and OUT4 terminals. Tighten the screws so the wires are secured firmly in the terminal blocks.
+Strip the ends of the wires (you can snip off the male or female ends if you need to). Insert the stripped ends of one motor into the **OUT1** and **OUT2** terminals and the stripped ends of the second motor into the **OUT3** and **OUT4** terminals. Tighten the screws so the wires are secured firmly in the terminal blocks.
 
 ![A close up image of one or two motors connected to the OUT terminal blocks of a motor board with the screws of the terminal blocks tightened. The OUT labels are clearly visible.](images/)
 
@@ -82,12 +80,16 @@ Strip the ends of the wires (you can snip off the male or female ends if you nee
 
 The motors require more power than the Raspberry Pi can provide. Therefore, you will use four AA batteries to power them.
 
-The battery pack should include 2 wires, one red and one black. The red wire is the power input and needs to be inserted into the VCC terminal block. Some motor boards do not have a VCC block so instead use the voltage in block labelled +12V.
+The battery pack should include 2 wires, one red and one black. The red wire is the power input and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** block so instead use the voltage in block labelled **+12V**.
+<!-- +12V not +5V? -->
 
-The black wire is to ground the power supply and must be inserted into the GND terminal. Make sure all the screws of the terminal blocks are tightened securely. 
+The black wire is to ground the power supply and must be inserted into the **GND** terminal. Make sure all the screws of the terminal blocks are tightened securely. 
 
 Insert the four AA batteries into the battery pack. If the batter pack is connected correctly, a red LED on the motor board should turn on.
 
 ### Discussion
 
-+ Did you have any issues connecting the motors to the motor board? Share them with your fellow learners below.
++ Did you have any issues connecting the motors to the motor board? 
++ Do you need help with anything that isn't working properly?
+
+Share your thoughts with your fellow learners below.
