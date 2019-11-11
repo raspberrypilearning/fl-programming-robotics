@@ -5,17 +5,19 @@ Related links:
 Related files:
 )
 
-## Programming a motor to move
+## Programming the motors
 
-You will now program the motors to turn on and off as well as set the speed and direction.
+You need to work out which is your left motor and which is right motor. You also need to know which way they are driving forwards and backwards. 
 
+You should already be familiar with turning on a Raspberry Pi and connecting to it. If not, follow <!-- link --> this guide to set up your Pi.
 
-You should already be familiar with turning powering and connecting to a Raspberry Pi. If not, follow <!-- link --> this guide to set up your Raspberry Pi.
-
-### 
-
+### Left and right
 
 
+### Forwards and backwards
+
+
+### Setting the speed
 
 
 
