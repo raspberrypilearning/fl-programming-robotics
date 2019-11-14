@@ -13,13 +13,13 @@ Robots can sense and interact with the environment through a wide range of compo
 
 The Raspberry Pi computers are wonderfully diverse in what they can do. Among the many applications they can be used for, robotics is one of the most exciting and powerful uses of a Raspberry Pi.
 
-Each model of the Raspberry Pi has a set of general-purpose input/output (GPIO) pins that are a really useful feature for connecting and communicating with all manner of electronic components. These pins are a physical interface between the Raspberry Pi and the outside world and are located along the top edge of the board. Using the pins, you can program the Raspberry Pi to switch components on and off (output), or receive data from sensors and switches (input). 
+Each model of the Raspberry Pi has a set of general-purpose input/output (GPIO) pins, which are a really useful feature for connecting and communicating with all manner of electronic components. These pins are a physical interface between the Raspberry Pi and the outside world and are located along the top edge of the board. Using the pins, you can program the Raspberry Pi to switch components on and off (output), or receive data from sensors and switches (input).
 
 ![The GPIO pins on a Raspberry Pi 4 with a 40 pin header](images/1_5-gpio-pins-raspberry-pi-4-40-header.jpg)
 
 #### Raspberry Pi models
 
-Most models of the Raspberry Pi have a 40 pin header as shown in the image above. Of the 40 pins, 26 are GPIO pins and the others are power or ground pins (plus two ID EEPROM pins which you should not play with unless you know your stuff!). Any of the GPIO pins can be designated (in software) as an input or output pin and used for a wide range of purposes - whether it is turning on an LED, driving a motor or sending data to another device, the possibilities are almost endless! 
+Most models of the Raspberry Pi have a 40 pin header as shown in the image above. Of the 40 pins, 26 are GPIO pins and the others are power or ground pins (plus two ID EEPROM pins which you should not play with unless you know your stuff!). Any of the GPIO pins can be designated (in software) as an input or output pin and used for a wide range of purposes - whether it is turning on an LED, driving a motor or sending data to another device, the possibilities are almost endless!
 
 Early models of the Raspberry Pi A and B compromise of a shorter header of 26 pins, as shown below.
 
@@ -29,11 +29,11 @@ The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi 
 
 ![A Raspberry Pi Zero with a solder-less header](images/1_5-raspberry-pi-zero.jpg)
 
-Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4 as it will be easier to connect and program the Pi using the inbuilt WiFi or Bluetooth.
+Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4 as it will be easier to connect and program the Pi using the inbuilt Wi-Fi or Bluetooth.
 
 #### GPIO pin numbering
 
-When programming the GPIO pins there are two different ways to refer to them: **GPIO numbering** and **physical numbering**. Throughout this course (and in all our resources) we will refer to the pins using the GPIO numbering scheme. These are the GPIO pins as the computer sees them. 
+When programming the GPIO pins there are two different ways to refer to them: **GPIO numbering** and **physical numbering**. Throughout this course (and in all our resources) we will refer to the pins using the GPIO numbering scheme. These are the GPIO pins as the computer sees them.
 
 ![The layout of the GPIO pins on a 40 pin Raspberry Pi using GPIO numbering, which can be used as a reference guide.](images/1_5-gpio-numbers-raspberry-pi-40-pin-header.png)
 
@@ -47,11 +47,11 @@ The voltage of a pin is labelled on the reference guide. There are two **5V** pi
 
 A GPIO pin designated as an **output** pin can be set to high (3.3V) or low (0V). Components are usually attached so that setting the output to high will allow current to flow to them, whilst setting the output to low won't allow a current to flow to them.
 
-A GPIO pin that is designated as an input will allow a signal to be received by the Raspberry Pi. The threshold between a high and a low signal is around 1.8V; a voltage between 1.8V and 3.3V will be read as high, otherwise it will be read as low. Do not allow an input voltage above 3.3V or else you will fry your Pi! 
+A GPIO pin that is designated as an input will allow a signal to be received by the Raspberry Pi. The threshold between a high and a low signal is around 1.8V; a voltage between 1.8V and 3.3V will be read by the Raspberry Pi as high, otherwise it will be read as low. Do not allow an input voltage above 3.3V or else you will fry your Pi!
 
 #### A word of caution
 
-While connecting up simple components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up otherwise you could damage the Raspberry Pi or the components. 
+While connecting up simple components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up otherwise you could damage the Raspberry Pi or the components.
 
 A few pieces of general advice to follow are listed below:
 
