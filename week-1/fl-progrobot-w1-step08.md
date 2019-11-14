@@ -7,7 +7,7 @@ Related files:
 
 ## Testing the motors
 
-You need to work out which is your left motor and which is right motor. You also need to know which way they are driving forwards and backwards. 
+You need to work out which is your left motor and which is right motor. You also need to know which way they are driving forwards and backwards.
 
 You should already be familiar with turning on a Raspberry Pi and accessing the environment. If not, follow [this guide](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started) to set up your Pi.
 
@@ -21,7 +21,7 @@ Choose one of the motors. Use a marker pen to label it ‘right’ and draw an a
 
 **1.** On your Raspberry Pi, open a Python shell by clicking **Menu > Programming > Python 3 (IDLE)**. Then click **File > New File** to open an empty script.
 
-**2.** In the new file, type the following to import the `Robot` class and create a `Robot` object. You can name it anything you like. In this course, the robot is called `robin`.
+**2.** In the new file, type the following to import the `Robot` class and create a `Robot` object. You can name it anything you like. In this course, I've chosen to call my robot `robin`.
 <!-- can you name it robot or Robot?? -->
 
 ~~~ python
@@ -29,9 +29,9 @@ from gpiozero import Robot
 robin = Robot(left=(7,8), right=(9,10))
 ~~~
 
-**3.** Save you file and call it `robin.py` or something similar. You can then run it by pressing **F5** on your keyboard or clicking **Run > Run Module**.
+**3.** Save your file and call it `robin.py` or something similar. You can then run it by pressing **F5** on your keyboard or clicking **Run > Run Module**.
 
-**4.** Now switch over to the shell and type the following to observe which way the motors turn.
+**4.** Now switch over to the shell and type the following so that you can observe which way the motors turn.
 
 ~~~ python
 robin.forward()
@@ -108,7 +108,7 @@ If the motors aren't moving at all, try one of the following things:
 
 + check that the wires from the motor board are connected to the four GPIO pins and GND as set out in the previous step
 + check the wires between the motors and the motor board are secure and connected properly
-+ most motor boards have a red LED to show it is powered on. If it is not lit up, your board might have a switch to turn it on. You may also need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it can take 8 batteries)
++ most motor boards have a red LED to show it is powered on. If it is not lit up, your board might have a switch to turn it on. You may also need new batteries, or your battery pack may need to be filled completely for it to work (e.g. if it can take 8 batteries)
 
 ### Discussion
 
