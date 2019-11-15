@@ -10,7 +10,7 @@ Should voltage, current etc. be discussed here or in the GPIO step or both?
 Is it necessary to go into more detail about pneumatic and hydraulic systems?
 )
 
-## Mobile robots
+## Mobile robotics
 
 This step covers the different ways that robots can move using actuators, which convert energy into a force much like the muscles in our body do.
 

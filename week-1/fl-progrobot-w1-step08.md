@@ -81,9 +81,9 @@ If the right-hand motor is turning in the wrong direction, alter your robot obje
 
 ~~~ python
 # for example, change
-robby = Robot(left=(9,10), right=(7,8))
+robin = Robot(left=(9,10), right=(7,8))
 # to
-robby = Robot(left=(9,10), right=(8,7))
+robin = Robot(left=(9,10), right=(8,7))
 ~~~
 
 If the left-hand motor is turning the wrong way, then do the same thing and swap the order of the left pin numbers.
@@ -100,15 +100,16 @@ If either of the motors does not turn backwards, try swapping the order of the G
 
 You may have noticed that a value can be provided to the forward, backward, left, and right commands inside the brackets. Using a value that is less than 1 will make the motors turn at a slower speed than its default speed.
 
-### Problems
+### Potential problems
 
-If you are having problems with getting the motors to turn in the right direction, try this step again and save the code in a new Python file.
+If you are having problems with getting the motors to turn in the right direction, try following the instructions in this step again and save the code in a new Python file.
 
 If the motors aren't moving at all, try one of the following things:
 
 + check that the wires from the motor board are connected to the four GPIO pins and GND as set out in the previous step
 + check the wires between the motors and the motor board are secure and connected properly
-+ most motor boards have a red LED to show it is powered on. If it is not lit up, your board might have a switch to turn it on. You may also need new batteries, or your battery pack may need to be filled completely for it to work (e.g. if it can take 8 batteries)
++ if the battery pack has a switch to turn it on and off, make sure it is switched on
++ most motor boards have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries)
 
 ### Discussion
 

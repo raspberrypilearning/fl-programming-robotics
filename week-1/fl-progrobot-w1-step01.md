@@ -39,10 +39,17 @@ Course breakdown
 + AA batteries (x4 per motor controller board)
 + A USB battery pack (to power the Raspberry Pi)
 + Screwdriver
-+ Soldering iron and solder
 + A small cardboard box for the chassis (can be plastic, wood, metal etc.)
 
-**Using a soldering iron can be a bit daunting at first but if you are new to soldering or even if you are a veteran solderer, [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) will provide you with some quick tips and tricks. **
+You may also need:
+
++ Soldering iron and solder
++ Scissors
++ Wire strippers
++ Adhesives (duct tape / electrical tape, putty, glue etc.)
++ Cable ties
+
+**Using a soldering iron can be a bit daunting at first but if you are new to soldering or even if you are a veteran solderer, [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) will provide you with some quick tips and tricks.**
 
 A Raspberry Pi model 3B or above is recommended as you can connect to it over Wifi or Bluetooth without an adapted which will help when programming the buggy.
 
@@ -50,12 +57,10 @@ The ultrasonic distance sensor and line following sensor are required for week 2
 
 A ball caster is usually necessary if your buggy has two wheels to balance it and aid with movement.
 
+
 **Optional extras**
 
-+ Adhesives (duct tape / electrical tape, putty, glue etc.)
 + Velcro tape
-+ Cable ties
-+ Wire strippers
 + Threading tool
 + Screws
 + Tracks or legs

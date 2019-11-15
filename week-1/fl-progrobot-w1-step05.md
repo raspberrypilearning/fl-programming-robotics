@@ -7,7 +7,7 @@ Related files:
 
 ## Raspberry Pi and general-purpose input/output
 
-Robots can sense and interact with the environment through a wide range of components. A computer or microcontroller is usually used to process all of the information being received so the robot can make decisions and perform actions. This is where the Raspberry Pi and the general-purpose input/output (GPIO) pins come into play.
+Robots can sense and interact with the environment through a wide range of components. For a robot to make decisions and perform actions, it usually needs a computer or microcontroller to process all the information being received and to send signals back to the robot. A standard interface for connecting a single-board computer or microcontroller to other components is through general-purpose input/output (GPIO) pins.
 
 ### Controlling robots using the Raspberry Pi
 
@@ -29,7 +29,7 @@ The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi 
 
 ![A Raspberry Pi Zero with a solder-less header](images/1_5-raspberry-pi-zero.jpg)
 
-Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4 as it will be easier to connect and program the Pi using the inbuilt Wi-Fi or Bluetooth.
+Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4. These models allow you to easily connect and program the Raspberry Pi with another computer or even a smartphone through the inbuilt Wi-Fi or Bluetooth, rather than needing to physically plug the Pi into a screen or keyboard and mouse.
 
 #### GPIO pin numbering
 
@@ -51,7 +51,7 @@ A GPIO pin that is designated as an input will allow a signal to be received by 
 
 #### A word of caution
 
-While connecting up simple components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up otherwise you could damage the Raspberry Pi or the components.
+While connecting most components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up otherwise you could damage the Raspberry Pi or the components.
 
 A few pieces of general advice to follow are listed below:
 
@@ -59,4 +59,4 @@ A few pieces of general advice to follow are listed below:
 + Certain components, such as LEDs, should have resistors to limit the current passing through them
 + Do not connect motors directly to the GPIO pins, instead use a motor controller board or an H-bridge circuit
 
-In the next step, you will look at how to connect the motors to the Raspberry Pi.
+In the next step, you will look at how to connect the motors to the motor controller board.
