@@ -28,7 +28,7 @@ You may also need:
 + Scissors
 + Tape
 
-**Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) will provide you with some quick tips and tricks.**
+**Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, this [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will provide you with some quick tips and tricks.**
 
 [comment]: # (Link to PDF of components)
 

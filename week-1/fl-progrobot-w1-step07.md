@@ -40,9 +40,11 @@ Insert the 4 AA batteries into the battery pack. Some battery packs have a switc
 
 ### Receiving input
 
-The instructions are for a L298N Dual H Bridge DC Stepper Motor Driver Controller Board, and they will be pretty similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one. 
+These instructions are for a L298N Dual H Bridge DC Stepper Motor Driver Controller Board, and they will be pretty similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one. 
 
-On this motor controller board there are pins labeled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins but this board does not. Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
+On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins but this board does not. 
+
+Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
 
 Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each of your DC motors will need to need to use two **IN** pins to connect to the Raspberry Pi so it can turn in both directions, as well as one **GND** pin to complete the circuit.
 

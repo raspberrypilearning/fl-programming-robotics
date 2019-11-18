@@ -49,7 +49,7 @@ You may also need:
 + Adhesives (duct tape / electrical tape, putty, glue etc.)
 + Cable ties
 
-**Using a soldering iron can be a bit daunting at first but if you are new to soldering or even if you are a veteran solderer, [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) will provide you with some quick tips and tricks.**
+**Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, this [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will provide you with some quick tips and tricks.**
 
 A Raspberry Pi model 3B or above is recommended as you can connect to it over Wifi or Bluetooth without an adapted which will help when programming the buggy.
 
