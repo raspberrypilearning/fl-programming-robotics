@@ -25,7 +25,7 @@ The capabilities of a robot can vary massively. For example, a robot that is des
 
 ### Making sense of the environment
 
-Just like people and animals, robots are able to sense the physical world so they can perform actions accordingly. Robots often use sensors to detect the movement of their own components as well as other objects nearby. A robotic arm in a factory for assembling smartphones will use a motion sensor to calculate the distance it has moved and where it needs to go next. This robotic arm may also use a pressure sensor to determine how much force an object is being held by so that the arm does not drop or break the smartphone components.
+Just like people and animals, robots are able to sense the physical world so they can perform actions accordingly. Robots often use sensors to detect the movement of their own components as well as other objects nearby. A robotic arm in a factory for assembling smartphones will use a motion sensor to calculate the distance it has moved and where it needs to go next. This robotic arm may also use a pressure sensor to determine how much force is being exerted on an object so that the arm does not drop or crush the smartphone components.
 
 ![A robotic arm installing a computer chip or fitting together an electronic device such as a smartphone.](images/1_4-robotic-arm-installing-computer-chip.jpg)
 

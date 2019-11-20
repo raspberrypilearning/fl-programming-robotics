@@ -19,15 +19,7 @@ The easiest way to keep track of which motor is left and which is right is to la
 
 ![Animated GIF of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up.](images/)
 
-### Setting up your Pi
-
-You should already be familiar with setting up a Raspberry Pi and using it. If not, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
-
-The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins. 
-
-Python and GPIO Zero will be installed by default if your Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or other operating systems.
-
-### Programming the motors
+### Choosing a programming environment
 
 I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs. 
 
@@ -39,7 +31,9 @@ If you experience problems or would just like to know more about Mu, have a look
 
 **Note:** if you choose another IDE, some of the screenshots and instructions in this course might differ to your development environment.
 
-#### Setting up the motors in the code
+### Programming the motors
+
+#### Setting up the motors in Python
 
 You are going to start by creating a Python program that allows the motors to be controlled through the GPIO pins on the Raspberry Pi.
 
@@ -165,6 +159,8 @@ The motor that changed direction at the end of the program should be the motor y
 
 If you are having problems with getting the motors to turn in the right direction, try out the instructions for programming the motors again and save the code in a new Python file.
 
+**Top tip:** if there is a problem with your program or the wiring, the motors can spin continuously. If this happens, try entering the command `robin.stop()` (or the name you gave the robot object followed by `.stop()`) into the Python shell. Otherwise, turn off the battery pack or Raspberry Pi and check the wiring is correct.
+
 If the motors aren't moving at all, try one of the following things:
 
 + check that the wires from the motor board are connected to the four GPIO pins and GND as set out in the previous step
@@ -172,6 +168,10 @@ If the motors aren't moving at all, try one of the following things:
 + if the battery pack has a switch to turn it on and off, make sure it is switched on
 + most motor boards have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries)
 
-**Did you have any issues setting up your Pi or programming the motors? If so, did you fix the problems or are you still having issues?**
+### Challenge: experimenting with direction and speed
 
-Share your comments below.
++ Create a Python file that includes each of the commands: `forward`, `backward`, `left` and `right`. 
+
++ Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.8)`
+
+Share your comments and any issues you had below.

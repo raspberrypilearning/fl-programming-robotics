@@ -7,7 +7,9 @@ Related files:
 
 ## Raspberry Pi and general-purpose input/output
 
-Robots can sense and interact with the environment through a wide range of components. For a robot to make decisions and perform actions, it usually needs a computer or microcontroller to process all the information being received and to send signals back to the robot. A standard interface for connecting a single-board computer or microcontroller to other components is through general-purpose input/output (GPIO) pins.
+Robots can sense and interact with the environment through a wide range of components. For a robot to make decisions and perform actions, it usually needs a computer or microcontroller which receives information from and sends signals back to the other components.
+
+A standard interface for connecting a single-board computer or microcontroller to other components is through general-purpose input/output (GPIO) pins.
 
 ### Controlling robots using the Raspberry Pi
 
@@ -29,7 +31,7 @@ The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi 
 
 ![A Raspberry Pi Zero with a solder-less header](images/1_5-raspberry-pi-zero.jpg)
 
-Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4. These models allow you to easily connect and program the Raspberry Pi with another computer or even a smartphone through the inbuilt Wi-Fi or Bluetooth, rather than needing to physically plug the Pi into a screen, keyboard and mouse.
+Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4. These models allow you to easily connect and program the Raspberry Pi with another computer or even a smartphone through the inbuilt Wi-Fi or Bluetooth, rather than needing to physically plug the Pi into a screen or keyboard and mouse.
 
 #### GPIO pin numbering
 
