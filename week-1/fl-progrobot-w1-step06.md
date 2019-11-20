@@ -2,14 +2,18 @@
 Is this step open? Y/N
 If so, short description of this step:
 Related links:
-Related files:
+Related files: PDF of components
 )
 
 ## Connecting a motor to the motor board
 
-In this step you will start by connecting the motors to the motor controller board before connecting the battery holder to the motor board. 
 
-The instructions are for a L298N Dual H Bridge DC Stepper Motor Driver Controller Board, and they will be pretty similar for most motor controller boards. Check the documentation for your board if you are using a different one.
+[comment]: # (Need to create PDF of components for related file)
+
+
+In this step you will start by connecting the motors to the motor controller board before connecting the battery holder to the motor board.
+
+The instructions are for a "L298N Dual H Bridge DC Stepper Motor Driver Controller Board", and they will be pretty similar for most motor controller boards. Check the documentation for your board if you are using a different one.
 
 ### What you will need
 
@@ -30,7 +34,7 @@ You may also need:
 
 **Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, this [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will provide you with some quick tips and tricks.**
 
-[comment]: # (Link to PDF of components)
+
 
 ![Picture of parts](images/)
 
@@ -44,7 +48,7 @@ You will need 2 wires for each DC motor to connect it to the motor controller bo
 
 ![Picture of partially stripped male-male jumper lead](images/)
 
-Remove the soft plastic clip from the motors so the wires can be attached. You can use the flat head of a screwdriver to help remove the clip.
+Remove the soft plastic clip from the motors so the wires can be attached. You can use a flat head screwdriver to help remove the clip.
 
 ![GIF of the plastic clip from a DC motor being removed with the help of a flat head screwdriver](images/)
 
@@ -60,9 +64,9 @@ Heat the contact on the motor with the soldering iron for a second or 2. Keeping
 
 Wait for a minute or two for the solder to cool and then gently try to move the wire to test if it is securely attached to the contact. If the wire does move, you can either reheat the applied solder with the soldering iron and realign the wire, or apply more solder to the connection.
 
-Try not to touch the plastic coating of the wires or any plastic between the two contacts with the soldering iron or the plastic will melt and start to smoke. More tips and guidance can be found on [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering).
+Try not to touch the plastic coating of the wires or any plastic between the two contacts with the soldering iron or the plastic will melt and start to smoke. More tips and guidance can be found in [this soldering tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering).
 
-Once the wires have been soldered to the motors securely, trim the end of the wires with scissors. Accidental touching of the wires on the metal casing can short the circuit and stop the motor from receiving consistent power. 
+Once the wires have been soldered to the motors securely, trim the end of the wires with scissors. If the wires accidentally touch the metal casing while power is running this can short the circuit and stop the motor from receiving consistent power.
 
 Reattach the plastic clips to the motors. It's also a good idea to wrap the end of the motors where you attached the wire in tape, to protect the connection and help keep the solder in good condition.
 
@@ -76,7 +80,7 @@ The reason a DC motor needs to use two wires is so it can turn forwards and back
 
 Using a screwdriver, loosen the screws in the terminal blocks labelled **OUT1**, **OUT2**, **OUT3**, and **OUT4**. Have a look at the documentation for your board if your labels are different.
 
-Strip the ends of the wires (you can snip off the male or female ends if you need to). Insert the stripped ends of one motor into the **OUT1** and **OUT2** terminals and the stripped ends of the second motor into the **OUT3** and **OUT4** terminals. Tighten the screws so the wires are secured firmly in the terminal blocks.
+Strip the ends of the wires (you can snip off the ends if you need to). Insert the stripped ends of one motor into the **OUT1** and **OUT2** terminals and the stripped ends of the second motor into the **OUT3** and **OUT4** terminals. Tighten the screws so the wires are secured firmly in the terminal blocks.
 
 ![A close up image of one or two motors connected to the OUT terminal blocks of a motor board with the screws of the terminal blocks tightened. The OUT labels are clearly visible.](images/)
 
@@ -84,4 +88,4 @@ Strip the ends of the wires (you can snip off the male or female ends if you nee
 
 **Do you need help with anything that isn't working properly?**
 
-Share your comments with your fellow learners below.
+If so, let us know in the comments below.
