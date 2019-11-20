@@ -29,7 +29,7 @@ The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi 
 
 ![A Raspberry Pi Zero with a solder-less header](images/1_5-raspberry-pi-zero.jpg)
 
-Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4. These models allow you to easily connect and program the Raspberry Pi with another computer or even a smartphone through the inbuilt Wi-Fi or Bluetooth, rather than needing to physically plug the Pi into a screen or keyboard and mouse.
+Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4. These models allow you to easily connect and program the Raspberry Pi with another computer or even a smartphone through the inbuilt Wi-Fi or Bluetooth, rather than needing to physically plug the Pi into a screen, keyboard and mouse.
 
 #### GPIO pin numbering
 
