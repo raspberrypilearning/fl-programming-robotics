@@ -34,8 +34,6 @@ You may also need:
 
 **Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, this [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will provide you with some quick tips and tricks.**
 
-
-
 ![Picture of parts](images/)
 
 ### The DC motors
