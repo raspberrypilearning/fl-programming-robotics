@@ -7,7 +7,7 @@ Related files:
 
 ## Connecting the Raspberry Pi and battery pack to the motor board
 
-Now you have attached the motors to the motor controller board, your next step is to connect the motor board to the battery pack and the GPIO pins on the Raspberry Pi. This will allow you to power the motor board and control the motors using the Raspberry Pi.
+Now that you have attached the motors to the motor controller board, your next step is to connect the motor board to  the GPIO pins on the Raspberry Pi, and to the battery back. This will allow you to power the motor board and control the motors using the Raspberry Pi.
 
 ### What you will need
 
@@ -31,18 +31,18 @@ The motors require more power than the Raspberry Pi can provide. Therefore, you 
 The battery pack should include 2 wires, one red and one black. The red wire is the power input and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** block so instead use the voltage in block labelled **+12V**.
 
 [comment]: # (
-Mention the +5V block can be used to power another device, such as Arduino? Is the voltage too high for a Raspberry Pi? 
+Mention the +5V block can be used to power another device, such as Arduino? Is the voltage too high for a Raspberry Pi?
 )
 
-The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit for the battery pack. Make sure all the screws of the terminal blocks are tightened securely. 
+The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit for the battery pack. Make sure all the screws of the terminal blocks are tightened securely.
 
 Insert the 4 AA batteries into the battery pack. Some battery packs have a switch to turn it on and off; if it does than turn it on. Most motor boards have a red LED that lights up to indicate it is powered on. If the LED is not lit up, the wires may not be connected properly. You may also need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries).
 
 ### Receiving input
 
-These instructions are for a L298N Dual H Bridge DC Stepper Motor Driver Controller Board, and they will be pretty similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one. 
+These instructions are for a "L298N Dual H Bridge DC Stepper Motor Driver Controller Board", and they will be pretty similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one.
 
-On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins but this board does not. 
+On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins but this board does not.
 
 Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
 
@@ -62,12 +62,12 @@ If your motor board does not have a **GND** pin then you can use the terminal bl
 
 ### Powering the Pi
 
-The Raspberry Pi will need its own source of power. A small USB power bank is the easiest way to power the Raspberry Pi as it is light and mobile. You could also make your own power bank though that is beyond the scope of this course. 
+The Raspberry Pi will need its own source of power. A small USB power bank is the easiest way to power the Raspberry Pi as it is light and mobile. You could also make your own power bank though that is beyond the scope of this course.
 
-For testing purposes, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Pi will need a mobile source of power otherwise it won't be able to travel far from the mains power supply. 
+For testing purposes, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Pi will need a mobile source of power otherwise it won't be able to travel far from the mains power supply.
 
 **Did you have any problems connecting the motor board to the Raspberry Pi or to the battery pack?**
 
 **What type of power supply are you using for the Raspberry Pi?**
 
-Share your comments below.
+Answer both of these questions in the  comments section below.
