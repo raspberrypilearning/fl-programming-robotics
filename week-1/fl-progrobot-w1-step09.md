@@ -49,4 +49,4 @@ If you want to know more about creating a physical object and using tools such a
 
 Now it is time for you to design a chassis for your robot buggy.
 
-Share an image of your chassis with your fellow learners using [imgur](https://imgur.com/) or another image hosting platform.
+Share an image of your chassis with your fellow learners using [Imgur](https://imgur.com/) or another image hosting platform.
