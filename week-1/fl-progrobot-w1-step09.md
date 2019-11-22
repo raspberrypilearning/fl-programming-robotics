@@ -23,7 +23,9 @@ I recommend making a prototype of the chassis first using a low-cost material, s
 
 #### What needs to be attached to the chassis
 
-At the very minimum, the chassis will need the following components attached to it:
+There is no “right” way to build your prototype robot chassis, but there are a few things to bear in mind. 
+
+At the very minimum, the chassis needs to house the following components:
 
 + Raspberry Pi
 + Motor controller board
@@ -32,6 +34,8 @@ At the very minimum, the chassis will need the following components attached to 
 + Line following sensor (1 x minimum)
 + AA battery holder (to power the motor controller board)
 + USB battery pack (for powering the Raspberry Pi)
+
+The chassis needs to allow the mounting of a pair of wheels that will connect to the motors and a ball caster so the buggy can move with two wheels.
 
 ![A picture of all the components that will need to be attached to the robot buggy chassis:  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, line following sensor, AA battery holder, USB battery](images/)
 
