@@ -5,173 +5,60 @@ Related links:
 Related files:
 )
 
-## Testing the motors
+## Designing the chassis
 
-In this step you will choose one of the motors to be the left motor and the other one to be the right motor. You will then use the Raspberry Pi to program the motors so they are able to go forward, backward, left and right.
+Now you have the motors set up, the next stage is to design a chassis to house the robot in. A chassis is the physical frame of a wheeled vehicle that holds together the main parts of a vehicle. Your buggy will need a chassis to secure the components to such as the wheels, motors and Raspberry Pi.
 
-### Labelling the motors
+![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame.](images/1_9-automobile-chassis.png)
 
-The easiest way to keep track of which motor is left and which is right is to label the motors.
+### Choosing a material
 
-+ Start by lining up the motors side-by-side
-+ Use a marker pen to label the motor on the left-hand side ‘left’ and draw an arrow on it to indicate which way is forward, just like in the animation below
-+ Label the other motor ‘right’ and draw an arrow on it pointing in the same direction as your first motor
+A chassis for a robot buggy can be built using all sorts of materials; cardboard, plastic or metal to name a few. The material that works best for you depends on the function, cost, and tools available. 
 
-![Animated GIF of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up.](images/)
+When choosing a material, you need to consider aspects such as weight vs durability, cost vs strength, and difficulty to work with vs quality of the chassis. Using certain types of metal might result in a strong and durable chassis but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap but it is less sturdy than other materials. 
 
-### Choosing a programming environment
+I recommend making a prototype of the chassis first using a low-cost material, since tweaking the design will be much easier. Common households items, such as a cardboard box or a plastic ice cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton which originally contained grapes. The reason I chose this was because it is a good sized box that can hold the robot components without needing to be modified. It is was also easy to make holes in the carton when attaching the components to the chassis. 
 
-I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs.
+### Planning the layout
 
-The IDE I will be using is **Mu**, which is available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
+#### What needs to be attached to the chassis
 
-[comment]: # (Mu was installed already on my Pi. Does it depend on version of Raspbian?)
+There is no “right” way to build your prototype robot chassis, but there are a few things to bear in mind. 
 
-If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
+At the very minimum, the chassis needs to house the following components:
 
-**Note:** if you choose another IDE, some of the screenshots and instructions in this course might differ to your development environment.
++ Raspberry Pi
++ Motor controller board
++ DC motors (2 x minimum)
++ Ultrasonic distance sensor (1 x minimum)
++ Line following sensor (1 x minimum)
++ AA battery holder (to power the motor controller board)
++ USB battery pack (for powering the Raspberry Pi)
 
-### Programming the motors
+The chassis needs to allow the mounting of a pair of wheels to the axels of the motors and a ball caster that will act as a third wheel.
 
-#### Setting up the motors in Python
+![A picture of all the components that will need to be attached to the robot buggy chassis:  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, line following sensor, AA battery holder, USB battery](images/)
 
-You are going to start by creating a Python program that allows the motors to be controlled through the GPIO pins on the Raspberry Pi.
+#### Making sure the components fit
 
-**1.** On your Raspberry Pi, open Mu or the IDE of your choice and create a new file.
+If you are planning on using a pre-made container for the chassis, you can try placing all the components inside to see if there is room. This will give you an  idea whether the parts will fit or not. Bear in mind that the components can't all be shoved in without much consideration; some parts will need extra space around them so they can be accessed easily, such as the power supply so that it can be recharged. Other parts will need to be secured to certain places on the chassis; for instance the ultrasonic distance sensor must be attached to the front of the chassis so it can sense objects in front of the buggy.
 
-To create a new Python file in Mu, click on **Menu > Programming > mu**. Then click **File > New File** to open an empty script.
+It can also be useful to design the layout of the buggy on paper to make sure that all the components have enough room. Begin by making a footprint, which is the base of your buggy. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about to try out different arrangements. 
 
-![Open Mu on the Raspberry Pi by selecting it from the Programming menu](https://codewith.mu/img/en/howto/pi_open_mu.png)
+![Picture of the buggy components drawn represented in real size on paper with a cardboard container for the chassis of the buggy.](images/)
 
-[comment]: # (Image taken from the Mu website https://codewith.mu/en/howto/1.0/install_raspberry_pi. The icon was the Python icon on my Raspberry Pi, not the Mu icon)
+Make sure each piece of paper is the correct size and shape for the component. You might have to measure your components, but most of them will have technical documentation online that will include their exact dimensions. 
 
-**2.** In the new file, type in the following code:
+#### Taking your design further
 
-~~~ python
-from gpiozero import Robot
-robin = Robot(left=(7,8), right=(9,10))
-~~~
+If you want to know more about creating a physical object and using tools such as 3D modelling and 3D printing, then check out our [Design and prototype embedded computer systems](https://www.futurelearn.com/courses/embedded-systems) course.
 
-The first line of code imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors.
+### Your turn
 
-The second line of code creates a `Robot` in the program. You can name it anything you like - in this course, I've chosen to call my robot `robin`.
-<!-- can you name it robot or Robot?? -->
+Now it is time for you to design a chassis for your robot buggy and make sure all the components fit:
 
-When creating a new `Robot` in the code you need to give it two commands: `left` and `right`. The `left` command should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor board. In the last step, I chose GPIO pins 7 and 8 but yours might be different.
++ Try to find a container that you can use for the prototype of the chassis
++ If you have a container, check that all the components will fit. Otherwise, map out the components on paper
++ Make any modifications to the chassis if necessary or find another container if the design isn't working out
 
-Similarly, the `right` command needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4** on the motor board - for me that is GPIO pins 9 and 10.
-
-**3.** Save your file and call it `robin.py` or something similar.
-
-#### Forward and backward
-
-You are now going to test which direction is forward and backward on each motor. This will depend on how the motors are wired and the code in your program.
-
-**4.** At the end of your program, type in this code to drive both motors forward, wait 1 second and then stop the motors:
-
-~~~ python
-robin.forward()
-sleep(1)
-robin.stop()
-~~~
-
-**Note:** `robin` is the name I gave my `Robot` in the first piece of code - if you chose a different name then make sure you change `robin` to the name you specified.
-
-The first command, `robin.forward()`, tells both motors to turn forwards at the default speed.
-
-The `sleep` command waits for a given number of seconds before running the next command - in this example, the program waits 1 second before stopping both motors with the command `robin.stop()`.
-
-Run the program and check that both motors are turning in the direction shown in the diagram below in relation to the arrows you drew on the motors.
-
-![Animated GIF showing the direction both the motors should be spinning when the command robin.forward() is entered](images/)
-
-If the right-hand motor is turning in the wrong direction, alter your `Robot` code and swap the order of the right pin numbers.
-
-~~~ python
-# for example, change the right pins from
-robin = Robot(left=(9,10), right=(7,8))
-# to
-robin = Robot(left=(9,10), right=(8,7))
-~~~
-
-If the left-hand motor is turning the wrong way, then do the same thing and swap the order of the left pin numbers.
-
-**Note:** You may have chosen different GPIO pins than me to connect the Raspberry Pi to the motor board.
-
-Stop the program and run it again to check how any changes you made affected the motors.
-
-**5.** Test that the motors both turn backwards by adding `robin.backward()` and another `sleep` command before `robin.stop()`, and running the program.
-
-~~~ python
-robin.forward()
-sleep(1)
-robin.backward()
-sleep(1)
-robin.stop()
-~~~
-
-You should see both the motors turn forwards, wait 1 second and then turn the opposite way for 1 second before stopping.
-
-If the both motors do not turn as expected, repeat steps 4 and 5 until both motors turn forward and backward correctly.
-
-#### Left and right
-
-Finally, you are going to test whether the motors are turning the correct way when using the `.left()` and `.right()` commands.
-
-**6.** Type the following lines of code at the end of the Python file you created. Run the program and note which motor changes direction on the command `robin.right(0.4)`.
-
-~~~ python
-robin.forward(0.4)
-sleep(1)
-robin.right(0.4)
-sleep(1)
-robin.stop()
-~~~
-
-**Note:** The 0.4 inside the `.forward()` and `.right()` commands makes the motors go a little slower, so it is easier to see which way they turn. The default speed is 1.
-
-The motor that changed direction is the right-hand motor. If that was the one you labelled ‘right’, then there’s nothing to change. If it was the one you labelled ‘left’, you need to alter your `Robot` code to swap the left pin numbers with the right pins:
-
-~~~ python
-# for example, change the GPIO pins from
-robin = Robot(left=(7,8), right=(9,10))
-# to
-robin = Robot(left=(9,10), right=(7,8))
-~~~
-
-Remember, you may have chosen different GPIO pins than me to connect the Raspberry Pi to the motor board. Your pin numbers may also have been altered when setting up the forward and backward directions.
-
-Stop the program and run it again to check how any changes you made affected the motors. Repeat step 6 if you made any changes.
-
-**7.** Check that the left motor is turning correctly by adding the `.left()` command to the program.
-
-~~~python
-robin.forward(0.4)
-sleep(1)
-robin.left(0.4)
-sleep(1)
-robin.stop()
-~~~
-
-The motor that changed direction at the end of the program should be the motor you labelled ‘left’.
-
-#### Potential problems
-
-If you are having problems with getting the motors to turn in the right direction, try out the instructions for programming the motors again and save the code in a new Python file.
-
-**Top tip:** if there is a problem with your program or the wiring, the motors can spin continuously. If this happens, try entering the command `robin.stop()` (or the name you gave the robot object followed by `.stop()`) into the Python shell (known as the REPL in Mu). Otherwise, turn off the battery pack or Raspberry Pi and check the wiring is correct.
-
-If the motors aren't moving at all, try the following :
-
-+ Check that the wires from the motor board are connected to the four GPIO pins and GND as set out in the previous step
-+ Check the wires between the motors and the motor board are secure and connected properly
-+ If the battery pack has a switch to turn it on and off, make sure it is switched on
-+ Most motor boards have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries)
-
-### Challenge: experimenting with direction and speed
-
-+ Create a Python file that includes each of the commands: `forward`, `backward`, `left` and `right`.
-
-+ Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.8)`
-
-Share your comments and any issues you had below.
+Share the materials you used and the design process you followed in the comments below. You can also include an image of your chassis using [Imgur](https://imgur.com/) or another image hosting platform.

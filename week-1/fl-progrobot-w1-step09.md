@@ -5,60 +5,60 @@ Related links:
 Related files:
 )
 
-## Designing the chassis
+## Attaching the components to the chassis
 
-Now you have the motors set up, the next stage is to design a chassis to house the robot in. A chassis is the physical frame of a wheeled vehicle that holds together the main parts of a vehicle. Your buggy will need a chassis to secure the components to such as the wheels, motors and Raspberry Pi.
+Once you have ensured all the robot parts fit to the chassis, you need to secure some of the components in place.
 
-![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame.](images/1_9-automobile-chassis.png)
+### Permanent and removable fastenings
 
-### Choosing a material
+Some types of fastening might be preferential to others depending on the material of the robot chassis and the component being secured.
 
-A chassis for a robot buggy can be built using all sorts of materials; cardboard, plastic or metal to name a few. The material that works best for you depends on the function, cost, and tools available. 
+Whilst making the prototype chassis, you may not want to use permanent fastenings, such as adhesive putty or glue, if you intend on removing the components at a later stage. In this instance, a fastening that is easier to remove may be preferential such as tape, cable ties or velcro strips. Once you are confident that you will not have to take things apart, using a permanent fastening might be desirable to keep a component secured firmly in place. 
 
-When choosing a material, you need to consider aspects such as weight vs durability, cost vs strength, and difficulty to work with vs quality of the chassis. Using certain types of metal might result in a strong and durable chassis but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap but it is less sturdy than other materials. 
+Screw holes may need to be incorporated into the chassis to attach some components, the ball caster for example. If you are using a material that is fairly durable, like metal or a hard plastic, you can use a threading tool to create threads for the screws. Otherwise, you can use a sharp instrument to make a small hole for the screw to go through.
 
-I recommend making a prototype of the chassis first using a low-cost material, since tweaking the design will be much easier. Common households items, such as a cardboard box or a plastic ice cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton which originally contained grapes. The reason I chose this was because it is a good sized box that can hold the robot components without needing to be modified. It is was also easy to make holes in the carton when attaching the components to the chassis. 
+### Securing the components in place 
 
-### Planning the layout
+I'm going to be using a cardboard box as my chassis. If you are using a different type of material or container for your chassis then some of these instructions may need to be adjusted to suit your design. 
 
-#### What needs to be attached to the chassis
+![Picture of the cardboard box that will be used as the chassis for the robot buggy](images/)
 
-There is no “right” way to build your prototype robot chassis, but there are a few things to bear in mind. 
+**1.** The first step is to place your motors into the chassis.
 
-At the very minimum, the chassis needs to house the following components:
+Place your motors inside the box, in roughly the position that you would like them to sit. Then use a pen to mark the place where the motors’ axle will need to pass through the walls of the box. Make sure you are giving your wheels enough room to spin around.
 
-+ Raspberry Pi
-+ Motor controller board
-+ DC motors (2 x minimum)
-+ Ultrasonic distance sensor (1 x minimum)
-+ Line following sensor (1 x minimum)
-+ AA battery holder (to power the motor controller board)
-+ USB battery pack (for powering the Raspberry Pi)
+![Picture of the chassis containing the motors and a pen marking where a hole needs to be made for one of the axels of a motor](images/)
 
-The chassis needs to allow the mounting of a pair of wheels to the axels of the motors and a ball caster that will act as a third wheel.
+**2.** Make a hole that is big enough for the motors’ axels to fit through. 
 
-![A picture of all the components that will need to be attached to the robot buggy chassis:  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, line following sensor, AA battery holder, USB battery](images/)
+If your chassis is made out of cardboard, use a sharp object such as a pencil or screwdriver to carefully poke holes through the sides of the box.
 
-#### Making sure the components fit
+![Picture of a pencil poking out of the side of the cardboard box where the axel of a motor will protrude.](images/)
 
-If you are planning on using a pre-made container for the chassis, you can try placing all the components inside to see if there is room. This will give you an  idea whether the parts will fit or not. Bear in mind that the components can't all be shoved in without much consideration; some parts will need extra space around them so they can be accessed easily, such as the power supply so that it can be recharged. Other parts will need to be secured to certain places on the chassis; for instance the ultrasonic distance sensor must be attached to the front of the chassis so it can sense objects in front of the buggy.
+**3.** You will need to fix the motors in place, otherwise they will move once the wheels are attached and the motors are powered. 
 
-It can also be useful to design the layout of the buggy on paper to make sure that all the components have enough room. Begin by making a footprint, which is the base of your buggy. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about to try out different arrangements. 
+Use a permanent or removable fastening to hold the motors down. If this is your prototype, tape or cable ties might be best as these will be easy to remove.
 
-![Picture of the buggy components drawn represented in real size on paper with a cardboard container for the chassis of the buggy.](images/)
+![Picture of the motors taped down to the inside of the box.](images/)
 
-Make sure each piece of paper is the correct size and shape for the component. You might have to measure your components, but most of them will have technical documentation online that will include their exact dimensions. 
+**4.** Once the motors are in place, you can attach the wheels to the axles.
 
-#### Taking your design further
+![Picture of the chassis with the wheels attached to the it.](images/)
 
-If you want to know more about creating a physical object and using tools such as 3D modelling and 3D printing, then check out our [Design and prototype embedded computer systems](https://www.futurelearn.com/courses/embedded-systems) course.
+**5.** When the wheels are in place, you can screw a ball caster to the front of the container to act as a third wheel.
 
-### Your turn
+![Picture of the screw fastening of the ball caster inside the cardboard box.](images/)
 
-Now it is time for you to design a chassis for your robot buggy and make sure all the components fit:
+![Picture of the ball caster and wheels of the robot buggy.](images/)
 
-+ Try to find a container that you can use for the prototype of the chassis
-+ If you have a container, check that all the components will fit. Otherwise, map out the components on paper
-+ Make any modifications to the chassis if necessary or find another container if the design isn't working out
+**6.** If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Pi inside the chassis.
 
-Share the materials you used and the design process you followed in the comments below. You can also include an image of your chassis using [Imgur](https://imgur.com/) or another image hosting platform.
+You won't need to secure these components to the chassis just yet. Remember you will need to access the Raspberry Pi and parts of the chassis later in the course to add the ultrasonic distance sensor and line following sensor.
+
+Make sure there is nothing that could disturb the jumper leads that are connected to the Raspberry Pi as they can easily come loose.
+
+![Picture of the motors, motor controller, Raspberry Pi, AA battery holder and USB battery pack inside the chassis.](images/)
+
+**Did you have any issues with attaching components to the chassis? If you, what adjustments did you have to make?**
+
+**What types of fastenings have you used for your robot buggy?**

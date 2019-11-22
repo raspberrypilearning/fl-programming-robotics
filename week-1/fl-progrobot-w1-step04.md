@@ -5,58 +5,60 @@ Related links:
 Related files:
 )
 
-## The world of robotics
+## Raspberry Pi and general-purpose input/output
 
-Robots are now an integral part of modern life and are set to be even more prominent in the future. Before building a robot buggy of your own, it is useful to understand the different components and technologies that can be used with robotics, and how these can work together to automate actions.
+Robots can sense and interact with the environment through a wide range of components. For a robot to make decisions and perform actions, it usually needs a computer or microcontroller which receives information from and sends signals back to the other components.
 
-### What makes a robot a robot?
+A standard interface for connecting a single-board computer or microcontroller to other components is through general-purpose input/output (GPIO) pins.
 
-Robots in todays age come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to landing on Mars. But defining what a robot actually **is** can be tricky; ask five roboticists and you are likely to get five different answers!
+### Controlling robots using the Raspberry Pi
 
-Nevertheless, there are some common features that most robots share:
+The Raspberry Pi computers are wonderfully diverse in what they can do. Among the many applications they can be used for, robotics is one of the most exciting and powerful uses of a Raspberry Pi.
 
-+ A physical body that can move
-+ Mechanisms for moving the structure
-+ A source of power
-+ Sensors for receiving data about the world around them
-+ The ability to process information and automate tasks
+Each model of the Raspberry Pi has a set of general-purpose input/output (GPIO) pins, which are a really useful feature for connecting and communicating with all manner of electronic components. These pins are a physical interface between the Raspberry Pi and the outside world and are located along the top edge of the board. Using the pins, you can program the Raspberry Pi to switch components on and off (output), or receive data from sensors and switches (input).
 
-The capabilities of a robot can vary massively. For example, a robot that is designed to manufacture microchips will need to make tiny, precise movements in a fixed place whilst a humanoid robot may be able to walk around its environment. What nearly all robots can do though is these three things: sense, process, and act.
+![The GPIO pins on a Raspberry Pi 4 with a 40 pin header](images/1_5-gpio-pins-raspberry-pi-4-40-header.jpg)
 
-### Making sense of the environment
+#### Raspberry Pi models
 
-Just like people and animals, robots are able to sense the physical world so they can perform actions accordingly. Robots often use sensors to detect the movement of their own components as well as other objects nearby. A robotic arm in a factory for assembling smartphones will use a motion sensor to calculate the distance it has moved and where it needs to go next. This robotic arm may also use a pressure sensor to determine how much force is being exerted on an object so that the arm does not drop or crush the smartphone components.
+Most models of the Raspberry Pi have a 40 pin header as shown in the image above. Of the 40 pins, 26 are GPIO pins and the others are power or ground pins (plus two ID EEPROM pins which you should not play with unless you know your stuff!). Any of the GPIO pins can be designated (in software) as an input or output pin and used for a wide range of purposes - whether it is turning on an LED, driving a motor or sending data to another device, the possibilities are almost endless!
 
-![A robotic arm installing a computer chip or fitting together an electronic device such as a smartphone.](images/1_4-robotic-arm-installing-computer-chip.jpg)
+Early models of the Raspberry Pi A and B compromise of a shorter header of 26 pins, as shown below.
 
-The first truly mobile robot with the ability to sense its environment was "Shakey" which was developed at Stanford University between 1966 and 1972. It was capable of navigating various obstacles inside a room using a TV camera and an infrared range finder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a pre-programmed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remember and adjust these actions for future tasks. This was integral to Shakey's capability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
+![The GPIO pins on a Raspberry Pi 1 with a 26 pin header](images/1_5-gpio-pins-raspberry-pi-1-26-header.jpg)
 
-![Shakey was the first truly mobile robot developed at Stanford University. It could map a picture of a room using it sensors and move around objects autonomously.](images/1_4-Shakey.jpg)
+The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi Zero WH) so there are holes where the GPIO header is located instead of physical pins. This means you need to add a header that includes the pins yourself.  
 
-Improvements to sensors over the years allowed robots to receive more data to better understand the environment. A major contribution to the ability for robots to navigate the world is Light Detection and Ranging (LiDAR), which uses the pulse of light from lasers to measure distances accurately. For example, self-driving cars use LiDAR to create 3D maps and build a picture of the world. Yet with all this extra information, robots also needed to become more powerful at processing data in a quick and timely manner.
+![A Raspberry Pi Zero with a solder-less header](images/1_5-raspberry-pi-zero.jpg)
 
-### The power of processing
+Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+ or 4. These models allow you to easily connect and program the Raspberry Pi with another computer or even a smartphone through the inbuilt Wi-Fi or Bluetooth, rather than needing to physically plug the Pi into a screen or keyboard and mouse.
 
-Nearly all robots need a device, such as a computer or microcontroller, to receive data from sensors and other components. The device will need to process this data into meaningful information that can then be used to communicate instructions.
+#### GPIO pin numbering
 
-One such device is a Raspberry Pi, which is a single-board computer that allows a wide range of components to be connected to it. In this course, you will be using a Raspberry Pi to connect the different parts of the robot buggy together. You will also program the Raspberry Pi to handle all of the decision making of the buggy, and to automate its tasks.
+When programming the GPIO pins there are two different ways to refer to them: **GPIO numbering** and **physical numbering**. Throughout this course (and in all our resources) we will refer to the pins using the GPIO numbering scheme. These are the GPIO pins as the computer sees them.
 
-### Automation in action
+![The layout of the GPIO pins on a 40 pin Raspberry Pi using GPIO numbering, which can be used as a reference guide.](images/1_5-gpio-numbers-raspberry-pi-40-pin-header.png)
 
-The ability to process data and act on this information almost instantly with minimal human interaction is one of the major advancements of robotics, and indeed technology, in the last few decades. Most robots will be able to perform some actions autonomously, whether it is a robotic arm that twists the lids onto jars of jam in an assembly line or a drone that is able to return home to the location it took off from.  
+The numbering of the GPIO pins is not in numerical order so there is no easy way to remember them. Instead it follows the Broadcom (BCM) numbering, which relates to the numbering on the CPU of the Raspberry Pi. However, you can use a reference board that fits over the pins, a printed reference, or a website guide to help you out.
 
-The level of autonomy a robot is capable of depends on how it is designed to interact with the world. Some are closely controlled by human operators, such as medical robots that assist surgeons with performing operations. These types of robots enhance a surgeon's ability to make very precise incisions that would be difficult without this assistance. It can also allow surgeons to operate remotely from another hospital, or even another country entirely!
+[comment]: # (Link to reference guide / board?)
 
-![A surgeon using a robotic assistant to perform surgery on a patient.](images/1_4-robotic-surgery.jpg)
+#### Voltages
 
-On the opposite end of the scale, other robots are much more autonomous and rely on minimal human interaction. Consider a robot vacuum cleaner: it will use sensors to move around the room whilst avoiding furniture and map the areas it has visited to ensure it has covered the entire room. Some even have the ability to automatically find a charging station and empty themselves in a designated bin.
+The voltage of a pin is labelled on the reference guide. There are two **5V** pins and two **3V3** pins present on the board, as well as a number of ground pins (0V), which are unconfigurable. The remaining pins are all general purpose 3V3 pins, meaning outputs are set to 3.3 Volts and inputs are tolerant of 3.3 Volts.
 
-Many robots are somewhere in the middle between fully autonomous and human controlled, having the ability to automate some tasks but also requiring a small amount of human interaction. These semi-autonomous robots are optimal for activities such as navigating contaminated places that would be dangerous for people. It is possible for operators to take over the decision making from the robot and perform certain actions remotely which the robot may not be programmed to perform.
+A GPIO pin designated as an **output** pin can be set to high (3.3V) or low (0V). Components are usually attached so that setting the output to high will allow current to flow to them, whilst setting the output to low won't allow a current to flow to them.
 
-### Discussion
+A GPIO pin that is designated as an input will allow a signal to be received by the Raspberry Pi. The threshold between a high and a low signal is around 1.8V; a voltage between 1.8V and 3.3V will be read by the Raspberry Pi as high, otherwise it will be read as low. Do not allow an input voltage above 3.3V or else you will fry your Pi!
 
-+ What are some of the robots that you interact with, either directly or indirectly?
+#### A word of caution
 
-+ Which area do you think robotics will have the biggest impact in the future? Why is that?
+While connecting most components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up otherwise you could damage the Raspberry Pi or the components.
 
-Share your thoughts in the comments section below.
+A few pieces of general advice to follow are listed below:
+
++ Do not use 5V for 3V3 components (you may damage the component or your Pi)
++ Certain components, such as LEDs, should have resistors to limit the current passing through them
++ Do not connect motors directly to the GPIO pins, instead use a motor controller board or an H-bridge circuit
+
+In the next step, you will look at how to connect the motors to the motor controller board.

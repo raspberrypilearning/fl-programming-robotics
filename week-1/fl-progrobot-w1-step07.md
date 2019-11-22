@@ -5,77 +5,173 @@ Related links:
 Related files:
 )
 
-## Connecting the Raspberry Pi and battery pack to the motor board
+## Testing the motors
 
-Now that you have attached the motors to the motor controller board, your next step is to connect the motor board to  the GPIO pins on the Raspberry Pi, and to the battery back. This will allow you to power the motor board and control the motors using the Raspberry Pi.
+In this step you will choose one of the motors to be the left motor and the other one to be the right motor. You will then use the Raspberry Pi to program the motors so they are able to go forward, backward, left and right.
 
-### What you will need
+### Labelling the motors
 
-For this step you will need the following items:
+The easiest way to keep track of which motor is left and which is right is to label the motors.
 
-+ Motor controller board (wired up to the motors)
-+ Raspberry Pi
-+ AA battery holder (for 4 x AA batteries)
-+ 4 x AA batteries
-+ Jumper leads (female-female)
-+ Screwdriver
++ Start by lining up the motors side-by-side
++ Use a marker pen to label the motor on the left-hand side ‘left’ and draw an arrow on it to indicate which way is forward, just like in the animation below
++ Label the other motor ‘right’ and draw an arrow on it pointing in the same direction as your first motor
 
-You may also need:
+![Animated GIF of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up.](images/)
 
-+ GPIO reference card
+### Choosing a programming environment
 
-### Connect the battery pack to the motor board
+I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs.
 
-The motors require more power than the Raspberry Pi can provide. Therefore, you will use 4 AA batteries to power them.
+The IDE I will be using is **Mu**, which is available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
 
-The battery pack should include 2 wires, one red and one black. The red wire is the power input and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** block so instead use the voltage in block labelled **+12V**.
+[comment]: # (Mu was installed already on my Pi. Does it depend on version of Raspbian?)
 
-[comment]: # (
-Mention the +5V block can be used to power another device, such as Arduino? Is the voltage too high for a Raspberry Pi?
-)
+If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
 
-The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit for the battery pack. Make sure all the screws of the terminal blocks are tightened securely.
+**Note:** if you choose another IDE, some of the screenshots and instructions in this course might differ to your development environment.
 
-Insert the 4 AA batteries into the battery pack. Some battery packs have a switch to turn it on and off; if it does than turn it on. Most motor boards have a red LED that lights up to indicate it is powered on. If the LED is not lit up, the wires may not be connected properly. You may also need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries).
+### Programming the motors
 
-### Receiving input
+#### Setting up the motors in Python
 
-These instructions are for a "L298N Dual H Bridge DC Stepper Motor Driver Controller Board", and they will be pretty similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one.
+You are going to start by creating a Python program that allows the motors to be controlled through the GPIO pins on the Raspberry Pi.
 
-On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins but this board does not.
+**1.** On your Raspberry Pi, open Mu or the IDE of your choice and create a new file.
 
-Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
+To create a new Python file in Mu, click on **Menu > Programming > mu**. Then click **File > New File** to open an empty script.
 
-Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each of your DC motors will need to need to use two **IN** pins to connect to the Raspberry Pi so it can turn in both directions, as well as one **GND** pin to complete the circuit.
+![Open Mu on the Raspberry Pi by selecting it from the Programming menu](https://codewith.mu/img/en/howto/pi_open_mu.png)
 
-| GPIO pin   | connects to   | board pin   |
-|:----------:|:-------------:|:-----------:|
-|7           |<–>            |IN1          |
-|8           |<–>            |IN2          |
-|9           |<–>            |IN3          |
-|10          |<–>            |IN4          |
-|GND         |<–>            |GND          |
+[comment]: # (Image taken from the Mu website https://codewith.mu/en/howto/1.0/install_raspberry_pi. The icon was the Python icon on my Raspberry Pi, not the Mu icon)
 
-If your motor board does not have a **GND** pin then you can use the terminal block that the battery pack also uses. Strip the end of the female-to-female or female-to-male wire and secure it into the **GND** terminal block that your battery pack feeds into. There will now be two wires fed into the **GND** block: one from the battery pack and one from the Raspberry Pi.
+**2.** In the new file, type in the following code:
 
-![The four In pins from the motor controller board connected to four GPIO pins on the Raspberry Pi as well as the GND pins connected from the board to the Pi.](images/)
+~~~ python
+from gpiozero import Robot
+robin = Robot(left=(7,8), right=(9,10))
+~~~
 
-### Powering the Pi
+The first line of code imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors.
 
-The Raspberry Pi will need its own source of power. A small USB power bank is the easiest way to power the Raspberry Pi as it is light and mobile. You could also make your own power bank though that is beyond the scope of this course.
+The second line of code creates a `Robot` in the program. You can name it anything you like - in this course, I've chosen to call my robot `robin`.
+<!-- can you name it robot or Robot?? -->
 
-For testing purposes, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Pi will need a mobile source of power otherwise it won't be able to travel far from the mains power supply.
+When creating a new `Robot` in the code you need to give it two commands: `left` and `right`. The `left` command should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. In the last step, I chose GPIO pins 7 and 8 but yours might be different.
 
-### Setting up your Pi
+Similarly, the `right` command needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4** on the motor controller - for me that is GPIO pins 9 and 10.
 
-You should already be familiar with setting up a Raspberry Pi and using it. If not, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
+**3.** Save your file and call it `robin.py` or something similar.
 
-The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins. 
+#### Forward and backward
 
-Python and GPIO Zero will be installed by default if your Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or other operating systems.
+You are now going to test which direction is forward and backward on each motor. This will depend on how the motors are wired and the code in your program.
 
-**Did you have any problems connecting the motor board to the Raspberry Pi or to the battery pack?**
+**4.** At the end of your program, type in this code to drive both motors forward, wait 1 second and then stop the motors:
 
-**What type of power supply are you using for the Raspberry Pi?**
+~~~ python
+robin.forward()
+sleep(1)
+robin.stop()
+~~~
 
-Answer both of these questions in the  comments section below.
+**Note:** `robin` is the name I gave my `Robot` in the first piece of code - if you chose a different name then make sure you change `robin` to the name you specified.
+
+The first command, `robin.forward()`, tells both motors to turn forwards at the default speed.
+
+The `sleep` command waits for a given number of seconds before running the next command - in this example, the program waits 1 second before stopping both motors with the command `robin.stop()`.
+
+Run the program and check that both motors are turning in the direction shown in the diagram below in relation to the arrows you drew on the motors.
+
+![Animated GIF showing the direction both the motors should be spinning when the command robin.forward() is entered](images/)
+
+If the right-hand motor is turning in the wrong direction, alter your `Robot` code and swap the order of the right pin numbers.
+
+~~~ python
+# for example, change the right pins from
+robin = Robot(left=(9,10), right=(7,8))
+# to
+robin = Robot(left=(9,10), right=(8,7))
+~~~
+
+If the left-hand motor is turning the wrong way, then do the same thing and swap the order of the left pin numbers.
+
+**Note:** You may have chosen different GPIO pins than me to connect the Raspberry Pi to the motor controller.
+
+Stop the program and run it again to check how any changes you made affected the motors.
+
+**5.** Test that the motors both turn backwards by adding `robin.backward()` and another `sleep` command before `robin.stop()`, and running the program.
+
+~~~ python
+robin.forward()
+sleep(1)
+robin.backward()
+sleep(1)
+robin.stop()
+~~~
+
+You should see both the motors turn forwards, wait 1 second and then turn the opposite way for 1 second before stopping.
+
+If the both motors do not turn as expected, repeat steps 4 and 5 until both motors turn forward and backward correctly.
+
+#### Left and right
+
+Finally, you are going to test whether the motors are turning the correct way when using the `.left()` and `.right()` commands.
+
+**6.** Type the following lines of code at the end of the Python file you created. Run the program and note which motor changes direction on the command `robin.right(0.4)`.
+
+~~~ python
+robin.forward(0.4)
+sleep(1)
+robin.right(0.4)
+sleep(1)
+robin.stop()
+~~~
+
+**Note:** The 0.4 inside the `.forward()` and `.right()` commands makes the motors go a little slower, so it is easier to see which way they turn. The default speed is 1.
+
+The motor that changed direction is the right-hand motor. If that was the one you labelled ‘right’, then there’s nothing to change. If it was the one you labelled ‘left’, you need to alter your `Robot` code to swap the left pin numbers with the right pins:
+
+~~~ python
+# for example, change the GPIO pins from
+robin = Robot(left=(7,8), right=(9,10))
+# to
+robin = Robot(left=(9,10), right=(7,8))
+~~~
+
+Remember, you may have chosen different GPIO pins than me to connect the Raspberry Pi to the motor controller. Your pin numbers may also have been altered when setting up the forward and backward directions.
+
+Stop the program and run it again to check how any changes you made affected the motors. Repeat step 6 if you made any changes.
+
+**7.** Check that the left motor is turning correctly by adding the `.left()` command to the program.
+
+~~~python
+robin.forward(0.4)
+sleep(1)
+robin.left(0.4)
+sleep(1)
+robin.stop()
+~~~
+
+The motor that changed direction at the end of the program should be the motor you labelled ‘left’.
+
+#### Potential problems
+
+If you are having problems with getting the motors to turn in the right direction, try out the instructions for programming the motors again and save the code in a new Python file.
+
+**Top tip:** if there is a problem with your program or the wiring, the motors can spin continuously. If this happens, try entering the command `robin.stop()` (or the name you gave the robot object followed by `.stop()`) into the Python shell (known as the REPL in Mu). Otherwise, turn off the battery pack or Raspberry Pi and check the wiring is correct.
+
+If the motors aren't moving at all, try the following :
+
++ Check that the wires from the motor controller are connected to the four GPIO pins and GND as set out in the previous step
++ Check the wires between the motors and the motor controller are secure and connected properly
++ If the battery pack has a switch to turn it on and off, make sure it is switched on
++ Most motor controllers have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries)
+
+### Challenge: experimenting with direction and speed
+
++ Create a Python file that includes each of the commands: `forward`, `backward`, `left` and `right`.
+
++ Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.8)`
+
+Share your comments and any issues you had below.
