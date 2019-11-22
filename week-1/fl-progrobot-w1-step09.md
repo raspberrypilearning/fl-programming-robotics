@@ -35,7 +35,7 @@ At the very minimum, the chassis needs to house the following components:
 + AA battery holder (to power the motor controller board)
 + USB battery pack (for powering the Raspberry Pi)
 
-The chassis needs to allow the mounting of a pair of wheels that will connect to the motors and a ball caster so the buggy can move with two wheels.
+The chassis needs to allow the mounting of a pair of wheels to the axels of the motors and a ball caster that will act as a third wheel.
 
 ![A picture of all the components that will need to be attached to the robot buggy chassis:  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, line following sensor, AA battery holder, USB battery](images/)
 
