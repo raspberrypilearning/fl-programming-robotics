@@ -11,15 +11,15 @@ Once you have ensured all the robot parts fit to the chassis, you need to secure
 
 ### Permanent and removable fastenings
 
-Some types of fastening might be preferential to others depending on the material of the robot chassis and the component being secured.
+Some types of fastening might be preferable to others depending on the material of the robot chassis and the component being secured.
 
-Whilst making the prototype chassis, you may not want to use permanent fastenings, such as adhesive putty or glue, if you intend on removing the components at a later stage. In this instance, a fastening that is easier to remove may be preferential such as tape, cable ties or velcro strips. Once you are confident that you will not have to take things apart, using a permanent fastening might be desirable to keep a component secured firmly in place. 
+Whilst making the prototype chassis, you may not want to use permanent fastenings, such as adhesive putty or glue, if you intend on removing the components at a later stage. In this instance, a fastening that is easier to remove may be better, for example tape, cable ties or velcro strips. Once you are confident that you will not have to take things apart, using a permanent fastening might be desirable to keep a component secured firmly in place.
 
 Screw holes may need to be incorporated into the chassis to attach some components, the ball caster for example. If you are using a material that is fairly durable, like metal or a hard plastic, you can use a threading tool to create threads for the screws. Otherwise, you can use a sharp instrument to make a small hole for the screw to go through.
 
-### Securing the components in place 
+### Securing the components in place
 
-I'm going to be using a cardboard box as my chassis. If you are using a different type of material or container for your chassis then some of these instructions may need to be adjusted to suit your design. 
+I'm going to be using a cardboard box as my chassis. If you are using a different type of material or container for your chassis then some of these instructions may need to be adjusted to suit your design.
 
 ![Picture of the cardboard box that will be used as the chassis for the robot buggy](images/)
 
@@ -29,13 +29,13 @@ Place your motors inside the box, in roughly the position that you would like th
 
 ![Picture of the chassis containing the motors and a pen marking where a hole needs to be made for one of the axels of a motor](images/)
 
-**2.** Make a hole that is big enough for the motors’ axels to fit through. 
+**2.** Make a hole that is big enough for the motors’ axles to fit through.
 
 If your chassis is made out of cardboard, use a sharp object such as a pencil or screwdriver to carefully poke holes through the sides of the box.
 
 ![Picture of a pencil poking out of the side of the cardboard box where the axel of a motor will protrude.](images/)
 
-**3.** You will need to fix the motors in place, otherwise they will move once the wheels are attached and the motors are powered. 
+**3.** You will need to fix the motors in place, otherwise they will move once the wheels are attached and the motors are powered.
 
 Use a permanent or removable fastening to hold the motors down. If this is your prototype, tape or cable ties might be best as these will be easy to remove.
 
