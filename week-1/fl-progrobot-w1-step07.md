@@ -7,7 +7,7 @@ Related files:
 
 ## Testing the motors
 
-In this step you will choose one of the motors to be the left motor and the other one to be the right motor. You will then use the Raspberry Pi to program the motors so they are able to go forward, backward, left and right.
+In this step you will choose one of the motors to be the left motor and the other one to be the right motor. You will then use the Raspberry Pi to program the motors so that the robot buggy is able to go forward, backward, left and right.
 
 ### Labelling the motors
 
@@ -23,9 +23,7 @@ The easiest way to keep track of which motor is left and which is right is to la
 
 I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs.
 
-The IDE I will be using is **Mu**, which is available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
-
-[comment]: # (Mu was installed already on my Pi. Does it depend on version of Raspbian?)
+The IDE I will be using is **Mu**, which is preinstalled on most Raspberry Pis. Mu is also available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
 
 If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
 
@@ -39,12 +37,6 @@ You are going to start by creating a Python program that allows the motors to be
 
 **1.** On your Raspberry Pi, open Mu or the IDE of your choice and create a new file.
 
-To create a new Python file in Mu, click on **Menu > Programming > mu**. Then click **File > New File** to open an empty script.
-
-![Open Mu on the Raspberry Pi by selecting it from the Programming menu](https://codewith.mu/img/en/howto/pi_open_mu.png)
-
-[comment]: # (Image taken from the Mu website https://codewith.mu/en/howto/1.0/install_raspberry_pi. The icon was the Python icon on my Raspberry Pi, not the Mu icon)
-
 **2.** In the new file, type in the following code:
 
 ~~~ python
@@ -54,12 +46,11 @@ robin = Robot(left=(7,8), right=(9,10))
 
 The first line of code imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors.
 
-The second line of code creates a `Robot` in the program. You can name it anything you like - in this course, I've chosen to call my robot `robin`.
-<!-- can you name it robot or Robot?? -->
+The second line of code sets the GPIO pins of the motors that the `Robot` is interacting with. You can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
 
-When creating a new `Robot` in the code you need to give it two commands: `left` and `right`. The `left` command should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. In the last step, I chose GPIO pins 7 and 8 but yours might be different.
+When defining the `Robot` in the code you need to give it two arguments: `left` and `right`. The `left` argument should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. In the last step, I chose GPIO pins 7 and 8 but yours might be different.
 
-Similarly, the `right` command needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4** on the motor controller - for me that is GPIO pins 9 and 10.
+Similarly, the `right` argument needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4** on the motor controller - for me that is GPIO pins 9 and 10.
 
 **3.** Save your file and call it `robin.py` or something similar.
 
@@ -67,7 +58,7 @@ Similarly, the `right` command needs to specify the GPIO pins that are connected
 
 You are now going to test which direction is forward and backward on each motor. This will depend on how the motors are wired and the code in your program.
 
-**4.** At the end of your program, type in this code to drive both motors forward, wait 1 second and then stop the motors:
+**4.** At the end of your program, type in this code to drive both motors forward at the default speed, wait 1 second and then stop the motors:
 
 ~~~ python
 robin.forward()
@@ -76,8 +67,6 @@ robin.stop()
 ~~~
 
 **Note:** `robin` is the name I gave my `Robot` in the first piece of code - if you chose a different name then make sure you change `robin` to the name you specified.
-
-The first command, `robin.forward()`, tells both motors to turn forwards at the default speed.
 
 The `sleep` command waits for a given number of seconds before running the next command - in this example, the program waits 1 second before stopping both motors with the command `robin.stop()`.
 
@@ -174,4 +163,4 @@ If the motors aren't moving at all, try the following :
 
 + Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.8)`
 
-Share your comments and any issues you had below.
+Do you need any help? Share any issues you have below with your fellow learners.
