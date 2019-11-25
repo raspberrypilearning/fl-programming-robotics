@@ -52,14 +52,10 @@ In the code above, I specified a speed that is lower than the default speed of 1
 
 ### Connecting to a Raspberry Pi remotely
 
-To use your Raspberry Pi without connecting a mouse, monitor, or keyboard, you can remotely access it via SSH or VNC.
+Being able to connect to your Raspberry Pi remotely is really useful when designing, running and testing code on the robot buggy. It means you don't have to or remove your Pi from the buggy every time you want to run or edit a program.
 
-[comment]: # (
-Include a PDF for connecting the to a Raspberry Pi remotely via SSH and another for connecting via VNC.
-)
+To use your Raspberry Pi without physically connecting it to a monitor, mouse or keyboard, you can remotely access the Pi via SSH (Secure Shell) or VNC (Virtual Network Computing). 
 
-You can also create a remote controller for controlling the movement of your buggy.
+VNC is a graphical desktop sharing system that allows you to remotely control the desktop interface of one computer (running VNC Server) from another computer or mobile device (running VNC Viewer). For more information, read our guide on [Connecting to your Raspberry Pi with VNC Viewer](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md).
 
-[comment]: # (
-Link article
-)
+You can also access the command line of a Raspberry Pi remotely from another computer or device on the same network using SSH. However, you will only have access to the command line, not the full desktop environment. Our guide on [Connecting to Raspberry Pi via SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) contains more details on how to do this.
