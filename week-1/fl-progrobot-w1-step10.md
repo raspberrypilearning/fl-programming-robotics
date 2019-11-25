@@ -7,11 +7,48 @@ Related files:
 
 ## Making the robot move
 
-INTRO
+Now you are going to test whether your buggy can move forward, backward, left and right using a Python program you created in step 1.7. First though, find a suitable surface for the buggy to move on and then power up the Pi and motor controller.
+
+### Finding a suitable surface
+
+Typically, the motors and wheels used for a robot buggy aren't very good when moving on certain surfaces, such as carpet. If possible, I recommend testing the buggy on a large wooden surface or tilled floor. 
 
 ### Powering the Raspberry Pi and motor controller
 
-If you are using a mobile battery pack, you can now power up your Raspberry Pi and the motor controller board. If either of the wheels starts spinning continuously, chances are one of the connections to the Raspberry Pi has come loose. Remove the power from the Raspberry Pi and check the wiring from step 1.6.
+Power up your Raspberry Pi and the motor controller board. Remember, you will need a mobile power supply for the Pi otherwise the buggy will not be able to travel far from the mains plug.
+
+If either of the wheels starts spinning continuously, chances are one of the connections between the motor controller and the Raspberry Pi has come loose or is wired up wrong. Turn off the battery pack for the motor controller or remove the power from the Raspberry Pi and check the wiring from step 1.6.
+
+### Testing the movement
+
+To check whether your buggy can move in all directions, it is best to use one of the programs you created in step 1.7. Make sure the program is one that was working when you tested the motor directions previously. 
+
+You need to check that the buggy can move in every direction. Therefore, a program that contains the commands `.foward()`, `.backward()`, `.left()` and `.right()` is ideal. Remember to end the program with `.stop()` to stop the motors from turning.
+
+If you don't have a program that is suitable, you can copy the code below into a new file. However, the numbers of your GPIO pins set in the `left` and `right` arguments of the `Robot` in line 2 may not be the same as mine or in a different order.
+
+~~~ python
+from gpiozero import Robot
+robin = Robot(left=(7,8), right=(9,10))
+
+robin.forward()
+sleep(1)
+robin.right(0.4)
+sleep(1)
+robin.backward(0.6)
+sleep(1)
+robin.left(0.4)
+sleep(1)
+robin.stop()
+~~~
+
+**Does the robot buggy move forward, backward, left and right correctly in the order you specified in the code?**
+
+If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. Follow the instructions again in step 1.7 if you are still having issues.
+
+**Does the speed need adjusting?**
+
+In the code above, I specified a speed that is lower than the default speed of 1 in the commands `.right()`, `.backward()` and `.left()`. If your buggy doesn't turn or move backward as intended, try changing the values and then run the program again to see any changes made.
 
 ### Connecting to a Raspberry Pi remotely
 
@@ -26,12 +63,3 @@ You can also create a remote controller for controlling the movement of your bug
 [comment]: # (
 Link article
 )
-
-
-
-### Testing the movement
-
-Does it move left, right, forwards, backwards?
-Are the GPIO pins set correctly in the code? 
-Does the speed / turning need to be adjusted? 
-
