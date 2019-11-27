@@ -51,7 +51,7 @@ Start by assembling the ball caster. It is useful to work out where the screw ho
 
 ![Picture of the screw fastening of the ball caster inside the cardboard box.](images/)
 
-Most ball casters come with spacers to increase the height. If the chassis dips towards the floor at the front, add spacers to the ball caster until the chassis is level.
+Most ball casters come with spacers to increase the height. If the chassis dips towards the floor at the front, add spacers to the ball caster until the chassis is level. Otherwise, you can adjust the position of the ball caster forwards or towards the back of the chassis if the buggy is dipping where the wheels are.
 
 ![Picture of the ball caster, wooden spacers for the ball caster and the wheels of the robot buggy.](images/)
 
