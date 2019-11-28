@@ -23,4 +23,4 @@ This could be a pattern such as:
 
 You could also include a loop in your program so that the buggy repeats the pattern more than once.
 
-Once you’ve completed a challenge, add a comment below and share a link to your code (e.g. using [Pastebin](https://pastebin.com/)). You can also comment with any observations you make, and any questions if you are having trouble.
+Once you’ve completed a challenge, add a comment below and share a link to your code (e.g. using [Pastebin](https://pastebin.com/)). You can also comment with any observations you make, and any questions you have if you are having trouble.
