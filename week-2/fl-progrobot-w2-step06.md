@@ -34,3 +34,27 @@ Driverless cars combine a huge array of sensors to monitor the road, surrounding
 ### Space Rovers
 
 Many of the important; scientific, exploratory and rescue operations humanity is undertaking involve venturing into environments that are extremely hostile to us. Using robots to do this allows us to gather info and study important environments we wouldn't otherwise be able to. 
+
+Extraterrestrial exploration is one area where robots are making a huge impact - depending on the gravity. Robotic space rovers are able to navigate and collect data and send it back to scientists on earth for study. 
+
+**How do they work?** 
+
+The primary directive for space rovers is *data collection*, and the ability to navigate - which is essential to achieve the first mission. *Cameras* on top of the rover take images and video of the surface of the planet, so scientists can study the landscape and other properties of the terrain. *Microscopic cameras* are used to take extreme close ups of soil and rocks, showing minerals and textures on their surfaces. [*Spectrometers*](https://sciencing.com/spectrometer-5372347.html) analyse the properties of soil and air by examining their light spectrum properties, these instruments can detect radiation and other forms of light. *Environmental and atmospheric sensors* take readings of the weather and environmental properties of a planet, this data is used to establish weather patterns on a seasonal basis.  
+
+[If you are interested, you can see a full list of instruments on the Curiosity Mars rover here](https://mars.nasa.gov/msl/spacecraft/instruments/summary/)
+
+### Rescue Robots
+
+Another great use of robotics in hostile environments, is rescue robots sent into disaster zones to search for life. These robots are deployed into situations that are extremely dangerous but essential to save lives. House and Forest fires, earthquake zones and tsunami/hurricane landing zones - amongst many others. These robots are designed specifically for a single type of disaster, so this category covers a wide range of robots. 
+
+**How do they work?** 
+
+Due to the wide range of robots in this category, this break down will be a bit more general. These robots have a variety of sensors that are used to navigate through the terrain, detecting obstacles and dangerous terrain so they can be avoided. The movement apparatus in these robots are often the most complex parts of the robots, able to roll or swim around many obstacles or even move them if necessary. Aquatic rescue robots use propulsion systems to move through the water, land rescue robots are often equipped with treads which roll over difficult terrain much easier. Finally, an array of sensors are included to allow the robots to make decisions about where to investigate and how to get there, you will have seen a few of these uses in the earlier step on sensors.
+
+### Other autonomous robots. 
+
+Another use for autonomous robots is in production lines and factory's. 
+
+**How do they work?** 
+
+From your own experience or by doing some research answer the question above and post your thoughts in the comments section.
