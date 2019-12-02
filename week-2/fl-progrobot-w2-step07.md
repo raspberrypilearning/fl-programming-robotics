@@ -7,7 +7,9 @@ Related files:
 
 ## Attaching the UDS to the buggy
 
-Now you have read about how a Ultrasonic Distance Sensor (UDS) works, you are going to connect the UDS to the Raspberry Pi. The instructions differ depending on whether the UDS is 3.3V or 5V so make sure you read them carefully and use the diagrams to guide you.
+Now you have read about how a Ultrasonic Distance Sensor (UDS) works, you are going to connect the UDS to the Raspberry Pi. 
+
+A voltage divider is required if the UDS `echo` pin is 5V to ensure the Pi is not damaged, such as the HC-SR04 sensor. Alternatively, the 3V3 tolerant HC-SR04P sensor will work without a voltage divider.
 
 ### What you will need
 
@@ -41,7 +43,7 @@ As discussed in the previous step, a typical UDS has 4 pins: `VCC`, `Trig`, `Ech
 
 **4.** The wiring of the `Echo` pin depends on whether the UDS is 3.3V or 5V.
 
-#### 3.3V UDS
+#### Wiring the `Echo` pin on a 3.3V UDS
 
 Wiring a **3.3V** UDS is fairly simple as the output voltage of the `Echo` pin does not need to be reduced. The `Echo` pin on the UDS can connect straight into `GPIO 17` in the Pi.
 
@@ -49,7 +51,7 @@ The diagram below shows you the complete setup for a **3.3V** UDS:
 
 ![Remove the vibration sensor and two connections (GP14 and GND) from the image. Replace the green, orange and black wires with one connection from Echo straight to GP17 and remove the two resistors](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
 
-#### 5V UDS
+#### Wiring the `Echo` pin on a 5V UDS
 
 The output of the `Echo` pin is **5V** which will damage your Pi, so you need to reduce the output voltage to a **maximum of 3.3V**.
 
@@ -75,10 +77,20 @@ The diagram below shows you the complete setup for a **5V** UDS:
 
 ![Remove the vibration sensor and two connections (GP14 and GND) from the image](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
 
+### Securing the UDS to the buggy
+
+Now that the UDS is connected to the Raspberry Pi you will need to attach the UDS to the robot buggy. The UDS will be detecting objects whilst the buggy is moving forwards, therefore you will need to secure the UDS to the front of the buggy. 
+
+Using a pencil, mark where you want the emitters and receivers (the two silver cylinders from the diagram above) to protrude from the buggy. 
+
+![Picture of the UDS cylinders being marked on the buggy](images/)
+
+Cut a hole into the buggy container that is just big enough for the emitters and receivers to poke through. You can also use tape to secure the UDS more securely to the chassis.
+
+![Picture of the UDS attached to the buggy](images/)
+
 ### Checking the connections
 
-Double check all your pins are connected properly before turning on the Pi. It's easy for the female ends of the jumper leads to come loose from the Pi.
+Double check all your pins are connected properly before turning on the Pi. It's easy for the female ends of the jumper leads to come loose from the Pi whilst you are moving parts of the robot buggy around.
 
-**Did you have any problems with wiring the UDS?**
-
-Share any issues you have in the comments.
+Share any issues you had with wiring the UDS or attaching it to the buggy in the comments.
