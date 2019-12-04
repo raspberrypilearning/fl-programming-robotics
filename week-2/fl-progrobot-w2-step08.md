@@ -146,8 +146,8 @@ Run your code and you should see a stream of numbers, showing you the distance f
 
 ### Testing the distances
 
-What happens if you place an object really, really close to the UDS? Why are the values larger than they should be?
+What are the range of values that your UDS is outputting? 
 
-How about when a object is really far away from the UDS? What values are output?
+What happens if you place an object really close or far away from the UDS? 
 
-Share your thinking and answers in the comments below.
+Share your answers in the comments below.

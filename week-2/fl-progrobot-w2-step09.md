@@ -5,9 +5,9 @@ Related links:
 Related files:
 )
 
-## Avoiding an obstacle autonomously
+## Avoiding obstacles autonomously
 
-So far, you have created programs for moving the robot buggy and detecting objects at different distances. Now you are going to create a program for detecting and navigating around an object autonomously.
+So far, you have created programs for moving the robot buggy and detecting objects at different distances. Now you are going to create a program for detecting and navigating around objects autonomously.
 
 ### Programming both the motors and the UDS
 
@@ -29,7 +29,7 @@ The other library that the program will rely on is time, which is necessary for 
 
 **Setting up the new program**
 
-The quickest way to setup the program with the correct GPIO pins for your setup is to use your previous code.
+The quickest way to setup the program with the correct GPIO pins for your buggy is to use your previous code.
 
 **1.** Make a copy of the program you created in the previous step to calculate the distance of an object in front of the UDS.
 
