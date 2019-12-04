@@ -5,33 +5,29 @@ Related links:
 Related files:
 )
 
-## 
+## Challenge: improving the obstacle avoidance
+
+There are some limitations and improvements that could be made to the program in the previous step, which may result in a more robust solution to autonomously avoiding objects. 
+
+### Potential improvements
+
+You may want to experiment with different distance thresholds and sleep values to see how that affects the buggy's ability to avoid an obstacle.
+
+Another improvement you could make to the program is to allow the buggy to randomly choose to turn left or right once an obstacle is detected. How might you program this?
+
+Can you think of any other improvements that could be made to the program?
+
+### Limitations of the program
+
+You may have found that an object which is really close to the UDS returns a much larger distance than expected. This usually occurs if an object is closer than the minimum distance a UDS can detect accurately - for my UDS that's anything 2mm or less away from the sensors. Likewise, a UDS will have a maximum range it can measure accurately, which for my UDS is 500cm or half a metre. 
+
+Take a look at the distance values that are output when an object 
+
+How might you 
 
 
-### The algorithm
+At the moment, this limitation of the sensor isn't going to affect the program massively but be aware of it incase the buggy doesn't behave as intended with really close or distant objects. You could try and find a hack to detect and respond to really close or distant objects.
 
-Whenever you embark on coding a solution to a problem, you need to first spend some time thinking about the intentions of the program and how you might achieve these outcomes. 
+Did you find a work around for an object that was too close for the UDS to measure the distance accurately?
 
-The algorithm you will need to create for detecting and navigating around an object needs breaking down first into several parts, which I am going to pose as questions:
-
-+ What hardware do I need to access within my program and what libraries do these rely on?
-+ At what distance is an object too close to the buggy?
-+ What should happen once an object has been detected as being too close?
-+ How often will you check whether an object is too close or not?
-
-
-
-The two pieces of hardware I will need to communicate with to move the buggy and avoid an obstacle are the UDS and the motors. 
-
-
-Begin by creating a new file. You can use the code previously written during this course to help you throughout this program.
-
- 
-The GPIO Zero library has been utilised throughout this course to interact with two of the buggy's components; `Robot` to control the motors and `InputDevice` and `OutputDevice` for the UDS.
-
-Your program will also need to use `time` and `sleep` from the time library to calculate the distance between the UDS and an object.
-
-
-Currently, the program calculates the time taken from a sound being emitted by the UDS until that sound is detected. 
-
-Now you need to figure out what distance an object should be in front of the buggy before enacting the next stage of the algorithm. I'm going to choose 20cm (or 0.2 metres) as my threshold value for now and I can experiment with this value later.
+Share your ideas and any code you create in the comments below.

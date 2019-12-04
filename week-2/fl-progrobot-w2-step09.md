@@ -5,25 +5,29 @@ Related links:
 Related files:
 )
 
-## Avoiding an obstacle
+## Avoiding an obstacle autonomously
 
-So far, you have created programs for moving the robot buggy and detecting objects at different distances. Now you are going to combine these two algorithms so that the buggy can autonomously avoid an obstacle.
+So far, you have created programs for moving the robot buggy and detecting objects at different distances. Now you are going to create a program for detecting and navigating around an object autonomously.
 
 ### Programming both the motors and the UDS
 
-To create a program for detecting and navigating around an object, you will need to utilise some of the code you have written so far in this course.
+For this program, you will need to bring together some of the code you have written so far in this course to solve a new problem. To begin this process, I am going to consider the different stages of the problem by breaking it down into several parts, which I will pose as questions:
 
-For this program, I am going to show you a process for combining several programs that you have already created to solve a new problem. To begin with, break down the new problem into several parts, which I will pose as questions:
-
-+ What hardware does my program need to interact?
-+ At what distance is an object too close to the buggy?
-+ How should the buggy behave when an object is too close or a safe distance away? 
++ What **hardware** does my program need to interact with?
++ What should the buggy do if an object is ***not*** too close to it? 
++ How should the buggy behave when an object ***is*** too close? 
 
 #### Interacting with the hardware
 
-Firstly, I must consider what hardware I am going to be communicating with and which programming libraries are required. 
+Firstly, I must consider what hardware I am going to be communicating with. The choice of hardware also leads me to consider which programming libraries are required. 
 
-There are two pieces of hardware this program needs to interact with; the motors and the UDS. I will use the GPIO Zero library and import `Robot` to control the motors, as well as `InputDevice` and `OutputDevice` to communicate with the UDS. This program will also need to import `sleep` and `time` from the time library.
+There are two pieces of hardware that this program needs to interact with; the motors for moving the buggy and the UDS for detecting objects. 
+
+One of the libraries I will use is GPIO Zero, from which I will import `Robot` to control the motors, as well as `InputDevice` and `OutputDevice` to communicate with the UDS. 
+
+The other library that the program will rely on is time, which is necessary for determining when the motors or UDS should perform certain actions. From this library I need to import `sleep` and `time`.
+
+**Setting up the new program**
 
 The quickest way to setup the program with the correct GPIO pins for your setup is to use your previous code.
 
@@ -36,7 +40,7 @@ from gpiozero import Robot, InputDevice, OutputDevice
 from time import sleep, time
 ~~~
 
-**3.** Setup the motors as well as the UDS so both pieces of hardware can be communicated with via the GPIO pins on the Raspberry Pi.
+**3.** Setup the motors in addition to the UDS so that both pieces of hardware can be communicated with via the GPIO pins on the Raspberry Pi.
 
 ~~~ python 
 trig = OutputDevice(4)
@@ -78,48 +82,80 @@ while True:
 	print(distance)
 ~~~
 
-#### How close is too close?
+#### What should the buggy do if there isn't an object nearby?
 
-Currently, the program calculates the distance an object is from the UDS in metres. Next, you need to work out at what distance an object is too close before the buggy responds. I'm going to choose 20cm (or 0.2 metres) as my threshold value for now; I can experiment with this value later.
+The robot buggy should move forwards unless it detects an object that is too close. 
 
-**5.** Inside the `while True` loop and after `distance` has been calculated, you are going to check if an object is less than 0.2 metres away:
+Although you could program the buggy to move forwards inside the `while True` loop, this would result in the buggy moving forever unless you turn off the Raspberry Pi. Therefore, I'm going to change the `while` loop to a `for` loop so that the buggy moves forward for a set number of times before stopping the buggy.
 
-~~~ python
-if distance < 0.2:
-    # do something!
+**5.** Replace the `while` loop with the following code:
+
+~~~ python 
+for i in range(30):
+    duration = get_pulse_time()
+    distance = calculate_distance(duration)
+    print(distance)
+    
+    robin.forward()
+
+robin.stop()
 ~~~
 
-### What should the buggy do?
+The robot buggy will now move forwards 30 times and then the buggy will stop moving before the program ends.
 
-You now have two scenarios to plan for: what should the buggy do if an object is too close to it and what should the buggy do if there isn't an object close by. 
+**Remember**: you may have changed the `Robot` variable from `robin` to something else.
 
-For this program, the buggy should move forward unless an object is too close. If an object is detected as too close, the buggy should move left, right or backward to avoid the obstacle in front. 
+#### What should the buggy do if an object is too close?
 
-**6.** I've chosen to move the buggy left if an object is 20cm or less away, otherwise the buggy should move forward. 
+At the moment, the buggy moves forwards regardless of how close it is to an object. If an object is detected as being within a certain distance of the UDS, then the buggy should move left or right to avoid the obstacle in front.
+
+**How close is too close?**
+
+The program currently calculates the distance an object is from the UDS in metres. You need to specify the threshold value of when an object is too close before the buggy responds. 
+
+The threshold value I'm going to choose is 20cm (0.2 metres) for now; I can experiment with this value later.
+
+**6.** Inside the `for` loop and after `distance` has been calculated, you are going to check if an object is less than 0.2 metres away. Remove the command `robin.forward()` and replace it with:
 
 ~~~ python
 if distance < 0.2:
     robin.left()
+    sleep(0.5)
 else:
     robin.forward()
+
+sleep(0.1)
 ~~~
 
-**Important:** the motors may not run smoothly whilst the Python program is printing messages. Comment out or remove any `print` statements before running the program.
+For this program, I have chosen to move the buggy left if an object is 20cm or less away, otherwise the buggy should move forward. You could chose another direction to move once an obstacle is detected, for example right or backward and then left or right. 
 
-You could chose another direction to turn once an obstacle is detected instead of left. 
+I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way - again, the value specified can be changed.
 
-Experiment with different distance thresholds and see how that affects the performance of the buggy avoiding an obstacle.
+The last `sleep` ensures the program waits for 0.1 seconds before attempting to detect more objects so the UDS has time to settle.
 
-STOP?
+Your final code for the end of the program should be:
 
-### Limitations of the program
+~~~ python
+for i in range(30):
+    duration = get_pulse_time()
+    distance = calculate_distance(duration)
+    print(distance)
+    
+    if distance < 0.2:
+        robin.left()
+        sleep(0.5)
+    else:
+        robin.forward()
 
-You may have found that an object which is really close to the UDS returns a much larger distance than expected. This usually occurs if an object is closer than the minimum distance a UDS can detect accurately - for my UDS that's anything 2mm or less away from the sensors. Likewise, a UDS will have a maximum range it can measure accurately, which for my UDS is 500cm or half a metre. 
+    sleep(0.1)
 
-At the moment, this limitation of the sensor isn't going to affect the program massively but be aware of it incase the buggy doesn't behave as intended with really close or distant objects. You could try and find a hack to detect and respond to really close or distant objects.
+robin.stop()
+~~~
 
-How well can your buggy avoid an object?
+### Test the program
 
-Did you find a work around for an object that was too close for the UDS to measure the distance accurately?
+Try running the program whilst the buggy is on a suitable surface. 
 
-Share your thoughts and code in the comments below.
+If the buggy is not behaving as expected, first check that all the connections to the GPIO pins are correct before trying the code again. It can also be beneficial to run an earlier program you know was working to test whether the motors and UDS are still working as expected.
+
+Leave a comment below if you are having issues with the buggy or if you found a solution to a problem you faced.
