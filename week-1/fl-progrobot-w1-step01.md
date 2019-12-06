@@ -33,21 +33,21 @@ Course breakdown
 + Wheels (2 minimum)
 + Ball caster (unless using more than 2 wheels)
 + Ultrasonic distance sensor (between 1-2)
-+ Line following sensor (between 1-3)
++ Line following sensor (between 2-3)
 + Jumper leads (female-female and male-female) or wire
 + AA battery holder for 4 AA batteries (1 per motor controller board)
 + AA batteries (x4 per motor controller board)
 + A USB battery pack (to power the Raspberry Pi)
++ Soldering iron and solder
++ Wire strippers
++ Scissors
 + Screwdriver
++ Adhesives (duct tape / electrical tape, putty, glue etc.)
 + A small cardboard box for the chassis (can be plastic, wood, metal etc.)
 
 You may also need:
 
-+ Soldering iron and solder
-+ Scissors
-+ Wire strippers
-+ Adhesives (duct tape / electrical tape, putty, glue etc.)
-+ Cable ties
++ Cable ties or velcro straps
 
 **Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, this [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will provide you with some quick tips and tricks.**
 
