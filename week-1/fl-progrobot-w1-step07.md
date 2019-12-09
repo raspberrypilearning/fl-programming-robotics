@@ -17,7 +17,7 @@ The easiest way to keep track of which motor is left and which is right is to la
 + Use a marker pen to label the motor on the left-hand side ‘left’ and draw an arrow on it to indicate which way is forward, just like in the animation below
 + Label the other motor ‘right’ and draw an arrow on it pointing in the same direction as your first motor
 
-![Animated GIF of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up.](images/)
+![Picture of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up](images/1_7-labelled-motors)
 
 ### Choosing a programming environment
 
@@ -72,7 +72,7 @@ The `sleep` command waits for a given number of seconds before running the next 
 
 Run the program and check that both motors are turning in the direction shown in the diagram below in relation to the arrows you drew on the motors.
 
-![Animated GIF showing the direction both the motors should be spinning when the command robin.forward() is entered](images/)
+![Picture with arrows showing the direction both the motors should be spinning when the forward() command is entered](images/1_7-motors-spinning-forward)
 
 If the right-hand motor is turning in the wrong direction, alter your `Robot` code and swap the order of the right pin numbers.
 

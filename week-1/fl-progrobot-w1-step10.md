@@ -42,6 +42,8 @@ sleep(1)
 robin.stop()
 ~~~
 
+![Video of the buggy moving forward, right, backward and left](images/1_10-buggy-moving-all-four-directions)
+
 **Does the robot buggy move forward, backward, left and right correctly in the order you specified in the code?**
 
 If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. Follow the instructions again in step 1.7 if you are still having issues.

@@ -7,22 +7,24 @@ Related files:
 
 ## Connecting the Raspberry Pi and battery pack to the motor board
 
-Now that you have attached the motors to the motor controller board, your next step is to connect the motor board to  the GPIO pins on the Raspberry Pi, and to the battery back. This will allow you to power the motor board and control the motors using the Raspberry Pi.
+Now that you have attached the motors to the motor controller board, your next step is to connect the motor board to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motor board and control the motors using the Raspberry Pi.
 
 ### What you will need
 
 For this step you will need the following items:
 
-+ Motor controller board (wired up to the motors)
 + Raspberry Pi
-+ AA battery holder (for 4 x AA batteries)
++ Motor controller board (wired up to the DC motors)
++ AA battery holder (for 4 AA batteries)
 + 4 x AA batteries
-+ Jumper leads (female-female)
++ 5 x jumper leads (female-female)
 + Screwdriver
 
 You may also need:
 
 + GPIO reference card
+
+![Picture of the robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-female), Screwdriver, GPIO reference card](images/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack)
 
 ### Connect the battery pack to the motor board
 
@@ -34,7 +36,11 @@ The battery pack should include 2 wires, one red and one black. The red wire is 
 Mention the +5V block can be used to power another device, such as Arduino? Is the voltage too high for a Raspberry Pi?
 )
 
+![Picture of the red wire from the battery pack connected to the 12V terminal block of the motor controller](images/1_6-battery-pack-red-wire-motor-controller)
+
 The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit for the battery pack. Make sure all the screws of the terminal blocks are tightened securely.
+
+![Picture of the black wire from the battery pack connected to the GND terminal block of the motor controller](images/1_6-battery-pack-black-wire-motor-controller)
 
 Insert the 4 AA batteries into the battery pack. Some battery packs have a switch to turn it on and off; if it does than turn it on. Most motor controllers have a red LED that lights up to indicate it is powered on. If the LED is not lit up, the wires may not be connected properly. You may also need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries).
 
@@ -43,6 +49,8 @@ Insert the 4 AA batteries into the battery pack. Some battery packs have a switc
 These instructions are for a "L298N Dual H Bridge DC Stepper Motor Driver Controller Board", and they will be pretty similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one.
 
 On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins but this board does not.
+
+![A L298N motor controller board with four IN screw terminals for connecting to an electric motor. The four IN terminals are circled.](images/1_6-motor-controller-board-in-circled)
 
 Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
 
@@ -58,7 +66,7 @@ Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to 
 
 If your motor board does not have a **GND** pin then you can use the terminal block that the battery pack also uses. Strip the end of the female-to-female or female-to-male wire and secure it into the **GND** terminal block that your battery pack feeds into. There will now be two wires fed into the **GND** block: one from the battery pack and one from the Raspberry Pi.
 
-![The four In pins from the motor controller board connected to four GPIO pins on the Raspberry Pi as well as the GND pins connected from the board to the Pi.](images/)
+![Picture of the four IN pins from the motor controller connected to four GPIO pins on the Raspberry Pi, as well as a GND pin connected from the Pi to the motor controller](images/1_6-motor-controller-connected-to-raspberry-pi)
 
 ### Powering the Pi
 

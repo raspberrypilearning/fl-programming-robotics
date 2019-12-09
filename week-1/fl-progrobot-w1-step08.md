@@ -9,7 +9,7 @@ Related files:
 
 Now you have the motors set up, the next stage is to design a chassis to house the robot in. A chassis is the physical frame of a wheeled vehicle that holds together the main parts of a vehicle. Your buggy will need a chassis so that you can secure the components, such as the wheels, motors and Raspberry Pi, to it.
 
-![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame.](images/1_9-automobile-chassis.png)
+![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame](images/1_8-automobile-chassis.png)
 
 ### Choosing a material
 
@@ -29,15 +29,15 @@ At the very minimum, the chassis needs to house the following components:
 
 + Raspberry Pi
 + Motor controller board
-+ DC motors (2 x minimum)
-+ Ultrasonic distance sensor (1 x minimum)
-+ Line following sensor (1 x minimum)
++ 2 x DC motors
++ Ultrasonic distance sensor
++ 2 x line following sensors
 + AA battery holder (to power the motor controller board)
 + USB battery pack (for powering the Raspberry Pi)
 
 The chassis needs to allow the mounting of a pair of wheels to the axles of the motors, and a ball caster that will act as a third wheel.
 
-![A picture of all the components that will need to be attached to the robot buggy chassis:  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, line following sensor, AA battery holder, USB battery](images/)
+![Picture of all the components that will need to be attached to the robot buggy chassis -  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, 2 line following sensors, AA battery holder, USB battery pack](images/1_8-components-for-the-chassis)
 
 #### Making sure the components fit
 
@@ -45,7 +45,7 @@ If you are planning on using a pre-made container for the chassis, you can try p
 
 It can also be useful to design the layout of the buggy on paper to make sure that all the components have enough room. Begin by making a footprint, which is the base of your buggy. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about to try out different arrangements.
 
-![Picture of the buggy components drawn represented in real size on paper with a cardboard container for the chassis of the buggy.](images/)
+![Picture of the buggy components represented in real size on paper with a cardboard container for the chassis of the buggy](images/1_8-chassis-componets-on-paper)
 
 Make sure each piece of paper is the correct size and shape for the component. You might have to measure your components, but most of them will have technical documentation online that will include their exact dimensions.
 
