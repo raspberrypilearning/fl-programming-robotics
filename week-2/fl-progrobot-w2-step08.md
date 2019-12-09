@@ -46,12 +46,16 @@ def get_pulse_time():
    trig.off()
 ~~~
 
+![Animation of Trig pin being set to High for 10μs, followed by an 8 cycle sonic burst being emitted](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
+
 **4.** As soon as the ultrasonic sensor has sent out a burst of sound from the `trig` pin, the `echo` pin is set to high. You can use a while loop inside the function to detect when this happens and then record the current time:
 
 ~~~ python
     while echo.is_active == False:
         pulse_start = time()
 ~~~
+
+![Animation of Trig pin being set to High for 10μs, followed by an 8 cycle sonic burst being emitted. Once the sound stops being emitted, the Echo pin is set to High](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
 In the code above, the start time will continue to be replaced by the current time until the `echo` pin has been activated and set to high.
 
@@ -61,6 +65,8 @@ In the code above, the start time will continue to be replaced by the current ti
     while echo.is_active == True:
         pulse_end = time()
 ~~~
+
+![Animation of Trig pin being set to High for 10μs, followed by an 8 cycle sonic burst being emitted. Once the sound stops being emitted, the Echo pin is set to High and remains High until the Echo pin receives the sound, which sets the pin to Low](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
 **6.** Next, you need to let the UDS sleep for a little bit before it can be used again. Then you can return the length of time it took for the pulse to be sent and received:
 

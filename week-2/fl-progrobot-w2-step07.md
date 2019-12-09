@@ -20,12 +20,13 @@ For this step, you will need the following items:
 
 If your UDS is 5V, you will also need:
 
-+ Soldering iron
-+ Solder
++ Soldering iron and solder
 + 330 Ohm resistor
 + 470 Ohm resistor
 + 2 more female-male jumper leads (6 in total)
 + Tape
+
+![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-male jumper leads, Soldering iron and solder, 330 Ohm resistor, 470 Ohm resistor, Tape](images/2_7-parts-for-the-UDS)
 
 ### Wiring the UDS
 
@@ -36,6 +37,8 @@ Be aware that the instructions for wiring the UDS to the Raspberry Pi are slight
 As discussed previously, a typical UDS has 4 pins: `VCC`, `Trig`, `Echo` and `GND`. All of these pins need to be connected to the Raspberry Pi.
 
 **1.** Start by connecting a 5V pin on the Raspberry Pi into the `VCC` pin on the UDS using a female-male jumper lead. Refer to the diagram below or a GPIO reference guide if you aren't sure which pin on the Pi to use.
+
+![The layout of the GPIO pins on a 40 pin Raspberry Pi using GPIO numbering, which can be used as a reference guide](images/1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
 
 **2.** The `Trig` pin on the UDS can connect straight into `GPIO 4` in the Raspberry Pi. You can use a different GPIO pin on the Raspberry Pi, although if you do the diagram below won't match your setup completely.
 
@@ -49,7 +52,7 @@ Wiring a **3.3V** UDS is fairly simple as the output voltage of the `Echo` pin d
 
 The diagram below shows you the complete setup for a **3.3V** UDS:
 
-![Remove the vibration sensor and two connections (GP14 and GND) from the image. Replace the green, orange and black wires with one connection from Echo straight to GP17 and remove the two resistors](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
+![Remove the vibration sensor and two connections (GP14 and GND) from the illustration. Replace the green, orange and black wires with one connection from Echo straight to GP17 and remove the two resistors](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
 
 #### Wiring the `Echo` pin on a 5V UDS
 
@@ -83,11 +86,11 @@ Now that the UDS is connected to the Raspberry Pi you will need to attach the UD
 
 Using a pencil, mark where you want the emitters and receivers (the two silver cylinders from the diagram above) to protrude from the buggy.
 
-![Picture of the UDS cylinders being marked on the buggy](images/)
+![Picture of the UDS cylinders being marked on the chassis were they need to be secured](images/2_7-marking-UDS-on-the-chassis)
 
 Cut a hole into the buggy container that is just big enough for the emitters and receivers to poke through. You can also use tape to secure the UDS more securely to the chassis.
 
-![Picture of the UDS attached to the buggy](images/)
+![Picture of the UDS attached to the chassis](images/2_7-UDS-attached-to-chassis)
 
 ### Checking the connections
 
