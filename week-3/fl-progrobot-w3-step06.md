@@ -7,7 +7,7 @@ Related files:
 
 ## Connecting the line sensors
 
-For the remainder of this week, you will turn your buggy into a line-following robot buggy. 
+For the remainder of this week, you will turn your buggy into a line-following robot buggy. To start with, you need to connect 2 line following sensors to the Raspberry Pi.
 
 ### What you will need
 
@@ -60,6 +60,6 @@ Take your remaining two single jumper leads and connect each one to the **DO** p
 
 Now connect the **VCC** pins of both line sensors to a **5V** pin on your Raspberry Pi, and the **GND** pins of the sensors to a **GND** pin on your Raspberry Pi. Each of the two **DO** pins can be connected to any numbered GPIO pin. In this example, pins **GPIO 6** and **GPIO 12** are used.
 
-![Picture of the buggy with the two line following sensors attached to the Raspberry Pi](images/)
+![Picture of the buggy with the two line following sensors attached to the Raspberry Pi](images/3_6-buggy-two-sensors)
 
 <!-- Check there are 2 5V pins on 26 pin headers -->
