@@ -22,11 +22,11 @@ For this step, you will need the following items:
 
 ### Prepare the connectors
 
-The first stage will be to connect your line sensors to your Raspberry Pi. Normally, the type of line sensor used in this project needs to be connected to a **3V3** pin, but you’re going to run two sensors via the same power pin, so you’ll attach both of sensors to a **5V** pin.
+The first stage will be to connect your line sensors to your Raspberry Pi. Normally, the type of line sensor used in this project needs to be connected to a **3V3** pin, but you’re going to run two sensors via the same power pin, so you’ll attach both sensors to a **5V** pin.
 
-Start by taking three of the female-female jumper leads and removing one of the connectors from the end of each lead with scissors. If you are using female-male jumper leads, make sure you remove the male end as you will need the female end to connect to the line sensors. 
+Start by taking three of the female-female jumper leads and removing one of the connectors from the end of each lead with scissors. If you are using female-male jumper leads, make sure you remove the male end as you will need the female end to connect to the line sensors.
 
-Strip the plastic sheath of the bare ends to reveal about a centimeter of the multi-core wire beneath.
+Strip the plastic sheath of the bare ends to reveal about a centimetre of the multi-core wire beneath.
 
 ![Picture of three female jumper leads with one end of each lead stripper - taken from project "Build a line following robot"](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/stripped.jpg)
 
