@@ -17,8 +17,6 @@ In early robotics, line following was seen as a way of allowing robots to move a
 
 ### Examples of line sensing robots
 
-#### The beginnings
-
 As you have heard already, robotics are often used to explore harsh environments that would be difficult for human explorers. In the 1960s one of the biggest exploration projects of all time was in full swing: the space race. Most robots that were built for Moon landings were remote controlled. The massive distance between the earth and moon meant these early moon buggies had to deal with huge delays between instruction and action.
 
 To try to tackle this challenge a team of university roboticists at Stanford created a cart.
@@ -27,7 +25,7 @@ To try to tackle this challenge a team of university roboticists at Stanford cre
 
 **The Stanford Cart**
 
-The Stanford cart started life as a remote controlled mobile robot. A four wheeled cart, its chassis consisted of a rectangular box fitted with cameras and an onboard TV system. The cart was worked on at the university from 1960 to 1980; for a period in 1970 the cart was outfitted with line sensors to test autonomous navigation algorithms.
+The Stanford cart started life as a remote controlled mobile robot. A four wheeled cart, its chassis consisted of a rectangular box fitted with cameras and an onboard TV system. Researchers at the university worked on the cart from 1960 to 1980; for a period in 1970 they outfitted the cart with line sensors to test autonomous navigation algorithms.
 
 [Here is a video of the robot following a white line on the ground.](https://youtu.be/8Mxk2L3lu9Q)
 
@@ -39,19 +37,19 @@ Later the cart would be turned into a fully autonomous vehicle; for a time the c
 
 ### Modern uses for line following robots
 
-Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making. Which is why they are employed as warehouse workers.
+Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making. This makes them suited for work in warehouses.
 
 **Warehouse Robots**
 
-Warehouses, particularly for large internet shopping companies (think Amazon or Alibaba), require a lot of stock to be moved around the massive buildings. The stock robots move around the massive warehouses to pick up large cages containing items that have either just arrived or are being prepared for dispatch.
+Warehouses, particularly for large internet shopping companies (think Amazon or Alibaba), require a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up large cages containing items that have either just arrived or are being prepared for dispatch.
 
-Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power in navigation. Their primary function is to identify and move the stock pile assigned to them. Following the lines allows them to do this without veering off track.
+Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power on navigation. Their primary function is to identify and move the stock pile assigned to them. Following the lines allows them to do this without veering off track.
 
 ### Competitions
 
 If you search for "line sensing robots" on Google, most of the hits returned relate to robotics competitions. As mentioned earlier in the article, line sensing robots have securely found their place in the robotics world as a good challenge for beginner roboticists.
 
-These competitions pit robots against one another, following a line track as quickly as possible. There are judges who watch the robots and penalise them for straying from the line - either through time penalties or in some cases disqualification.
+These competitions pit robots against one another, challenging them to follow a line track as quickly as possible. There are judges who watch the robots and penalise them for straying from the line - either through time penalties or in some cases disqualification.
 
 The size and complexities of the tracks depend on the target audience and their expected experience levels. Some competitions are aimed at children and so the courses are simple small ovals. Some more complex competitions involve line mazes for the robots to map and navigate.
 
