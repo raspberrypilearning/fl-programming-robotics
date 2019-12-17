@@ -15,21 +15,23 @@ Next you’re going to attach your line following sensors to the buggy and test 
 + Black tape
 + Screwdriver
 
-### Preparing your track / line
+![Picture of the parts for building a track for the buggy and testing the line following sensors - white card, black tape, screwdriver](images/3_6-parts-for-line-sensors)
+
+### Preparing your track 
 
 First, you will need to prepare a line for the buggy to follow. I am going to use a white piece of card for the background surface with a black strip of tape for the line so there is a really clear contrast in light levels that the sensor can detect.
 
 ![Picture of a white piece of card with a black line of tape running through the center](images/)
 
-### Attaching the sensors to the buggy
+### Attaching the sensors to the chassis
 
 Next, you will need to figure out where the line sensors need to be secured to the buggy so they can follow a line effectively.
 
-Both of the line sensors need to be positioned near the front of the buggy, with one either side of the ball caster. This way, the sensors will be able to detect whether it is directly over the line, to the left of the line, or to the right of the line. 
+Both of the line sensors need to be positioned near the front of the chassis, with one either side of the ball caster. This way, the sensors will be able to detect whether it is directly over the line, to the left of the line, or to the right of the line. 
 
 On the buggy, mark where you want to position the line sensors so that the sensor can view the line beneath it. Cut two small holes in the bottom of your buggy and secure the sensors in place.
 
-<!-- include the range of distance the sensors should be from the surface -->
+<!-- include the range of distance the sensors should be from the surface before affixing it to the chassis -->
 
 ![Picture of one line sensor secured to the buggy and a hole where the other line sensor should be placed](images/)
 
