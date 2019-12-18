@@ -53,7 +53,7 @@ One method of detecting objects around a robot, is the use of infrared sensor. I
 
 **Ultrasonic Distance Sensors** 
 
-A better sensor for robots that have to navigate around inanimate objects, is the UDS (ultrasonic distance sensor). These sensors emit high frequency noises, which rebound off of objects in the surrounding area and return to the robot. The gap between the emission and the return of the sound can be used to calculate the distance between the robot and the object. This is exactly how bats see the world when flying at night.
+A better sensor for robots that have to navigate around inanimate objects, is the UDS (ultrasonic distance sensor). These sensors emit high frequency noises, which rebound off of objects in the surrounding area and return to the robot. The gap between the emission and the return of the sound can be used to calculate the distance between the robot and the object. This is exactly how bats sense the world when flying at night.
 
 I am going to show you how to use a UDS in your buggy, and in the next step you will see how they work in greater detail. 
 

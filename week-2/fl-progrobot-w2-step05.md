@@ -11,13 +11,13 @@ In this step I am going to break down the Ultrasonic distance sensor mentioned i
 
 ### Ultrasound
 
-Ultrasonic distance sensors (UDS) use ultrasound to measuer distances. *Ultrasound* refers to any sound that has a frequency that is above the human range o hearing, this level changes from person to person but on average anything 20kHz or above is considered ultrasound.
+Ultrasonic distance sensors (UDS) use ultrasound to measure distances. Sound travels through the air in a *wave pattern*, measures of the sound are made by examining the properties of the pattern. As the sound travels the wave moves up and down, the frequency of a sound is a measure of the time in between the maximum values on that wave. Frequency is measured in Hertz (Hz), if a wave takes 1 second to move between the maximum and minimum value (called oscillation) it is said to have a frequency of 1Hz. 
 
-![A few waves showing the difference between high and low frequency sounds](images/frequency_example.png)
+![A few waves showing the difference between high and low frequency sounds.](images/frequency_example.png)
 
-Sound travels through the air in a *wave pattern*, one of the ways sounds can be measured is by examining the properties of the pattern. As the sound travels the wave moves up and down, the frequency of a sound is a measure of the time in between the maximum values on that wave.
+*Ultrasound* refers to any sound that has a frequency that is above the human range of hearing, this level changes from person to person but on average anything 20kHz or above is considered ultrasound. This means the sound wave oscillates 2000 times a second.
 
-Ultrasound devices use sound waves at frequencies ranging from 20kHz all the way up to multiple gigahertz. The uses of ultrasound are widespread; doctors use the sound waves to scan inside human bodies, engineers use it to reinforce metals and robots can use it to navigate the world.
+The uses of ultrasound are widespread; doctors use the sound waves to scan inside human bodies, engineers use it to reinforce metals and robots can use it to navigate the world.
 
 ### Ultrasonic distance sensor
 
