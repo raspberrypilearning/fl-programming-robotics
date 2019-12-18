@@ -7,25 +7,25 @@ Related files:
 
 ## Robotic Sensors
 
-Robots, particularly autonomous ones, should be able to sense the world around them in some way. There are lots of different sensors you can use in your robotics projects. In this step I will take you through some of the options you can use to add sensing to your buggy.
+Robots, particularly autonomous ones, should be able to sense the world around them. There are lots of different sensors you can use in your robotics projects. In this step I will take you through some of the options you can use to add sensing to your buggy.
 
 ### Force and Touch
 
-When navigating the real world and interacting with physical objects, Robots can benefit from being able to sense the forces it is applying to these objects and forces exerted upon the Robot itself. 
+A robot designed to navigate the real world and interact with physical objects - by picking them up for example - must be able to measure the force it is applying to these objects. In some cases it might be necessary for the bot to sense external forces exerted upon itself.
 
 **Force** 
 
-Force sensors can be used by roboticists to detect the forces their robots are exerting on the objects they interact with. You heard of an example last week, where a robotic arm uses a pressure sensor to detect the force it is exerting on the mobile phone parts it picks up. It is important that the arm applies enough force to hold the part and not drop it, but not so much pressure that the component is damaged or crushed.
+Force sensors are used by roboticists to measure the forces their robots are exerting on the objects they interact with. You heard of an example last week, where a robotic arm uses a pressure sensor to calculate the force it is exerting on the mobile phone parts it picks up. It is important that the arm applies enough force to hold the part and not drop it, but not so much pressure that the component is damaged or crushed.
 
-Other roboticists may use force sensors to detect external forces being applied to the robot. Force sensors can be used to detect shocks or vibrations that could allow a robot to react and balance/stabilise itself.
+Other roboticists use force sensors to detect shocks or vibrations, this allows a robot to react and balance/stabilise itself. Mobile robots could use force sensors in navigation as well - although touch sensors are more common.
 
 **Touch**
 
-Touch sensors can be used to detect forces applied to a specific point on a robot. *Capacitive touch* sensors utilise the human body's conductive properties to detect touches. They can also detect touches from any object that can conduct electricity. An example use might be to change the behaviour the robot is exhibiting when someone presses the touch pad. *Resistive touch* sensors do not use electrical properties, but instead they detect the pressure exerted by the touch. This type can be used to navigate a robots surroundings, as the object touching it does not have to conduct electricity. 
+Touch sensors allow robots to detect physical interactions between their body and objects in their surroundings. *Capacitive touch* sensors utilise conductive properties to detect touches, most commonly from a human's touch. They can also detect touches from any object that can conduct electricity. An example use might be to change the behaviour the robot is exhibiting when someone presses the touch pad. *Resistive touch* sensors do not use electrical properties, but instead they detect touches based on pressure applied to the plate. This type can allow a robot to navigate it's surroundings, as the object touching it does not have to conduct electricity. 
 
 ### Detecting the environment
 
-Robots can use measurements of the environment around them to accomplish a variety of tasks, they are especially useful in environments that are hostile to humans (such as the rovers NASA and other space agencies send to explore Mars).
+Robots can use measurements of the environment around them to accomplish a variety of tasks, they are especially useful in environments that are hostile to humans.
 
 **Temperature** 
 
@@ -37,7 +37,7 @@ Another detectable property of the environment is light. One use is for robots w
 
 **Sound** 
 
-A sound sensor will detect the presence of sound and also measure the amplitude of the sound. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, by following noises and sounds where they are more intense. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
+A sound sensor will detect the presence of sound and also measure the amplitude of the sound. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, the robot would navigate towards intense sounds. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
 
 **Chemical** 
 
@@ -53,7 +53,7 @@ One method of detecting objects around a robot, is the use of infrared sensor. I
 
 **Ultrasonic Distance Sensors** 
 
-A better sensor for robots that have to navigate around inanimate objects, is the UDS (ultrasonic distance sensor). These sensors emit high frequency noises, which rebound off of objects in the surrounding area and return to the robot. The gap between the emission and the return of the sound can be used to calculate the distance between the robot and the object that the sound bounced off of. This is exactly how bats see the world when flying at night.
+A better sensor for robots that have to navigate around inanimate objects, is the UDS (ultrasonic distance sensor). These sensors emit high frequency noises, which rebound off of objects in the surrounding area and return to the robot. The gap between the emission and the return of the sound can be used to calculate the distance between the robot and the object. This is exactly how bats see the world when flying at night.
 
 I am going to show you how to use a UDS in your buggy, and in the next step you will see how they work in greater detail. 
 
