@@ -25,7 +25,7 @@ For more discussions on the impact of automation and robotics, check out our oth
 
 The production industry is not the only sector that will take advantage of robots. Earlier you heard about warehouse robots that assist in packing and shipping orders for large retailers - where would Amazon be without their robots? You also learned about robots being used to navigate dangerous environments, some industrial environments definitely fit this bill. Mining is a good example of this, not just coal or oil - but also the precious metals and materials for the components inside of our mobile phones and computers. 
 
-![A mining robot - perhaps striking gold? Avoid coal or oil mining imagery]()
+![A robot physically digging and mining - perhaps striking gold? Avoid coal or oil mining imagery]()
 
 Industrial robots are great for management and the consumer, but what about the workers? Since the industrial revolution - when most people began worked in factories - jobs in this sector have been in steady decline. The workers who used to to dangerous jobs may be grateful for the robots, but your average worked would see the machines very differently. Robots drastically improve efficiency in industry, there comes a point however when production must be controlled. The resources used are not bottomless and neither is the energy required, without regulation we are at risk of over consumption.
 
