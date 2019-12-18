@@ -5,65 +5,62 @@ Related links:
 Related files:
 )
 
-## Connecting the line sensors
+## Testing the line sensors
 
-For the remainder of this week, you will turn your buggy into a line-following robot buggy. To start with, you need to connect 2 line following sensors to the Raspberry Pi.
+Next you’re going to attach your line following sensors to the buggy and test whether the sensors are working. You will tune the line sensors a little to ensure they are picking up changes in light between white paper and a black line.
+
+<!-- Taken from AliExpress -->
+The Line Tracking Sensor for Arduino can detect the white lines in black background and black lines in white background.
+If Line Tracking Sensor detect black color, the signal line (DO) of the sensor is HIGH,  at the same time the LED (blue) on the sensor lights up. If Line Tracking Sensor detect white color, the signal line (DO) goes LOW.
 
 ### What you will need
 
-For this step, you will need the following items:
++ White piece of card
++ Black tape
++ Screwdriver
 
-+ 8 female-to-female or female-to-male jumper leads
-+ 2 line following sensors
-+ Soldering iron and solder
-+ Wire strippers
-+ Scissors
-+ Tape
+![Picture of the parts for building a track for the buggy and testing the line following sensors - white card, black tape, screwdriver](images/3_6-parts-for-line-sensors)
 
-**You can use the [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource posted in the first week for guidance, and to learn some quick tips and tricks.**
+### Preparing your track 
 
-![Picture of the robot buggy parts for this step - 8 female-to-female jumper leads, 2 line following sensors, Soldering iron and solder, Wire strippers, Scissors, Tape](images/3_6-parts-for-line-sensors)
+First, you will need to prepare a line for the buggy to follow. I am going to use a white piece of card for the background surface with a black strip of tape for the line so there is a really clear contrast in light levels that the sensor can detect.
 
-### Prepare the connectors
+![Picture of a white piece of card with a black line of tape running through the center](images/)
 
-The first stage will be to connect your line sensors to your Raspberry Pi. Normally, the type of line sensor used in this project needs to be connected to a **3V3** pin, but you’re going to run two sensors via the same power pin, so you’ll attach both sensors to a **5V** pin.
+### Attaching the sensors to the chassis
 
-Start by taking three of the female-female jumper leads and removing one of the connectors from the end of each lead with scissors. If you are using female-male jumper leads, make sure you remove the male end as you will need the female end to connect to the line sensors.
+Next, you will need to figure out where the line sensors need to be secured to the buggy so they can follow a line effectively.
 
-Strip the plastic sheath of the bare ends to reveal about a centimetre of the multi-core wire beneath.
+Before you do this, I recommend taking a photo of your buggy and the connections between the Raspberry Pi, motor controller board, and UDS. It is quite likely that a few of the jumper leads will come loose during this process. Use the photo of the buggy and/or the building the buggy steps in the previous 2 weeks to help you check and reconnect the leads correctly.
 
-![Picture of three female jumper leads with one end of each lead stripper - taken from project "Build a line following robot"](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/stripped.jpg)
+Both of the line sensors need to be positioned near the front of the chassis, with one either side of the ball caster. This way, the sensors will be able to detect whether it is directly over the line, to the left of the line, or to the right of the line. 
 
-Place two of the jumper leads side-by-side so the multi-core wires are next to each other. Turn the third lead so it is facing the opposite way to the other leads and place the exposed wires next to the wires of the other leads in the shape of a two-pronged fork. Take all three jumper leads and twist their multi-core wires together. Then use a soldering iron to bond the leads.
+The sensors should also be fairly close to the center of the buggy, not right on the very left or very right if possible. This is so both sensors are able to detect the black line when the buggy is directly over it and so the buggy can be programmed to move straight forwards at this point.
 
-![Video-gif of three jumper leads with the multi-core wires twisted together being soldered together](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/solder.gif)
+![animation from 3.4?](images/)
 
-Cover the join of the leads with a small amount of insulating tape.
+On the buggy, mark where you want to position the line sensors so that the sensor can view the line beneath it. Cut two small holes in the bottom of your buggy and secure the sensors in place.
 
-![Picture of the three joined jumper leads with tape covering the soldered bond](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/soldered.jpg)
+<!-- include the range of distance the sensors should be from the surface before affixing it to the chassis -->
 
-Repeat the entire process with another three female-to-female jumper leads.
+The best distance between objects such as ground and the sensor is 1-3 cm.
 
-### Connect the line sensors to the Raspberry Pi
+![Picture of one line sensor secured to the buggy and a hole where the other line sensor should be placed](images/)
 
-Most line sensors have three pins: **VCC** for power, **GND** for ground, and **DO** for digital out.
+### Tuning the line sensors
 
-![Picture of a line following sensor with the pins VCC, GND and DO labelled clearly](images/)
+You are now going to check that the line sensors detect the difference between a light surface and a dark line.
 
-Take one of your soldered-together three-wire jumper leads, and connect two of its ends to the **VCC** pin on each of the two sensors.
+With the line sensors attached, boot up your Raspberry Pi. Move the buggy slowly side to side so each of the line sensors passes over the dark line.
 
-![Picture of a three-wired jumper leads connected to the VCC pin on two line following sensors](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/power.jpg)
+Whilst a sensor is over a light surface, the LED on the sensor board should turn off. Conversely, when a sensor passes over a dark line, the LED on the sensor should turn off.
 
-Take the second of your soldered jumper leads, and connect two ends to the **GND** pin on each line sensor.
+![Video-gif of the LED on each line sensor turning on when the sensor is over the white surface and off when the sensor is over the black line](images/)
 
-![Picture of the second three-wired jumper leads connected to the GND pin on two line following sensors](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/ground.jpg)
+<!-- Re-write and further explain the following paragraph -->
 
-Take your remaining two single jumper leads and connect each one to the **DO** pin on each line sensors.
+Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white space.
 
-![Picture of the two single jumper leads connected to the DO pin on two line following sensors](https://projects-static.raspberrypi.org/projects/rpi-python-line-following/5231de01afcfc787873b5b674045505e9dad8f1c/en/images/digital_out.jpg)
+![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/)
 
-Now connect the **VCC** pins of both line sensors to a **5V** pin on your Raspberry Pi, and the **GND** pins of the sensors to a **GND** pin on your Raspberry Pi. Each of the two **DO** pins can be connected to any numbered GPIO pin. In this example, pins **GPIO 6** and **GPIO 12** are used.
-
-![Picture of the buggy with the two line following sensors attached to the Raspberry Pi](images/3_6-buggy-two-sensors)
-
-Share how you got on and any other soldering tips in the comments below.
+Once you have tuned the sensors, you can proceed to programming your robot in the next step.
