@@ -15,7 +15,7 @@ Line sensors detect the presence of either a black or white line by emitting inf
 
 Below you can see an example TCRT5000 line sensor, your components may be laid out differently (all being on one side for example). However, all the components I will discuss will be present on the majority of line sensors.
 
-![](https://www.aam.com.pk/wp-content/uploads/2017/09/tcrt5000.jpg)
+![Like the reference image, but in a cartooney style. The pins with labels (VCC, GND, AO & DO) the potentiometer (blue box with white dial) & the two lights should be clear.](https://www.aam.com.pk/wp-content/uploads/2017/09/tcrt5000.jpg)
 
 In the picture above you can see these 2 components that look like LEDs on the bottom (on the right hand side of the image). The blue one is the IR emitter and the black one is the receiver. These devices also have a component that adjusts the sensitivity (called a potentiometer), a screwdriver can be used to turn the white dial you can see in the image above.
 

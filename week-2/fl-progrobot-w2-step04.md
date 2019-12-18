@@ -41,7 +41,7 @@ A sound sensor will detect the presence of sound and also measure the amplitude 
 
 **Chemical** 
 
-Certain chemical properties can be measured by a robot using sensors. *pH* sensors detect the acidity/alkalinity of the environment around a robot. Scientific Robots could use this to check the quality of rivers or soil in remote places. Carbon Monoxide sensors can be used to explore hostile environments where human explorers would be put at risk. 
+Certain chemical properties can be measured by a robot using sensors. *pH* sensors detect the acidity/alkalinity of the environment around a robot. Scientific Robots could use this to check the quality of rivers or soil in remote places. Carbon Monoxide sensors can be used to monitor dangerous environments where human explorers would be put at risk. 
 
 ### Object proximity
 
@@ -49,7 +49,7 @@ Mobile robots have to navigate the world around them, often autonomously, and th
 
 **Infrared Sensors** 
 
-One method of detecting objects around a robot, is the use of infrared sensor. Infrared sensors detect changes in the levels of environmental infrared radiation, which is given off by objects that are hot (particularly living things). They are not very effective at detecting inanimate objects. 
+One method of detecting objects around a robot, is the use of infrared sensor. Infrared sensors detect changes in the levels of infrared radiation captured by the device, these changes are caused when an object hotter than the background (often living things) passes through its field of view. 
 
 **Ultrasonic Distance Sensors** 
 

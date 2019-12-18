@@ -11,6 +11,8 @@ You are coming to the end of the first week of this robotics experience, and you
 
 ### The components
 
+![A robot buggy, with wheels and a face. Some loose cables are poking out from the top of the bot. Its eyes should look dazed and confused]()
+
 **Jumper Cables**
 
 The jumper cables you have been using for the buggy so far have a tendency to come loose from the components or GPIO pins if you knock them. I cannot tell you how many times I have been pulling my hair out trying to find an error in my code only to find a loose jumper cable that is causing my problem.
@@ -21,7 +23,11 @@ The numbering on the GPIO pins can be confusing, they are numbered as the proces
 
 **Debugging components**
 
-A lot of the things you have done this week may be completely new to you, especially the components you are using. When you deal with components rather than products you forgo some of the hand holding that comes with a pre-built device. When you buy components you have to figure out how they work and test them. When the components are new to you, this can be a challenging process - as you don't know what to look for or how to test the component.
+A lot of the things you have done this week will be completely new to you, especially the components you are using. When you deal with components rather than products you forgo some of the hand holding that comes with a pre-built device.
+
+![A character (preferrably male) looking at a component - feel free to use the UDS or line sensor - they look confused by the device]()
+
+When you buy components you have to figure out how they work and test them. When the components are new to you, this can be a challenging process - as you don't know what to look for or how to test the component.
 
 **Cardboard is easy - not strong**
 
@@ -31,7 +37,11 @@ As you create your buggy you are most likely using cardboard to house it -  whic
 
 **Not all floors are made equally**
 
-When you create a mobile robot, particularly one that uses wheels to navigate around, you will quickly realise you have to choose the floor you test it on. Some motors have no problem navigating carpet, linoleum or tiles - others will not work on anything less than smooth concrete. This can cause frustration as you adjust the settings on the wheels - only to find out it was an uneven floor causing the issues.
+When you create a mobile robot, particularly one that uses wheels to navigate around - you will quickly realise you have to choose the floor you test it on.
+
+![Two wheeled robots on a carpet floor - there is smoke coming from their wheels as though they can't move. The robots should look tired and sad.]()
+
+Some motors have no problem navigating carpet, linoleum or tiles - others will not work on anything less than smooth concrete. This can cause frustration as you adjust the settings on the wheels - only to find out it was an uneven floor causing the issues.
 
 **Environments are not consistent**
 
