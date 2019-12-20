@@ -66,7 +66,7 @@ Repeat the entire process with another three female-to-female jumper leads.
 
 ### Connect the line sensors to the Raspberry Pi
 
-Most line sensors have three pins: **VCC** for power, **GND** for ground, and **DO** for digital out.
+The line sensor I am using has three pins: **VCC** for power, **GND** for ground, and **DO** for digital out. These are the only pins you will need to use for the buggy, though your line sensor may have an extra **AO** pin for analogue out.
 
 ![Diagram of a line following sensor with the pins VCC, GND and DO labelled clearly](images/)
 
