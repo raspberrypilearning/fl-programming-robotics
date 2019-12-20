@@ -86,4 +86,10 @@ Now connect the **VCC** pins of both line sensors to a **5V** pin on your Raspbe
 
 ![Picture of the buggy with the two line following sensors attached to the Raspberry Pi](images/3_5-buggy-two-sensors)
 
-Share how you got on and any other tips in the comments below.
+Share how you got on and any other tips in the comments below. 
+
+Did this work for you? 
+
+How did you get on?
+
+If you had any problems or are stuck, leave a comment below and one of the facilitators will help you.
