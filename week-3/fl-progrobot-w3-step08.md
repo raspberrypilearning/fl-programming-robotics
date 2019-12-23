@@ -76,6 +76,8 @@ Notice that the functions to move the robot do not end in brackets; this is due 
 
 Each of the `when_line` and `when_no_line` events will continue to run, even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop the robot buggy from moving.
 
+<!-- The values of the devices will stay at whatever value they have been set as.  -->
+
 **4.** To make sure that the robot doesn’t keep running forever, and to close all the components connections cleanly, add in the following lines of code to the end of your program:
 
 ~~~ python
