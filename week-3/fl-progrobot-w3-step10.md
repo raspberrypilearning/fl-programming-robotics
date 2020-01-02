@@ -7,11 +7,11 @@ Related files:
 
 ## Robotics is changing our lives
 
-Robots have firmly shifted from science fiction to become science fact, even a few years ago all the content you have covered in this course would have been exclusively discussed in research laboratories. This shift also requires you to change the way we discuss the impact robotics will have, moving from the theoretical to the concrete. Which is exactly what you will do in this step.
+Robots have firmly shifted from science fiction to become science fact, even a few years ago all the content you have covered in this course would have been exclusively discussed in research laboratories. This shift also requires you to change the way we discuss the impact robotics will have, moving from the theoretical to the concrete. This is exactly what you will do in this step.
 
-### Automation 
+### Automation
 
-Modern factories have already been transformed by robots, and our society has been equally transformed by their improved efficiency and production rates. The lifestyle you lead now has been shaped by robotics; the food you eat, the car you drive and even the books you read were all manufactured using robots. 
+Modern factories have already been transformed by robots, and our society has been equally transformed by their improved efficiency and production rates. The lifestyle you lead now has been shaped by robotics; the food you eat, the car you drive and even the books you read were all manufactured using robots.
 
 ![An image of a robot painting a work of art <Can borrow from the robot collection we have already?>]()
 
@@ -21,25 +21,25 @@ For more discussions on the impact of automation and robotics, check out our oth
 
 ### Impact of robotics
 
-**Industry** 
+**Industry**
 
-The production industry is not the only sector that will take advantage of robots. Earlier you heard about warehouse robots that assist in packing and shipping orders for large retailers - where would Amazon be without their robots? You also learned about robots being used to navigate dangerous environments, some industrial environments definitely fit this bill. Mining is a good example of this, not just coal or oil - but also the precious metals and materials for the components inside of our mobile phones and computers. 
+The production industry is not the only sector that will take advantage of robots. Earlier you heard about warehouse robots that assist in packing and shipping orders for large retailers - where would Amazon be without their robots? You also learned about robots being used to navigate dangerous environments, some industrial environments definitely fit this bill. Mining is a good example of this, not just coal or oil - but also the precious metals and materials for the components inside of our mobile phones and computers.
 
 ![A robot physically digging and mining - perhaps striking gold? Avoid coal or oil mining imagery]()
 
-Industrial robots are great for management and the consumer, but what about the workers? Since the industrial revolution - when most people began worked in factories - jobs in this sector have been in steady decline. The workers who used to to dangerous jobs may be grateful for the robots, but your average worked would see the machines very differently. Robots drastically improve efficiency in industry, there comes a point however when production must be controlled. The resources used are not bottomless and neither is the energy required, without regulation we are at risk of over consumption.
+Industrial robots are great for management and the consumer, but what about the workers? Since the industrial revolution - when most people began worked in factories - jobs in this sector have been in steady decline. The workers who used to do dangerous jobs may be grateful for the robots, but your average worker could see the machines very differently. Robots drastically improve efficiency in industry, there comes a point however when production must be controlled. The resources used are not bottomless and neither is the energy required, without regulation we are at risk of over consumption.
 
-**Medicine** 
+**Medicine**
 
-Surgical robots are being used to the benefit of both patients and staff, these machines are tools the surgeon controls to perform surgeries through tiny incisions in a patients body. The robots are very small and extremely accurate, they cause far less trauma than traditional surgeries. Patients have shown quicker recovery times and fewer complications post-op. Looking to the future, you can see a world where AI and medical robots merge. Intelligent surgical robots could perform the surgery independently, leading to a boost in the availability of high quality medical care. 
+Surgical robots are being used to the benefit of both patients and staff. These machines are tools that the surgeon controls to perform surgeries through tiny incisions in a patients body. The robots are very small and extremely accurate, so they cause far less trauma than traditional surgeries, leading to patients showing quicker recovery times and fewer complications post-op. Looking to the future, you can see a world where AI and medical robots merge. Intelligent surgical robots could perform the surgery independently, leading to a boost in the availability of high quality medical care.
 
 ![A doctor robot, attending a patient in a bed. It would be great if the patient seemed slightly uneasy]()
 
-The main downside of surgical robotics is the cost. They are currently far too pricey for every hospital to afford one. This restricts the care to wealthier areas, a drop in cost may help increase access to this resource. Lastly, there is a very important side of medicine that robots cannot currently replace, patient bedside care. The care nurses, doctors and hospital staff provide to comfort the patients - for now this remains a task that only a human can accomplish.
+The main downside of surgical robotics is the cost. They are currently far too pricey for every hospital to afford one. This restricts the care to wealthier areas, a drop in cost may help increase access to this resource. Lastly, there is a very important side of medicine that robots cannot currently replace - patient bedside care. The care nurses, doctors and hospital staff provide to comfort the patients - for now this remains a task that only a human can accomplish.
 
-**Education** 
+**Education**
 
-There are uses for robot labour in education, but that is not what I would like to discuss here. Robotics as a discipline provides enormous benefits to computing education - it is awesome. 
+There are uses for robot labour in education, but that is not what I would like to discuss here. Robotics as a discipline provides enormous benefits to computing education - it is awesome.
 
 Robots are cool. Robots are also technology, which provides educators with an amazing hook to draw learners into the world of computing. Robotics remains one of the biggest attractions to technology, bringing fledgling roboticists to courses like this one. Robot competitions offer an alternative route to learning the subject that is perhaps even more engaging, a mixture of competitiveness and fun makes great motivation for learning.
 
@@ -49,10 +49,10 @@ As great as this all is, there is still work to be done to make the subject more
 
 ### Robotics in your life
 
-You have heard about a few ways that robots have impacted our loves, and will continue to do so in the future. 
+You have heard about a few ways that robots have impacted our loves, and will continue to do so in the future.
 
-**How have robots impacted your life, or the society you live in?** 
+**How have robots impacted your life, or the society you live in?**
 
-This could be on one of the areas I spoke about above, or another experience you have had. 
+This could be on one of the areas I spoke about above, or another experience you have had.
 
-Share your answers in the comments. 
+Share your answers in the comments.
