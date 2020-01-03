@@ -95,6 +95,9 @@ You can change the number of seconds to a different value if you want to test th
 
 #### Testing the basic algorithm
 
+<!-- Find out why and modify explanation -->
+Before you run the program, be aware that the `when_line` and `when_no_line` events won't initially activate until after one of them changes state. Once you run the program, you will need to move the robot so one of the sensors changes from over a line to not over a line or vice versa. Or you can add the line `robin.forward()` just before these events.
+
 **5.** Try running the program once your robot is placed directly over the line of your track.
 
 Here is an example of a robot running on a basic track with this algorithm:
