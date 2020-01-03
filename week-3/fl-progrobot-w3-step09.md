@@ -35,6 +35,8 @@ Let’s have a look at an algorithm that takes into account the position of the 
     + The left motor should run forwards and so receive a `1`
     + The right motor should run backwards and so receive a `-1`
 
+*Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
+
 #### Getting the output from the sensors
 
 How can you apply these rules to a piece of code? First of all, you’ll create an infinite loop to view the sensor values.
@@ -59,7 +61,7 @@ Don’t forget to adjust the pin numbers if you’ve used different GPIO pins. Y
 
 **2.** Run the code, then move the robot back and forth over the line to see what happens.
 
-Hopefully, you should see the binary output from the sensors, similar to the video below.
+Hopefully, you should see the binary output from the sensors, similar to the video below:
 
 ![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the output values on the screen changing whenever the robot is moved](images/3_9-binary-output-line-sensors)
 
@@ -121,16 +123,25 @@ For now, you can simply print out their values within the loop. Notice that the 
 
 Now that you are specifying values that the motors can use, it is time to feed these values to the motors.
 
-To do this, you’re going to turn your `while True` loop into a **generator**. 
+GPIO Zero provides a method for connecting devices together, allowing the `value` of an input device to set the state of an output device.
+
+For example, the input values of a button could be fed into an LED so that when the button is pressed, the LED turns on:
+
+![Diagram showing a the value of a button feeding the source of an LED](https://gpiozero.readthedocs.io/en/stable/_images/led_button.svg)
+
+The values of the input device can also be processed before they are passed to the source of the output device.
+
+To do this with your line following algorithm, you’re going to turn your `while True` loop into a **generator**. 
+
+![Diagram showing the values of an input device being processed with a custom generator and then passed to the source of an output device](https://gpiozero.readthedocs.io/en/stable/_images/value_processing.svg)
 
 A generator is a special kind of function, except that it uses the `yield` statement instead of `return` to send values back to the function call. 
 
 Generators are useful when you need to produce a series of values over time, rather than a single value, but don’t want to store the entire sequence in memory.
 
-There are two key differences between generators and **normal** functions:
+The yield statement suspends the function's execution by saving the current state of the function instead of stopping it.
 
-+ A generator always returns an iterator rather than a single value, for example a list of one or more items
-+ The yield statement suspends the function's execution by saving the current state of the function instead of stopping it. The next time the function is called, it continues from where it left off, rather than starting again from the beginning
+Let's see how you can use a generator practically for your line sensing robot.
 
 **6.** Turn your loop into a generator using the code below:
 
@@ -193,7 +204,7 @@ from gpiozero import Robot, LineSensor
 from time import sleep
 
 robin = Robot(left=(8, 7), right=(9, 10))
-left_sensor = LineSensor(16)
+left_sensor = LineSensor(19)
 right_sensor= LineSensor(26)
 
 speed = 0.65
@@ -228,6 +239,8 @@ robin.close()
 left_sensor.close()
 right_sensor.close()
 ~~~
+
+<!-- Add content to below points if this step is split into two -->
 
 ### Taking it further
 
