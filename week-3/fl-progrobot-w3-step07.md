@@ -18,7 +18,7 @@ This is also a perfect time to share the progress you have made and any pictures
 
 ### What's next?
 
-In the next step, you are going to write an algorithm for a basic line following robot. 
+In the next step, you are going to write an algorithm for a basic line following robot.
 
 You already know that the line sensors can detect the difference between light and dark surfaces, and this can be translated into a digital output of 0 (for a white surface) or 1 (for a black surface).
 

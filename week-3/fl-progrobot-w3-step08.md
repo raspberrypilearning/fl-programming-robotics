@@ -11,13 +11,13 @@ The line sensors you have attached to your robot buggy should be able to detect 
 
 ### The algorithm
 
-To develop a basic line following algorithm, you need to consider how the robot should act depending on the readings of the line sensors. 
+To develop a basic line following algorithm, you need to consider how the robot should act depending on the readings of the line sensors.
 
 The sensors have 2 states; the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
 
 Let's start by considering what the robot buggy should do when neither of the sensors detect the line. If the line is in the centre of the robot then both sensors will return a 0 from their digital pins, as they are both over the white background and the line has not been detected. Therefore, the robot should move forwards.
 
-Think about the other factors that make up the line following algorithm. **How should the robot react when the left sensor is over the line? What about when the right sensor detects the line? How have you previously programmed the robot to move using the `gpiozero` library?** 
+Think about the other factors that make up the line following algorithm. **How should the robot react when the left sensor is over the line? What about when the right sensor detects the line? How have you previously programmed the robot to move using the `gpiozero` library?**
 
 ![](images/3_4_Two_Sensors_Anim.gif)
 
@@ -38,7 +38,7 @@ I will revisit these rules when I come to code a solution to the line following 
 
 **1.** Create a new Python 3 file.
 
-**2.** You need to start the program by setting up the motor controller board and line sensors using the `gpiozero` library. 
+**2.** Start the program by setting up the motor controller board and line sensors using the `gpiozero` library.
 
 ~~~ python
 from gpiozero import Robot, LineSensor
@@ -49,7 +49,7 @@ left_sensor = LineSensor(19)
 right_sensor= LineSensor(26)
 ~~~
 
-**Note:** In this example, the left line sensor is connected to pin **GPIO 19** on the Raspberry Pi and the right line sensor is on pin **GPIO 26**. Check your build as you may have chosen different GPIO pins for the left and right line sensors, or the pin numbers could be swapped around. 
+**Note:** In this example, the left line sensor is connected to pin **GPIO 19** on the Raspberry Pi and the right line sensor is on pin **GPIO 26**. Check your build as you may have chosen different GPIO pins for the left and right line sensors, or the pin numbers could be swapped around.
 
 Also, you may have used different GPIO pins for the `left` and `right` motors, and perhaps a different variable name to `robin`. Use your previous working code to make sure you have defined the correct GPIO pins for your motors.
 
@@ -89,7 +89,7 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-After 20 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely. 
+After 20 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
 
 You can change the number of seconds to a different value if you want to test the robot for shorter or longer periods of time.
 
@@ -101,4 +101,4 @@ Here is an example of a robot running on a basic track with this algorithm:
 
 ![Video-gif of the robot wiggling side to side as it follows a basic track](images/3_8-basic-line-following-robot)
 
-Don’t worry if you’re robot moves off the line a bit. Just observe if it attempts to stay on the line. If it doesn't stay on the line, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to test that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions earlier in the week.
+Don’t worry if your robot moves off the line a bit. Just observe if it attempts to stay on the line. If it doesn't stay on the line, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to test that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions earlier in the week.
