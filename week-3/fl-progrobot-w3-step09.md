@@ -7,7 +7,7 @@ Related files:
 
 ## Designing a more complex algorithm
 
-The previous line following algorithm is okay, but it can easily be improved upon. To do this, you are going to read the values of the line sensors and use these to instruct the robot's left and right motors which way each one should turn.
+The previous line following algorithm is okay, but as it runs the robot at full speed it's easy for the robot to "overshoot" the line. You can improve it by re-writing the program to read the values of the line sensors and use these to instruct which way each of the robot's left and right motors should turn.
 
 ### Planning a better algorithm
 
@@ -15,31 +15,21 @@ As previously discussed, when a line sensor is over the line, it outputs a `1` f
 
 ![A still image from the animation in step 3.4 - 3_4_Two_Sensors_Anim.gif - with the left sensor (sensor 1) over the black line and the output as 1 and the right sensor (sensor 2) over the white surface with the output as 0](images/3_9-one-sensor-over-line)
 
-The motors work slightly differently though; whenever the robot receives a `1` signal to a motor, that motor drives `forward`. Whenever the robot receives a `-1`, it drives that motor `backward`. 
+The motors work on a range from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse.
 
-#### Rules of the algorithm
+**Rules of the algorithm**
 
-Let’s have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
++ If the robot is perfectly over the line, both line sensors are off the line (outputting `0`). The robot should continue going forward, so both motors should receive the same positive value.
 
-1. The robot is perfectly on the line and should drive forwards:
-    + Both line sensors are off the line and outputting a `0`
-    + Both motors should receive `1` to drive forwards
-2. The robot has drifted left and needs to **turn right**:
-    + The right sensor is over the line and outputting a `1`
-    + The left sensor is off the line and outputting a `0`
-    + The left motor should run backwards and so receive a `-1`
-    + The right motor should run forwards and so receive a `1`
-3. The robot has drifted right and needs to **turn left**:
-    + The right sensor is off the line and outputting a `0`
-    + The left sensor is over the line and outputting a `1`
-    + The left motor should run forwards and so receive a `1`
-    + The right motor should run backwards and so receive a `-1`
++ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. This results in two rules:
+    + If the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
+    + If the robot drifted right, the opposite would be true.
 
 *Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
 
 #### Getting the output from the sensors
 
-How can you apply these rules to a piece of code? First of all, you’ll create an infinite loop to view the sensor values.
+To apply these rules, the code needs to repeatedly read the outputs of the line sensors, in a loop:
 
 **1.** In a new Python 3 file, add in the following lines of code:
 
@@ -67,31 +57,15 @@ Hopefully, you should see the binary output from the sensors, similar to the vid
 
 #### Using the sensor readings to control the motors
 
-So now that you have the output of the sensors, you need to alter these values before you send them to the motors. As per the algorithm above:
+Your next step is to send a signal to the motors:
 
 + If both sensors output `0`, then both motors should receive `1`
 + If the right sensor outputs `1`, then the left motor should receive `-1` and the right motor `1`
 + If the left sensor outputs `1`, then the left motor should receive `1` and the right motor `-1`
 
-To implement these conditions in the program, you will also need two new variables called `left_motor` and `right_motor`. The values of these variables will be used to instruct the motors of the robot which way to turn.
+The signals for the motors should be stored in two new variables - I've called them `left_motor` and `right_motor`.
 
-**3.** Inside the `while` loop, use a condition to check if both sensors are not over the line.
-
-~~~ python
-while True:
-	left_detect  = int(left_sensor.value)
-	right_detect = int(right_sensor.value)
-
-	if left_detect == 0 and right_detect == 0:
-		left_motor = 1
-		right_motor = 1
-~~~
-
-*What do you think the other two conditions will look like?*
-
-Use the rules of the algorithm to specify the direction of each motor when the robot has drifted to the left or right of the line.
-
-**4.** You need two more if statements to handle the sensors being triggered by a line.
+**3.** Inside the `while` loop, use conditional statements to work out which way your robot needs to move:
 
 ~~~ python
 while True:
@@ -101,35 +75,130 @@ while True:
 	if left_detect == 0 and right_detect == 0:
 		left_motor = 1
 		right_motor = 1
-
-	if left_detect == 0 and right_detect == 1:
+	elif right_detect == 1:
 		left_motor = -1
 		right_motor = 1
-
-	if left_detect == 1 and right_detect == 0:
+	elif left_detect == 1:
 		left_motor = 1
 		right_motor = -1
 
-	print (right_motor, left_motor)
+	print (right_motor, left_motor)    
 ~~~
 
-For now, you can simply print out their values within the loop. Notice that the values are being printed out in the order `right_motor, left_motor`. This is important for the next stage of the code.
+Notice that the signals are being output in the order `right_motor, left_motor`. This is important for the next stage of the code.
 
-**5.** Run your code and test how it works when you move the robot over the line.
+**4.** Run your code and test how it works when you move the robot over the line.
 
 <!-- Split the step here into another step? -->
 
-#### The final algorithm
+#### Feeding the values to the motors
 
-Now that you are specifying values that the motors can use, it is time to feed these values to the motors.
+GPIO Zero provides a method for connecting devices together; feeding the values of one device into another. 
 
-GPIO Zero provides a method for connecting devices together, allowing the `value` of an input device to set the state of an output device.
+For example, the current `value` of a button can be used to set the `source` of values for an LED so that when the button is pressed, the LED turns on:
 
-For example, the input values of a button could be fed into an LED so that when the button is pressed, the LED turns on:
+![Diagram showing a the values of a button feeding the source of an LED](https://gpiozero.readthedocs.io/en/stable/_images/led_button.svg)
 
-![Diagram showing a the value of a button feeding the source of an LED](https://gpiozero.readthedocs.io/en/stable/_images/led_button.svg)
+To do this, you are going to turn your `while` loop into a **generator**. A generator is a special type of function that produces a series of values over time.
+
+
+
+an **iterator**, such as a 
+
+
+
+The `source` of an output device must be set by an **iterator**, such as a list of items. In your program, you are going to specify the `source` of the motors by turning the `while` loop into a **generator**, which is a special type of function that returns an iterator.
+
+These values can also be processed before they are passed to the source of an output device.
+
+
+
+To do this with the motors, you are going to produce a series of values from the line sensors 
+
+
+In your program, the iterator will be a series of values produced by the line sensors. 
+
+
+To set the `source` of the motors, you are going to produce a series of values
+
+
+You are going to produce a series of values from the line sensors
+
+
+To do this using the line sensor values, you are going to turn the `while` loop into a **generator**, which is a special type of function that returns an iterator.
+
+These values can also be processed before they are passed to the source of an output device.
+
+![Diagram showing the values of an input device being processed with a custom generator and then passed to the source of an output device](https://gpiozero.readthedocs.io/en/stable/_images/value_processing.svg)
+
+**5.** Turn your loop into a generator using the code below:
+
+~~~ python
+def motor_speed():
+    while True:
+        left_detect  = int(left_sensor.value)
+        right_detect = int(right_sensor.value)
+        
+        if left_detect == 0 and right_detect == 0:
+            left_motor = 1
+            right_motor = 1
+        
+        if left_detect == 0 and right_detect == 1:
+            left_motor = -1
+            right_motor = 1
+        
+        if left_detect == 1 and right_detect == 0:
+            left_motor = 1
+            right_motor = -1
+        
+        # values need to be in the order right, left for the robin.source event
+        yield (right_motor, left_motor)
+
+robin.source = motor_speed()
+~~~
+
+
+
+
+A generator is a special kind of function, except that it uses the `yield` statement instead of `return` to send values back to the function call. 
+
+
+
+
+
+The `source` of values for the output device are produced by a **generator**, which is a special type of function. 
+
+
+
+
+This can be done by setting the `source` of values for an output device 
+
+The `source` of values for the output device
+
+
+To do this, you need to set the `source` of the output device using an **iterator**. 
+
+
+To do this with your line following algorithm, you’re going to turn your `while True` loop into a **generator**. 
+
+
+
+which can be produced by a **generator**. 
+
+using a **generator** and an **iterator**.
+
+
+
+an **iterator** instead of the value of a variable.
+
+
 
 The values of the input device can also be processed before they are passed to the source of the output device.
+
+
+
+
+
 
 To do this with your line following algorithm, you’re going to turn your `while True` loop into a **generator**. 
 
