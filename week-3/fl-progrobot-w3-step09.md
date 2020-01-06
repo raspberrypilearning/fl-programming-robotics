@@ -21,13 +21,13 @@ The motors work on a range from `-1` to `1`; positive values tell the motor to r
 
 + If the robot is perfectly over the line, both line sensors are off the line (outputting `0`). The robot should continue going forward, so both motors should receive the same positive value.
 
-+ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. This results in two rules:
++ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. For example:
     + If the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
     + If the robot drifted right, the opposite would be true.
 
 *Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
 
-#### Getting the output from the sensors
+#### Reading the values of the sensors
 
 To apply these rules, the code needs to repeatedly read the outputs of the line sensors, in a loop:
 
@@ -55,7 +55,7 @@ Hopefully, you should see the binary output from the sensors, similar to the vid
 
 ![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the output values on the screen changing whenever the robot is moved](images/3_9-binary-output-line-sensors)
 
-#### Using the sensor readings to control the motors
+#### Using the sensor readings to set the motor values
 
 Your next step is to send a signal to the motors:
 
@@ -89,49 +89,21 @@ Notice that the signals are being output in the order `right_motor, left_motor`.
 
 **4.** Run your code and test how it works when you move the robot over the line.
 
-<!-- Split the step here into another step? -->
+#### Generating the source values of the motors
 
-#### Feeding the values to the motors
+GPIO Zero provides a method for connecting devices together by feeding the values of one device into another. 
 
-GPIO Zero provides a method for connecting devices together; feeding the values of one device into another. 
-
-For example, the current `value` of a button can be used to set the `source` of values for an LED so that when the button is pressed, the LED turns on:
+For example, the input values of a button could be fed into an LED so that when the button is pressed, the LED turns on:
 
 ![Diagram showing a the values of a button feeding the source of an LED](https://gpiozero.readthedocs.io/en/stable/_images/led_button.svg)
 
-To do this, you are going to turn your `while` loop into a **generator**. A generator is a special type of function that produces a series of values over time.
+To set the motor output values of the motors, you are going to specify the source of 
 
+With GPIO Zero, you can set the `source` of values for an output device.  of an output device to specify the 
 
+In your program, you are going to set the `source` of values for the motors based on the current `value` of the line sensors. 
 
-an **iterator**, such as a 
-
-
-
-The `source` of an output device must be set by an **iterator**, such as a list of items. In your program, you are going to specify the `source` of the motors by turning the `while` loop into a **generator**, which is a special type of function that returns an iterator.
-
-These values can also be processed before they are passed to the source of an output device.
-
-
-
-To do this with the motors, you are going to produce a series of values from the line sensors 
-
-
-In your program, the iterator will be a series of values produced by the line sensors. 
-
-
-To set the `source` of the motors, you are going to produce a series of values
-
-
-You are going to produce a series of values from the line sensors
-
-
-To do this using the line sensor values, you are going to turn the `while` loop into a **generator**, which is a special type of function that returns an iterator.
-
-These values can also be processed before they are passed to the source of an output device.
-
-![Diagram showing the values of an input device being processed with a custom generator and then passed to the source of an output device](https://gpiozero.readthedocs.io/en/stable/_images/value_processing.svg)
-
-**5.** Turn your loop into a generator using the code below:
+**5.** To do this, you are going to turn your `while` loop into a **generator**:
 
 ~~~ python
 def motor_speed():
@@ -157,92 +129,13 @@ def motor_speed():
 robin.source = motor_speed()
 ~~~
 
+You may be more used to seeing `return` to pass values back from functions. Instead, `yield` is used to return data from a special kind of function called a **generator**.
 
+Generators are useful if you want to return an **iterator**, which is a series of values, rather than a single value. 
 
+The `source` of an output device - in this case the motors - must be set as an iterator so that it's values can be updated over time. 
 
-A generator is a special kind of function, except that it uses the `yield` statement instead of `return` to send values back to the function call. 
-
-
-
-
-
-The `source` of values for the output device are produced by a **generator**, which is a special type of function. 
-
-
-
-
-This can be done by setting the `source` of values for an output device 
-
-The `source` of values for the output device
-
-
-To do this, you need to set the `source` of the output device using an **iterator**. 
-
-
-To do this with your line following algorithm, you’re going to turn your `while True` loop into a **generator**. 
-
-
-
-which can be produced by a **generator**. 
-
-using a **generator** and an **iterator**.
-
-
-
-an **iterator** instead of the value of a variable.
-
-
-
-The values of the input device can also be processed before they are passed to the source of the output device.
-
-
-
-
-
-
-To do this with your line following algorithm, you’re going to turn your `while True` loop into a **generator**. 
-
-![Diagram showing the values of an input device being processed with a custom generator and then passed to the source of an output device](https://gpiozero.readthedocs.io/en/stable/_images/value_processing.svg)
-
-A generator is a special kind of function, except that it uses the `yield` statement instead of `return` to send values back to the function call. 
-
-Generators are useful when you need to produce a series of values over time, rather than a single value, but don’t want to store the entire sequence in memory.
-
-The yield statement suspends the function's execution by saving the current state of the function instead of stopping it.
-
-Let's see how you can use a generator practically for your line sensing robot.
-
-**6.** Turn your loop into a generator using the code below:
-
-~~~ python
-def motor_speed():
-    while True:
-        left_detect  = int(left_sensor.value)
-        right_detect = int(right_sensor.value)
-        
-        if left_detect == 0 and right_detect == 0:
-            left_motor = 1
-            right_motor = 1
-        
-        if left_detect == 0 and right_detect == 1:
-            left_motor = -1
-            right_motor = 1
-        
-        if left_detect == 1 and right_detect == 0:
-            left_motor = 1
-            right_motor = -1
-        
-        # values need to be in the order right, left for the robin.source event
-        yield (right_motor, left_motor)
-
-robin.source = motor_speed()
-~~~
-
-In this code, the `yield` statement produces values for the robot's right and left motors whenever the generator `motor_speed()` is called. 
-
-The last line of code sets the `source` of the robot’s motor values to the result of the generator. 
-
-Just like the `when_line` and `when_no_line` events from before, `source` will retain the last value supplied and continue to run even after you close the program.
+Just like when you set the motors earlier, `source` will retain the last value supplied and continue to run even after you close the program.
 
 **7.** To make sure that the robot doesn’t keep running forever, and to close all the components connections cleanly, add in these lines to the end of your program:
 
@@ -256,8 +149,6 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-Setting the robot's `source` to `None` before closing the robot connection safely terminates the event.
-
 Remember, you can change the number of seconds of `sleep` to a different value if you want to test the robot for shorter or longer periods of time.
 
 **8.** Now run your code and test your robot over a track.
@@ -266,59 +157,10 @@ Remember, you can change the number of seconds of `sleep` to a different value i
 
 Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. 
 
-**9.** Add in a speed multiplier to slow the robot down a little.
+**9.** Add in a speed multiplier to slow the robot down a little. Try different values for `speed` (between 0 and 1) and check how your robot runs.
 
 ~~~ python
-from gpiozero import Robot, LineSensor
-from time import sleep
-
-robin = Robot(left=(8, 7), right=(9, 10))
-left_sensor = LineSensor(19)
-right_sensor= LineSensor(26)
-
 speed = 0.65
 
-def motor_speed():
-    while True:
-        left_detect  = int(left_sensor.value)
-        right_detect = int(right_sensor.value)
-        
-        if left_detect == 0 and right_detect == 0:
-            left_motor = 1
-            right_motor = 1
-        
-        if left_detect == 0 and right_detect == 1:
-            left_motor = -1
-            right_motor = 1
-        
-        if left_detect == 1 and right_detect == 0:
-            left_motor = 1
-            right_motor = -1
-        
-        # values need to be in the order right, left for the robin.source event
-        yield (right_motor * speed, left_motor * speed)
-
-robin.source = motor_speed()
-
-sleep(60)
-
-robin.stop()
-robin.source = None
-robin.close()
-left_sensor.close()
-right_sensor.close()
+yield (right_motor * speed, left_motor * speed)
 ~~~
-
-<!-- Add content to below points if this step is split into two -->
-
-### Taking it further
-
-+ Using a line following PID array sensor
-
-+ Reading the proportional value of the robot’s position compared to the line
-
-+ Calculating the derivative value (i.e. rate of change) using the setpoint value and the current value
-
-+ Adjusting the direction based on the derivative
-
-+ Testing and refining the equation and algorithm
