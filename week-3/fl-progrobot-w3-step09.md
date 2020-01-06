@@ -7,7 +7,9 @@ Related files:
 
 ## Designing a more complex algorithm
 
-The previous line following algorithm is okay, but as it runs the robot at full speed it's easy for the robot to "overshoot" the line. You can improve it by re-writing the program to read the values of the line sensors and use these to instruct which way each of the robot's left and right motors should turn.
+The previous line following algorithm is okay, but as it runs the robot at full speed it's easy for the robot to "overshoot" the line. 
+
+To have more control over the robot's speed and run time, you can modify the program so that it reads the values of the line sensors and uses these to instruct which way each of the robot's left and right motors should turn.
 
 ### Planning a better algorithm
 
@@ -21,9 +23,9 @@ The motors work on a range from `-1` to `1`; positive values tell the motor to r
 
 + If the robot is perfectly over the line, both line sensors are off the line (outputting `0`). The robot should continue going forward, so both motors should receive the same positive value.
 
-+ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. For example:
-    + If the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
-    + If the robot drifted right, the opposite would be true.
++ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. This means that:
+    + if the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
+    + if the robot drifted right, the opposite would be true.
 
 *Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
 
@@ -47,7 +49,7 @@ while True:
 	print(left_detect, right_detect)
 ~~~
 
-Don’t forget to adjust the pin numbers if you’ve used different GPIO pins. You may also have renamed the variable `robin` to something else.
+Don’t forget to adjust the pin numbers if you’ve used different GPIO pins. 
 
 **2.** Run the code, then move the robot back and forth over the line to see what happens.
 
@@ -91,19 +93,11 @@ Notice that the signals are being output in the order `right_motor, left_motor`.
 
 #### Generating the source values of the motors
 
-GPIO Zero provides a method for connecting devices together by feeding the values of one device into another. 
+GPIO Zero allows you to set the `source` of an output device so that it can receive a series of values over time. 
 
-For example, the input values of a button could be fed into an LED so that when the button is pressed, the LED turns on:
+|In your program, you are going to set the `source` of values for the motors depending on the current `value` of the line sensors. 
 
-![Diagram showing a the values of a button feeding the source of an LED](https://gpiozero.readthedocs.io/en/stable/_images/led_button.svg)
-
-To set the motor output values of the motors, you are going to specify the source of 
-
-With GPIO Zero, you can set the `source` of values for an output device.  of an output device to specify the 
-
-In your program, you are going to set the `source` of values for the motors based on the current `value` of the line sensors. 
-
-**5.** To do this, you are going to turn your `while` loop into a **generator**:
+**5.** To do this, you will need to turn your `while` loop into a **generator**:
 
 ~~~ python
 def motor_speed():
@@ -129,15 +123,19 @@ def motor_speed():
 robin.source = motor_speed()
 ~~~
 
-You may be more used to seeing `return` to pass values back from functions. Instead, `yield` is used to return data from a special kind of function called a **generator**.
+You may be more used to seeing `return` to pass values back from functions. 
 
-Generators are useful if you want to return an **iterator**, which is a series of values, rather than a single value. 
+A **generator** is a special kind of function that uses `yield` to return data instead.
 
-The `source` of an output device - in this case the motors - must be set as an iterator so that it's values can be updated over time. 
+The data returned to the function call is an **iterator**, which is a series of values, rather than a single value. 
+
+This iterator is then used to update the `source` of the motor's value over time.
+
+#### Specifying a time limit
 
 Just like when you set the motors earlier, `source` will retain the last value supplied and continue to run even after you close the program.
 
-**7.** To make sure that the robot doesn’t keep running forever, and to close all the components connections cleanly, add in these lines to the end of your program:
+**7.** To make sure that the robot doesn’t keep running forever, add this code to the end of your program:
 
 ~~~ python
 sleep(60)
@@ -149,15 +147,15 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-Remember, you can change the number of seconds of `sleep` to a different value if you want to test the robot for shorter or longer periods of time.
+Remember, you can change the number of seconds within `sleep` if you want to test the robot for shorter or longer periods of time.
 
 **8.** Now run your code and test your robot over a track.
 
 #### Reducing the speed
 
-Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. 
+Sometimes the robot runs a little too fast, so you can tweak your code to slow the robot down.
 
-**9.** Add in a speed multiplier to slow the robot down a little. Try different values for `speed` (between 0 and 1) and check how your robot runs.
+**9.** Add in a speed multiplier to the program. Try different values for `speed` (between 0 and 1) and check how your robot runs.
 
 ~~~ python
 speed = 0.65
