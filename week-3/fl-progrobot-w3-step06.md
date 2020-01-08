@@ -13,6 +13,9 @@ Now you are going to attach your line following sensors to the buggy and test wh
 
 + White paper or card (at least 3 sheets of A4)
 + Black tape (a black marker pen would also work)
+
+You may also need:
+
 + Screwdriver
 
 ![Picture of the parts for building a track for the buggy and testing the line following sensors - white paper, black tape, screwdriver](images/3_6-parts-for-line-testing)

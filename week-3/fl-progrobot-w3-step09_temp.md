@@ -130,3 +130,10 @@ Sometimes the robot runs a little too fast, so you can tweak your code a bit as 
 speed = 0.65
 motor_speed = (right_motor*speed, left_motor*speed)
 ~~~
+
+
+
+<!-- DELETE -->
+You can also process the values from the line sensors before they are passed to the `source` of the motors.
+
+![Diagram showing the values of an input device being processed with a custom generator and then passed to the source of an output device](https://gpiozero.readthedocs.io/en/stable/_images/value_processing.svg)

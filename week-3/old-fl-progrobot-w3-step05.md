@@ -40,6 +40,10 @@ Explain that we are going to connect the two GND pins of the sensor to one GND p
 You will also connect both of the VCC pins to one 5V pin on the Pi which will power both sensors because... 
 -->
 
+<!-- From gpiozero https://gpiozero.readthedocs.io/en/stable/api_input.html#gpiozero.InputDevice
+"A typical line sensor has a small circuit board with three pins: VCC, GND, and OUT. VCC should be connected to a 3V3 pin, GND to one of the ground pins, and finally OUT to the GPIO specified as the value of the pin parameter in the constructor."
+-->
+
 The first stage will be to connect your line sensors to your Raspberry Pi. Normally, the type of line sensor used in this project needs to be connected to a **3V3** pin, but you’re going to run two sensors via the same power pin, so you’ll attach both sensors to a **5V** pin.
 
 Start by taking three of the female-female jumper leads and removing one of the connectors from the end of each lead with scissors. If you are using female-male jumper leads, make sure you remove the male end as you will need the female end to connect to the line sensors.
