@@ -9,7 +9,7 @@ Related files:
 
 To develop a basic line following algorithm, you need to consider how the robot should act depending on the readings of the line sensors. First, let's set up the program before moving on to the algorithm. 
 
-#### Setting up the motors and line sensors
+### Setting up the motors and line sensors
 
 **1.** Create a new Python 3 file.
 
@@ -67,7 +67,7 @@ Notice that the functions to move the robot do not end in brackets; this is due 
 
 Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop the robot buggy from moving.
 
-**4.** To make sure that the robot doesn’t keep running forever, and to close all the components connections cleanly, add in the following lines of code to the end of your program:
+**4.** To make sure that the robot doesn’t keep running forever, and to close all the component's connections cleanly, add in the following lines of code to the end of your program:
 
 ~~~ python
 sleep(20)
@@ -84,7 +84,7 @@ You can change the number of seconds to a different value if you want to test th
 
 ### Testing the algorithm
 
-<!-- Find out why and modify explanation -->
+<!-- Find out why and potentially modify explanation -->
 Before you run the program, be aware that the `when_line` and `when_no_line` events might not initially activate until after one of them changes state. Once you run the program, you will need to move the robot so one of the sensors changes from over a line to not over a line or vice versa. Or you can add the line `robin.forward()` just before these events.
 
 **5.** Try running the program once your robot is placed directly over the line of your track.

@@ -7,58 +7,90 @@ Related files:
 
 ## Designing a more complex algorithm
 
-The previous line following algorithm is okay, but the robot can move a bit jaggedly especially when following a curved track / around corners.
+The previous line following algorithm is okay, but the robot can move side to side quite a lot as it tries to keep track of the line. This is partly down to the speed of the robot; slowing the robot down a bit means that the left and right turns are smaller and therefore more gradual.
+
+However, the `when_line` and `when_no_line` events don't allow you to modify the robot's speed or other properties. 
+
+In the previous algorithm, the events `when_line` and `when_no_line` don't allow you to modify the robot's speed or other properties.
 
 
-The previous line following algorithm is okay, but as it runs the robot at full speed it's easy for the robot to "overshoot" the line. 
+### Setting up the program
 
-To have more control over the robot's speed and run time, you can modify the program so that it reads the values of the line sensors and uses these to instruct which way each of the robot's left and right motors should turn.
+**1.** In a new Python 3 file, add these lines of code:
 
-### Planning a better algorithm
-
-As previously discussed, when a line sensor is over the line, it outputs a `1` from the digital pin. When the sensor is off the line, it outputs a `0`.
-
-![A still image from the animation in step 3.4 - 3_4_Two_Sensors_Anim.gif - with the left sensor (sensor 1) over the black line and the output as 1 and the right sensor (sensor 2) over the white surface with the output as 0](images/3_9-one-sensor-over-line)
-
-The motors work on a range from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse.
-
-**Rules of the algorithm**
-
-+ If the robot is perfectly over the line, both line sensors are off the line (outputting `0`). The robot should continue going forward, so both motors should receive the same positive value.
-
-+ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. This means that:
-    + if the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
-    + if the robot drifted right, the opposite would be true.
-
-*Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
-
-#### Reading the values of the sensors
-
-To apply these rules, the code needs to repeatedly read the outputs of the line sensors, in a loop:
-
-**1.** In a new Python 3 file, add in the following lines of code:
-
-~~~ python 
+~~~ python
 from gpiozero import Robot, LineSensor
-from time import sleep
+from time import sleep, time
 
 robin = Robot(left=(8, 7), right=(9, 10))
 left_sensor = LineSensor(19)
 right_sensor= LineSensor(26)
-
-while True:
-	left_detect  = int(left_sensor.value)
-	right_detect = int(right_sensor.value)
-	print(left_detect, right_detect)
 ~~~
 
-Don’t forget to adjust the pin numbers if you’ve used different GPIO pins. 
+Remember to adjust the pin numbers if you’ve used different GPIO pins. 
 
-**2.** Run the code, then move the robot back and forth over the line to see what happens.
+The only difference from the set up of the previous program so far is that you are also importing `time` from the `time` library. This will be used to create a timer so the program does not run forever. 
 
-Hopefully, you should see the binary output from the sensors, similar to the video below:
+**2.** Create variables that will be used to control the speed of the motors and the duration of time that the program will run.
 
-![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the output values on the screen changing whenever the robot is moved](images/3_9-binary-output-line-sensors)
+~~~ python 
+speed = 0.75
+
+duration = 20
+end_time = time() + duration
+
+running = True
+~~~
+
+The multiplier for `speed` usually needs to be above 0.6 otherwise the motors do not have enough momentum to turn on a solid surface. The maximum value for `speed` is 1.
+
+`duration` is how many seconds the program will run for. By adding this value to the current `time()` you can calculate the `end_time` for stopping the program.
+
+You will use the `running` variable to specify when the program should stop running.
+
+### Planning a better algorithm
+
+In the previous algorithm, the events `when_line` and `when_no_line` don't allow you to modify the robot's speed or other properties.
+
+To have more control over the robot's movement, you can read the values of the line sensors and use these to instruct which way each of the robot's left and right motors should turn, and by how much.
+
+
+
+When a line sensor is above a line, it outputs a `1`. When it’s off a line, it outputs a `0`.
+
+The motors work slightly differently though as they have a range from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse. 
+
+
+Let’s have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
+
+
+
+
+The motors work slightly differently though: the robot, whenever it receives a 1 signal to the right motor, drives that motor forwards. When it receives a -1, it drives the motor backwards.
+
+
+
+
+Let's see how you can set the value of each of the motors based on the readings from the line sensors.
+
+### Rules of the new algorithm
+
+
+The motors work on a range from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse. 
+
+To turn left
+
+
+If the robot is perfectly over the line, both line sensors are off the line (outputting `0`). In this case, the robot should move forward, so both motors should receive the same positive value.
+
+If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. For example if the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
++ If the robot drifed right, the opposite would be true.
+
+
+
+Remember that the line sensors output `0` if it is over a white background and `1` if it 
+
+
 
 #### Using the sensor readings to set the motor values
 
@@ -68,100 +100,95 @@ Your next step is to send a signal to the motors:
 + If the right sensor outputs `1`, then the left motor should receive `-1` and the right motor `1`
 + If the left sensor outputs `1`, then the left motor should receive `1` and the right motor `-1`
 
-The signals for the motors should be stored in two new variables - I've called them `left_motor` and `right_motor`.
+![Picture of a table showing the robot directions based on the left line sensor and right line sensor readings](images/3_9-table-sensor-values.jpeg)
 
-**3.** Inside the `while` loop, use conditional statements to work out which way your robot needs to move:
+*Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
 
-~~~ python
-while True:
-	left_detect  = int(left_sensor.value)
-	right_detect = int(right_sensor.value)
 
-	if left_detect == 0 and right_detect == 0:
-		left_motor = 1
-		right_motor = 1
-	elif right_detect == 1:
-		left_motor = -1
-		right_motor = 1
-	elif left_detect == 1:
-		left_motor = 1
-		right_motor = -1
 
-	print (right_motor, left_motor)    
++ If the robot is perfectly over the line, both line sensors are off the line (outputting `0`). The robot should continue going forward, so both motors should receive the same positive value.
+
++ If the robot has drifted to one side, the sensor on the opposite side will move over the line and so will output `1`. This means that:
+    + if the robot has drifted left, the right sensor will read `1`. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor continues to run forwards.
+    + if the robot drifted right, the opposite would be true.
+
+
+
+
+
+
+#### Using the sensor readings to set the motor values
+
+Your next step is to send a signal to the motors:
+
++ If both sensors output `0`, then both motors should receive `1`
++ If the right sensor outputs `1`, then the left motor should receive `-1` and the right motor `1`
++ If the left sensor outputs `1`, then the left motor should receive `1` and the right motor `-1`
+
+To turn left, the left motor needs a negative value and the right motor needs a positive value.
+
+
+
+### Programming the algorithm
+
+**3.** To start applying these rules, the code needs to repeatedly read the outputs of the line sensors, in a loop:
+
+~~~ python 
+while running:
+    left_detect  = int(left_sensor.value)
+    right_detect = int(right_sensor.value)
+    
+	print (left_detect, right_detect)
 ~~~
 
-Notice that the signals are being output in the order `right_motor, left_motor`. This is important for the next stage of the code.
+**4.** If you run the program now, you should see the binary output from the sensors, similar to the video below:
 
-**4.** Run your code and test how it works when you move the robot over the line.
+![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the line sensor output values changing on the screen changing whenever the robot is moved](images/3_9-binary-output-line-sensors)
 
-#### Generating the source values of the motors
-
-GPIO Zero allows you to set the `source` of an output device so that it can receive a series of values over time. 
-
-|In your program, you are going to set the `source` of values for the motors depending on the current `value` of the line sensors. 
-
-**5.** To do this, you will need to turn your `while` loop into a **generator**:
+**5.** Inside the `while` loop, use conditional statements to specify the direction of each motor depending on the line sensor readings:
 
 ~~~ python
-def motor_speed():
-    while True:
-        left_detect  = int(left_sensor.value)
-        right_detect = int(right_sensor.value)
-        
-        if left_detect == 0 and right_detect == 0:
-            left_motor = 1
-            right_motor = 1
-        
-        if left_detect == 0 and right_detect == 1:
-            left_motor = -1
-            right_motor = 1
-        
-        if left_detect == 1 and right_detect == 0:
-            left_motor = 1
-            right_motor = -1
-        
-        # values need to be in the order right, left for the robin.source event
-        yield (right_motor, left_motor)
+while running:
+    left_detect  = int(left_sensor.value)
+    right_detect = int(right_sensor.value)
+    
+    if left_detect == 0 and right_detect == 0:
+        left_mot = 1
+        right_mot = 1
+    elif left_detect == 1:
+        left_mot = -1
+        right_mot = 1
+    elif right_detect == 1:
+        left_mot = 1
+        right_mot = -1
 
-robin.source = motor_speed()
+	print (left_mot, right_mot)    
 ~~~
 
-You may be more used to seeing `return` to pass values back from functions. 
+**6.** Run your code and test that the program outputs the correct motor values when you move the robot over the line.
 
-A **generator** is a special kind of function that uses `yield` to return data instead.
+![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the motor output values changing on the screen changing whenever the robot is moved](images/3_9-binary-output-motors)
 
-The data returned to the function call is an **iterator**, which is a series of values, rather than a single value. 
-
-This iterator is then used to update the `source` of the motor's value over time.
-
-#### Specifying a time limit
-
-Just like when you set the motors earlier, `source` will retain the last value supplied and continue to run even after you close the program.
-
-**7.** To make sure that the robot doesn’t keep running forever, add this code to the end of your program:
+**7.** Inside the loop, remove the `print` statement and replace it with:
 
 ~~~ python
-sleep(60)
-
-robin.stop()
-robin.source = None
-robin.close()
-left_sensor.close()
-right_sensor.close()
+    robin.left_motor.value = left_mot * speed
+    robin.right_motor.value = right_mot * speed
 ~~~
 
-Remember, you can change the number of seconds within `sleep` if you want to test the robot for shorter or longer periods of time.
+The value for each motor will be modified by the `speed` multiplier to slow down the robot. 
 
-**8.** Now run your code and test your robot over a track.
+Make sure you remove any `print` statements within the loop otherwise this will slow down the response time and the robot may "overshoot" the line.
 
-#### Reducing the speed
-
-Sometimes the robot runs a little too fast, so you can tweak your code to slow the robot down.
-
-**9.** Add in a speed multiplier to the program. Try different values for `speed` (between 0 and 1) and check how your robot runs.
+**8.** To stop the `while` loop from running forever, and to close all the component's connections cleanly, add this code inside the loop:
 
 ~~~ python
-speed = 0.65
-
-yield (right_motor * speed, left_motor * speed)
+    if time() >= end_time:
+        running = False
+        robin.stop()
+        robin.close()
+        left_sensor.close()
+        right_sensor.close()
 ~~~
+
+**9.** Now run your code and test your robot over a track.
