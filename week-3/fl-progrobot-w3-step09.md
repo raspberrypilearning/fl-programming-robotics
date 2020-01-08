@@ -7,6 +7,9 @@ Related files:
 
 ## Designing a more complex algorithm
 
+The previous line following algorithm is okay, but the robot can move a bit jaggedly especially when following a curved track / around corners.
+
+
 The previous line following algorithm is okay, but as it runs the robot at full speed it's easy for the robot to "overshoot" the line. 
 
 To have more control over the robot's speed and run time, you can modify the program so that it reads the values of the line sensors and uses these to instruct which way each of the robot's left and right motors should turn.
