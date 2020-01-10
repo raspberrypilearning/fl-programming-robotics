@@ -9,8 +9,7 @@ Related files:
 
 Congratulations on reaching the end of the course! Over the three weeks you've built a robot based on a Raspberry Pi, and developed it so that it could move, avoid obstacles, and follow lines. You've also completed an assignment to increase the functionality of your robot.
 
-You've learnt about the gpiozero library, and used it to control your robot. Over the course you've also had to think about how to construct your robot, attaching new elements to the chassis in suitable positions. It's also likely that you've had to fix some problems - whether with how you've built your robot, or with your programming. Throughout the course you've been developing these skills, which will be applicable to a range of products - not just robots! Good luck with all of your future projects.
-
+You've learnt about the `gpiozero` library, and used it to control your robot. Over the course you've also had to think about how to construct your robot, attaching new elements to the chassis in suitable positions. It's also likely that you've had to fix some problems - whether with how you've built your robot, or with your programming. Throughout the course you've been developing these skills, which will be applicable to a range of products - not just robots! Good luck with all of your future projects.
 
 ### Course feedback
 
