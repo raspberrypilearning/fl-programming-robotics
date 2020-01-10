@@ -49,6 +49,17 @@ This course requires you to have the following:
 #### Software:
 
 + The latest version of the Raspbian operating system
++ An IDE of your choice
+
+### Choosing a programming environment
+
+I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs.
+
+The IDE I will be using is **Mu**, which is preinstalled on most Raspberry Pis. Mu is also available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
+
+If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
+
+**Note:** if you choose another IDE, some of the screenshots and instructions in this course might differ to your development environment.
 
 #### Additional extras:
 
