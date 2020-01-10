@@ -44,7 +44,7 @@ Similarly, the `right` argument needs to specify the GPIO pins that are connecte
 
 #### Forward and backward
 
-You are now going to test which direction is forward and backward on each motor.
+You are now need to test which direction is forward and backward on each motor.
 
 **4.** Add this code to your program, to drive both motors forward, wait 1 second and then stop the motors:
 
