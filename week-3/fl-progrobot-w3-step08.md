@@ -61,7 +61,7 @@ left_sensor.when_no_line = robin.forward
 right_sensor.when_no_line = robin.forward
 ~~~
 
-Notice that the functions to move the robot do not end in brackets; this is due to how the events are defined in `LineSensor`.
+Notice that the functions to move the robot do not end in brackets; this is due to how the events are defined in `LineSensor` and means you can't pass any values inside brackets, such as the speed of the motors.
 
 ### Ensuring the program doesn't run forever
 
