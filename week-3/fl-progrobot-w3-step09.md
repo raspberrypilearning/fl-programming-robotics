@@ -65,7 +65,7 @@ If the left sensor outputs `1`, the robot has drifted right and needs to turn le
 
 If the right sensor outputs `1`, the robot has drifted left and needs to turn right. Therefore, the right motor should run backwards (a negative signal is needed), while the left motor should run forwards.
 
-![Picture of a table showing the robot directions based on the left line sensor and right line sensor readings](images/3_9-table-sensor-values.jpeg)
+![Image of a table showing the robot directions based on the left line sensor and right line sensor readings](images/3_9-table-sensor-values.jpeg)
 
 *Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
 

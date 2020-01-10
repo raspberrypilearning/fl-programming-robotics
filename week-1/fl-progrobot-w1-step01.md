@@ -15,11 +15,11 @@ Over this course you'll develop a robot buggy and program it. You'll start by ma
 
 Over the next 3 weeks you will learn about:
 
-+ Using the GPIO pins on the Raspberry Pi for both input and output.
++ Using the GPIO pins on the Raspberry Pi for both input and output
 + How to connect motors via a motor board, and control them using Python
 + Attaching components to a chassis
 + Using a ultrasonic distance sensor (UDS)
-+ Using inputs to control the outputs of your robot.
++ Using inputs to control the outputs of your robot
 + How line sensors work
 + How changing an algorithm can improve the performance of your robot
 
