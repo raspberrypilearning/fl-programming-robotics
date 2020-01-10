@@ -107,17 +107,17 @@ If the both motors do not turn as expected, repeat steps 4 and 5 until both moto
 
 Finally, you are going to test whether the motors are turning the correct way when using the `.left()` and `.right()` commands.
 
-**6.** Type the following lines of code at the end of the Python file you created. Run the program and note which motor changes direction on the command `robin.right(0.4)`.
+**6.** Type the following lines of code at the end of the Python file you created. Run the program and note which motor changes direction on the command `robin.right(0.6)`.
 
 ~~~ python
-robin.forward(0.4)
+robin.forward(0.6)
 sleep(1)
-robin.right(0.4)
+robin.right(0.6)
 sleep(1)
 robin.stop()
 ~~~
 
-**Note:** The 0.4 inside the `.forward()` and `.right()` commands makes the motors go a little slower, so it is easier to see which way they turn. The default speed is 1.
+**Note:** The 0.6 inside the `.forward()` and `.right()` commands makes the motors go a little slower, so it is easier to see which way they turn. The default speed is 1.
 
 The motor that changed direction is the right-hand motor. If that was the one you labelled ‘right’, then there’s nothing to change. If it was the one you labelled ‘left’, you need to alter your `Robot` code to swap the left pin numbers with the right pins:
 
@@ -135,9 +135,9 @@ Stop the program and run it again to check how any changes you made affected the
 **7.** Check that the left motor is turning correctly by adding the `.left()` command to the program.
 
 ~~~python
-robin.forward(0.4)
+robin.forward(0.8)
 sleep(1)
-robin.left(0.4)
+robin.left(0.7)
 sleep(1)
 robin.stop()
 ~~~
@@ -161,6 +161,6 @@ If the motors aren't moving at all, try the following :
 
 + Create a Python file that includes each of the commands: `forward`, `backward`, `left` and `right`.
 
-+ Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.8)`
++ Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.65)`
 
 Do you need any help? Share any issues you have below with your fellow learners.

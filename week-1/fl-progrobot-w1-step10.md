@@ -25,20 +25,26 @@ To check whether your buggy can move in all directions, it is best to use one of
 
 You need to check that the buggy can move in every direction. Therefore, a program that contains the commands `.foward()`, `.backward()`, `.left()` and `.right()` is ideal. Remember to end the program with `.stop()` to stop the motors from turning.
 
-If you don't have a program that is suitable, you can copy the code below into a new file. However, the numbers of your GPIO pins set in the `left` and `right` arguments of the `Robot` in line 2 may not be the same as mine or in a different order.
+If you don't have a program that is suitable, you can copy the code below into a new Python file. However, you may need to adjust the GPIO pins for the `left` and `right` motors as they may not be the same pins numbers and could also be in a different order. For example, in my robot setup I had to swap the `left` motor pins from `7,8` to `8,7`.
 
 ~~~ python
 from gpiozero import Robot
-robin = Robot(left=(7,8), right=(9,10))
+from time import sleep
+
+robin = Robot(left=(8,7), right=(9,10))
 
 robin.forward()
 sleep(1)
-robin.right(0.4)
+
+robin.right(0.8)
 sleep(1)
-robin.backward(0.6)
+
+robin.backward(0.9)
 sleep(1)
-robin.left(0.4)
+
+robin.left(0.7)
 sleep(1)
+
 robin.stop()
 ~~~
 

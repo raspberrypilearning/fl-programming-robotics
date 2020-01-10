@@ -49,7 +49,7 @@ echo = InputDevice(17)
 robin = Robot(left=(8,7), right=(9,10))
 ~~~
 
-Remember that your GPIO pin numbers for the motors or the UDS may be different to the code above. Check the previous programs that you got working and change the pin numbers to reflect the connections on your Raspberry Pi if necessary. You may have also renamed the variable `robin` to something else.
+Remember that your GPIO pin numbers for the `left` and `right` motors or the `trig` and `echo` pins of the UDS may be different to the code above. Check the previous programs that you got working and change the pin numbers to reflect the connections on your Raspberry Pi if necessary. You may have also renamed the variable `robin` to something else.
 
 **4.** The rest of the code should be the same as the program in the last step:
 
