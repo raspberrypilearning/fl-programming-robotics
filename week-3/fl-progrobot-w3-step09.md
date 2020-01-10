@@ -139,6 +139,3 @@ Make sure you remove any `print` statements within the loop otherwise this will 
 **9.** Now run your code and test your robot over a track.
 
 Try different values for `speed` (between 0 and 1) and check how your robot runs.
-
-+ Does your robot run smoother or not?
-+ Does it "overshoot" the line?
