@@ -133,4 +133,4 @@ If the motors aren't moving at all, try the following :
 
 + Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.65)`
 
-Do you need any help? Share any issues you have below with your fellow learners.
+Do you need any help? Share any issues you have below.

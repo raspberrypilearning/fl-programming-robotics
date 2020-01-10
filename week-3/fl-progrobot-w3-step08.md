@@ -70,7 +70,7 @@ Currently, the motors will continue to run even after you close the program. If 
 **4.** To make sure that the robot doesn’t keep running forever, and to close all the component's connections cleanly, add in the following lines of code to the end of your program:
 
 ~~~ python
-sleep(20)
+sleep(10)
 
 robin.stop()
 robin.close()
@@ -78,7 +78,7 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-After 20 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
+After 10 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
 
 You can change the number of seconds to a different value if you want to test the robot for shorter or longer periods of time.
 
