@@ -7,14 +7,14 @@ Related files:
 
 ## Testing the motors
 
-In this step you will label and test the motors, making sure your robot is able to go forward, backward, left and right.
+In this step you will label and test the motors, making sure your robot is able to go forwards, backwards, left and right.
 
 ### Labelling the motors
 
 The easiest way to keep track of which motor is left and which is right is to label the motors.
 
 + Start by lining up the motors side-by-side
-+ Use a marker pen to label the motor on the left-hand side ‘left’ and draw an arrow on it to indicate which way is forward, just like in the animation below
++ Use a marker pen to label the motor on the left-hand side ‘left’ and draw an arrow on it to indicate which way is forward, just like in the picture below
 + Label the other motor ‘right’ and draw an arrow on it pointing in the same direction as your first motor
 
 ![Picture of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up](images/1_7-labelled-motors)
@@ -23,20 +23,22 @@ The easiest way to keep track of which motor is left and which is right is to la
 
 #### Setting up the motors in Python
 
-**1.** On your Raspberry Pi, open Mu or the IDE of your choice and create a new file.
+**1.** On your Raspberry Pi, open Mu or the IDE of your choice and create a new Python file.
 
 **2.** Add in the following code:
 
 ~~~ python
 from gpiozero import Robot
+from time import sleep
+
 robin = Robot(left=(7,8), right=(9,10))
 ~~~
 
-The first line imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors.
+The first line imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors. The second line imports `sleep` from the `time` library.
 
-The second line defines the `Robot`, you can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
+The final line defines the `Robot`, you can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
 
-When defining the `Robot` you need to give it two arguments: `left` and `right`. The `left` argument should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. In the last step, I chose GPIO pins 7 and 8 but yours might be different.
+When intialising the `Robot` you need to give it two arguments: `left` and `right`. The `left` argument should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. Previously, I chose GPIO pins 7 and 8 but yours might be different.
 
 Similarly, the `right` argument needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4** on the motor controller - for me that is GPIO pins 9 and 10.
 
@@ -58,7 +60,7 @@ robin.stop()
 
 Run the program and check that both motors are turning in the direction of the arrows you drew.
 
-![Picture with arrows showing the direction both the motors should be spinning when the forward() command is entered](images/1_7-motors-spinning-forward)
+![Video-gif of the DC motors labelled with arrows showing the direction both the motors should be spinning when the forward() command is entered](images/1_7-motors-spinning-forward)
 
 If either motor is turning in the wrong direction, alter your program and swap the pin numbers for that motor.
 
@@ -87,7 +89,7 @@ Repeat steps 4 and 5 until both motors turn forward and backward correctly.
 
 #### Left and right
 
-Finally, you are going to test whether the motors are turning the correct way when using the `.right()` command. There is a `.left()` command as well, but you only need to test one to ensure you have labelled them correctly.
+Finally, you are going to test whether the motors are turning the correct way when using the `.right()` command. There is a `.left()` command as well, but you only need to test one to ensure you have labelled these directions correctly.
 
 **6.** Add the following lines of code to your program. Run the program and note which motor changes direction on the command `robin.right(0.6)`.
 
@@ -114,13 +116,13 @@ Repeat step 6 until the motor labelled right changes direction.
 
 #### Potential problems
 
-If you are having problems with getting the motors to turn in the right direction, try out the instructions for programming the motors again in a new Python file.
+If you are having problems with getting the motors to turn in the correct directions, try out the instructions for programming the motors again in a new Python file.
 
 **Top tip:** if there is a problem with your program or the wiring, the motors can spin continuously. If this happens, try entering the command `robin.stop()` (or the name you gave the robot object followed by `.stop()`) into the Python shell. Otherwise, turn off the battery pack or Raspberry Pi and check the wiring is correct.
 
 If the motors aren't moving at all, try the following :
 
-+ Check that the wires from the motor controller are connected to the four GPIO pins and GND as set out in the previous step
++ Check that the wires from the motor controller are connected to the four GPIO pins and GND as set out in the previous article
 + Check the wires between the motors and the motor controller are secure and connected properly
 + If the battery pack has a switch, make sure it is on
 + Most motor controllers have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries)

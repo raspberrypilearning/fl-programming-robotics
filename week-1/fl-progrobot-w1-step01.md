@@ -51,16 +51,6 @@ This course requires you to have the following:
 + The latest version of the Raspbian operating system
 + An IDE of your choice
 
-### Choosing a programming environment
-
-I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs.
-
-The IDE I will be using is **Mu**, which is preinstalled on most Raspberry Pis. Mu is also available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
-
-If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
-
-**Note:** if you choose another IDE, some of the screenshots and instructions in this course might differ to your development environment.
-
 #### Additional extras:
 
 + Adhesives (duct tape / electrical tape, putty, glue etc.)
@@ -74,6 +64,14 @@ A Raspberry Pi model 3B or above is recommended as you can connect to it over Wi
 The ultrasonic distance sensor and line following sensor are required for week 2 and week 3 respectively.
 
 A ball caster is necessary if your robot has only two wheels to act as a third wheel so the robot is balanced and can move freely.
+
+### Choosing a programming environment
+
+I recommend using an Integrated Development Environment (IDE) during this course to create, run and test your Python programs.
+
+The IDE I will be using is **Mu**, which is preinstalled on most Raspberry Pis. Mu is also available at the website [codewith.mu](https://codewith.mu/) along with [Instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
+
+If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
 
 ### Week one
 

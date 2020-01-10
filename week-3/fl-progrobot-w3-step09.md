@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-## Designing a more complex algorithm
+## Improving the line following algorithm
 
 The previous line following algorithm is okay, but the robot can move side to side quite a lot as it tries to keep track of the line. To make the robot's movement more elegant, you can slow down the speed of the robot; this ensures the left and right turns and smaller and therefore more gradual.
 
@@ -37,7 +37,7 @@ end_time = time() + duration
 running = True
 ~~~
 
-The multiplier for `speed` usually needs to be above 0.6 otherwise the motors do not have enough momentum to turn on a solid surface. The maximum value for `speed` is 1.
+The value for each motor will be modified by the `speed` multiplier to slow down the robot a little. The value for `speed` usually needs to be above 0.6 otherwise the motors do not have enough momentum to turn on a solid surface, and the maximum value is 1.
 
 The variable `duration` specifies how many seconds the program will run for. By adding this value to the current `time()` you can calculate the `end_time` for stopping the program.
 
