@@ -62,13 +62,13 @@ In the code above, I specified a speed that is lower than the default speed of 1
 
 Using `Robot` from the GPIO Zero library allows you to set the direction of the motors without needing to worry too much about the signals being sent to the motors. 
 
-As useful as this is, it's also important to understand how these signals are interpreted by the motor controller board to produce the output you want. Knowing this allows you to debug issues with your robot more easily.
+As useful as this is, it's also important to understand how these signals are interpreted by the motor controller board to produce the output you want.
 
 The motors work on a range of `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse. 
 
 When using the `.forward()` command, a positive value is sent to the left and right motors, whilst the `.backward()` command sends a negative value to both motors.
 
-The `.left()` and `.right()` commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. To turn right, the right motor should run backwards (a negative signal is needed), while the left motor should run forwards.
+The `.left()` and `.right()` commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. The opposite is true to turn right; the right motor receives a negative value and the left motor a positive value.
 
 ### Connecting to a Raspberry Pi remotely
 

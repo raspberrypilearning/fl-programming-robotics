@@ -129,7 +129,7 @@ If the motors aren't moving at all, try the following :
 
 ### Challenge: experimenting with direction and speed
 
-+ Create a Python file that includes each of the commands: `forward`, `backward`, `left` and `right`.
++ Create a Python file that includes each of the commands: `.forward()`, `.backward()`, `.left()` and `.right()`.
 
 + Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.65)`
 
