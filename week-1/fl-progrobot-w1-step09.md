@@ -45,7 +45,7 @@ Use a permanent or removable fastening to hold the motors in place. If this is y
 
 ![Picture of the chassis with the wheels attached to the motors](images/1_9-chassis-wheels-attached)
 
-**5.** When the wheels are in place, you can attach a ball caster to the front of the chassis to act as a third wheel. 
+**5.** When the wheels are in place, you can attach a ball caster to the front of the chassis to support the robot and act as a third wheel. 
 
 Start by assembling the ball caster. It is useful to work out where the screw holes for the ball caster should be on the chassis before securing it in place. Place the ball caster face down inside the chassis near the front-centre and use a pen to mark where the screws need to go. If your chassis is made out of cardboard, use a small sharp instrument to carefully make holes where you marked.
 
