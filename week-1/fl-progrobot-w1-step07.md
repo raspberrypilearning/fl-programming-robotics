@@ -36,7 +36,7 @@ robin = Robot(left=(7,8), right=(9,10))
 
 The first line imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors. The second line imports `sleep` from the `time` library.
 
-The final line defines the `Robot`, you can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
+The final line defines the `Robot`. You can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
 
 When intialising the `Robot` you need to give it two arguments: `left` and `right`. The `left` argument should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. Previously, I chose GPIO pins 7 and 8 but yours might be different.
 
@@ -62,13 +62,13 @@ Run the program and check that both motors are turning in the direction of the a
 
 ![Video-gif of the DC motors labelled with arrows showing the direction both the motors should be spinning when the forward() command is entered](images/1_7-motors-spinning-forward)
 
-If either motor is turning in the wrong direction, alter your program and swap the pin numbers for that motor.
+If either motor is turning in the wrong direction, alter your program by swapping the pin numbers for that motor.
 
 ~~~ python
-# for example, change the right pins from
-robin = Robot(left=(9,10), right=(7,8))
+# for example, change the left pins from
+robin = Robot(left=(7,8), right=(9,10))
 # to
-robin = Robot(left=(9,10), right=(8,7))
+robin = Robot(left=(8,7), right=(9,10))
 ~~~
 
 Stop the program and run it again to check how any changes you made affected the motors.
@@ -101,9 +101,9 @@ sleep(1)
 robin.stop()
 ~~~
 
-**Note:** The 0.6 inside the `.forward()` and `.right()` commands makes the motors go a little slower, the default speed is 1.
+**Note:** The 0.6 inside the `.forward()` and `.right()` commands makes the motors go a little slower. The default speed is 1.
 
-The motor that changed direction is the right-hand motor. If that was the one you labelled ‘right’, then there’s nothing to change. If it was the one you labelled ‘left’, you need to alter your `Robot` code to swap the left pin numbers with the right pins:
+The motor that changed direction is the right-hand motor. If that was the one you labelled "right", then there’s nothing to change. If it was the one you labelled "left", you need to alter your `Robot` code to swap the left pin numbers with the right pins:
 
 ~~~ python
 # for example, change the GPIO pins from
@@ -122,10 +122,9 @@ If you are having problems with getting the motors to turn in the correct direct
 
 If the motors aren't moving at all, try the following :
 
-+ Check that the wires from the motor controller are connected to the four GPIO pins and GND as set out in the previous article
-+ Check the wires between the motors and the motor controller are secure and connected properly
++ Check that the wiring of the components is correct from the previous articles and all connections are secure
 + If the battery pack has a switch, make sure it is on
-+ Most motor controllers have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries)
++ Most motor controllers have a red LED to show it is powered on. If it is not lit up, you may need new batteries or your battery pack may need to be filled completely with batteries for it to work
 
 ### Challenge: experimenting with direction and speed
 

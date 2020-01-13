@@ -45,7 +45,7 @@ You will need 2 wires for each DC motor to connect it to the motor controller bo
 
 Remove the soft plastic clip from the motors so the wires can be attached. You can use a flat head screwdriver to help remove the clip.
 
-![Video of the plastic clip from a DC motor being removed with the help of a flat head screwdriver](images/1_5-removing-plastic-clip-from-motor)
+![Video-gif of the plastic clip from a DC motor being removed with the help of a flat head screwdriver](images/1_5-removing-plastic-clip-from-motor)
 
 Thread the bare wire through the contact on the motor. **Top tip:** it may be easier to solder the wire to the contact on the motor if you bend the wire once it has passed through the contact.
 
