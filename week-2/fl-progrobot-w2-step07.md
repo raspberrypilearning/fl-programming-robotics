@@ -15,13 +15,13 @@ If the UDS `echo` pin is 5V, for example for the HC-SR04 sensor, a voltage divid
 
 For this step, you will need the following items:
 
-+ Ultrasonic distance sensor
++ Ultrasonic distance sensor <!-- Check aliexpress wishlist -->
 + 4 x female-male jumper leads
 
 If your UDS is 5V, you will also need:
 
 + Soldering iron and solder
-+ 330 Ohm resistor
++ 330 Ohm resistor <!-- Change to: 2 different sized resistors to split the voltage e.g. a 330 Ohm resistor and a 470 Ohm resistor -->
 + 470 Ohm resistor
 + 2 more female-male jumper leads (6 in total)
 + Tape

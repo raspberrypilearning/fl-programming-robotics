@@ -70,7 +70,7 @@ The Raspberry Pi will need its own source of power. A small USB power bank is th
 
 For testing purposes, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Pi will need a mobile source of power, otherwise it won't be able to travel far from the mains power supply.
 
-### Setting up your Pi
+### Setting up your Pi <!-- Add VNC viewer here or leave in 3.10? -->
 
 You should already be familiar with setting up a Raspberry Pi and using it. If not, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
 
