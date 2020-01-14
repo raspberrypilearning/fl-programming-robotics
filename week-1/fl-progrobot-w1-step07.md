@@ -7,7 +7,7 @@ Related files:
 
 ## Testing the motors
 
-In this step you will label and test the motors, making sure your robot is able to go forwards, backwards, left and right.
+In this step you will label and test the motors, to help ensure that your robot will correctly go forwards, backwards, left or right as commanded.
 
 ### Labelling the motors
 
@@ -36,7 +36,7 @@ robin = Robot(left=(7,8), right=(9,10))
 
 The first line imports `Robot` from the GPIO Zero library, which you will use to control the direction and speed of the motors. The second line imports `sleep` from the `time` library.
 
-The final line defines the `Robot`, you can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
+The final line defines the `Robot`; you can name the variable anything you like - in this course, I've chosen to call my robot `robin`.
 
 When intialising the `Robot` you need to give it two arguments: `left` and `right`. The `left` argument should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. Previously, I chose GPIO pins 7 and 8 but yours might be different.
 
@@ -46,7 +46,7 @@ Similarly, the `right` argument needs to specify the GPIO pins that are connecte
 
 #### Forward and backward
 
-You are now need to test which direction is forward and backward on each motor.
+You are now need to test which direction is forward on each motor.
 
 **4.** Add this code to your program, to drive both motors forward, wait 1 second and then stop the motors:
 
@@ -133,4 +133,4 @@ If the motors aren't moving at all, try the following :
 
 + Experiment with giving these commands different values inside the brackets e.g. `robin.left(0.65)`
 
-Do you need any help? Share any issues you have below with your fellow learners.
+Do you need any help? Share any issues you have below.
