@@ -7,7 +7,7 @@ Related files:
 
 ## Program a line following algorithm
 
-To develop a basic line following algorithm, you need to consider how the robot should act depending on the readings of the line sensors. First, let's set up the program before moving on to the algorithm. 
+Now that you have attached the line sensors, you can develop a basic line following algorithm based on the readings of the line sensors. First, let's set up the program before moving on to the algorithm. 
 
 ### Setting up the motors and line sensors
 
@@ -24,16 +24,17 @@ left_sensor = LineSensor(19)
 right_sensor= LineSensor(26)
 ~~~
 
-Don’t forget to adjust the pin numbers if you’ve used different GPIO pins for the left and right motors or the left and right line sensors. You may have also used a different variable name to `robin`. 
+Don’t forget to adjust the pin numbers if you’ve used different GPIO pins for the motors or line sensors.
 
 ### Describing the algorithm
 
 The line sensors have 2 states; the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
 
-Let's start by considering what the robot buggy should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 from their digital pins as they are over the white background. Therefore, the robot should move forwards.
+Start by considering what the robot buggy should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 from their digital pins as they are over the white background. Therefore, the robot should move forwards.
 
 Think about the other factors that make up the line following algorithm: 
 
++ **What is the initial position of the robot in relation to the line?**
 + **How should the robot react when the left sensor is over the line?**
 + **What about when the right sensor detects the line?**
 + **How have you previously programmed the robot to move using the `gpiozero` library?**
@@ -50,7 +51,15 @@ The actions that the robot needs to take depending on the readings from the line
 
 ### Programming the algorithm
 
-To detect the state of each sensor, you are going to use two events from `LineSensor`, which is part of the `gpiozero` library. These events are called `when_line` and `when_no_line`.
+To detect the state of each sensor, you are going to use two events from `LineSensor`, which is part of the `gpiozero` library. 
+
+An event is an action that occurs based on user interaction or a change in behaviour, such as a button being pressed. 
+
+Synchronous
+
+When an event is activated...
+
+These events are called `when_line` and `when_no_line`.
 
 **3.** Within the Python file you set up, program your robot to move in a certain direction based on the rules of the algorithm.
 
@@ -70,7 +79,7 @@ Currently, the motors will continue to run even after you close the program. If 
 **4.** To make sure that the robot doesn’t keep running forever, and to close all the component's connections cleanly, add in the following lines of code to the end of your program:
 
 ~~~ python
-sleep(20)
+sleep(10)
 
 robin.stop()
 robin.close()
@@ -78,7 +87,7 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-After 20 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
+After 10 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
 
 You can change the number of seconds to a different value if you want to test the robot for shorter or longer periods of time.
 

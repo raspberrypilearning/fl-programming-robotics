@@ -13,7 +13,7 @@ Now you have the motors set up, the next stage is to design a chassis to house t
 
 ### Choosing a material
 
-A chassis for a robot buggy can be built using all sorts of materials; cardboard, plastic or metal to name a few. The material that works best for you depends on the function, cost, and tools available.
+A chassis for a robot buggy can be built using all sorts of materials: cardboard, plastic or metal to name a few. The material that works best for you depends on the function, cost, and tools available.
 
 When choosing a material, you need to consider aspects such as weight vs durability, cost vs strength, and difficulty to work with vs quality of the chassis. Using certain types of metal might result in a strong and durable chassis but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap but it is less sturdy than other materials.
 

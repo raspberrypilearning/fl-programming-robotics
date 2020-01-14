@@ -21,11 +21,11 @@ If either of the wheels starts spinning continuously, chances are one of the con
 
 ### Testing the movement
 
-To check whether your buggy can move in all directions, it is best to use one of the programs you created in step 1.7. Make sure the program is one that was working when you tested the motor directions previously. 
+To check whether your buggy can move in all directions, it is best to use one of the programs you created previously for testing the direction of the motors - just make sure it was a working program with the correct GPIO pins for the `Robot`! 
 
 You need to check that the buggy can move in every direction. Therefore, a program that contains the commands `.foward()`, `.backward()`, `.left()` and `.right()` is ideal. Remember to end the program with `.stop()` to stop the motors from turning.
 
-If you don't have a program that is suitable, you can copy the code below into a new Python file. However, you may need to adjust the GPIO pins for the `left` and `right` motors as they may not be the same pins numbers and could also be in a different order. For example, in my robot setup I had to swap the `left` motor pins from `7,8` to `8,7`.
+If you don't have a program that is suitable, you can copy the code below into a new Python file. However, you may need to adjust the GPIO pins for the `left` and `right` motors like you did earlier. For example, in my robot setup I had to swap the `left` motor pins from `7,8` to `8,7`.
 
 ~~~ python
 from gpiozero import Robot
@@ -52,11 +52,23 @@ robin.stop()
 
 **Does the robot buggy move forward, backward, left and right correctly in the order you specified in the code?**
 
-If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. Follow the instructions again in step 1.7 if you are still having issues.
+If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. Follow the previous instructions when you tested the direction of both motors if you are still having issues.
 
 **Does the speed need adjusting?**
 
-In the code above, I specified a speed that is lower than the default speed of 1 in the commands `.right()`, `.backward()` and `.left()`. If your buggy doesn't turn or move backward as intended, try changing the values and then run the program again to see any changes made.
+In the code above, I specified a speed that is lower than the default speed of 1 using the commands `.right(0.8)`, `.backward(0.9)` and `.left(0.7)`. If your buggy doesn't turn or move backward as intended, try changing the values inside the brackets and then run the program again to see any changes made.
+
+### Understanding how the .forward(), .left(), .right() and .backward() commands work
+
+Using `Robot` from the GPIO Zero library allows you to set the direction of the motors without needing to worry too much about the signals being sent to the motors. 
+
+As useful as this is, it's also important to understand how these signals are interpreted by the motor controller board to produce the output you want.
+
+The motors work on a range of `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse. 
+
+When using the `.forward()` command, a positive value is sent to the left and right motors, whilst the `.backward()` command sends a negative value to both motors.
+
+The `.left()` and `.right()` commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. The opposite is true to turn right; the right motor receives a negative value and the left motor a positive value.
 
 ### Connecting to a Raspberry Pi remotely
 
@@ -67,3 +79,5 @@ To use your Raspberry Pi without physically connecting it to a monitor, mouse or
 VNC is a graphical desktop sharing system that allows you to remotely control the desktop interface of one computer (running VNC Server) from another computer or mobile device (running VNC Viewer). For more information, read our guide on [Connecting to your Raspberry Pi with VNC Viewer](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md).
 
 You can also access the command line of a Raspberry Pi remotely from another computer or device on the same network using SSH. However, you will only have access to the command line, not the full desktop environment. Our guide on [Connecting to Raspberry Pi via SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) contains more details on how to do this.
+
+Share how you got on in the comments below, and any issues you are having. Post a link to a video of your robot once you have got it moving!

@@ -49,15 +49,15 @@ The voltage of a pin is labelled on the reference guide. There are two **5V** pi
 
 A GPIO pin designated as an **output** pin can be set to high (3.3V) or low (0V). Components are usually attached so that setting the output to high will allow current to flow to them, whilst setting the output to low won't allow a current to flow to them.
 
-A GPIO pin that is designated as an input will allow a signal to be received by the Raspberry Pi. The threshold between a high and a low signal is around 1.8V; a voltage between 1.8V and 3.3V will be read by the Raspberry Pi as high, otherwise it will be read as low. Do not allow an input voltage above 3.3V or else you will fry your Pi!
+A GPIO pin that is designated as an **input** will allow a signal to be received by the Raspberry Pi. The threshold between a high and a low signal is around 1.8V; a voltage between 1.8V and 3.3V will be read by the Raspberry Pi as high, anything lower than 1.8V will be read as low. Do not allow an input voltage above 3.3V or else you will fry your Pi!
 
 #### A word of caution
 
 While connecting most components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up otherwise you could damage the Raspberry Pi or the components.
 
-A few pieces of general advice to follow are listed below:
+A few pieces of general advice to follow are:
 
-+ Do not use 5V for 3V3 components (you may damage the component or your Pi)
++ Do not attach 3V3 components directly to a 5V pin on the Pi (you may damage the component or your Pi)
 + Certain components, such as LEDs, should have resistors to limit the current passing through them
 + Do not connect motors directly to the GPIO pins, instead use a motor controller board or an H-bridge circuit
 

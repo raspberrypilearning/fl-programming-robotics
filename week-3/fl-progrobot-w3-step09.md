@@ -31,7 +31,7 @@ So far, the only difference from the start of the previous program is that you a
 ~~~ python 
 speed = 0.75
 
-duration = 20
+duration = 10
 end_time = time() + duration
 
 running = True
@@ -91,8 +91,8 @@ while running:
 
 ~~~ python
 while running:
-    left_detect  = int(left_sensor.value)
-    right_detect = int(right_sensor.value)
+    left_detect  = left_sensor.value
+    right_detect = right_sensor.value
     
     # Rule 1
     if left_detect == 0 and right_detect == 0:
