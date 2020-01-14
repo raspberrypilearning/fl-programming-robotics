@@ -103,7 +103,7 @@ robin.stop()
 
 **Note:** The 0.6 inside the `.forward()` and `.right()` commands makes the motors go a little slower. The default speed is 1.
 
-The motor that changed direction is the right-hand motor. If that was the one you labelled "right", then there’s nothing to change. If it was the one you labelled "left", you need to alter your `Robot` code to swap the left pin numbers with the right pins:
+The motor that changed direction is the one that your program has defined as the right-hand motor. If that was the one you labelled "right", then there’s nothing to change. If it was the one you labelled "left", you need to alter your `Robot` code to swap the left pin numbers with the right pins:
 
 ~~~ python
 # for example, change the GPIO pins from

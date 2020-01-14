@@ -30,7 +30,7 @@ You may also need:
 
 The motors require more power than the Raspberry Pi can provide. Therefore, you will use 4 AA batteries to power them.
 
-The battery pack should include 2 wires; one red and one black. The red wire is the power input and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** block so instead use the voltage in block labelled **+12V**.
+The battery pack should include 2 wires; one red and one black. The red wire is the power input and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** terminal block so instead use the "voltage in" terminal block labelled **+12V**.
 
 ![Picture of the red wire from the battery pack connected to the 12V terminal block of the motor controller](images/1_6-battery-pack-red-wire-motor-controller)
 
@@ -50,7 +50,7 @@ On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**
 
 Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
 
-Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each of your DC motors will need to need to use two **IN** pins to connect to the Raspberry Pi so it can turn in both directions. You will also need one **GND** pin in total to complete the circuit.
+Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each of your DC motors will need to need to use two **IN** pins to connect to the Raspberry Pi so it can turn in both directions. You will also need one **GND** pin to complete the circuits - this can be the same pin for both motors.
 
 | GPIO pin   | connects to   | board pin   |
 |:----------:|:-------------:|:-----------:|
@@ -74,12 +74,12 @@ For testing purposes, the Raspberry Pi can be plugged directly into the mains po
 
 You should already be familiar with setting up a Raspberry Pi and using it. If not, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
 
-The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins. 
+The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins.
 
-Python and GPIO Zero will be installed by default if your Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or other operating systems.
+Python and GPIO Zero will be installed by default if your Raspberry Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or other operating systems.
 
 **Did you have any problems connecting the motor board to the Raspberry Pi or to the battery pack?**
 
-**What type of power supply are you using for your Pi?**
+**What type of power supply are you using for your Raspberry Pi?**
 
 Answer both of these questions in the  comments section below.
