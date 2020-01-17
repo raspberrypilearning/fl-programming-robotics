@@ -39,7 +39,7 @@ When programming the GPIO pins there are two different ways to refer to them: **
 
 ![The layout of the GPIO pins on a 40 pin Raspberry Pi using GPIO numbering, which can be used as a reference guide.](images/1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
 
-The numbering of the GPIO pins is not in numerical order so there is no easy way to remember them. Instead it follows the Broadcom (BCM) numbering, which relates to the numbering on the CPU of the Raspberry Pi. However, you can use a reference board that fits over the pins, a printed reference, or a website guide to help you out.
+The numbering of the GPIO pins is not in numerical order so there is no easy way to remember them. Instead it follows the Broadcom (BCM) numbering, which relates to the numbering on the CPU of the Raspberry Pi. However, you can use a reference board that fits over the pins, a printed reference, or a [website](http://pinout.xyz) guide to help you out.
 
 [comment]: # (Link to reference guide / board?)
 
