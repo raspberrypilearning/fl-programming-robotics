@@ -35,15 +35,15 @@ If your chassis is made out of cardboard, use a sharp object (such as a pencil o
 
 ![Picture of a pencil poking out of the side of the cardboard box where the axel of a motor will protrude](images/1_9-chassis-motor-axel)
 
-**3.** You will need to secure the motors firmly to the chassis. Otherwise the motors will move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best if this is a prototype as they are easy to attach and remove if necessary. 
+**3.** You will need to secure the motors firmly to the chassis. Otherwise the motors will move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best for your prototype as they are easy to attach and remove if necessary. 
 
 ![Picture of the motors secured with cable ties to the chassis](images/1_9-motors-secured-to-chassis)
 
-**4.** Once the motors are in place, you can attach the wheels to the axles.
+**4.** Once the motors are in place, you should attach the wheels to the axles.
 
 ![Picture of the chassis with the wheels attached to the motors](images/1_9-chassis-wheels-attached)
 
-**5.** When the wheels are in place, you can attach a ball caster to the front of the chassis to support the robot and act as a third wheel. 
+**5.** Next you need to attach a ball caster to the front of the chassis to support the robot and act as a third wheel. 
 
 Start by assembling the ball caster. It is useful to work out where the screw holes for the ball caster should be on the chassis before securing it in place. Place the ball caster face down inside the chassis near the front-centre and use a pen to mark where the screws need to go. If your chassis is made out of cardboard, use a small sharp instrument to carefully make holes where you marked.
 
@@ -61,6 +61,8 @@ Make sure there is nothing that could disturb the jumper leads that are connecte
 
 ![Picture of the motors, motor controller, Raspberry Pi, AA battery holder and USB battery pack inside the chassis](images/1_9-chassis-with-basic-components-attached)
 
-**Did you have any issues with attaching components to the chassis? If you, what adjustments did you have to make?**
+**Did you have any issues with attaching components to the chassis? If so, what adjustments did you have to make?**
 
 **What types of fastenings have you used for your robot buggy?**
+
+Share your answers in the comments below, and a picture of your robot using [Imgur](https://imgur.com/) or another image hosting platform.

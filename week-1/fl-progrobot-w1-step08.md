@@ -63,4 +63,8 @@ Now it is time for you to design a chassis for your robot buggy and make sure al
 + If you have a container, check that all the components will fit using the actual components or by mapping them out on paper
 + Check that there is a bit of extra room for the components to account for things like wiring
 
-Share the materials you used and the design process you followed in the comments below. You can also include a link to an image of your chassis by using [Imgur](https://imgur.com/) or another image hosting platform.
+**What type of container have you used for your chassis? What material is it made out of?**
+
+**How did you check that all the components will fit?**
+
+Share your answers in the comments below. You can also include a link to an image of your chassis by using [Imgur](https://imgur.com/) or another image hosting platform.
