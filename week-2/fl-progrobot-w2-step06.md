@@ -39,10 +39,10 @@ Now that you have a better idea of what a UDS is and how they work, you can move
 
 UDSs typically have 4 pins;
 
-+ `VCC` is the pin that powers the device. It needs 5V to work.
-+ `Trig` is the pin that trigger the emission of the ultrasound burst. It can be triggered using 3.3V.
-+ `Echo` is the pin that outputs when the reflected sound is received. It outputs at 5V.
-+ `GND` is the ground pin, used to complete the circuit.
++ **VCC** is the pin that powers the device. It needs 5V to work.
++ **Trig** is the pin that trigger the emission of the ultrasound burst. It can be triggered using 3.3V.
++ **Echo** is the pin that outputs when the reflected sound is received. It outputs at 5V.
++ **GND** is the ground pin, used to complete the circuit.
 
 This causes some issues, as the Echo will output 5V and the Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider - also known as a potential divider.
 
@@ -74,7 +74,7 @@ print('The resistor you need is approximately',R2)
 
 ### Limitations of a UDS
 
-The biggest limitation of this type of sensor, comes when the object that reflects the ultrasound is very close. In this case the microphone might miss the first echo, and instead detect a secondary echo that has rebounded back to the object and then returned. This gives a much higher distance reading than is accurate.
+The biggest limitation of this type of sensor comes when the object that reflects the ultrasound is very close. In this case the receiver might not pick up the sound when it is initially reflected off an object, and instead detect the sound once it has rebounded off another object. This results in a higher distance reading than is accurate.
 
 ### Test your voltage divider
 
