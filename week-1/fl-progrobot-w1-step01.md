@@ -36,7 +36,7 @@ This course requires you to have the following:
 + Ball caster (unless using more than 2 wheels)
 + Ultrasonic distance sensor (between 1-2)
 + 2 x line following sensors
-+ Jumper leads (female-female and male-female) or wire
++ Jumper leads (female-to-female and male-to-female) or wire
 + AA battery holder (for 4 AA batteries)
 + 4 x AA batteries
 + A USB battery pack (to power the Raspberry Pi) <!-- Check the amps / voltage to power Pi 4 and other models  -->

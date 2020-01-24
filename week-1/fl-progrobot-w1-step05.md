@@ -19,7 +19,7 @@ For this step you will need the following items:
 
 + Motor controller board
 + 2 x 3V - 6V DC motors
-+ 4 x jumper leads (male-male or female-male) or wire
++ 4 x jumper leads (male-to-male or female-to-male) or wire
 + Screwdriver
 
 You may also need:
@@ -31,7 +31,7 @@ You may also need:
 
 **Using a soldering iron can be a bit daunting at first but whether you are new to soldering or a veteran solderer, this [getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will provide you with some quick tips and tricks.**
 
-![Picture of the robot buggy parts for this step - 2 x DC motors, Motor controller board, Jumper leads (male-male and female-male), Screwdriver, Soldering iron and solder, Wire strippers, Scissors, Tape](images/1_5-parts-for-motor-controller)
+![Picture of the robot buggy parts for this step - 2 x DC motors, Motor controller board, Jumper leads (male-to-male and female-to-male), Screwdriver, Soldering iron and solder, Wire strippers, Scissors, Tape](images/1_5-parts-for-motor-controller)
 
 ### The DC motors
 
@@ -41,7 +41,7 @@ Most DC motors do not come with wires attached to them, which means you will nee
 
 You will need 2 wires for each DC motor to connect it to the motor controller board. Alternatively, you can use wire strippers to strip 2 jumper leads to expose the bare wire for attaching to each of the motors. A demonstration of how to strip a wire with wire strippers can be seen in [this video](https://www.youtube.com/watch?v=TZFTKbT4XFs).
 
-![Picture of 4 partially stripped male-male jumper lead](images/1_5-stripped-male-male-jumper-leads)
+![Picture of 4 partially stripped male-to-male jumper lead](images/1_5-stripped-male-male-jumper-leads)
 
 Remove the soft plastic clip from the motors so the wires can be attached. You can use a flat head screwdriver to help remove the clip.
 

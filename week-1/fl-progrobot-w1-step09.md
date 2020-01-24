@@ -35,9 +35,7 @@ If your chassis is made out of cardboard, use a sharp object (such as a pencil o
 
 ![Picture of a pencil poking out of the side of the cardboard box where the axel of a motor will protrude](images/1_9-chassis-motor-axel)
 
-**3.** You will need to secure the motors firmly to the chassis. Otherwise the motors will move once the wheels are attached and the motors are powered, and this could disturb other components inside the chassis.
-
-Use a permanent or removable fastening to hold the motors in place. If this is your prototype, tape or cable ties might be best as these will be easy to remove. 
+**3.** You will need to secure the motors firmly to the chassis. Otherwise the motors will move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best if this is a prototype as they are easy to attach and remove if necessary. 
 
 ![Picture of the motors secured with cable ties to the chassis](images/1_9-motors-secured-to-chassis)
 

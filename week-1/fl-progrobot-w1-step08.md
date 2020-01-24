@@ -13,7 +13,7 @@ Now you have the motors set up, the next stage is to design a chassis to house t
 
 ### Choosing a material
 
-A chassis for a robot buggy can be built using all sorts of materials: cardboard, plastic or metal to name a few. The material that works best for you depends on the function, cost, and tools available.
+A chassis for a robot buggy can be built using all sorts of materials: cardboard, plastic or metal to name a few. The material that works best for you depends on the weight of the components, cost, skill of the maker, and tools available. Check out our [Design and prototype embedded computer systems](https://www.futurelearn.com/courses/embedded-systems) course to learn about developing a physical product.
 
 When choosing a material, you need to consider aspects such as weight vs durability, cost vs strength, and difficulty to work with vs quality of the chassis. Using certain types of metal might result in a strong and durable chassis but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap but it is less sturdy than other materials.
 
@@ -31,13 +31,15 @@ At the very minimum, the chassis needs to house the following components:
 + Motor controller board
 + 2 x DC motors
 + Ultrasonic distance sensor
-+ 2 x line following sensors
++ 2 x line sensors
 + AA battery holder (to power the motor controller board)
 + USB battery pack (for powering the Raspberry Pi)
 
-The chassis needs to allow the mounting of a pair of wheels to the axles of the motors, and a ball caster that will act as a third wheel.
+You will also need to mount a pair of wheels to the axles of the motors and a ball caster to the front of the chassis that will act as a third. 
 
-![Picture of all the components that will need to be attached to the robot buggy chassis -  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, 2 line following sensors, AA battery holder, USB battery pack](images/1_8-components-for-the-chassis)
+The line sensors will need to sit either side of the ball caster and point downwards to the floor. The optimal distance between the line sensors and the floor surface is 1cm to 3cm, which should be fine for most buggies.
+
+![Picture of all the components that will need to be attached to the robot buggy chassis -  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, 2 line sensors, AA battery holder, USB battery pack](images/1_8-components-for-the-chassis)
 
 #### Making sure the components fit
 
@@ -49,7 +51,7 @@ It can also be useful to design the layout of the buggy on paper to make sure th
 
 Make sure each piece of paper is the correct size and shape for the component. You might have to measure your components, but most of them will have technical documentation online that will include their exact dimensions.
 
-#### Taking your design further
+#### Advanced design techniques
 
 If you want to know more about creating a physical object and using tools such as 3D modelling and 3D printing, then check out our [Design and prototype embedded computer systems](https://www.futurelearn.com/courses/embedded-systems) course.
 
@@ -58,7 +60,7 @@ If you want to know more about creating a physical object and using tools such a
 Now it is time for you to design a chassis for your robot buggy and make sure all the components fit:
 
 + Try to find a container that you can use for the prototype of the chassis
-+ If you have a container, check that all the components will fit. Otherwise, map out the components on paper
-+ Make any modifications to the chassis if necessary or find another container if the design isn't working out
++ If you have a container, check that all the components will fit using the actual components or by mapping them out on paper
++ Check that there is a bit of extra room for the components to account for things like wiring
 
 Share the materials you used and the design process you followed in the comments below. You can also include a link to an image of your chassis by using [Imgur](https://imgur.com/) or another image hosting platform.

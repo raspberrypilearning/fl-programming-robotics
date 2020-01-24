@@ -17,20 +17,20 @@ For this step you will need the following items:
 + Motor controller board (wired up to the DC motors)
 + AA battery holder (for 4 AA batteries)
 + 4 x AA batteries
-+ 5 x jumper leads (female-female)
++ 5 x jumper leads (female-to-female)
 + Screwdriver
 
 You may also need:
 
 + GPIO reference card
 
-![Picture of the robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-female), Screwdriver, GPIO reference card](images/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack)
+![Picture of the robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-to-female), Screwdriver, GPIO reference card](images/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack)
 
 ### Connect the battery pack to the motor board
 
 The motors require more power than the Raspberry Pi can provide. Therefore, you will use 4 AA batteries to power them.
 
-The battery pack should include 2 wires; one red and one black. The red wire is the power input and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** terminal block so instead use the "voltage in" terminal block labelled **+12V**.
+The battery pack should include 2 wires; one red and one black. The red wire is for the positive terminal and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** terminal block so instead use the "voltage in" terminal block labelled **+12V**.
 
 ![Picture of the red wire from the battery pack connected to the 12V terminal block of the motor controller](images/1_6-battery-pack-red-wire-motor-controller)
 
@@ -70,13 +70,15 @@ The Raspberry Pi will need its own source of power. A small USB power bank is th
 
 For testing purposes, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Pi will need a mobile source of power, otherwise it won't be able to travel far from the mains power supply.
 
-### Setting up your Pi <!-- Add VNC viewer here or leave in 3.10? -->
+### Setting up your Pi
 
 You should already be familiar with setting up a Raspberry Pi and using it. If not, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
 
 The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins.
 
 Python and GPIO Zero will be installed by default if your Raspberry Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or other operating systems.
+
+If you would like to remotely control the desktop of your Pi with another computer, check out our guide to [creating a virtual desktop using VNC Server](https://www.raspberrypi.org/documentation/remote-access/vnc/).
 
 **Did you have any problems connecting the motor board to the Raspberry Pi or to the battery pack?**
 

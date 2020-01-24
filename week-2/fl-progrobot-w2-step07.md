@@ -9,24 +9,24 @@ Related files:
 
 Having read about how a Ultrasonic Distance Sensor (UDS) works, you are now going to connect one to the Raspberry Pi.
 
-If the UDS `echo` pin is 5V, for example for the HC-SR04 sensor, a voltage divider (as described earlier this week) is required to ensure the Pi is not damaged. Alternatively, a 3V3 tolerant  sensor (such as the HC-SR04P) will work without a voltage divider.
+If the UDS `echo` pin is 5V, for example for the HC-SR04 sensor, a voltage divider (as described earlier this week) is required to ensure the Pi is not damaged. Alternatively, a 3V3 tolerant  sensor, such as the HC-SR04P, will work without a voltage divider.
 
 ### What you will need
 
 For this step, you will need the following items:
 
 + Ultrasonic distance sensor <!-- Check aliexpress wishlist -->
-+ 4 x female-male jumper leads
++ 4 x female-to-male jumper leads
 
 If your UDS is 5V, you will also need:
 
 + Soldering iron and solder
 + 330 Ohm resistor <!-- Change to: 2 different sized resistors to split the voltage e.g. a 330 Ohm resistor and a 470 Ohm resistor -->
 + 470 Ohm resistor
-+ 2 more female-male jumper leads (6 in total)
++ 2 more female-to-male jumper leads (6 in total)
 + Tape
 
-![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-male jumper leads, Soldering iron and solder, 330 Ohm resistor, 470 Ohm resistor, Tape](images/2_7-parts-for-the-UDS)
+![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-male jumper leads, Soldering iron and solder, 330 Ohm resistor, 470 Ohm resistor, Tape](images/2_7-parts-for-the-UDS)
 
 ### Wiring the UDS
 
@@ -36,7 +36,7 @@ Be aware that the instructions for wiring the UDS to the Raspberry Pi are slight
 
 As discussed previously, a typical UDS has 4 pins: `VCC`, `Trig`, `Echo` and `GND`. All of these pins need to be connected to the Raspberry Pi.
 
-**1.** Start by connecting a 5V pin on the Raspberry Pi into the `VCC` pin on the UDS using a female-male jumper lead. Refer to the diagram below or a GPIO reference guide if you aren't sure which pin on the Pi to use.
+**1.** Start by connecting a 5V pin on the Raspberry Pi into the `VCC` pin on the UDS using a female-to-male jumper lead. Refer to the diagram below or a GPIO reference guide if you aren't sure which pin on the Pi to use.
 
 ![The layout of the GPIO pins on a 40 pin Raspberry Pi using GPIO numbering, which can be used as a reference guide](images/1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
 
