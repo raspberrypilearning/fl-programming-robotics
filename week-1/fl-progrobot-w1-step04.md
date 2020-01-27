@@ -7,9 +7,11 @@ Related files:
 
 ## Raspberry Pi and general-purpose input/output
 
-Robots can sense and interact with the environment through a wide range of components. For a robot to make decisions and perform actions, it usually needs a computer or microcontroller which receives information from and sends signals back to the other components.
+Robots are able to sense and interact with the environment through a wide range of components. 
 
-A standard interface for connecting a single-board computer or microcontroller to other components is through general-purpose input/output (GPIO) pins.
+So that a robot can make decisions and perform actions, it uses some form of processor to receive information from and send signals back to the other components. 
+
+A standard interface for connecting a single-board computer or microprocessor to other components is through general-purpose input/output (GPIO) pins.
 
 ### Controlling robots using the Raspberry Pi
 

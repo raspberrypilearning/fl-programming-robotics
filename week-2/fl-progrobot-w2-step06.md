@@ -40,11 +40,11 @@ Now that you have a better idea of what a UDS is and how they work, you can move
 UDSs typically have 4 pins;
 
 + **VCC** is the pin that powers the device. It needs 5V to work.
-+ **Trig** is the pin that trigger the emission of the ultrasound burst. It can be triggered using 3.3V.
-+ **Echo** is the pin that outputs when the reflected sound is received. It outputs at 5V.
++ **Trig** is the pin that triggers the emission of the ultrasound burst. It can be triggered using 3.3V.
++ **Echo** is the pin that outputs when the reflected sound is received. It outputs at 3.3V or 5V depending on the UDS model.
 + **GND** is the ground pin, used to complete the circuit.
 
-This causes some issues, as the Echo will output 5V and the Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider - also known as a potential divider.
+If the UDS is 5V tolerant, this causes some issues because the **Echo** pin will output 5V and the Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider - also known as a potential divider.
 
 #### Voltage dividers
 
@@ -69,7 +69,7 @@ Vin = 5 # The input voltage (always 5)
 
 R2 = (Vout * R1) / (Vin - Vout)
 
-print('The resistor you need is approximately',R2)
+print('The resistor you need is approximately', R2)
 ~~~
 
 ### Limitations of a UDS

@@ -7,15 +7,15 @@ Related files:
 
 ## Programming the UDS
 
-In the last step, you connected the ultrasonic distance sensor (UDS) to the Raspberry Pi and secured the UDS to the robot buggy. Now you will test that the UDS can detect objects at different distances directly in front of it.
+In the last step, you connected your ultrasonic distance sensor (UDS) to your Raspberry Pi and secured the UDS to the chassis. Now you will test that the UDS can detect objects at different distances directly in front of it.
 
 ### Testing the UDS
 
-You need to make sure the UDS is working correctly whilst the robot is not moving. To do this, you will be using the GPIO Zero library again.
+Firstly, you need to make sure the UDS is working correctly whilst the robot is stationary. To interact with the UDS, you will be using the GPIO Zero library.
 
 **1.** Start by creating a new Python 3 file.
 
-**2.** Next you need to import `InputDevice` and `OutputDevice` from the GPIO Zero library, which you will use to communicate with the **Trigger** and **Echo** pins. 
+**2.** Next you need to import `InputDevice` and `OutputDevice` from the GPIO Zero library, which you will use to communicate with the **Trig** and **Echo** pins. 
 
 ~~~ python
 from gpiozero import InputDevice, OutputDevice
@@ -24,7 +24,7 @@ from time import sleep, time
 
 You will also need to use `time` and `sleep` to calculate the time taken for the ultrasound to be transmitted and received. 
 
-**3.** Set up the Trigger and Echo pins of the distance sensor using the GPIO pins you connected to on your Raspberry Pi. In the last step, I connected the Trigger pin to GPIO pin 4 and the Echo pin to GPIO pin 17 but yours might be different.
+**3.** Set up the **Trig** and **Echo** pins of the distance sensor using the GPIO pins you connected to on your Raspberry Pi. In the last step, I connected the **Trig** pin to **GPIO 4** and the **Echo** pin to **GPIO 17** but yours might be different.
 
 
 ~~~ python
