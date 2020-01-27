@@ -11,34 +11,44 @@ So far, you have created programs for moving the robot buggy and detecting objec
 
 ### Programming both the motors and the UDS
 
-For this program, you will need to bring together some of the code you have written so far in this course to solve a new problem. To begin this process, I am going to consider the different stages of the problem by breaking it down into several parts, which I will pose as questions:
+For this program, you will need to bring together some of the code you have written in during the course to solve a new problem. 
 
-+ What **hardware** does my program need to interact with?
-+ What should the buggy do if an object is ***not*** too close to it?
-+ How should the buggy behave when an object ***is*** too close?
+To help you begin this process, consider the different stages of the problem by breaking it down into several parts, which I will pose as questions:
+
++ What **components** does your program need to interact with?
++ What should the robot do if an object is ***not*** too close to it?
++ How should the robot behave when an object ***is*** too close?
 
 #### Interacting with the hardware
 
-Firstly, I must consider what hardware I am going to be communicating with. The choice of hardware also leads me to consider which programming libraries are required.
+The first question to think about is what components does your robot need to communicate with so it can sense objects and move accordingly?
 
-There are two pieces of hardware that this program needs to interact with; the motors for moving the buggy and the UDS for detecting objects.
+One of the components you will need to use is the UDS for detecting objects in front of the robot. 
 
-One of the libraries I will use is GPIO Zero, from which I will import `Robot` to control the motors, as well as `InputDevice` and `OutputDevice` to communicate with the UDS.
+**1.** Make a copy of your program from the previous step which calculates the distance of objects using the UDS. 
 
-The other library that the program will rely on is time, which is necessary for determining when the motors or UDS should perform certain actions. From this library I need to import `sleep` and `time`.
+The other components that your program needs to interact with are the motors. 
 
-**Setting up the new program**
-
-The quickest way to setup the program with the correct GPIO pins for your buggy is to use your previous code.
-
-**1.** Make a copy of the program you created in the previous step to calculate the distance of an object in front of the UDS.
-
-**2.** Change the `gpiozero` import statement so that `Robot` is also imported from the GPIO Zero library:
+**2.** Change the first line of code so that `Robot` is also imported from the `gpiozero` library.
 
 ~~~ python
 from gpiozero import Robot, InputDevice, OutputDevice
-from time import sleep, time
 ~~~
+
+You will also need to setup the `Robot` with the GPIO pins for the `left` and `right` commands. 
+
+**3.**
+
+
+
+**3.** After the two import statements for the 
+
+
+You can use one of your working programs from week 1 to check that the GPIO pins of your motors are set correctly. 
+
+
+<!-- Copy Robot explanation from week 1 -->
+
 
 **3.** Setup the motors in addition to the UDS so that both pieces of hardware can be communicated with via the GPIO pins on the Raspberry Pi.
 
@@ -82,9 +92,9 @@ while True:
 	print(distance)
 ~~~
 
-#### What should the buggy do if there isn't an object nearby?
+#### The default option for the robot
 
-The robot buggy should move forwards unless it detects an object that is too close.
+The robot should, by default, move forwards unless it detects an object that is too close.
 
 Although you could program the buggy to move forwards inside the `while True` loop, this would result in the buggy moving forever unless you turn off the Raspberry Pi. Therefore, I'm going to change the `while` loop to a `for` loop so that the buggy moves forward for a set number of times before stopping the buggy.
 
@@ -107,7 +117,7 @@ The robot buggy will now move forwards 30 times and then the buggy will stop mov
 
 #### What should the buggy do if an object is too close?
 
-At the moment, the buggy moves forwards regardless of how close it is to an object. If an object is detected as being within a certain distance of the UDS, then the buggy should move left or right to avoid the obstacle in front.
+At the moment, the robot moves forwards regardless of how close it is to an object. If an object is detected as being within a certain distance of the UDS, then the robot should turn left or right to avoid the obstacle in front.
 
 **How close is too close?**
 
@@ -127,11 +137,11 @@ else:
 sleep(0.1)
 ~~~
 
-For this program, I have chosen to move the buggy left if an object is 20cm or less away, otherwise the buggy should move forward. You could chose another direction to move once an obstacle is detected, for example right or backward and then left or right.
+For this program, I have chosen to turn the robot left if an object is 20cm or less away, otherwise the robot should move forward. 
 
-I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way - again, the value specified can be changed.
+I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way.
 
-The last `sleep` ensures the program waits for 0.1 seconds before attempting to detect more objects so the UDS has time to settle.
+The last `sleep` ensures the program waits for 0.1 seconds before attempting to detect more objects, allowing the UDS time to settle.
 
 Your final code for the end of the program should be:
 
@@ -152,10 +162,14 @@ for i in range(30):
 robin.stop()
 ~~~
 
-### Test the program
+### Testing the obstacle avoidance
 
-Try running the program whilst the buggy is on a suitable surface.
+Try running the program whilst the robot is on a suitable surface.
 
-If the buggy is not behaving as expected, first check that all the connections to the GPIO pins are correct before trying the code again. It can also be beneficial to run an earlier program you know was working to test whether the motors and UDS are still working as expected.
+If the buggy is not behaving as expected, first check that all the connections to the GPIO pins are correct before trying the code again. It may also be beneficial to run an earlier program you know was working to test whether the motors and UDS are still working as expected.
 
-Leave a comment below if you are having issues with the buggy or if you found a solution to a problem you faced.
+How effective is your robot at avoiding objects? 
+
+In the next step, you will look at some ways to improve your program. Can you think of any modifications that might help?
+
+Leave a comment below if you are having issues with the obstacle avoidance program, or if you found a solution to a problem you faced.

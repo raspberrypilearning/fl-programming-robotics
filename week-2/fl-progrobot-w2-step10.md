@@ -15,6 +15,19 @@ You might want to start by experimenting with different distance thresholds and 
 
 Another improvement you could make to the program is to allow the buggy to randomly choose to turn left or right once an obstacle is detected. **How might you code this?**
 
+
+
+
+
+You could instruct the robot to turn right instead of left, or to move backward before turning left or right. 
+
+You could also instruct your robot to choose a random direction, left or right, and then turn that way once an object has been detected. 
+
+
+I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way - again, the value specified can be changed.
+
+
+
 ### Limitations of the buggy
 
 You may have noticed that an object which is really close to the UDS returns a much larger distance than expected. This usually occurs if an object is closer than the minimum distance a UDS can detect accurately; for the HC-SR04 UDS the detection distance is about 2cm-500cm.
