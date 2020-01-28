@@ -24,7 +24,7 @@ from time import sleep, time
 
 `InputDevice` and `OutputDevice` will be used to communicate with the **Trig** and **Echo** pins. You will also need `time` and `sleep` to calculate the time taken for the ultrasound to be emitted and received. 
 
-**2.** Set up the **Trig** and **Echo** pins using the GPIO pins you connected them to on your Pi. 
+**2.** Set up the **Trig** and **Echo** pins using the GPIO pins you connected them to on your Pi.
 
 ~~~ python
 trig = OutputDevice(4)
@@ -39,7 +39,7 @@ The `sleep(2)` is there to let the sensor settle itself when the program starts 
 
 #### Transmitting and receiving the ultrasound
 
-**3.** Create a function that will be used to calculate how long it takes for the ultrasound to be transmitted and received. 
+**3.** Create a function that will be used to calculate how long it takes for the ultrasound to be transmitted and received.
 
 ~~~ python
 def get_pulse_time():
@@ -48,15 +48,15 @@ def get_pulse_time():
    trig.off()
 ~~~
 
-The function starts by setting the **Trig** pin to high for 10μs (microseconds) which prepares the internal clock of the UDS. 
+The function starts by setting the **Trig** pin to high for 10μs (microseconds) which prepares the internal clock of the UDS.
 
 As soon as the Trig pin is set to low, a burst of ultrasound is sent from the emitter and the sound starts to travel through the air.
 
 ![Animation of the Trig pin being set to high for 10μs and then Trig is set low. A burst of ultrasound is emitted from the UDS as soon as the Trig pin is set to low.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
-Once the ultrasound has finished being transmitted, the Echo pin is set to high. At this point, you need to record the start time. 
+Once the ultrasound has finished being transmitted, the Echo pin is set to high. At this point, you need to record the start time.
 
-**4.** Use a `while` loop inside the function to continuosly replace the start time until all of the sound has been transmitted.
+**4.** Use a `while` loop inside the function to continuously replace the start time until all of the sound has been transmitted.
 
 ~~~ python
     while echo.is_active == False:
@@ -67,7 +67,7 @@ Once the ultrasound has finished being transmitted, the Echo pin is set to high.
 
 ![Animation showing that once the ultrasound has finished being transmitted, the Echo pin is set to high and the start time is recorded.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
-If the ultrasound hits an object, it is reflected back to the sensor. As soon as the receiver picks up the ultrasound, the Echo pin is set to low and the end time needs to be recorded. 
+If the ultrasound hits an object, it is reflected back to the sensor. As soon as the receiver picks up the ultrasound, the Echo pin is set to low and the end time needs to be recorded.
 
 **5.** Create another `while` loop inside the function that keeps replacing the end time until the **Echo** pin is set to low.
 
@@ -123,7 +123,7 @@ def calculate_distance(duration):
 
 Using a different function to perform a separate piece of functionality is good coding practice.
 
-**9.** Add an infinite loop to the bottom of the program to test everything works. 
+**9.** Add an infinite loop to the bottom of the program to test everything works.
 
 ~~~ python
 while True:
