@@ -23,74 +23,132 @@ To help you begin this process, consider the different stages of the problem by 
 
 The first question to think about is what components does your robot need to communicate with so it can sense objects and move accordingly?
 
-One of the components you will need to use is the UDS for detecting objects in front of the robot. 
+One of the components your program needs to interact with is the UDS for detecting objects in front of the robot, and the other components are the motors. 
 
 **1.** Make a copy of your program from the previous step which calculates the distance of objects using the UDS. 
 
-The other components that your program needs to interact with are the motors. 
-
-**2.** Change the first line of code so that `Robot` is also imported from the `gpiozero` library.
+**2.** Change the first line of code so that `Robot` is also imported from the `gpiozero` library to control the motors.
 
 ~~~ python
 from gpiozero import Robot, InputDevice, OutputDevice
 ~~~
 
-You will also need to setup the `Robot` with the GPIO pins for the `left` and `right` commands. 
-
-**3.**
-
-
-
-**3.** After the two import statements for the 
-
-
-You can use one of your working programs from week 1 to check that the GPIO pins of your motors are set correctly. 
-
-
-<!-- Copy Robot explanation from week 1 -->
-
-
-**3.** Setup the motors in addition to the UDS so that both pieces of hardware can be communicated with via the GPIO pins on the Raspberry Pi.
+**3.** After the `trig` and `echo` variables have been initialised, initialise the `Robot` using the GPIO pins for your `left` and `right` motors. 
 
 ~~~ python
+robin = Robot(left=(8,7), right=(9,10))
+~~~
+
+You can use one of your working programs from week 1 to check that the GPIO pins of your motors are set correctly, as they may be different to the ones above.
+
+#### Setting up a timer
+
+Creating a timer so that your robot doesn't run forever is beneficial, espeically during the testing phases. There are quite a few ways to make a timer in Python - here is one of them.
+
+**4.** Add in these three variables just after you have initialised `Robot`:
+
+~~~ python 
+duration = 10
+end_time = time() + duration
+running = True
+~~~
+
+`duration` is the number of seconds that the timer will run. `end_time` is calculated by adding the current time from the `time()` function to `duration`. 
+
+You will use the `running` variable later to repeat some of the code until it is time to stop the program, and the robot. 
+
+#### Your code so far
+
+At the moment, your program should look similar to this:
+
+~~~ python
+from gpiozero import Robot, InputDevice, OutputDevice
+from time import sleep, time
+
 trig = OutputDevice(4)
 echo = InputDevice(17)
 
 robin = Robot(left=(8,7), right=(9,10))
-~~~
 
-Remember that your GPIO pin numbers for the `left` and `right` motors or the `trig` and `echo` pins of the UDS may be different to the code above. Check the previous programs that you got working and change the pin numbers to reflect the connections on your Raspberry Pi if necessary. You may have also renamed the variable `robin` to something else.
+duration = 10
+end_time = time() + duration
+running = True
 
-**4.** The rest of the code should be the same as the program in the last step:
-
-~~~ python
 sleep(2)
 
 def get_pulse_time():
     trig.on()
-   	sleep(0.00001)
-	trig.off()
+    sleep(0.00001)
+    trig.off()
 
-	while echo.is_active == False:
-		pulse_start = time()
+    while echo.is_active == False:
+        pulse_start = time()
 
-	while echo.is_active == True:
-		pulse_end = time()
+    while echo.is_active == True:
+        pulse_end = time()
 
-	sleep(0.06)
-
-	return pulse_end - pulse_start
+    return pulse_end - pulse_start
 
 def calculate_distance(duration):
-	speed = 343
-	distance = speed * duration / 2
-	return distance
+    speed = 343
+    distance = speed * duration / 2
+    return distance
 
 while True:
-	duration = get_pulse_time()
-	distance = calculate_distance(duration)
-	print(distance)
+    duration = get_pulse_time()
+    distance = calculate_distance(duration)
+
+    sleep(0.06)
+    print(distance)
 ~~~
+
+The last changes you are going to make are going to all be with the `while` loop. 
+
+#### How should the robot behave?
+
+The robot should, by default, move forwards unless it detects an object that is too close. If an object is detected within a certain distance of the UDS, then the robot should turn left or right to avoid the obstacle in front.
+
+*How close is too close?*
+
+
+
+
+
+The program currently calculates the distance an object is from the UDS in metres. You need to specify the threshold value of when an object is too close before the buggy responds.
+
+The threshold value I'm going to choose is 20cm (0.2 metres) for now; I can experiment with this value later.
+
+**6.** Inside the `for` loop and after `distance` has been calculated, you are going to check if an object is less than 0.2 metres away. Remove the command `robin.forward()` and replace it with:
+
+~~~ python
+if distance < 0.2:
+    robin.left()
+    sleep(0.5)
+else:
+    robin.forward()
+
+sleep(0.1)
+~~~
+
+For this program, I have chosen to turn the robot left if an object is 20cm or less away, otherwise the robot should move forward. 
+
+I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way.
+
+The last `sleep` ensures the program waits for 0.1 seconds before attempting to detect more objects, allowing the UDS time to settle.
+
+Your final code for the end of the program should be:
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### The default option for the robot
 
