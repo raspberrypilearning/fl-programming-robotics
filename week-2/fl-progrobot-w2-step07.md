@@ -11,7 +11,7 @@ Having read about how a Ultrasonic Distance Sensor (UDS) works, you are now goin
 
 If the UDS **Echo** pin is 5V, for example for the HC-SR04 sensor, a voltage divider (as described previously) is required to ensure the Pi is not damaged. Alternatively, a 3V3 tolerant sensor, such as the HC-SR04P, will work without a voltage divider.
 
-Most sensors are the **5V** version - check the model number or post a photo in the comments if you are unsure. 
+Most sensors are the **5V** version - check the model number or post a photo in the comments if you are unsure.
 
 ### What you will need
 
@@ -33,9 +33,9 @@ If your UDS is 5V, you will also need:
 
 It is best to set up the UDS with the Raspberry Pi switched off, especially if your UDS is 5V. Otherwise, if make a mistake with your wiring and the Raspberry Pi is turned on, you might damage it or the UDS.
 
-As discussed previously, a typical UDS has 4 pins: **VCC**, **Trig**, **Echo** and **GND**. All of these pins need to be connected to your Raspberry Pi. 
+As discussed previously, a typical UDS has 4 pins: **VCC**, **Trig**, **Echo** and **GND**. All of these pins need to be connected to your Raspberry Pi.
 
-The **Trig** and **Echo** pins can be wired to any available GPIO pins on your Pi, though if you choose different pins to the setup below than the diagrams won't match, and you'll also need to remember what pins you used for your code. 
+The **Trig** and **Echo** pins can be wired to any available GPIO pins on your Pi, though if you choose different pins to the setup below than the diagrams won't match. You'll also need to remember what pins you used and replace the pin numbers in the code.
 
 Refer to the diagrams in this article or a GPIO reference guide if you aren't sure which pins on the Pi to use.
 
@@ -43,7 +43,7 @@ Refer to the diagrams in this article or a GPIO reference guide if you aren't su
 
 #### Wiring the VCC, Trig and GND pins
 
-**1.** Start by connecting the **VCC** pin on your UDS to a 5V pin on your Pi using a female-to-male jumper lead. 
+**1.** Start by connecting the **VCC** pin on your UDS to a 5V pin on your Pi using a female-to-male jumper lead.
 
 **2.** Connect the **Trig** pin on the UDS to an available GPIO pin on your Pi; I've used **GPIO 4**.
 
@@ -55,13 +55,13 @@ The instructions for wiring the **Echo** pin are different depending on whether 
 
 If the output of the **Echo** pin is **5V**, you need to reduce the output voltage to a **maximum of 3.3V**.
 
-The resistors used to split the voltage in this example are 330 Ohm and 620 Ohm. You can use different resistors to these but you must ensure that the voltage across the larger resistor has been reduced to 3.3V or just below, using the previous voltage divider algorithm. 
+For the purposes of this example, I'm going to use a 330 Ohm resistor and a 620 Ohm resistor. You can use different resistors to these but you must ensure that the voltage across the larger resistor has been reduced to 3.3V or just below, using the previous voltage divider algorithm.
 
 The first thing to do is to solder the pair of resistors together, and then add female jumper leads to each end of the pair. This part might be easier with two people.
 
 ![Image of two resistors soldered together with one female jumper lead soldered to the other end of each resistor - taken from project "See like a bat"](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/joined_resistors.jpg)
 
-Next, add a third female jumper lead to the join between the two resistors. 
+Next, add a third female jumper lead to the join between the two resistors.
 
 ![Image of the third female jumper lead soldered to the join between the two resistors - also taken from the project site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/t_join.jpg)
 
@@ -79,7 +79,7 @@ The diagram below shows you the complete setup for a **5V** UDS:
 
 #### Wiring the Echo pin on a 3.3V UDS
 
-Wiring a **3.3V** UDS is fairly simple as the output voltage of the **Echo** pin does not need to be reduced. 
+Wiring a **3.3V** UDS is fairly simple as the output voltage of the **Echo** pin does not need to be reduced.
 
 The diagram below shows you the complete setup for a **3.3V** UDS, with the **Echo** pin connected to **GPIO 17** on the Pi:
 
@@ -99,6 +99,6 @@ Cut two holes into the chassis that is just big enough for the emitter and recei
 
 ### Checking the connections
 
-It's easy for the jumper leads to come loose from the Pi whilst you are moving parts of the robot around, so double check all your pins are connected properly before turning on your Pi. 
+It's easy for the jumper leads to come loose from the Pi whilst you are moving parts of the robot around, so double check all your pins are connected properly before turning on your Pi.
 
 Share any issues you had with wiring the UDS or attaching it to the chassis in the comments.
