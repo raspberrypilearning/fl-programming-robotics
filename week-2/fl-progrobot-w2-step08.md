@@ -22,7 +22,7 @@ from gpiozero import InputDevice, OutputDevice
 from time import sleep, time
 ~~~
 
-`InputDevice` and `OutputDevice` will be used to communicate with the **Trig** and **Echo** pins. You will also need `time` and `sleep` to calculate the time taken for the ultrasound to be emitted and received. 
+`InputDevice` and `OutputDevice` will be used to communicate with the **Trig** and **Echo** pins. You will also need `time` and `sleep` to calculate the time taken for the ultrasound to be emitted and received.
 
 **2.** Set up the **Trig** and **Echo** pins using the GPIO pins you connected them to on your Pi.
 
@@ -63,9 +63,9 @@ Once the ultrasound has finished being emitted, the UDS sets the Echo pin to hig
         pulse_start = time()
 ~~~
 
-You can use the `is_active` command to check if a pin is set to high (which returns `True`) or low (which returns `False`). 
+You can use the `is_active` command to check if a pin is set to high (which returns `True`) or low (which returns `False`).
 
-The code above works by repeatedly replacing the value of `pulse_start` with the current time until the **Echo** pin is active, at which point all of the sound has been emitted by the UDS.
+The code above works by repeatedly replacing the value of `pulse_start` with the current time until the **Echo** pin is active, at which point all of the sound has been emitted by the UDS. This means that the final value of `pulse_start` is the time at which the **Echo** pin is set to high.
 
 ![Animation showing that once the ultrasound has finished being transmitted, the Echo pin is set to high and the start time is recorded.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
@@ -123,7 +123,7 @@ def calculate_distance(duration):
     return distance
 ~~~
 
-Using a different function to calculate the distance of the UDS to an object is good coding practice as it can be tested and reused easily within the program.
+Using a different function to calculate the distance of the UDS to an object is good coding practice as this function can be tested separately, and easily reused multiple times within the program.
 
 **9.** Add an infinite loop to the bottom of the program to test everything works.
 
