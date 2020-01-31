@@ -54,16 +54,18 @@ As soon as the Trig pin is set to low, a burst of ultrasound is sent from the em
 
 ![Animation of the Trig pin being set to high for 10μs and then Trig is set low. A burst of ultrasound is emitted from the UDS as soon as the Trig pin is set to low.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
-Once the ultrasound has finished being transmitted, the Echo pin is set to high. At this point, you need to record the start time.
+Once the ultrasound has finished being emitted, the UDS sets the Echo pin to high. At this point, you need to record the start time.
 
-**4.** Use a `while` loop inside the function to continuously replace the start time until all of the sound has been transmitted.
+**4.** Use a `while` loop inside the function to record the start time.
 
 ~~~ python
     while echo.is_active == False:
         pulse_start = time()
 ~~~
 
-`is_active` will return `True` if the **Echo** pin is high and `False` if the **Echo** pin is low.
+You can use the `is_active` command to check if a pin is set to high (which returns `True`) or low (which returns `False`). 
+
+The code above works by repeatedly replacing the value of `pulse_start` with the current time until the **Echo** pin is active, at which point all of the sound has been emitted by the UDS.
 
 ![Animation showing that once the ultrasound has finished being transmitted, the Echo pin is set to high and the start time is recorded.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
@@ -121,7 +123,7 @@ def calculate_distance(duration):
     return distance
 ~~~
 
-Using a different function to perform a separate piece of functionality is good coding practice.
+Using a different function to calculate the distance of the UDS to an object is good coding practice as it can be tested and reused easily within the program.
 
 **9.** Add an infinite loop to the bottom of the program to test everything works.
 

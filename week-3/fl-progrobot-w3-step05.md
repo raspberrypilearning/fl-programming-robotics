@@ -33,9 +33,9 @@ One of the sensors will be used to detect a line on the left side of the robot, 
 
 ### Connect the sensors to the Raspberry Pi
 
-Take one of the line sensors and connect a female-female jumper lead to each of the **VCC**, **GND**, and **DO** pins. 
+Take one of the line sensors and three female-to-female jumper leads. Then connect a jumper lead to each of the **VCC**, **GND**, and **DO** pins. 
 
-![Picture of a line sensor with three female-female jumper leads connected to the VCC, GND, and DO pins](images/)
+![Picture of a line sensor with three female-to-female jumper leads connected to the VCC, GND, and DO pins](images/)
 
 Connect the jumper lead from the **VCC** pin on the line sensor to either a 3V3 or 5V pin on the Raspberry Pi. 
 

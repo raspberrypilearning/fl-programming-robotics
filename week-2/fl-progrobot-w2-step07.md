@@ -87,7 +87,7 @@ The diagram below shows you the complete setup for a **3.3V** UDS, with the **Ec
 
 ### Securing the UDS to the chassis
 
-Now that your UDS is connected to your Pi, you will need to attach the UDS to the front of the chassis so your robot can detect objects whilst it's moving forwards.  
+Now that your UDS is connected to your Pi, you will need to attach the UDS to the front of the chassis so your robot can detect objects in front of the buggy.  
 
 Mark where you want the emitter and receiver (the two silver cylinders from the diagram above) to protrude from the chassis.
 
