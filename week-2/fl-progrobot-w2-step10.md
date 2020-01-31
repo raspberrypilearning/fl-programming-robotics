@@ -7,39 +7,72 @@ Related files:
 
 ## Challenge: improving the obstacle avoidance program
 
-There are some limitations and improvements that could be made to the program in the previous step. Make a copy of the program first, then modify the code to try and improve the robot buggy's ability to avoid objects autonomously.
+There are a number of modifications that will improve your robot's ability to avoid objects autonomously. Most of these require changes to the program from the previous step.
 
-### Potential improvements
+First, I suggest making a copy of your program before modifying any of the code in case something you try doesn't work out.
 
-You might want to start by experimenting with different distance thresholds and sleep values to see how that affects the performance of the buggy.
+### Changing some of the values
 
-Another improvement you could make to the program is to allow the buggy to randomly choose to turn left or right once an obstacle is detected. **How might you code this?**
+Begin by experimenting with different distance thresholds and sleep values to see how that affects the performance of the robot.
 
+For example, the distance threshold of 0.2 metres used in the previous program may need to be increased slightly if your robot does not start to turn out the way of an obstable in time.
 
+Also, you can change the sleep value of 0.5 seconds so that the robot continues turning for more or less time once the threshold value has been met. 
 
+### Changing the robot's behaviour
 
+Currently, the robot turns left for a set amount of time whenever an object is detected as being too close. This predicitable behaviour has the potential to cause issues. 
 
-You could instruct the robot to turn right instead of left, or to move backward before turning left or right. 
+One problem is that the robot might get stuck in an obstacle avoidance loop when turning by a fixed amount each time. This is a situation where the robot keeps detecting the same obstacles over and over again, seemingly with no way to escape!
 
-You could also instruct your robot to choose a random direction, left or right, and then turn that way once an object has been detected. 
+There are a number of changes you can make to the robot's behaviour.
 
+#### Two steps forward, one step back
 
-I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way - again, the value specified can be changed.
+One modification you can make is to instruct the robot to move backwards for a period of time before turning to avoid an object. This will give your robot a chance to avoid obstacles if it has found itself in a dead end.
 
+Another solution is to introduce random aspects into the robot's movements.
 
+#### Randmosing the amount of time the robot turns
 
-### Limitations of the buggy
+Rather than turning left for a set amount ot time, you can instruct the program to generate a random number of seconds within a certain range of values. 
 
-You may have noticed that an object which is really close to the UDS returns a much larger distance than expected. This usually occurs if an object is closer than the minimum distance a UDS can detect accurately; for the HC-SR04 UDS the detection distance is about 2cm-500cm.
+To add this functionality, you will need to import the `random` library into your Python program. Use the function `random.uniform(a, b)` to return a random floating point number, where `a` is the lowest value and `b` is the highest value.
 
-Take a look at the distance values that are output when an object is very close to the UDS and see if you can find a hack within the program to pick up these objects. 
+#### Choosing a random direction
 
-Another possible limitation is that the UDS will not detect objects either side of it, which the buggy may hit if the chassis is wider than the range of the UDS. A solution to this could be to add an extra UDS to the front of the buggy and have a UDS either side of the chassis.
+Another modification to the robot's behaviour is to allow the program to choose a random direction to turn once an obstacle has been detected.
 
-**Can you think of any other limitations or improvements that could be made to the program?**
+Instead of always turning left, the robot could be instructed to turn *either* left or right. **How might you code this?**
 
-**What improvements are you going to make to the program?**
+### Limitations of the UDS
 
-**Did you find a solution to the UDS not picking up objects that are really close to it?**
+There are some limitations it is important to be aware of when using a UDS. Finding workarounds to these problems will ensure that your program is really robust. 
 
-Share your ideas and any programs that you modify in the comments below.
+#### Objects that are too close
+
+You may have noticed that an object which is really close to the UDS returns a much larger distance than expected. This occurs if an object is closer than the minimum distance a UDS can detect accurately; for the HC-SR04 and HC-SR04P models the detection distance is about 2cm-500cm.
+
+Take a look at the distance values that are output when an object is very close to the UDS and see if you can find a solution within the program to pick up these objects. 
+
+#### Failing to detect objects that are to the side
+
+Another issue that your robot may run into is that, depending on the width of your robot, the UDS won't detect objects either side of it that will still hit your robot. 
+
+A solution to this could be to add an extra UDS to the front of the robot, so there is one on each side of the chassis. This modification would also require the program to be adapted so that it is able to work with two UDSs.
+
+### What improvements will you make? 
+
+Improve your program using one of the ideas in this step:
+
+- Change the distance threshold and/or sleep values
+- Once your robot has detected an obstacle:
+    - instruct your robot to move backwards before turning left
+    - generate a random amount of seconds for the robot to turn
+    - get the program choose a random direction for the robot to turn
+- Find a solution for detecting objects that are closer than the minimum detection distance of your UDS
+- Attach another UDS to the chassis and modify your program so it works with two UDSs
+
+**Can you think of any other improvements that could be made?**
+
+Share the changes you made and a link to your new code using [Pastebin](https://pastebin.com/) in the comments below.
