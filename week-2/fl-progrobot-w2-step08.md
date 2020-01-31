@@ -179,8 +179,8 @@ while True:
 
 ### Testing the distances
 
-What are the range of values that your UDS is outputting?
+**What are the range of values that your UDS is outputting?**
 
-What happens if you place an object really close or far away from the UDS?
+**What happens if you place an object really close or far away from the UDS?**
 
 Share your answers in the comments below.

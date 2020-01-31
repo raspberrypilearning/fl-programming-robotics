@@ -11,9 +11,9 @@ So far, you have created programs for moving the robot buggy and detecting objec
 
 ### Programming both the motors and the UDS
 
-For this program, you will need to bring together some of the code you have written in during the course to solve a new problem. 
+For this program, you will need to bring together some of the code you have written during the course to solve a new problem. 
 
-To help you begin this process, consider the different stages of the problem by breaking it down into several parts, which I will pose as questions:
+To help you begin this process, consider the different parts of the problem:
 
 + What **components** does your program need to interact with?
 + What should the robot do if an object is ***not*** too close to it?
@@ -21,11 +21,11 @@ To help you begin this process, consider the different stages of the problem by 
 
 #### Interacting with the hardware
 
-The first question to think about is what components does your robot need to communicate with so it can sense objects and move accordingly?
+The first question to think about is the components your robot needs to communicate with so it can sense objects (the UDS) and move accordingly (the motors).
 
-One of the components your program needs to interact with is the UDS for detecting objects in front of the robot, and the other components are the motors. 
+To speed up this process, make a copy of your program from the previous step which calculates the distance of objects from the UDS. Then you will modify the code to include the motors.
 
-**1.** Make a copy of your program from the previous step which calculates the distance of objects using the UDS. 
+**1.** Make a copy of your program from the previous step. 
 
 **2.** Change the first line of code so that `Robot` is also imported from the `gpiozero` library to control the motors.
 
@@ -33,17 +33,17 @@ One of the components your program needs to interact with is the UDS for detecti
 from gpiozero import Robot, InputDevice, OutputDevice
 ~~~
 
-**3.** After the `trig` and `echo` variables have been initialised, initialise the `Robot` using the GPIO pins for your `left` and `right` motors. 
+**3.** After the `trig` and `echo` variables have been initialised, define the `Robot` using the GPIO pins for your `left` and `right` motors. 
 
 ~~~ python
 robin = Robot(left=(8,7), right=(9,10))
 ~~~
 
-You can use one of your working programs from week 1 to check that the GPIO pins of your motors are set correctly, as they may be different to the ones above.
+You can use one of your working programs from week 1 to check that the GPIO pins of your motors are set correctly, as they may be different to the ones I've used above.
 
 #### Setting up a timer
 
-Creating a timer so that your robot doesn't run forever is beneficial, espeically during the testing phases. There are quite a few ways to make a timer in Python - here is one of them.
+Next you are going to create a timer so that your robot doesn't run forever, which is especially useful during the testing phases. 
 
 **4.** Add in these three variables just after you have initialised `Robot`:
 
@@ -53,9 +53,9 @@ end_time = time() + duration
 running = True
 ~~~
 
-`duration` is the number of seconds that the timer will run. `end_time` is calculated by adding the current time from the `time()` function to `duration`. 
+The value of `duration` is the number of seconds that the timer will run for. Calculate `end_time` by adding `duration` to the current time using the `time()` function. 
 
-You will use the `running` variable later to repeat some of the code until it is time to stop the program, and the robot. 
+You will use the `running` variable later to specify when the program - and the robot - should stop running.
 
 #### Your code so far
 
@@ -110,15 +110,11 @@ The robot should, by default, move forwards unless it detects an object that is 
 
 *How close is too close?*
 
+The program currently calculates the distance an object is from the UDS in metres. You need to specify the threshold value (in metres) of when an object is too close before the buggy responds.
 
+For now, the threshold value I'm going to choose is 20cm (0.2 metres); you can experiment with this value later.
 
-
-
-The program currently calculates the distance an object is from the UDS in metres. You need to specify the threshold value of when an object is too close before the buggy responds.
-
-The threshold value I'm going to choose is 20cm (0.2 metres) for now; I can experiment with this value later.
-
-**6.** Inside the `for` loop and after `distance` has been calculated, you are going to check if an object is less than 0.2 metres away. Remove the command `robin.forward()` and replace it with:
+**5.** Inside the `while` loop and after `distance` has been calculated, check if an object is less than 0.2 metres away. If the distance is below the threshold value then turn the robot left for half a second, else move forward. 
 
 ~~~ python
 if distance < 0.2:
@@ -126,88 +122,40 @@ if distance < 0.2:
     sleep(0.5)
 else:
     robin.forward()
-
-sleep(0.1)
 ~~~
 
-For this program, I have chosen to turn the robot left if an object is 20cm or less away, otherwise the robot should move forward. 
+Using a sleep command here inside the if statement means that the robot will continue to turn left for a certain amount of time before checking for more obstructions. Hopefully, this will allow your robot enough time to turn clear of the object that was detected.
 
-I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way.
-
-The last `sleep` ensures the program waits for 0.1 seconds before attempting to detect more objects, allowing the UDS time to settle.
-
-Your final code for the end of the program should be:
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### The default option for the robot
-
-The robot should, by default, move forwards unless it detects an object that is too close.
-
-Although you could program the buggy to move forwards inside the `while True` loop, this would result in the buggy moving forever unless you turn off the Raspberry Pi. Therefore, I'm going to change the `while` loop to a `for` loop so that the buggy moves forward for a set number of times before stopping the buggy.
-
-**5.** Replace the `while` loop with the following code:
+**6.** To stop the program from running forever, add in the following code inside the `while` loop.
 
 ~~~ python
-for i in range(30):
+    if time() >= end_time:
+        running = False
+        robin.stop()
+~~~
+
+This checks if the current time is more than or equal to the `end_time` value specified at the start of the program. If so, change the value of `running` to `False` (which you will use next) and then stop the motors of the robot.
+
+**7.** Modify the `while` loop condition so that it stops repeating once `running` is set to `False`.
+
+Change the condition from
+
+~~~ python
+while True:
+~~~
+ 
+to
+
+~~~ python
+while running:
+~~~
+
+Your final code for the `while` loop should be:
+
+~~~ python
+while running:
     duration = get_pulse_time()
     distance = calculate_distance(duration)
-    print(distance)
-
-    robin.forward()
-
-robin.stop()
-~~~
-
-The robot buggy will now move forwards 30 times and then the buggy will stop moving before the program ends.
-
-**Remember**: you may have changed the `Robot` variable from `robin` to something else.
-
-#### What should the buggy do if an object is too close?
-
-At the moment, the robot moves forwards regardless of how close it is to an object. If an object is detected as being within a certain distance of the UDS, then the robot should turn left or right to avoid the obstacle in front.
-
-**How close is too close?**
-
-The program currently calculates the distance an object is from the UDS in metres. You need to specify the threshold value of when an object is too close before the buggy responds.
-
-The threshold value I'm going to choose is 20cm (0.2 metres) for now; I can experiment with this value later.
-
-**6.** Inside the `for` loop and after `distance` has been calculated, you are going to check if an object is less than 0.2 metres away. Remove the command `robin.forward()` and replace it with:
-
-~~~ python
-if distance < 0.2:
-    robin.left()
-    sleep(0.5)
-else:
-    robin.forward()
-
-sleep(0.1)
-~~~
-
-For this program, I have chosen to turn the robot left if an object is 20cm or less away, otherwise the robot should move forward. 
-
-I also instructed the program to wait for 0.5 seconds once the threshold value is met so that the buggy has enough time to move out of the way.
-
-The last `sleep` ensures the program waits for 0.1 seconds before attempting to detect more objects, allowing the UDS time to settle.
-
-Your final code for the end of the program should be:
-
-~~~ python
-for i in range(30):
-    duration = get_pulse_time()
-    distance = calculate_distance(duration)
-    print(distance)
 
     if distance < 0.2:
         robin.left()
@@ -215,19 +163,25 @@ for i in range(30):
     else:
         robin.forward()
 
-    sleep(0.1)
+    sleep(0.06)
 
-robin.stop()
+    if time() >= end_time:
+        running = False
+        robin.stop()
 ~~~
 
-### Testing the obstacle avoidance
+### Testing the program
 
 Try running the program whilst the robot is on a suitable surface.
 
-If the buggy is not behaving as expected, first check that all the connections to the GPIO pins are correct before trying the code again. It may also be beneficial to run an earlier program you know was working to test whether the motors and UDS are still working as expected.
+If the buggy is not behaving as expected, check that all the connections to the GPIO pins are correct before trying the code again. 
 
-How effective is your robot at avoiding objects? 
+It may also be beneficial to run an earlier program you know was working to test whether the motors and UDS are still working as expected.
 
-In the next step, you will look at some ways to improve your program. Can you think of any modifications that might help?
+**How effective is your robot at avoiding objects?**
 
-Leave a comment below if you are having issues with the obstacle avoidance program, or if you found a solution to a problem you faced.
+**Can you think of any modifications that might help?**
+
+Share your answers or if you are having any issues in the comments below.
+
+In the next step, you will look at some ways to improve your program.
