@@ -67,4 +67,4 @@ Ideally, the LED of each sensor should be off as soon as the black line is direc
 
 ![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/)
 
-Share how you got on and any pictures you have of your robot in the comments.
+In the next step you will have an opportunity to reflect on how you have got on so far.
