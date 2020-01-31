@@ -126,7 +126,7 @@ else:
 
 Using a sleep command here inside the if statement means that the robot will continue to turn left for a certain amount of time before checking for more obstructions. Hopefully, this will allow your robot enough time to turn clear of the object that was detected.
 
-**6.** To stop the program from running forever, add in the following code inside the `while` loop after the `sleep(0.06)` command.
+**6.** To stop the program from running forever, add in the following code inside the `while` loop before the `sleep(0.06)` command.
 
 ~~~ python
     if time() >= end_time:
@@ -163,11 +163,11 @@ while running:
     else:
         robin.forward()
 
-    sleep(0.06)
-
     if time() >= end_time:
         running = False
         robin.stop()
+
+    sleep(0.06)
 ~~~
 
 ### Testing the program
