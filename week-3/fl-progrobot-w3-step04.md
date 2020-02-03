@@ -7,7 +7,7 @@ Related files:
 
 ## Line sensors and how to use them
 
-In this step you will investigate how a line sensor operates and how it detects a line. I will be using the TCRT5000 IR sensor as my example, but the learning can apply to other sensors as well. This knowledge will help you design and program a line following algorithm later in the week.
+In this step you will investigate how a line sensor operates and how it detects a line. I will be using the TCRT5000 IR sensor as my example, but the learning can apply to other line sensors as well. This knowledge will help you design and program a line following algorithm later in the week.
 
 ### IR detection
 
@@ -21,13 +21,13 @@ In the picture above you can see these 2 components that look like LEDs on the b
 
 The device will emit IR light and the sensor will capture the light level that is reflected from the surface underneath. Some line sensors have 2 types of output - analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting, but analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against the sensitivity set by the potentiometer. If the sensor is not receiving enough light to surpass the sensitivity value, the digital output will be high (1). If enough light is received and the sensitivity value surpassed - the pin will be set to low (0).
 
-The setup of these devices may seem a bit backwards at first, "the pin is on when the light levels are low", but when you consider that the sensor is designed to detect black lines it makes a bit more sense. A black line will not reflect as much light, so the output will be on when a black surface is underneath.
+The setup of these devices may seem a bit backwards at first, but when you consider that the sensor is designed to detect black lines it makes a bit more sense. A black line will not reflect as much light, so the output will be on when a black surface is underneath.
 
 ### How to use a line sensor.
 
 Now that you know a bit more about the functionality of a line sensor - you should now learn how to use one!
 
-The line sensor also has an array of pins some of which you will have to connect to the Pi you are using, they are;
+The line sensor also has an array of pins, some of which you will have to connect to the Raspberry Pi you are using:
 
 + `VCC` is the pin used to power the device, it will take any voltage in between 3.3 and 5V
 + `GND` is the ground pin that is required to complete the circuit
@@ -38,7 +38,7 @@ The VCC pin here can take a range of voltages so potential dividers are not nece
 
 ### Two sensors are better than one.
 
-You can create a line following robot with only 1 sensor, as this is enough to detect a line underneath the robot. If the robot strays from the line, it is very difficult to work out which way to turn to find the line again. 
+You can create a line following robot with only 1 sensor, as this is enough to detect a line underneath the robot. If the robot strays from the line, it is very difficult to work out which way to turn to find the line again.
 
 To solve this problem, you can use more than 1 sensor. If you add a second sensor, and spread them out so they are evenly spaced either side of the caster wheel, the information from both sensors will allow your robot to find the line again.
 
