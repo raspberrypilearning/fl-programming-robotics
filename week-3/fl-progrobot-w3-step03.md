@@ -7,7 +7,7 @@ Related files:
 
 ## Line sensing robots
 
-This week you will be attaching a line sensor to your buggy and turning it into a line following robot. This type of robot are very popular amongst beginner roboticists, giving you experience with both the software and hardware aspects of robotics. However, line following robots are much more than a learning tool and have a rich history going all the way back to the 1960s.
+This week you will be attaching a line sensor to your buggy and turning it into a line following robot. This type of robot is very popular amongst beginner roboticists, giving you experience with both the software and hardware aspects of robotics. However, line following robots are much more than a learning tool and have a rich history going all the way back to the 1960s.
 
 ### What is line sensing, and why are robots doing it?
 
@@ -37,15 +37,15 @@ Later the cart would be turned into a fully autonomous vehicle; for a time the c
 
 ### Modern uses for line following robots
 
-Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making. A good example is working in a warehouse, where the movement requires following pre-set paths to collect palletes.
+Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making.
 
 **Warehouse Robots**
 
-Warehouses, particularly for large internet shopping companies (think Amazon or Alibaba), require a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up large cages containing items that have either just arrived or are being prepared for dispatch.
+A good example is robots working in a warehouse, where the movement requires following pre-set paths to collect pallets. Warehouses, particularly for large internet shopping companies (think Amazon or Alibaba), require a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up cages containing items that have either just arrived or are being prepared for dispatch.
 
 Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power on navigation. Their primary function is to identify and move the stock pile assigned to them. Following the lines allows them to do this without veering off track.
 
-### Competitions
+**Competitions**
 
 If you search for "line sensing robots" on Google, most of the hits returned relate to robotics competitions. As mentioned earlier in the article, line sensing robots have securely found their place in the robotics world as a good challenge for beginner roboticists.
 
