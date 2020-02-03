@@ -7,7 +7,7 @@ Related files:
 
 ## Why we call Robotics challenging
 
-You are coming to the end of the first week of your journey into the world of robotics, and you may have noticed that working in this discipline requires you to navigate some challenges. Robotics is such a complex and vast subject which can be off putting when you are just starting off. I want to discuss some of these challenges and hear how you have overcome them. 
+You are coming to the end of the first week of your journey into the world of robotics, and you may have noticed that working in this discipline requires you to navigate some challenges. Robotics is such a complex and vast subject which can be off putting when you are just starting off. I want to discuss some of these challenges and hear how you have overcome them.
 
 ### Challenges with components
 
