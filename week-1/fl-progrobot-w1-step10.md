@@ -17,7 +17,7 @@ Typically, the motors and wheels used for a robot buggy aren't very good when mo
 
 Power up your Raspberry Pi and the motor controller board. Remember, you will need a mobile power supply for the Pi otherwise the buggy will not be able to travel far from the mains plug.
 
-If either of the wheels starts spinning continuously, chances are one of the connections between the motor controller and the Raspberry Pi has come loose or is wired up wrong. Turn off the battery pack for the motor controller or remove the power from the Raspberry Pi to stop the motors. Then check the wiring using the previous steps for connecting the motors and the Pi to the motor controller.
+If either of the wheels starts spinning continuously, chances are one of the connections between the motor controller and the Raspberry Pi has come loose or is wired up wrong. Turn off the battery pack for the motor controller or remove the power from the Raspberry Pi to stop the motors. Then, check the wiring that you connected in the steps for connecting the motors and the Raspberry Pi to the motor controller.
 
 ### Testing the movement
 
