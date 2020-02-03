@@ -53,7 +53,7 @@ end_time = time() + duration
 running = True
 ~~~
 
-The value of `duration` is the number of seconds that the timer will run for. Calculate `end_time` by adding `duration` to the current time using the `time()` function.
+The value of `duration` is the number of seconds that the timer will run for. Calculate `end_time` by adding `duration` to the current time, which is obtained using the `time()` function.
 
 You will use the `running` variable later to specify when the program - and the robot - should stop running.
 
@@ -134,7 +134,7 @@ Using a sleep command here inside the if statement means that the robot will con
         robin.stop()
 ~~~
 
-This checks if the current time is more than or equal to the `end_time` value specified at the start of the program. If so, change the value of `running` to `False`, which will stop the `while` loop from repeating, and then stop the motors of the robot.
+This checks if the current time is more than or equal to the `end_time` value specified at the start of the program. If so, it will change the value of `running` to `False` (which will stop the `while` loop from repeating) and then stop the motors.
 
 **7.** Modify the `while` loop condition so that it stops repeating once `running` is set to `False`.
 
