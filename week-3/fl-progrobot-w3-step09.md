@@ -7,7 +7,7 @@ Related files:
 
 ## Improving the line following algorithm
 
-The previous line following algorithm is okay, but the robot can move side to side quite a lot as it tries to keep track of the line. To make the robot's movement more elegant, you can slow down the speed of the robot; this ensures the left and right turns and smaller and therefore more gradual.
+The previous line following algorithm is okay, but the robot can move side to side quite a lot as it follows the line. To make the robot's movement more elegant, you can slow down the speed of the robot; this ensures the left and right turns and smaller and therefore more gradual.
 
 However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed or other properties. To have more control over the robot, you can adapt your program so that it takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
 
