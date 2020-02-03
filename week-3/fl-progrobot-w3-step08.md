@@ -7,11 +7,11 @@ Related files:
 
 ## Program a line following algorithm
 
-Now that you have attached the line sensors, you are going to create a basic line following algorithm using the readings from the line sensors. 
+Now that you have attached the line sensors, you are going to create a basic line following algorithm using the readings from those sensors.
 
 ### Setting up the motors and line sensors
 
-First, you need to set your program with the components you'll be interacting with before moving on to the line following algorithm. 
+First, you need to set your program with the components you'll be interacting with before moving on to the line following algorithm.
 
 **1.** Create a new Python 3 file.
 
@@ -35,7 +35,7 @@ The line sensors have 2 states; the line **is** detected or the line **is not** 
 
 To start with, consider what the robot should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 from their digital pins as they are over the white background. In this scenario, the robot should move forwards.
 
-Think about the rest of the line following algorithm: 
+Think about the rest of the line following algorithm:
 
 + **What is the initial position of the robot in relation to the line?**
 + **How should the robot react when the left sensor is over the line?**
@@ -53,13 +53,13 @@ The actions that the robot needs to take depending on the readings from the line
 
 ### Using events
 
-To detect the state of each sensor, you are going to use two **events** from `LineSensor`, which is part of the GPIO Zero library. 
+To detect the state of each sensor, you are going to use two **events** from `LineSensor`, which is part of the GPIO Zero library.
 
 So far you have been writing **procedural** programs that generally run instructions from top to bottom, calling functions as they run.
 
 **Event-driven** programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run is determined by events like when a button is pressed.
 
-In your program, each of the line sensors will handle two events: `when_line` and `when_no_line`. 
+In your program, each of the line sensors will handle two events: `when_line` and `when_no_line`.
 
 The `when_line` event is triggered whenever the sensor changes state from 0 (white background) to 1 (black line), whilst `when_no_line` is triggered when the sensor changes state from 1 to 0.
 
@@ -74,7 +74,7 @@ left_sensor.when_no_line = robin.forward
 right_sensor.when_no_line = robin.forward
 ~~~
 
-**Note:** Unlike calling a function during a program, you should make sure not to put brackets after the function name when using events.
+**Note:** Unlike calling a function during a program, you should make sure not to put brackets after the function name when using events. You are providing a *reference* to the method, not calling it. The event only needs you to provide the function name, when the event happens it will find the method and call it. If you include brackets with the method it is called immediately**
 
 ### Ensuring the program doesn't run forever
 
