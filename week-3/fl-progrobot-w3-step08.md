@@ -15,11 +15,11 @@ First, you need to set your program with the components you'll be interacting wi
 
 **1.** Create a new Python 3 file.
 
-**2.** Begin the program by setting up the motors and line sensors using the `gpiozero` library.
+**2.** Set up the program using the code below:
 
 ~~~ python
 from gpiozero import Robot, LineSensor
-from time import sleep
+from time import sleep, time
 
 robin = Robot(left=(8, 7), right=(9, 10))
 
@@ -30,6 +30,8 @@ robin.forward()
 ~~~
 
 Don’t forget to adjust the pin numbers if you’ve used different GPIO pins for the motors or line sensors.
+
+The `robin.forward()` command is used to get your robot started.
 
 ### Describing the algorithm
 
@@ -99,8 +101,6 @@ You can change the number of seconds to a different value if you want to test th
 
 ### Testing the algorithm
 
-Before you run the program, be aware that the `when_line` and `when_no_line` events won't initially activate until after one of them changes state. That's why I included a `robin.forward()` command before defining the events. Alternatively, once you run the program you can move the robot so that one of the sensors changes state from over a line to not over a line or vice versa.
-
 **5.** Try running the program with your robot on your track.
 
 Here is an example of a robot running on a basic track with this algorithm:
@@ -109,4 +109,8 @@ Here is an example of a robot running on a basic track with this algorithm:
 
 Don’t worry if your robot moves off the line a bit, just observe if it follows the line. If it doesn't, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to check that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions for testing the line sensors.
 
-Share how you got on in the comments below. Is your robot able to follow the line?
+**How well does your robot follow the line?**
+
+**Why do you think the command `robin.forward()` is necessary before the events are defined?**
+
+Share your thoughts in the comments section.
