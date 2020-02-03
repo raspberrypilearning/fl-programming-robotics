@@ -25,6 +25,8 @@ robin = Robot(left=(8, 7), right=(9, 10))
 
 left_sensor = LineSensor(19)
 right_sensor= LineSensor(26)
+
+robin.forward()
 ~~~
 
 Don’t forget to adjust the pin numbers if you’ve used different GPIO pins for the motors or line sensors.
@@ -97,9 +99,9 @@ You can change the number of seconds to a different value if you want to test th
 
 ### Testing the algorithm
 
-Before you run the program, be aware that the `when_line` and `when_no_line` events might not initially activate until after one of them changes state. Once you run the program, you will need to move the robot so one of the sensors changes state from over a line to not over a line or vice versa, or you can add the line `robin.forward()` just before these events.
+Before you run the program, be aware that the `when_line` and `when_no_line` events won't initially activate until after one of them changes state. That's why I included a `robin.forward()` command before defining the events. Alternatively, once you run the program you can move the robot so that one of the sensors changes state from over a line to not over a line or vice versa.
 
-**5.** Try running the program once your robot is placed directly over the line of your track.
+**5.** Try running the program with your robot on your track.
 
 Here is an example of a robot running on a basic track with this algorithm:
 
