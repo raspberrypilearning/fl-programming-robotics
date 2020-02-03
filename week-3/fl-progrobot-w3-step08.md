@@ -15,7 +15,7 @@ First, you need to set your program with the components you'll be interacting wi
 
 **1.** Create a new Python 3 file.
 
-**2.** Set up the program using the code below:
+**2.** Set up the program using the code below. You should recognise the elements from your previous programs.
 
 ~~~ python
 from gpiozero import Robot, LineSensor

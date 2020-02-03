@@ -7,19 +7,19 @@ Related files:
 
 ## Improving the line following algorithm
 
-The previous line following algorithm is okay, but the robot can move side to side quite a lot as it follows the line. To make the robot's movement more elegant, you can slow down the speed of the robot; this ensures the left and right turns and smaller and therefore more gradual.
+The previous line following algorithm is okay, but the robot can move side to side quite a lot as it follows the line. To make the robot's movement more elegant, you can slow down the speed of the robot; this ensures the left and right turns are smaller and therefore more gradual.
 
-However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed or other properties. To have more control over the robot, you can adapt your program so that it takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
+However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed or other properties. To have more control over the robot, you can adapt your program so that it takes into account the position of the robot, the states of the line sensors, and the actions required of the motors.
 
 ### Setting up the program
 
-**1.** Copy the code from the last step into a new Python file. 
+**1.** Copy the code from the last step into a new Python file.
 
 **2.** Remove all of the code **after** you have initialised the variables `left_sensor` and `right_sensor`.
 
-**3.** After the `LineSensor` variables have been defined, initialise the variables for controlling the speed of the motors and the timer.
+**3.** After the `LineSensor` variables have been defined, initialise the variables for controlling the speed of the motors and the timer:
 
-~~~ python 
+~~~ python
 speed = 0.75
 
 duration = 10
@@ -30,13 +30,13 @@ running = True
 
 The value for each motor will be modified by the `speed` multiplier to slow down the robot a little. The value for `speed` usually needs to be at least 0.6 otherwise the motors do not have enough momentum to turn on a solid surface, and the maximum value is 1.
 
-The other variables are used to create a timer so that robot doesn't run forever, just like you did for the UDS program last week. Remember that `duration` is the number of seconds your program will run for which can be modified.
+The other variables are used to create a timer so that robot doesn't run forever, just like you did for the UDS program last week. Remember that `duration` is the number of seconds your program will run for, and you can modify this yourself.
 
 ### Planning a better algorithm
 
-To have more control over the robot's movement and speed, you can read the line sensor values and use these to instruct the motors.
+To have more control over the robot's movement and speed, you can read the line sensor values and use these to choose how to instruct the motors.
 
-Remember that when a line sensor is above a line, it outputs a `1`. When it’s off a line, it outputs a `0`. You can’t pass these values straight to the motors because the motors have a range from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse. 
+Remember that when a line sensor is above a line, it outputs a `1`. When it’s off a line, it outputs a `0`. You can’t pass these values straight to the motors because the motors will accept a range of values from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse.
 
 Taking this behaviour into account, I am going to define whether the motors should be given a positive or negative value based on the line sensor outputs.
 
@@ -64,11 +64,11 @@ To start applying these rules, the code needs to repeatedly read the outputs of 
 
 **4.** Add a `while` loop to the program after where you initialised the speed and timer variables.
 
-~~~ python 
+~~~ python
 while running:
     left_detect  = left_sensor.value
     right_detect = right_sensor.value
-    
+
 	print (left_detect, right_detect)
 ~~~
 
@@ -82,7 +82,7 @@ while running:
 while running:
     left_detect  = left_sensor.value
     right_detect = right_sensor.value
-    
+
     # Rule 1
     if left_detect == 0 and right_detect == 0:
         left_mot = 1
@@ -110,7 +110,7 @@ while running:
     robin.right_motor.value = right_mot * speed
 ~~~
 
-The value for each motor will be modified by the `speed` multiplier to slow down the robot a little. 
+The value for each motor will be modified by the `speed` multiplier to slow down the robot a little.
 
 Make sure you remove any `print` statements within the loop otherwise this will affect the response time of the program and the robot may "overshoot" the line.
 
@@ -129,8 +129,8 @@ Make sure you remove any `print` statements within the loop otherwise this will 
 
 **10.** Now run your code and test your robot over a track.
 
-Try different values for `speed` (between 0 and 1) and check how your robot runs. 
+Try different values for `speed` (between 0 and 1) and check how your robot runs.
 
 **How does this affect your robot's ability to follow the line?**
 
-Share your thoughts in the comments section.
+Share your findings in the comments section.
