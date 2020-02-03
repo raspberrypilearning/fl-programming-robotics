@@ -7,15 +7,15 @@ Related files:
 
 ## Sharing your progress
 
-So far, you have made incredible progress with your robot buggy - turning it from an inanimate object into a robot that is able to sense the world around it and act upon this information!
+So far, you have made incredible progress with your robot buggy - turning it from an inanimate object into a robot that is able to sense the world around it, and to act upon this information!
 
-Take a minute to congratulate yourself on the hard work and persistence you have shown throughout this course - well done!
+Well done. Take a minute to congratulate yourself on the hard work and persistence you have shown throughout this course.
 
-This is also a perfect time to share the progress you have made and any pictures or videos that you have of your robot in action. **Post a link to an image hosting platform such as [Imgur](https://imgur.com/) or a video of your robot in the comments section below.**
+This is also a perfect time to share the progress you have made and any pictures or videos that you have of your robot in action. **Describe your progress, and share a link to any image or videos you've taken of your robot in the comments section below.** You may need to use an image hosting platform such as [Imgur](https://imgur.com/) or a video hosting platform such as [YouTube](https://www.youtube.com)
 
 ### Are you stuck with anything?
 
-If you are have any questions or are struggling with anything robot-related, **leave a comment below and one of the facilitators will be able to provide help and support**.
+If you are have any questions or are struggling with anything related to your robot buggy, **leave a comment below and one of the course facilitators will be able to provide help and support**.
 
 ### Next steps for your robot
 
@@ -25,8 +25,8 @@ You already know that the line sensors can detect the difference between light a
 
 Have a think about the line following algorithm by considering these questions:
 
-+ What do you think the line following algorithm might look like? 
++ What do you think the line following algorithm might look like?
 + How should your robot react when the left sensor detects the line of your track?
 + What about when the right sensor detects the line?
 
-Answer these questions in the comments section, either by writing the different stages of the algorithm as a list of instructions or by creating a flowchart and posting a link to it.
+**Answer these questions in the comments section, either by writing the different stages of the algorithm as a list of instructions or by creating a flowchart and posting a link to it.**
