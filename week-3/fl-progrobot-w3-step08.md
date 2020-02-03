@@ -15,7 +15,7 @@ First, you need to set your program with the components you'll be interacting wi
 
 **1.** Create a new Python 3 file.
 
-**2.** Begin the program by setting up the motor controller board and line sensors using the `gpiozero` library.
+**2.** Begin the program by setting up the motors and line sensors using the `gpiozero` library.
 
 ~~~ python
 from gpiozero import Robot, LineSensor
@@ -51,19 +51,21 @@ The actions that the robot needs to take depending on the readings from the line
 + If there’s a line under the right sensor, turn right
 + If there’s no line under the left sensor **and** the right sensor, drive forwards
 
+### Using events
+
+To detect the state of each sensor, you are going to use two **events** from `LineSensor`, which is part of the GPIO Zero library. 
+
+So far you have been writing **procedural** programs that generally run instructions from top to bottom, calling functions as they run.
+
+**Event-driven** programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run is determined by events like when a button is pressed.
+
+In your program, each of the line sensors will handle two events: `when_line` and `when_no_line`. 
+
+The `when_line` event is triggered whenever the sensor changes state from 0 (white background) to 1 (black line), whilst `when_no_line` is triggered when the sensor changes state from 1 to 0.
+
 ### Programming the algorithm
 
-To detect the state of each sensor, you are going to use two events from `LineSensor`, which is part of the `gpiozero` library. 
-
-An event is an action that occurs based on user interaction or a change in behaviour, such as a button being pressed. 
-
-Synchronous
-
-When an event is activated...
-
-These events are called `when_line` and `when_no_line`.
-
-**3.** Within the Python file you set up, program your robot to move in a certain direction based on the rules of the algorithm.
+**3.** Within the Python file you set up, instruct your robot to move in a certain direction based on the rules of the algorithm.
 
 ~~~ python
 left_sensor.when_line = robin.left
@@ -72,11 +74,11 @@ left_sensor.when_no_line = robin.forward
 right_sensor.when_no_line = robin.forward
 ~~~
 
-Notice that the functions to move the robot do not end in brackets; this is due to how the events are defined in `LineSensor` and means you can't pass any values inside brackets, such as the speed of the motors.
+**Note:** Unlike calling a function during a program, you should make sure not to put brackets after the function name when using events.
 
 ### Ensuring the program doesn't run forever
 
-Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop the robot buggy from moving.
+Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop your robot from moving.
 
 **4.** To make sure that the robot doesn’t keep running forever, and to close all the component's connections cleanly, add in the following lines of code to the end of your program:
 
@@ -95,8 +97,7 @@ You can change the number of seconds to a different value if you want to test th
 
 ### Testing the algorithm
 
-<!-- Find out why and potentially modify explanation -->
-Before you run the program, be aware that the `when_line` and `when_no_line` events might not initially activate until after one of them changes state. Once you run the program, you will need to move the robot so one of the sensors changes from over a line to not over a line or vice versa. Or you can add the line `robin.forward()` just before these events.
+Before you run the program, be aware that the `when_line` and `when_no_line` events might not initially activate until after one of them changes state. Once you run the program, you will need to move the robot so one of the sensors changes state from over a line to not over a line or vice versa, or you can add the line `robin.forward()` just before these events.
 
 **5.** Try running the program once your robot is placed directly over the line of your track.
 
@@ -104,4 +105,6 @@ Here is an example of a robot running on a basic track with this algorithm:
 
 ![Video-gif of the robot wiggling side to side as it follows a basic track](images/3_8-basic-line-following-robot)
 
-Don’t worry if your robot moves off the line a bit. Just observe if it attempts to stay on the line. If it doesn't stay on the line, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to test that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions earlier in the week.
+Don’t worry if your robot moves off the line a bit, just observe if it follows the line. If it doesn't, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to check that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions for testing the line sensors.
+
+Share how you got on in the comments below. Is your robot able to follow the line?
