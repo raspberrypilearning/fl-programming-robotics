@@ -140,7 +140,7 @@ You need to let the UDS wait for a little bit before it can be used again, hence
 
 ### The final program
 
-Your full code should now look similar to [this program](uds-detect-objects.py).
+Your full code should now look similar to [this finished program](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/code/uds-detect-objects.py).
 
 **10.** Run your code and you should see a stream of numbers, showing you the distance from the sensor in metres. Move your hand (or even better, a large flat object such as a book) closer to and further from the distance sensor.
 
