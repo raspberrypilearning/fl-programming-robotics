@@ -7,9 +7,9 @@ Related files:
 
 ## Why we call Robotics challenging
 
-You are coming to the end of the first week of this robotics experience, and you may have noticed that working in this discipline requires you to navigate some challenges. Robotics is such a complex and vast subject which can be off putting when you are just starting off. I want to discuss some of these challenges and how you have overcome them. We are all in this together after all.
+You are coming to the end of the first week of your journey into the world of robotics, and you may have noticed that working in this discipline requires you to navigate some challenges. Robotics is such a complex and vast subject which can be off putting when you are just starting off. I want to discuss some of these challenges and hear how you have overcome them. 
 
-### The components
+### Challenges with components
 
 ![A robot buggy, with wheels and a face. Some loose cables are poking out from the top of the bot. Its eyes should look dazed and confused]()
 
@@ -23,11 +23,11 @@ The numbering on the GPIO pins can be confusing, they are numbered as the proces
 
 **Debugging components**
 
-A lot of the things you have done this week will be completely new to you, especially the components you are using. When you deal with components rather than products you forgo some of the hand holding that comes with a pre-built device.
+A lot of the things you have done this week will be completely new to you, especially the components you are using. Dealing with components rather than products means you forgo some of the hand holding that comes with a pre-built device.
 
 ![A character (preferrably male) looking at a component - feel free to use the UDS or line sensor - they look confused by the device]()
 
-When you buy components you have to figure out how they work and test them. When the components are new to you, this can be a challenging process - as you don't know what to look for or how to test the component.
+When you buy components you have to figure out how they work and test them. If the components are new to you, this can be a challenging process - as you don't know what to look for or how to test the component.
 
 **Cardboard is easy - not strong**
 
@@ -37,7 +37,7 @@ As you create your buggy you are most likely using cardboard to house it -  whic
 
 **Not all floors are made equally**
 
-When you create a mobile robot, particularly one that uses wheels to navigate around - you will quickly realise you have to choose the floor you test it on.
+Creating a mobile robot, particularly one that uses wheels to navigate around - requires you to carefully consider the floor you test it on.
 
 ![Two wheeled robots on a carpet floor - there is smoke coming from their wheels as though they can't move. The robots should look tired and sad.]()
 
@@ -45,7 +45,7 @@ Some motors have no problem navigating carpet, linoleum or tiles - others will n
 
 **Environments are not consistent**
 
-Some of the sensors and components you will use can be greatly impacted by the environment you test the buggy in. Light and line sensors can be thrown off by environmental light levels and have to be calibrated in order to be accurate. A simple thing to do, if you are comfortable with the components.
+Some of the sensors and components you will use can be greatly impacted by the environment you test the buggy in. Light and line sensors can be thrown off by environmental light levels and have to be calibrated in order to be accurate. Handling these inconsistencies is much simpler if you are working with components that you are familiar with. This process can cause considerable frustration if you are also having to learn how to calibrate the sensors at the same time.
 
 ### It's not you, it's robotics
 

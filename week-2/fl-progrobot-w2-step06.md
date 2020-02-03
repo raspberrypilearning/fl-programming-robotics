@@ -19,7 +19,7 @@ As the sound travels the particles are oscillating back and forth, this is hard 
 
 *Ultrasound* refers to any sound that has a frequency that is above the human range of hearing, this level changes from person to person but on average anything 20kHz or above is considered ultrasound. This means the sound wave oscillates 20000 times a second or more.
 
-The uses of ultrasound are widespread; doctors use the sound waves to scan inside human bodies, robots can use it to navigate the world and [engineers use it to reinforce metals by compressing the particles]().
+The uses of ultrasound are widespread; doctors use the sound waves to scan inside human bodies, robots can use it to navigate the world and [engineers use it to reinforce metals by compressing the particles](https://www.hielscher.com/ultrasonic-formulation-of-reinforced-composites.htm).
 
 ### Ultrasonic distance sensor
 

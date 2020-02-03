@@ -7,7 +7,7 @@ Related files:
 
 ## Line sensors and how to use them
 
-In this step you will investigate how an infrared line sensor you will be using (the TCRT5000 IR sensor) works and how it detects a line. This knowledge will help you design and program a line following algorithm later in the week.
+In this step you will investigate how a line sensor operates and how it detects a line. I will be using the TCRT5000 IR sensor as my example, but the learning can apply to other sensors as well. This knowledge will help you design and program a line following algorithm later in the week.
 
 ### IR detection
 

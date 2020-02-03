@@ -37,7 +37,7 @@ Later the cart would be turned into a fully autonomous vehicle; for a time the c
 
 ### Modern uses for line following robots
 
-Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making. This makes them suited for work in warehouses.
+Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making. A good example is working in a warehouse, where the movement requires following pre-set paths to collect palletes.
 
 **Warehouse Robots**
 
