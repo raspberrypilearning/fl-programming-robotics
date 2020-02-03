@@ -7,9 +7,11 @@ Related files:
 
 ## Program a line following algorithm
 
-Now that you have attached the line sensors, you can develop a basic line following algorithm based on the readings of the line sensors. First, let's set up the program before moving on to the algorithm. 
+Now that you have attached the line sensors, you are going to create a basic line following algorithm using the readings from the line sensors. 
 
 ### Setting up the motors and line sensors
+
+First, you need to set your program with the components you'll be interacting with before moving on to the line following algorithm. 
 
 **1.** Create a new Python 3 file.
 
@@ -20,6 +22,7 @@ from gpiozero import Robot, LineSensor
 from time import sleep
 
 robin = Robot(left=(8, 7), right=(9, 10))
+
 left_sensor = LineSensor(19)
 right_sensor= LineSensor(26)
 ~~~
@@ -30,14 +33,13 @@ Don’t forget to adjust the pin numbers if you’ve used different GPIO pins fo
 
 The line sensors have 2 states; the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
 
-Start by considering what the robot buggy should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 from their digital pins as they are over the white background. Therefore, the robot should move forwards.
+To start with, consider what the robot should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 from their digital pins as they are over the white background. In this scenario, the robot should move forwards.
 
-Think about the other factors that make up the line following algorithm: 
+Think about the rest of the line following algorithm: 
 
 + **What is the initial position of the robot in relation to the line?**
 + **How should the robot react when the left sensor is over the line?**
 + **What about when the right sensor detects the line?**
-+ **How have you previously programmed the robot to move using the `gpiozero` library?**
 
 ![](images/3_4_Two_Sensors_Anim.gif)
 
@@ -47,7 +49,7 @@ The actions that the robot needs to take depending on the readings from the line
 
 + If there’s a line under the left sensor, turn left
 + If there’s a line under the right sensor, turn right
-+ If there’s no line under the left sensor and the right sensor, drive forwards
++ If there’s no line under the left sensor **and** the right sensor, drive forwards
 
 ### Programming the algorithm
 

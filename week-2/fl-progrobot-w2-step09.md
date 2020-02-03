@@ -114,7 +114,7 @@ The program currently calculates the distance an object is from the UDS in metre
 
 For now, the threshold value I'm going to choose is 20cm (0.2 metres); you can experiment with this value later.
 
-**5.** Inside the `while` loop and before the `sleep(0.06)` command, check if an object is less than 0.2 metres away. If the distance is below the threshold value then program the robot left for half a second, else move forward.
+**5.** Inside the `while` loop and before the `sleep(0.06)` command, use a selection statement to check if an object is less than 0.2 metres away. Program the robot to turn left for half a second if the distance is below the threshold value, and to move forwards otherwise.
 
 ~~~ python
 if distance < 0.2:
@@ -134,7 +134,7 @@ Using a sleep command here inside the if statement means that the robot will con
         robin.stop()
 ~~~
 
-This checks if the current time is more than or equal to the `end_time` value specified at the start of the program. If so, it will change the value of `running` to `False` and then stop the motors of the robot.
+This checks if the current time is more than or equal to the `end_time` value specified at the start of the program. If so, change the value of `running` to `False`, which will stop the `while` loop from repeating, and then stop the motors of the robot.
 
 **7.** Modify the `while` loop condition so that it stops repeating once `running` is set to `False`.
 
