@@ -13,54 +13,54 @@ Robots, particularly autonomous ones, should be able to sense the world around t
 
 A robot designed to navigate the real world and interact with physical objects - by picking them up for example - must be able to measure the force it is applying to these objects. In some cases it might be necessary for the bot to sense external forces exerted upon itself.
 
-**Force** 
+**Force**
 
 Force sensors are used by roboticists to measure the forces their robots are exerting on the objects they interact with. You heard of an example last week, where a robotic arm uses a pressure sensor to calculate the force it is exerting on the mobile phone parts it picks up. It is important that the arm applies enough force to hold the part and not drop it, but not so much pressure that the component is damaged or crushed.
 
-Other roboticists use force sensors to detect shocks or vibrations, this allows a robot to react and balance/stabilise itself. Mobile robots could use force sensors in navigation as well - although touch sensors are more common.
+Other roboticists use force sensors to detect shocks or vibrations, to allow a robot to react and balance/stabilise itself. Mobile robots could use force sensors in navigation as well - although touch sensors are more common.
 
 **Touch**
 
-Touch sensors allow robots to detect physical interactions between their body and objects in their surroundings. *Capacitive touch* sensors utilise conductive properties to detect touches, most commonly from a human's touch. They can also detect touches from any object that can conduct electricity. An example use might be to change the behaviour the robot is exhibiting when someone presses the touch pad. *Resistive touch* sensors do not use electrical properties, but instead they detect touches based on pressure applied to the plate. This type can allow a robot to navigate it's surroundings, as the object touching it does not have to conduct electricity. 
+Touch sensors allow robots to detect physical interactions between their body and objects in their surroundings. *Capacitive touch* sensors utilise conductive properties to detect touches, most commonly from a human's touch. They can also detect touches from any object that can conduct electricity. An example use might be to change the behaviour the robot is exhibiting when someone presses the touch pad. *Resistive touch* sensors do not use electrical properties, but instead they detect touches based on pressure applied to the plate. This type of sensor can allow a robot to navigate its surroundings, even if the object touching the sensor would not conduct electricity.
 
 ### Detecting the environment
 
-Robots can use measurements of the environment around them to accomplish a variety of tasks, they are especially useful in environments that are hostile to humans.
+Robots can use measurements of the environment around them to accomplish a variety of tasks. Robots can be especially useful in environments that are hostile to humans.
 
-**Temperature** 
+**Temperature**
 
-Temperature sensors can be used in a variety of contexts, not just data collection for scientific experiments. A rover on Mars can use its temperature sensor to evaluate the terrain it is rolling over, if it detects a drop in temperature it can reduce the torque on it's wheels to prepare for ice. A robot designed to fight fires could use a temperature sensor to direct itself to the hottest parts of a burning building, where it will be most effective.
+Temperature sensors can be used in a variety of contexts, not just as data collection for scientific experiments. A rover on Mars can use its temperature sensor to evaluate the terrain it is rolling over; if it detects a drop in temperature it can reduce the torque on its wheels to prepare for ice. A robot designed to fight fires could use a temperature sensor to direct itself to the hottest parts of a burning building, where it will be most effective.
 
-**Light** 
+**Light**
 
-Another detectable property of the environment is light. One use is for robots who have different tasks to accomplish at night than in the day, a robot can detect changes in light and change it's behaviour into night mode. Changes in light can also indicate a change in surroundings, a robot designed to explore houses in disaster zones could use it to navigate around a home that has collapsed. Directing itself towards the light to get out of tight spaces. 
+Another detectable property of the environment is light. One use is for robots who have different tasks to accomplish at night than in the day; a robot could detect decreasing light levels and change its behaviour to night mode. Changes in light can also indicate a change in surroundings; a robot designed to explore houses in disaster zones could use light sensors to help navigate around a home that has collapsed, by directing itself towards the light to get out of tight spaces.
 
-**Sound** 
+**Sound**
 
-A sound sensor will detect the presence of sound and also measure the amplitude of the sound. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, the robot would navigate towards intense sounds. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
+A sound sensor will detect the presence of sound and also measure the amplitude of the sound. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, the robot would navigate towards intense sounds. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user.
 
-**Chemical** 
+**Chemical**
 
-Certain chemical properties can be measured by a robot using sensors. *pH* sensors detect the acidity/alkalinity of the environment around a robot. Scientific Robots could use this to check the quality of rivers or soil in remote places. Carbon Monoxide sensors can be used to monitor dangerous environments where human explorers would be put at risk. 
+Robots can also use specialised sensors to detect certain chemical properties. *pH* sensors detect the acidity/alkalinity of the environment around a robot. Scientific robots could use this to check the quality of rivers or soil in remote places. Carbon monoxide sensors can be used to monitor dangerous environments where human explorers would be put at risk.
 
 ### Object proximity
 
-Mobile robots have to navigate the world around them, often autonomously, and there are sensors that help them detect the proximity of other objects around them. 
+Mobile robots have to navigate the world around them, often autonomously, and there are sensors that help them detect the proximity of other objects around them.
 
-**Infrared Sensors** 
+**Infrared Sensors**
 
-One method of detecting objects around a robot, is the use of infrared sensor. Infrared sensors detect changes in the levels of infrared radiation captured by the device, these changes are caused when an object hotter than the background (often living things) passes through its field of view. 
+One method of detecting objects around a robot is through the use of an infrared sensor. Infrared sensors detect changes in the levels of infrared radiation captured by the device, these changes are caused when an object (often a living thing) hotter than the background passes through its field of view.
 
-**Ultrasonic Distance Sensors** 
+**Ultrasonic Distance Sensors**
 
-A better sensor for robots that have to navigate around inanimate objects, is the UDS (ultrasonic distance sensor). These sensors emit high frequency noises, which rebound off of objects in the surrounding area and return to the robot. The gap between the emission and the return of the sound can be used to calculate the distance between the robot and the object. This is exactly how bats sense the world when flying at night.
+A better sensor for robots that have to navigate around inanimate objects is the UDS (ultrasonic distance sensor). These sensors emit high frequency noises, which rebound off of objects in the surrounding area and return to the robot. The gap between the emission and the return of the sound can be used to calculate the distance between the robot and the object. This is  how bats sense the world when flying at night.
 
-I am going to show you how to use a UDS in your buggy, and in the next step you will see how they work in greater detail. 
+I am going to show you how to use a UDS in your buggy, and in the next step you will see how they work in greater detail.
 
-### Sense your way. 
+### Sense your way.
 
 **Pick one of the types of sensor you have seen in this step.**
 
-**Think of another use of that sensor in robotics, from past experience or your imagination** 
+**Think of another use of that sensor in robotics, from past experience or your imagination**
 
-Share your ideas in the comments section. 
+Share your ideas in the comments section.
