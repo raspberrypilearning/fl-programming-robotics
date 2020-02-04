@@ -23,7 +23,7 @@ Many of the important scientific, exploratory and rescue operations humanity is 
 
 ![A rover on the surface of a Mars like planet (red and dusty) - it is collecting data on a clipboard. There are various sensors and modules on the robots body (satellite dishes, maybe a scanning light and a weather vein](images/2_5-Exploring_Rover)
 
-Extraterrestrial exploration is one area where robots are making a huge impact - depending on the gravity. Robotic space rovers are able to navigate and collect data and send it back to scientists on earth for study. Autonomy allows space rovers to make decisions and perform time sensitive tasks with minimal lag, sending radio signals for control from earth would add a considerable amount of lag. 
+Extraterrestrial exploration is one area where robots are making a huge impact - depending on the gravity. Robotic space rovers are able to navigate and collect data and send it back to scientists on earth for study. Autonomy allows space rovers to make decisions and perform time sensitive tasks with minimal lag; sending radio signals for control from earth would add a considerable amount of lag.
 
 **Sensors & Tasks**
 
