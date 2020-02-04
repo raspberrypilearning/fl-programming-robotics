@@ -7,11 +7,9 @@ Related files:
 
 ## Connecting the Raspberry Pi and battery pack to the motor board
 
-Now that you have attached the motors to the motor controller board, your next step is to connect the motor board to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motor board and control the motors using the Raspberry Pi.
+Your next step is to connect the motor board to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motor board and control the motors using the Raspberry Pi.
 
 ### What you will need
-
-For this step you will need the following items:
 
 + Raspberry Pi
 + Motor controller board (wired up to the DC motors)
@@ -30,15 +28,15 @@ You may also need:
 
 The motors require more power than the Raspberry Pi can provide. Therefore, you will use 4 AA batteries to power them.
 
-The battery pack should include 2 wires; one red and one black. The red wire is for the positive terminal and needs to be inserted into the **VCC** terminal block. Some motor boards do not have a **VCC** terminal block so instead use the "voltage in" terminal block labelled **+12V**.
+The battery pack should include 2 wires; one red and one black. The red wire is for the positive terminal and needs to be inserted into the **VCC** terminal block if it is present, or the "voltage in" terminal block labelled **+12V** otherwise.
 
 ![Picture of the red wire from the battery pack connected to the 12V terminal block of the motor controller](images/1_6-battery-pack-red-wire-motor-controller)
 
-The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit for the battery pack. Make sure all the screws of the terminal blocks are tightened securely.
+The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit. Make sure all the screws of the terminal blocks are tightened securely.
 
 ![Picture of the black wire from the battery pack connected to the GND terminal block of the motor controller](images/1_6-battery-pack-black-wire-motor-controller)
 
-Insert the 4 AA batteries into the battery pack. Some battery packs have a switch to turn it on and off; if it does than turn it on. Most motor controllers have a red LED that lights up to indicate it is powered on. If the LED is not lit up, the wires may not be connected properly. You may also need new batteries or your battery pack may need to be filled completely for it to work (e.g. if it has space for 8 batteries, then insert 8 batteries).
+Insert the 4 AA batteries into the battery pack, and if it has a switch, turn it on. Most motor controllers have a red LED that lights up to indicate it is powered on. If the LED is not lit up, the wires may not be connected properly. Also, check that your battery pack is full, and the batteries are the right way around.
 
 ### Receiving input
 
@@ -48,9 +46,9 @@ On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**
 
 ![A L298N motor controller board with four IN screw terminals for connecting to an electric motor. The four IN terminals are circled.](images/1_6-motor-controller-board-in-circled)
 
-Which GPIO pins on your Pi that you use is up to you - in this part of the project, I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones they are as you will need to refer to them in the code.
+Which GPIO pins on your Pi that you use is up to you - I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins then make sure you remember which ones as you will need to refer to them in the code.
 
-Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each of your DC motors will need to need to use two **IN** pins to connect to the Raspberry Pi so it can turn in both directions. You will also need one **GND** pin to complete the circuits - this can be the same pin for both motors.
+Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each DC motor will need to need to use two **IN** pins to connect to the Raspberry Pi, so the motor can turn in both directions. You will also need one **GND** pin to complete the circuits - this can be the same pin for both motors.
 
 | GPIO pin   | connects to   | board pin   |
 |:----------:|:-------------:|:-----------:|
@@ -60,28 +58,26 @@ Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to 
 |10          |<–>            |IN4          |
 |GND         |<–>            |GND          |
 
-If your motor board does not have a **GND** pin then you can use the terminal block that the battery pack also uses. Strip the end of the female-to-female or female-to-male wire for the **GND** pin and secure it into the **GND** terminal block that your battery pack feeds into. There will now be two wires fed into the **GND** block; one from the battery pack and one from the Raspberry Pi.
+If your motor board does not have a **GND** pin then use the terminal block that the battery pack also uses. Strip the end of the wire for the **GND** pin and secure it into the **GND** terminal block that your battery pack feeds into. There will now be two wires fed into the **GND** block; one from the battery pack and one from the Raspberry Pi.
 
 ![Picture of the four IN pins from the motor controller connected to four GPIO pins on the Raspberry Pi, as well as a GND pin connected from the Pi to the motor controller](images/1_6-motor-controller-connected-to-raspberry-pi)
 
 ### Powering the Pi
 
-The Raspberry Pi will need its own source of power. A small USB power bank is the easiest way to power the Raspberry Pi as it is mobile and fairly light for the chassis to carry, though you need to check it won't run out too quickly. You could also make your own power bank though that is beyond the scope of this course.
+The Raspberry Pi will need its own source of power. For testing, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Raspberry Pi will need a mobile source of power. A small USB power bank is a good choice as it will be fairly light for the chassis to carry, though you need to check it won't run out too quickly.
 
-For testing purposes, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move then the Pi will need a mobile source of power, otherwise it won't be able to travel far from the mains power supply.
+### Setting up your Raspberry Pi
 
-### Setting up your Pi
-
-You should already be familiar with setting up a Raspberry Pi and using it. If not, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
+If you are not familiar with setting up a Raspberry Pi and using it, follow this guide on [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
 
 The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins.
 
-Python and GPIO Zero will be installed by default if your Raspberry Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or other operating systems.
+Python and GPIO Zero will be installed by default if your Raspberry Pi is running the **Raspbian** operating system. Follow this guide on [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or another operating systems.
 
-If you would like to remotely control the desktop of your Pi with another computer, check out our guide to [creating a virtual desktop using VNC Server](https://www.raspberrypi.org/documentation/remote-access/vnc/).
+If you would like to remotely control your Raspberry Pi from another computer, check out our guide to [creating a virtual desktop using VNC Server](https://www.raspberrypi.org/documentation/remote-access/vnc/).
 
 **Did you have any problems connecting the motor board to the Raspberry Pi or to the battery pack?**
 
 **What type of power supply are you using for your Raspberry Pi?**
 
-Answer both of these questions in the  comments section below.
+Answer these questions in the comments section below.
