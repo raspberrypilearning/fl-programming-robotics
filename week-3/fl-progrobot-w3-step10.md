@@ -39,9 +39,7 @@ The main downside of surgical robotics is the cost. They are currently far too p
 
 **Education**
 
-Robotics as a discipline provides enormous benefits to computing education - it is awesome.
-
-Robots are cool, what was once science fiction is now a reality. Robots are also technology, and it remains one of the biggest attractions to technology, bringing fledgling roboticists to courses like this one. In order to be a successful robotiscist, you need the knowledge and skills provided by computer science. Robot competitions offer a a mixture of competitiveness and fun to engage learners, the learning is a side effect of participation in these events.
+Robotics as a discipline can provide enormous benefits to computing education. Robots are cool, what was once science fiction is now a reality. Robots are also technology, and they remain one of the biggest attractions to technology, bringing fledgling roboticists to courses like this one. In order to be a successful roboticist, you need the knowledge and skills provided by computer science. Robot competitions offer a mixture of competitiveness and fun to engage learners, the learning is a side effect of participation in these events.
 
 ![A podium - with characters on the positions standing next to their robots looking proud]()
 
