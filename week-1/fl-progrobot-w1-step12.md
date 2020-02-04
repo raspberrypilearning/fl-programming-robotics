@@ -13,7 +13,7 @@ You are coming to the end of the first week of your journey into the world of ro
 
 ![A robot buggy, with wheels and a face. Some loose cables are poking out from the top of the bot. Its eyes should look dazed and confused]()
 
-**Jumper Cables**
+**Jumper Cables and loose components**
 
 The jumper cables you have been using for the buggy so far have a tendency to come loose from the components or GPIO pins if you knock them. I cannot tell you how many times I have been pulling my hair out trying to find an error in my code only to find a loose jumper cable that is causing my problem.
 
@@ -32,6 +32,8 @@ When you buy components you have to figure out how they work and test them. If t
 **Cardboard is easy - not strong**
 
 As you create your buggy you are most likely using cardboard to house it -  which is great, and the most sensible option for the initial build. This however brings its own challenges - as previously mentioned the components are susceptible to being knocked out of place. These two challenges combine meaning that as roboticists we need to do 2 things when testing: checking the components after each run and make sure to avoid bumps as much as possible.
+
+Attaching components to your chassis can cause frustrations if the placement does not allow for particularly sturdy attachments. A small bump can knock any number of components loose, often in subtle ways that require a thorough check.
 
 ### The environment
 
@@ -57,4 +59,4 @@ I hope you have found some comfort in this step. This is a challenging area of c
 
 **If you haven't experienced these challenges, what have you done to prevent them? Could you share your process to help other learners?**
 
-Share your challenges and stories in the comments below.
+Share your challenges and stories in the comments below. We are all in this together after all, it may be frustrating but together we can overcome these obstacles and create amazing robots.

@@ -19,7 +19,7 @@ Below you can see an example TCRT5000 line sensor, your components may be laid o
 
 In the picture above you can see these 2 components that look like LEDs on the bottom (on the right hand side of the image). The blue one is the IR emitter and the black one is the receiver. These devices also have a component that adjusts the sensitivity (called a potentiometer), a screwdriver can be used to turn the white dial you can see in the image above.
 
-The device will emit IR light and the sensor will capture the light level that is reflected from the surface underneath. Some line sensors have 2 types of output - analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting, but analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against the sensitivity set by the potentiometer. If the sensor is not receiving enough light to surpass the sensitivity value, the digital output will be high (1). If enough light is received and the sensitivity value surpassed - the pin will be set to low (0).
+The device will emit IR light and the sensor will capture the light level that is reflected from the surface underneath. Some line sensors have 2 types of output - analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting, but analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against a threshold level (which is adjusted by turning the potentiometer). If the sensor is not receiving enough light to surpass the threshold value, the digital output will be high (1). If enough light is received and the threshold value surpassed - the pin will be set to low (0).
 
 The setup of these devices may seem a bit backwards at first, but when you consider that the sensor is designed to detect black lines it makes a bit more sense. A black line will not reflect as much light, so the output will be on when a black surface is underneath.
 
@@ -56,7 +56,7 @@ The same applies when the robot turns too far left, the right sensor will move o
 
 You can use even more than 2 sensors if you want, some designs use 3 or 4.
 
-**How might a robot with 3 sensors follow a line?**
+**How would a 3rd sensor in the center of the robot impact the way it moves?**
 
 **What difference do the extra sensors make?**
 

@@ -25,7 +25,7 @@ Touch sensors allow robots to detect physical interactions between their body an
 
 ### Detecting the environment
 
-Robots can use measurements of the environment around them to accomplish a variety of tasks. Robots can be especially useful in environments that are hostile to humans.
+Robots can use measurements of the environment around them to influence their behaviour, or just to collect data for analysis. Robots are especially useful in environments that are hostile to humans.
 
 **Temperature**
 
@@ -37,7 +37,7 @@ Another detectable property of the environment is light. One use is for robots w
 
 **Sound**
 
-A sound sensor will detect the presence of sound and also measure the amplitude of the sound. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, the robot would navigate towards intense sounds. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user.
+A sound sensor will detect the presence of sound and also measure the amplitude of the sound, but unlike a microphone it does not record the sound itself. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, the robot would navigate towards intense sounds in order to locate the animals it is searching for. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
 
 **Chemical**
 

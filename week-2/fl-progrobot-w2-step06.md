@@ -7,7 +7,7 @@ Related files:
 
 ## Ultrasonic Distance Sensors
 
-In this step I am going to break down the Ultrasonic distance sensor mentioned previously. Your robot buggy will use one of these sensors to navigate the physical world around it. Before you wire and code this functionality for your buggy, you should first get to know how these sensors work.
+In this step you will be examining the Ultrasonic distance sensor mentioned previously. Your robot buggy will use one of these sensors to navigate the physical world around it. Before you wire and code this functionality for your buggy, you should first get to know how these sensors work.
 
 ### Ultrasound
 
