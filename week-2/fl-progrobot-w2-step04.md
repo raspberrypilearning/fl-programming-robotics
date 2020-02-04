@@ -37,11 +37,11 @@ Another detectable property of the environment is light. One use is for robots w
 
 **Sound**
 
-A sound sensor will detect the presence of sound and also measure the amplitude of the sound, but unlike a microphone it does not record the sound itself. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, the robot would navigate towards intense sounds in order to locate the animals it is searching for. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
+Sound sensors act similarly to microphones but are often attached to circuits that compare the amplitude of the sound to a threshold value - returning the result of that comparison to the robot. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, detecting and following loud noises may be one of the pieces of a data used to locate wildlife. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
 
 **Chemical**
 
-Robots can also use specialised sensors to detect certain chemical properties. *pH* sensors detect the acidity/alkalinity of the environment around a robot. Scientific robots could use this to check the quality of rivers or soil in remote places. Carbon monoxide sensors can be used to monitor dangerous environments where human explorers would be put at risk.
+Robots can also use specialised sensors to detect certain chemical properties. *pH* sensors detect the acidity/alkalinity of the environment around a robot. Scientific robots could use this to check the quality of rivers or soil in remote places. Carbon monoxide is poisonous, robots equipped to sense the gas can be used to monitor potentially dangerous environments where human explorers may be put at risk.
 
 ### Object proximity
 
