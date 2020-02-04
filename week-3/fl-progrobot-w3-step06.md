@@ -61,12 +61,12 @@ Whilst a sensor is over a **light** surface, the LED on the sensor board should 
 
 ![Video-gif of the LED on each line sensor turning on when the sensor is over the white surface and off when the sensor is over the black line](images/)
 
-Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value of the potentiometer using a screwdriver. 
+Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value of the potentiometer using a screwdriver.
 
 Be careful when turning the potentiometer as it is quite a delicate component. If the potentiometer screw is facing the floor, you will need to lift the robot up, adjust the potentiometer a small amount and then place the robot back over the line to check the accuracy of the sensor.
 
 ![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/)
 
-**How did you get on with testing the line sensors? Did you have any issues?**
+**How did you get on with testing the line sensors? Did you have any issues? Share your thoughts in the comments.**
 
 In the next step you will have an opportunity to reflect on how you have got on so far in the course.
