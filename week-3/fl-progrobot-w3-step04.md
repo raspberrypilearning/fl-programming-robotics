@@ -29,7 +29,7 @@ Now that you know a bit more about the functionality of a line sensor - you shou
 
 The line sensor also has an array of pins, some of which you will have to connect to the Raspberry Pi you are using:
 
-+ `VCC` is the pin used to power the device, it will take any voltage in between 3.3 and 5V
++ `VCC` needs to be connected to a voltage in between 3.3 and 5V, in order to power the device.
 + `GND` is the ground pin that is required to complete the circuit
 + `AO` is the analogue output (will not work with a Pi)
 + `DO` is the digital output pin (this will work with the Pi)

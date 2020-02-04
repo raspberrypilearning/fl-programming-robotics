@@ -27,13 +27,13 @@ Extraterrestrial exploration is one area where robots are making a huge impact -
 
 **Sensors & Tasks**
 
-The primary directive for space rovers is **data collection**, and the ability to navigate - which is essential to achieve the first mission. **Cameras** on top of the rover take images and video of the surface of the planet, so scientists can study the landscape and other properties of the terrain. **Microscopic cameras** are used to take extreme close ups of soil and rocks, showing minerals and textures on their surfaces. [**Light spectrometers**](https://sciencing.com/spectrometer-5372347.html) analyse the properties of soil and air by examining their light spectrum properties, for example to detect radiation. **Air quality, humidity, barometric pressure and temperature sensors** take readings of the weather and environmental properties of a planet, this data is used to establish weather patterns on a seasonal basis.  
+The primary directive for space rovers is **data collection**, and the ability to navigate - which is essential to achieve the first mission. **Cameras** on top of the rover take images and video of the surface of the planet, so scientists can study the landscape and other properties of the terrain. **Microscopic cameras** are used to take extreme close ups of soil and rocks, showing minerals and textures on their surfaces. [**Light spectrometers**](https://sciencing.com/spectrometer-5372347.html) analyse the properties of soil and air by examining the light they absorb and emit. **Air quality, humidity, barometric pressure and temperature sensors** take readings of the weather and environmental properties of a planet, this data is used to establish weather patterns on a seasonal basis.  
 
 [If you are interested, you can see a full list of instruments on the Curiosity Mars rover here](https://mars.nasa.gov/msl/spacecraft/instruments/summary/)
 
 ### Driverless cars
 
-Autonomous robots can use clever algorithm design to make decisions incredibly quickly, much quicker than a human can. One of the best uses for autonomous robots is for safety, and one of the most prevalent uses for this is *driverless cars*.
+Autonomous robots can use clever algorithm design to make decisions incredibly quickly, much quicker than a human can. One of the best uses for autonomous robots is for safety, and one of the most promising uses for this is *driverless cars*.
 
 ![A car, driving down a road with passengers inside. There are 4 passengers and they are all facing each other - clearly no one is driving. ](images/2_5-Driverless_Car)
 

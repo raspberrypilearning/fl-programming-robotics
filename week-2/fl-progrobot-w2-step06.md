@@ -39,8 +39,8 @@ Now that you have a better idea of what a UDS is and how they work, you can move
 
 UDSs typically have 4 pins;
 
-+ **VCC** is the pin that powers the device. It needs 5V to work.
-+ **Trig** is the pin that triggers the emission of the ultrasound burst. It can be triggered using 3.3V.
++ **VCC** needs to be connected to a 5V pin, in order to power the device.
++ **Trig** is the pin that triggers the emission of the ultrasound burst.
 + **Echo** is the pin that provides an output from the device. It outputs at 3.3V or 5V depending on the UDS model.
 + **GND** is the ground pin, used to complete the circuit.
 
@@ -56,7 +56,7 @@ Now look at the diagram below. By using two resistors wired in series, the volta
 
 ![Same again](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_3.png)
 
-By altering the resistors, you can tailor the voltage across any one of them to be anything we like. Here you can see that I have split the voltage to give us almost exactly 3.3V:
+By altering the resistors, you can tailor the voltage across any one of them to be anything we like. Here you can see that I have split the voltage to give us almost exactly 3.3V across the second resistor:
 
 ![And agaaain](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_4.png)
 
@@ -64,7 +64,7 @@ To work out the resistors you need, you can use the code below.
 
 ~~~python
 R1 = 1200 # Your current resistor (alter this)
-Vout = 3.3 # The voltage you are trying to achieve (always 3.3)
+Vout = 3.3 # The voltage you are trying to achieve (always 3.3) across the resistor R2
 Vin = 5 # The input voltage (always 5)
 
 R2 = (Vout * R1) / (Vin - Vout)
