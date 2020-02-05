@@ -9,23 +9,20 @@ Related files:
 
 Robots are an integral part of modern life and are set to be even more prominent in the future. They come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to landing on Mars. But defining what a robot actually **is** can be tricky; ask five roboticists and you are likely to get five different answers!
 
-Nevertheless, there are some common features that most robots share:
+Robots can vary massively, from fixed location robots making tiny precise movements to manufacture microchips, to humanoid robots needing to walk around different environments.
 
-+ A physical body that can move
-+ Mechanisms for moving the structure
-+ A source of power
-+ Sensors for receiving data about the world around them
-+ The ability to process information and automate tasks
-
-Robots can vary massively, from fixed location robots making tiny precise movements to manufacture microchips, to humanoid robots needing to walk around different environments. What nearly all robots can do though is these three things: sense, process, and act.
+What nearly all robots can do though is these three things: 
+1. Sense 
+2. Process
+3. Act
 
 ### Making sense of the environment
 
-Just like people and animals, robots are able to sense the physical world so they can perform actions accordingly. Robots often use sensors to detect the movement of their own components as well as other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and a pressure sensor to ensure it holds components with the correct force to avoid dropping or crushing them.
+Robots are able to sense the physical world so they can perform actions accordingly, they often use sensors to detect the movement of their own components as well as other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and a pressure sensor to ensure it holds components with the correct force to avoid dropping or crushing them.
 
 ![A robotic arm installing a computer chip or fitting together an electronic device such as a smartphone.](images/1_4-robotic-arm-installing-computer-chip.jpg)
 
-Between 1966 and 1972, researched at Standord University developed "Shakey", the first truly mobile robot with the ability to sense its environment. It was capable of navigating various obstacles inside a room, using a TV camera and an infrared range finder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a pre-programmed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remember and adjust these actions for future tasks. This was integral to Shakey's capability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
+Between 1966 and 1972, researchers at Standord University developed "Shakey", the first truly mobile robot with the ability to sense its environment. It was capable of navigating using a TV camera and an infrared range finder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. By piecing together simple commands Shakey was able to perform more complex tasks, as well as remember and adjust these actions for future tasks. This was integral to Shakey's capability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
 
 ![Shakey was the first truly mobile robot developed at Stanford University. It could map a picture of a room using it sensors and move around objects autonomously.](images/1_4-Shakey.jpg)
 
@@ -35,7 +32,7 @@ Over the years, new and improved sensors have increased robots' abilities to und
 
 Nearly all robots need a device, such as a computer or microcontroller, to receive data from sensors and other components. This device will need to process this data  into meaningful information that can then be used to communicate instructions.
 
-In this course your buggy will be based around a Raspberry Pi, a single-board computer that allows a wide range of components to be connected to it. You'll attach the different components of the buggy to the Raspberry Pi and program it to run autonomously, handling the decision making required during its tasks.
+In this course your buggy will be based around a Raspberry Pi, a single-board computer that allows a wide range of components to be connected to it. You'll attach the different components of the buggy to the Raspberry Pi and program it to run autonomously.
 
 ### Automation in action
 
