@@ -27,6 +27,8 @@ The uses of ultrasound are widespread; doctors use the sound waves to scan insid
 
 An ultrasonic distance sensor (UDS) works by sending out a burst of ultrasound. This sound will travel through air, but reflect back (echo) off of surrounding objects. The sensor can detect the echo, when it returns.
 
+![Add some images taken from the animation]()
+
 Using a measure of the time between the outgoing burst and returning echo, and the speed of sound, you can calculate how far an object is away from the sensor.
 
 Commonly, a UDS requires 2 components to do this; an emitter and a receiver. You can see this in the picture above, the two silver cylinders on the front of the sensor are the emitter and receiver.
