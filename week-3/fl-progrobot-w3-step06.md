@@ -61,7 +61,7 @@ Whilst a sensor is over a **light** surface, the LED on the sensor board should 
 
 ![Video-gif of the LED on each line sensor turning on when the sensor is over the white surface and off when the sensor is over the black line](images/)
 
-Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value of the potentiometer using a screwdriver. Be careful when turning the potentiometer as it is quite a delicate component. 
+Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value by adjusting the potentiometer using a screwdriver. Be careful when turning the potentiometer as it is quite a delicate component.
 
 ![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/)
 
