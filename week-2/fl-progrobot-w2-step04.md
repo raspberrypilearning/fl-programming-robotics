@@ -15,13 +15,13 @@ A robot designed to navigate the real world and interact with physical objects -
 
 **Force**
 
-Force sensors are used by roboticists to measure the forces their robots are exerting on the objects they interact with - like the robotic arm you heard about last week. It is important that the arm applies enough force to hold the part and not drop it, but not so much pressure that the component is damaged or crushed.
+Force sensors are used by roboticists to measure the forces their robots are exerting on the objects they interact with - like the robotic arm assembling mobile phones that you heard about last week. It is important that the arm applies enough force to hold the part and not drop it, but not so much pressure that the component is damaged or crushed.
 
 Other roboticists use force sensors to detect shocks or vibrations, to allow a robot to react and balance/stabilise itself. Mobile robots could use force sensors in navigation as well - although touch sensors are more common.
 
 **Touch**
 
-Touch sensors allow robots to detect physical interactions between their body and objects in their surroundings. *Capacitive touch* sensors utilise conductive properties to detect touches, most commonly from a human's touch but any object that can conduct electricity will work. These sensors are usually used by human's to interact with a robot. *Resistive touch* sensors do not use electrical properties, but instead they detect touches based on pressure applied to the plate. This type of sensor can allow a robot to navigate its surroundings, even if the object touching the sensor would not conduct electricity.
+Touch sensors allow robots to detect physical interactions between their body and objects in their surroundings. *Capacitive touch* sensors utilise conductive properties to detect touches, most commonly from a human's touch but any object that can conduct electricity will work. *Resistive touch* sensors do not use electrical properties, but instead they detect touches based on pressure applied to the plate. This type of sensor can allow a robot to navigate its surroundings, even if the object touching the sensor would not conduct electricity.
 
 ### Detecting the environment
 
@@ -33,11 +33,11 @@ Temperature sensors can be used in a variety of contexts, not just as data colle
 
 **Light**
 
-Another detectable property of the environment is light. If a robot has different tasks to accomplish at night than in the day; it could detect decreasing light levels and change its behaviour to night mode. Changes in light can also indicate a change in surroundings; a robot designed to explore houses in disaster zones could use light sensors to help navigate around a home that has collapsed, by directing itself towards the light to get out of tight spaces.
+Another detectable property of the environment is light. If a robot has different tasks to accomplish at night than in the day, it could detect decreasing light levels and change its behaviour to night mode. Changes in light can also indicate a change in surroundings; a robot designed to explore houses in disaster zones could use light sensors to help navigate around a home that has collapsed, by directing itself towards the light to get out of tight spaces.
 
 **Sound**
 
-Sound sensors act similarly to microphones but are often attached to circuits that compare the amplitude of the sound to a threshold value - returning the result of that comparison to the robot. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, detecting and following loud noises may be one of the pieces of a data used to locate wildlife. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user. 
+Sound sensors act similarly to microphones but are often attached to circuits that compare the amplitude of the sound to a threshold value - returning the result of that comparison to the robot. The higher the amplitude, the louder the noise. This could be used by a robot designed to study wildlife, detecting and following loud noises may be one of the pieces of a data used to locate wildlife. A more complex use could a sound sensor for speech recognition, responding to commands spoken by a user.
 
 **Chemical**
 
@@ -49,7 +49,7 @@ Mobile robots have to navigate the world around them, often autonomously, and th
 
 **Infrared Sensors**
 
-Infrared sensors detect changes in the levels of infrared radiation captured by the device, these changes are caused when an object (often a living thing) hotter than the background passes through its field of view.
+Infrared sensors detect changes in the levels of infrared radiation captured by the device. These changes are caused when an object (often a living thing) hotter than the background passes through the sensor's field of view.
 
 **Ultrasonic Distance Sensors**
 
