@@ -7,7 +7,7 @@ Related files:
 
 ## Testing the line sensors
 
-Now you are going to attach your line following sensors to the chassis and test whether the sensors are picking up the differences between light and dark surfaces. This is best done on a track made with white paper or card and black tape for the line - you'll  also use this later on to test the line following ability of your robot.
+Now you are going to attach your line following sensors to the chassis and test whether the sensors are picking up the differences between light and dark surfaces.
 
 ### What you will need
 
@@ -27,11 +27,11 @@ In order to test your robot, you'll need to prepare a track with a line for the 
 
 ![Picture of a white piece of card with a black line of tape running through the center](images/)
 
-This provides a really clear contrast in light levels between the white paper and the black tape so that your line sensors are be able to accurately detect whether they are over the line or not.
+This provides a really clear contrast in light levels between the white paper and the black tape so that your line sensors are able to accurately detect when the line is beneath them.
 
 ### Attaching the sensors to the chassis
 
-Before you modify the chassis, I recommend taking a few photos of your robot and the connections between the Raspberry Pi, motor controller board, line sensors, and Ultrasonic Distance Sensor (UDS). It is quite likely that a few of the jumper leads will come loose whilst attaching the line sensors to the chassis. Use the photo of the robot and/or the steps in the previous 2 weeks of this course to help you check and reconnect the leads correctly.
+Before you modify the chassis, I recommend taking a few photos of your robot and the connections between the pins on the Raspberry Pi and the components. It is quite likely that a few of the jumper leads will come loose whilst attaching the line sensors to the chassis. Use the photo of the robot and/or the steps in the previous 2 weeks of this course to help you check and reconnect the leads correctly.
 
 #### Positioning the line sensors
 
@@ -61,9 +61,7 @@ Whilst a sensor is over a **light** surface, the LED on the sensor board should 
 
 ![Video-gif of the LED on each line sensor turning on when the sensor is over the white surface and off when the sensor is over the black line](images/)
 
-Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value of the potentiometer using a screwdriver.
-
-Be careful when turning the potentiometer as it is quite a delicate component. If the potentiometer screw is facing the floor, you will need to lift the robot up, adjust the potentiometer a small amount and then place the robot back over the line to check the accuracy of the sensor.
+Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value of the potentiometer using a screwdriver. Be careful when turning the potentiometer as it is quite a delicate component. 
 
 ![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/)
 
