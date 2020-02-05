@@ -44,7 +44,7 @@ UDSs typically have 4 pins;
 + **Echo** is the pin that provides an output from the device. It outputs at 3.3V or 5V depending on the UDS model.
 + **GND** is the ground pin, used to complete the circuit.
 
-If the UDS is 5V tolerant, this causes some issues because the **Echo** pin will output 5V and the Raspberry Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider - also known as a potential divider.
+If the UDS is 5V tolerant, this causes some issues because the **Echo** pin will output 5V and the Raspberry Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider - also known as a potential divider. Make sure to check the voltage tolerance of your UDS, the HC-SR04 sensor will need a voltage divider. Alternatively, a 3V3 tolerant sensor, such as the HC-SR04P, will work without a voltage divider.
 
 #### Voltage dividers
 

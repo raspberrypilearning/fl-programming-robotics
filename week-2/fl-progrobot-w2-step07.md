@@ -7,11 +7,7 @@ Related files:
 
 ## Attaching the UDS to the buggy
 
-Having read about how a Ultrasonic Distance Sensor (UDS) works, you are now going to connect one to the Raspberry Pi.
-
-If the UDS **Echo** pin is 5V, for example for the HC-SR04 sensor, a voltage divider (as described previously) is required to ensure the Pi is not damaged. Alternatively, a 3V3 tolerant sensor, such as the HC-SR04P, will work without a voltage divider.
-
-Most sensors are the **5V** version - check the model number or post a photo in the comments if you are unsure.
+Having read about how a Ultrasonic Distance Sensor (UDS) works, you are now going to connect one to the Raspberry Pi. Make sure to check whether you need a voltage divider - check the model number or post a photo in the comments if you are unsure.
 
 ### What you will need
 
