@@ -33,7 +33,7 @@ The Stanford cart started life as a remote controlled mobile robot. A four wheel
 
 The robot used a camera pointing towards the ground which tracked a white line drawn by the researchers. The robot would adjust its direction to keep the line in the middle of the picture captured by the camera. It moved at a walking pace and was reasonably successful at this task.
 
-Later the cart would be turned into a fully autonomous vehicle; for a time the cart was the cutting edge of vision controlled robots. Famously the team would let the robot roam the campus unaccompanied, and they created a sign that read "CAUTION ROBOT VEHICLE" to hang when it was out. This sign caused the lead researcher a lot of headaches, as he kept having to get it remade - after it was taken.
+Later the cart would be turned into a fully autonomous vehicle; for a time the cart was the cutting edge of vision controlled robots. Famously the team would let the robot roam the campus unaccompanied, and they created a sign that read "CAUTION ROBOT VEHICLE" to hang when it was out. This sign caused the lead researcher a lot of headaches, as he kept having to get it remade - after it was repeatedly taken.
 
 ### Modern uses for line following robots
 
@@ -41,15 +41,13 @@ Line following robots excel in situations where the tasks they must complete do 
 
 **Warehouse Robots**
 
-A good example is robots working in a warehouse, where the movement requires following pre-set paths to collect pallets. Warehouses, particularly for large internet shopping companies (think Amazon or Alibaba), require a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up cages containing items that have either just arrived or are being prepared for dispatch.
-
-Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power on navigation. Their primary function is to identify and move the stock pile assigned to them. Following the lines allows them to do this without veering off track.
+A good example is robots working in a warehouse, where the movement requires following pre-set paths to collect pallets. Warehouses, particularly for large internet shopping companies (think Amazon or Alibaba), require a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up cages containing items that have either just arrived or are being prepared for dispatch. Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power on navigation. 
 
 **Competitions**
 
 As mentioned earlier in the article, line sensing robots have securely found their place in the robotics world as a good challenge for beginner roboticists.
 
-These competitions pit robots against one another, challenging them to follow a line track as quickly as possible. There are judges who watch the robots and penalise them for straying from the line - either through time penalties or in some cases disqualification.
+This has led to the creation of competitions pit robots against one another, challenging them to follow a line track as quickly as possible. There are judges who watch the robots and penalise them for straying from the line - either through time penalties or in some cases disqualification.
 
 The size and complexities of the tracks depend on the target audience and their expected experience levels. Some competitions are aimed at children and so the courses are simple small ovals. Some more complex competitions involve line mazes for the robots to map and navigate.
 
