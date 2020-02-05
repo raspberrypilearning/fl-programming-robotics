@@ -11,7 +11,7 @@ Now that you have attached the line sensors, you are going to create a basic lin
 
 ### Setting up the motors and line sensors
 
-First, you need to set your program with the components you'll be interacting with before moving on to the line following algorithm.
+First, you need to set your program with the components you'll be interacting with.
 
 **1.** Create a new Python 3 file.
 
@@ -37,7 +37,7 @@ The `robin.forward()` command is used to get your robot started.
 
 The line sensors have 2 states; the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
 
-To start with, consider what the robot should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 from their digital pins as they are over the white background. In this scenario, the robot should move forwards.
+To start with, consider what the robot should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 as they are over the white background. In this scenario, the robot should move forwards.
 
 Think about the rest of the line following algorithm:
 
@@ -78,13 +78,13 @@ left_sensor.when_no_line = robin.forward
 right_sensor.when_no_line = robin.forward
 ~~~
 
-**Note:** Unlike calling a function during a program, you should make sure not to put brackets after the function name when using events. You are providing a *reference* to the method, not calling it. The event only needs you to provide the function name, when the event happens it will find the method and call it. If you include brackets with the method it is called immediately**
+**Note:** Unlike calling these methods during a program, you should make sure not to put brackets after the method name when using events. You are providing a *reference* to the method, not calling it. The event only needs you to provide the method name, when the event happens it will find the method and call it. If you include brackets with the method it is called immediately.
 
 ### Ensuring the program doesn't run forever
 
 Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop your robot from moving.
 
-**4.** To make sure that the robot doesn’t keep running forever, and to close all the component's connections cleanly, add in the following lines of code to the end of your program:
+**4.** To make sure that the robot doesn’t keep running forever, and to close all the components' connections cleanly, add the following to the end of your program:
 
 ~~~ python
 sleep(10)
@@ -95,9 +95,9 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-After 10 seconds, the motors will be instructed to stop moving with the `stop()` command. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
+After 10 seconds, the `stop()` command will stop both motors. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
 
-You can change the number of seconds to a different value if you want to test the robot for shorter or longer periods of time.
+You can change the number of seconds to a different value if you want to test the robot for a different period of time.
 
 ### Testing the algorithm
 
