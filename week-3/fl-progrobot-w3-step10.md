@@ -7,7 +7,7 @@ Related files:
 
 ## Robotics is changing our lives
 
-Robots have firmly shifted from science fiction to become science fact, even a few years ago most of the content you have covered in this course would have been exclusively discussed in research laboratories. This shift also requires you to change the way we discuss the impact robotics will have, moving from the theoretical to the concrete. This is exactly what you will do in this step.
+Robots have firmly shifted from science fiction to become science fact. Even a few years ago much of the content you have covered in this course would have been exclusively discussed in research laboratories. This shift also requires you to change the way we discuss the impact robotics will have, moving from the theoretical to the concrete.
 
 ### Automation
 
@@ -23,7 +23,7 @@ For more discussions on the impact of technology, including automation and robot
 
 **Industry**
 
-The production industry is not the only sector that will take advantage of robots. Earlier you heard about warehouse robots that assist in packing and shipping orders for large retailers - where would Amazon be without their robots? You also learned about robots being used to navigate dangerous environments, some industrial environments definitely fit this bill. Mining is a good example of this, not just coal or oil - but also the precious metals and materials for the components inside of our mobile phones and computers.
+The production industry is not the only sector that will take advantage of robots. Earlier you heard about warehouse robots that assist in packing and shipping orders for large retailers. You also learned about robots being used to navigate dangerous environments - some industrial environments definitely fit this bill. Mining is a good example of this; not just for coal or oil, but also the precious metals and materials for the components inside of our mobile phones and computers.
 
 ![A robot physically digging and mining - perhaps striking gold? Avoid coal or oil mining imagery]()
 
@@ -39,11 +39,11 @@ The main downside of surgical robotics is the cost. They are currently far too p
 
 **Education**
 
-Robotics as a discipline can provide enormous benefits to computing education. Robots are cool, what was once science fiction is now a reality. Robots are also technology, and they remain one of the biggest attractions to computing education, bringing fledgling roboticists to courses like this one. In order to be a successful roboticist, you need the knowledge and skills provided by computer science. Some learners enjoy getting involved in Robot competitions. Which offer a mixture of competitiveness and fun to engage learners, the learning is a side effect of participation in these events.
+Robotics as a discipline can provide enormous benefits to computing education. Robots are cool, what was once science fiction is now a reality. Robots are also technology, and they remain one of the biggest attractions to computing education, bringing fledgling roboticists to courses like this one. In order to be a successful roboticist, you need the knowledge and skills provided by computer science. Some learners enjoy getting involved in robot competitions. These offer a mixture of competitiveness and fun to engage learners, with learning as a side effect of participation in these events.
 
 ![A podium - with characters on the positions standing next to their robots looking proud]()
 
-As great as this all is, there is still work to be done to make the subject more inclusive. Robotics is still a selective subject, with relatively high entry requirements - both financially and cognitively. A lot of work has been done to improve this and robotics is more accessible now than it has ever been. As I am sure you have noticed, the subject is still quite challenging for beginners and a lot of resilience is necessary. There is an argument that this is not a bad thing, and that robotics has a place in education as a extension activity to push confident learners. However as I said earlier it works well as a hook to bring more reticent learners into formal computing education.
+As great as this all is, there is still work to be done to make the subject more inclusive. Robotics is still a selective subject, with relatively high entry requirements - both financially and cognitively. A lot of work has been done to improve this and robotics is more accessible now than it has ever been. As I am sure you have noticed, the subject is still quite challenging for beginners and a lot of resilience is necessary. There is an argument that this is not a bad thing, and that robotics has a place in education as a extension activity to push confident learners. However, as I said earlier, it can also work well as a hook to bring more reticent learners into formal computing education.
 
 ### Robotics in your life
 
