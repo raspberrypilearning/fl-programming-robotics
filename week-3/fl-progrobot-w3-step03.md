@@ -33,11 +33,11 @@ The Stanford cart started life as a remote controlled mobile robot. A four wheel
 
 The robot used a camera pointing towards the ground which tracked a white line drawn by the researchers. The robot would adjust its direction to keep the line in the middle of the picture captured by the camera. It moved at a walking pace and was reasonably successful at this task.
 
-Later the cart would be turned into a fully autonomous vehicle; for a time the cart was the cutting edge of vision controlled robots. Famously the team would let the robot roam the campus unaccompanied, and they created a sign that read "CAUTION ROBOT VEHICLE" to hang when it was out. This sign caused the lead researcher a lot of headaches, as he kept having to get it remade - it kept being taken.
+Later the cart would be turned into a fully autonomous vehicle; for a time the cart was the cutting edge of vision controlled robots. Famously the team would let the robot roam the campus unaccompanied, and they created a sign that read "CAUTION ROBOT VEHICLE" to hang when it was out. This sign caused the lead researcher a lot of headaches, as he kept having to get it remade - after it was taken.
 
 ### Modern uses for line following robots
 
-Although line following robots in research were overtaken by more complex autonomy systems, there are still modern robots using this technique. Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making.
+Line following robots excel in situations where the tasks they must complete do not involve complex movement - in other words the movement they must complete does not involve much decision making.
 
 **Warehouse Robots**
 
@@ -47,7 +47,7 @@ Lines on the floor allow the robots to navigate the busy warehouse space without
 
 **Competitions**
 
-If you search for "line sensing robots" on Google, most of the hits returned relate to robotics competitions. As mentioned earlier in the article, line sensing robots have securely found their place in the robotics world as a good challenge for beginner roboticists.
+As mentioned earlier in the article, line sensing robots have securely found their place in the robotics world as a good challenge for beginner roboticists.
 
 These competitions pit robots against one another, challenging them to follow a line track as quickly as possible. There are judges who watch the robots and penalise them for straying from the line - either through time penalties or in some cases disqualification.
 
