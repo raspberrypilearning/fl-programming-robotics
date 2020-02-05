@@ -13,7 +13,7 @@ Your robot buggy will use an Ultrasonic Distance Sensor (UDS) to help it navigat
 
 Ultrasonic distance sensors (UDS) use ultrasound to measure distances. Sound travels through the air in a *wave pattern*, measurements are made by examining the properties of the pattern over space and time.
 
-As the sound travels the particles in the air oscillate back and forth. This  is often instead represented as a wave moving up and down on a graph. A sound's frequency is the number of oscillations per second. Frequency is measured in Hertz (Hz), if a wave oscillates once a second it is said to have a frequency of 1 Hz.
+As the sound travels the particles in the air oscillate back and forth. This  is often instead represented as a wave moving up and down on a graph. A sound's frequency is the number of oscillations per second. Frequency is measured in Hertz (Hz), 1Hz corresponds to one oscillation per second.
 
 ![A few waves showing the difference between high and low frequency sounds.](images/frequency_example.png)
 
