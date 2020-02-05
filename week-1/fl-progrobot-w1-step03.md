@@ -11,18 +11,19 @@ Robots are an integral part of modern life and are set to be even more prominent
 
 Robots can vary massively, from fixed location robots making tiny precise movements to manufacture microchips, to humanoid robots needing to walk around different environments.
 
-What nearly all robots can do though is these three things: 
-1. Sense 
+What nearly all robots can do though is these three things:
+
+1. Sense
 2. Process
 3. Act
 
 ### Making sense of the environment
 
-Robots are able to sense the physical world so they can perform actions accordingly, they often use sensors to detect the movement of their own components as well as other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and a pressure sensor to ensure it holds components with the correct force to avoid dropping or crushing them.
+Robots are able to sense the physical world so they can perform actions accordingly. They often use sensors to detect the movement of their own components as well as other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and a pressure sensor to ensure it holds components with the correct force to avoid dropping or crushing them.
 
 ![A robotic arm installing a computer chip or fitting together an electronic device such as a smartphone.](images/1_4-robotic-arm-installing-computer-chip.jpg)
 
-Between 1966 and 1972, researchers at Standord University developed "Shakey", the first truly mobile robot with the ability to sense its environment. It was capable of navigating using a TV camera and an infrared range finder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. By piecing together simple commands Shakey was able to perform more complex tasks, as well as remember and adjust these actions for future tasks. This was integral to Shakey's capability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
+Between 1966 and 1972, researchers at Standord University developed "Shakey", the first truly mobile robot with the ability to sense its environment. It was capable of navigating around obstacles, using a TV camera and an infrared range finder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a pre-programmed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remember and adjust these actions for future tasks. This was integral to Shakey's capability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
 
 ![Shakey was the first truly mobile robot developed at Stanford University. It could map a picture of a room using it sensors and move around objects autonomously.](images/1_4-Shakey.jpg)
 
