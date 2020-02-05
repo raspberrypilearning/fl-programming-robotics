@@ -7,7 +7,7 @@ Related files:
 
 ## Designing the chassis
 
-Now you have the motors set up, the next stage is to design a chassis to house the robot in. A chassis is the physical frame of a wheeled vehicle that holds together the main parts of a vehicle. Your buggy will need a chassis so that you can secure the components, such as the wheels, motors and Raspberry Pi, to it.
+Now that you have the motors set up, it's time to design a chassis - the physical frame of your vehicle. Your buggy will need a chassis so that you can secure the components, such as the wheels, motors and Raspberry Pi, to it.
 
 ![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame](images/1_8-automobile-chassis.png)
 
@@ -15,9 +15,9 @@ Now you have the motors set up, the next stage is to design a chassis to house t
 
 A chassis for a robot buggy can be built using all sorts of materials: cardboard, plastic or metal to name a few. The material that works best for you depends on the weight of the components, cost, skill of the maker, and tools available. Check out our [Design and prototype embedded computer systems course](https://www.futurelearn.com/courses/embedded-systems) to learn about developing a physical product.
 
-When choosing a material, you need to consider aspects such as weight vs durability, cost vs strength, and difficulty to work with vs quality of the chassis. Using certain types of metal might result in a strong and durable chassis but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap but it is less sturdy than other materials.
+When choosing a material, you need to consider aspects such as weight vs durability, cost vs strength, and difficulty to work with vs quality of the chassis. Using certain types of metal might result in a strong and durable chassis but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap but it is less sturdy than other materials. 
 
-I recommend making a prototype of the chassis first using a low-cost material, since tweaking the design will be much easier. Common households items, such as a cardboard box or a plastic ice cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton which originally contained grapes. The reason I chose this was because it is a good sized box that can hold the robot components without needing to be modified. It is was also easy to make holes in the carton when attaching the components to the chassis.
+I recommend making a prototype of the chassis first using a low-cost material, since tweaking the design will be much easier. Common households items, such as a cardboard box or a plastic ice cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton which originally contained grapes. I chose this was because it is a good sized box that can hold the robot components without needing to be modified. It was also easy to make holes in the carton when attaching the components to the chassis.
 
 ### Planning the layout
 
@@ -35,7 +35,7 @@ At the very minimum, the chassis needs to house the following components:
 + AA battery holder (to power the motor controller board)
 + USB battery pack (for powering the Raspberry Pi)
 
-You will also need to mount a pair of wheels to the axles of the motors and a ball caster to the front of the chassis that will act as a third wheel.
+You will also need to mount a pair of wheels to the axles of the motors, and a ball caster to the front of the chassis that will act as a third wheel.
 
 The line sensors will need to sit either side of the ball caster and point downwards to the floor. The optimal distance between the line sensors and the floor surface is 1cm to 3cm, which should be fine for most buggies.
 
@@ -59,8 +59,8 @@ If you want to know more about creating a physical object and using tools such a
 
 Now it is time for you to design a chassis for your robot buggy and make sure all the components fit:
 
-+ Try to find a container that you can use for the prototype of the chassis
-+ If you have a container, check that all the components will fit using the actual components, or by mapping them out on paper
++ Find a container that you can use for the prototype of the chassis
++ Check that all the components will fit using the actual components, or by mapping them out on paper
 + Check that there is a bit of extra room around the components to account for things like wiring
 
 **What type of container have you used for your chassis? What material is it made out of?**
