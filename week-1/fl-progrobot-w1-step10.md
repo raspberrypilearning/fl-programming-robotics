@@ -7,7 +7,7 @@ Related files:
 
 ## Making the robot move
 
-Now you are going to test whether your buggy can move forward, backward, left and right using the Python program you created for testing the motors. First though, find a suitable surface for the buggy to move on and then power up the Pi and motor controller.
+Now you are going to test whether your buggy can move forward, backward, left and right using the Python program you created for testing the motors.
 
 ### Finding a suitable surface
 
@@ -25,7 +25,7 @@ To check whether your buggy can move in all directions, it is best to use one of
 
 You need to check that the buggy can move in every direction. Therefore, a program that contains the commands `.foward()`, `.backward()`, `.left()` and `.right()` is ideal. Remember to end the program with `.stop()` to stop the motors from turning.
 
-If you don't have a program that is suitable, you can copy the code below into a new Python file. However, you may need to adjust the GPIO pins for the `left` and `right` motors like you did earlier. For example, in my robot setup I had to swap the `left` motor pins from `7,8` to `8,7`.
+If you don't have a program that is suitable, you can copy the code below into a new Python file.
 
 ~~~ python
 from gpiozero import Robot
@@ -52,11 +52,7 @@ robin.stop()
 
 **Does the robot buggy move forward, backward, left and right correctly in the order you specified in the code?**
 
-If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. Follow the previous instructions when you tested the direction of both motors if you are still having issues.
-
-**Does the speed need adjusting?**
-
-In the code above, I specified a speed that is lower than the default speed of 1 using the commands `.right(0.8)`, `.backward(0.9)` and `.left(0.7)`. If your buggy doesn't turn or move backward as intended, try changing the values inside the brackets and then run the program again to see any changes made.
+If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. For example, in my robot setup I had to swap the `left` motor pins from `7,8` to `8,7`. Follow the previous instructions when you tested the direction of both motors if you are still having issues.
 
 ### Understanding how the .forward(), .left(), .right() and .backward() commands work
 
@@ -69,6 +65,8 @@ The motors work on a range of `-1` to `1`; positive values tell the motor to run
 When using the `.forward()` command, a positive value is sent to the left and right motors, whilst the `.backward()` command sends a negative value to both motors.
 
 The `.left()` and `.right()` commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. The opposite is true to turn right; the right motor receives a negative value and the left motor a positive value.
+
+In the code above, I specified a speed that is lower than the default speed of 1 using the commands `.right(0.8)`, `.backward(0.9)` and `.left(0.7)`.
 
 ### Connecting to a Raspberry Pi remotely
 
