@@ -21,7 +21,7 @@ To help you begin this process, consider the different parts of the problem:
 
 #### Setting up the program
 
-**1.** Copy the code from the last step into a new Python file. 
+**1.** Copy the code from the last step into a new Python file.
 
 **2.** Change the first line of code so that `Robot` is also imported from the `gpiozero` library to control the motors.
 
@@ -53,50 +53,7 @@ The value of `duration` is the number of seconds that the timer will run for. Ca
 
 You will use the `running` variable later to specify when the program - and the robot - should stop running.
 
-#### Your code so far
-
-At the moment, your program should look similar to this:
-
-~~~ python
-from gpiozero import Robot, InputDevice, OutputDevice
-from time import sleep, time
-
-trig = OutputDevice(4)
-echo = InputDevice(17)
-
-robin = Robot(left=(8,7), right=(9,10))
-
-duration = 10
-end_time = time() + duration
-running = True
-
-sleep(2)
-
-def get_pulse_time():
-    trig.on()
-    sleep(0.00001)
-    trig.off()
-
-    while echo.is_active == False:
-        pulse_start = time()
-
-    while echo.is_active == True:
-        pulse_end = time()
-
-    return pulse_end - pulse_start
-
-def calculate_distance(duration):
-    speed = 343
-    distance = speed * duration / 2
-    return distance
-
-while True:
-    duration = get_pulse_time()
-    distance = calculate_distance(duration)
-
-    sleep(0.06)
-    print(distance)
-~~~
+**Check your program so far against my [version of the program after step 4](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/code/uds-motors-halfway.py)**
 
 The last changes you are going to make are going to all be with the `while` loop.
 
@@ -104,7 +61,7 @@ The last changes you are going to make are going to all be with the `while` loop
 
 The robot should, by default, move forwards unless it detects an object that is too close. If an object is detected within a certain distance of the UDS, then the robot should turn left or right to avoid the obstacle in front of it.
 
-*How close is too close?*
+**How close is too close?**
 
 The program currently calculates the distance an object is from the UDS in metres. You need to specify the threshold value (in metres) of when an object is too close to the robot.
 
