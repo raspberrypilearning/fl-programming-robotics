@@ -5,11 +5,11 @@ Related links:
 Related files:
 )
 
-## Improving the line following algorithm
+## Improving the line following
 
-The previous line following algorithm is okay, but the robot can move side to side quite a lot as it follows the line. To make the robot's movement more elegant, you can slow down the speed of the robot; this ensures the left and right turns are smaller and therefore more gradual.
+The previous line following program is okay, but the robot can move side to side quite a lot as it follows the line. To make the robot's movement more elegant you can slow down the speed of the robot, making the turns smaller and more gradual.
 
-However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed or other properties. To have more control over the robot, you can adapt your program so that it takes into account the position of the robot, the states of the line sensors, and the actions required of the motors.
+However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed. To have more control over the robot, you can adapt your program so that it takes into account the states of the line sensors, and uses these to choose the actions required of the motors.
 
 ### Setting up the program
 
@@ -17,7 +17,7 @@ However, the `when_line` and `when_no_line` events don't allow you to modify the
 
 **2.** Remove all of the code **after** you have initialised the variables `left_sensor` and `right_sensor`.
 
-**3.** After the `LineSensor` variables have been defined, initialise the variables for controlling the speed of the motors and the timer:
+**3.** After those variables have been defined, initialise the variables for controlling the speed of the motors and the timer:
 
 ~~~ python
 speed = 0.75
@@ -30,15 +30,15 @@ running = True
 
 The value for each motor will be modified by the `speed` multiplier to slow down the robot a little. The value for `speed` usually needs to be at least 0.6 otherwise the motors do not have enough momentum to turn on a solid surface, and the maximum value is 1.
 
-The other variables are used to create a timer so that robot doesn't run forever, just like you did for the UDS program last week. Remember that `duration` is the number of seconds your program will run for, and you can modify this yourself.
+The other variables are used to create a timer so that the robot doesn't run forever, just like the UDS program last week. Remember that `duration` is the number of seconds your program will run for, and you can modify this yourself.
 
-### Planning a better algorithm
+### Planning a better program
 
-To have more control over the robot's movement and speed, you can read the line sensor values and use these to choose how to instruct the motors.
+To have more control over the robot's movement and speed, your program needs to choose how to instruct the motors based on the values from the line sensors.
 
-Remember that when a line sensor is above a line, it outputs a `1`. When it’s off a line, it outputs a `0`. You can’t pass these values straight to the motors because the motors will accept a range of values from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse.
+Remember that when a line sensor is above a line, it outputs a `1`. When it’s off a line, it outputs a `0`. You can’t simply pass these values straight to the motors because the motors accept a range of values from `-1` to `1`; positive values tell the motor to run forwards and negative values run the motor in reverse.
 
-Taking this behaviour into account, I am going to define whether the motors should be given a positive or negative value based on the line sensor outputs.
+Taking this behaviour into account, I am going to define three rules to determine what outputs are sent to the motors.
 
 ### The three rules to rule them all
 
@@ -58,9 +58,9 @@ If the right sensor outputs `1`, the robot has drifted left and needs to turn ri
 
 *Why do you think there is not a rule for both the sensors outputting a `1` simultaneously?*
 
-### Programming the algorithm
+### Programming the rules
 
-To start applying these rules, the code needs to repeatedly read the outputs of the line sensors, in a loop.
+To start applying these rules, the code needs to repeatedly read the outputs of the line sensors in a loop.
 
 **4.** Add a `while` loop to the program after where you initialised the speed and timer variables.
 
@@ -72,7 +72,7 @@ while running:
 	print (left_detect, right_detect)
 ~~~
 
-**5.** If you run the program now, you should see the binary output from the sensors, similar to the video below:
+**5.** If you run the program now, you should see the binary output from the sensors:
 
 ![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the line sensor output values changing on the screen changing whenever the robot is moved](images/3_9-binary-output-line-sensors)
 
