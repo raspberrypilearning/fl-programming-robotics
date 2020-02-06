@@ -1,6 +1,6 @@
 Over the next three weeks, you'll build a robot buggy and program it to allow it to:
 
-+ move,
++ move autonomously,
 + avoid obstacles,
 + follow a line.
 
