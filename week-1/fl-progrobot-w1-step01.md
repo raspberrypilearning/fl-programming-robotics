@@ -39,12 +39,14 @@ This course requires you to have the following:
 + Jumper leads (female-to-female and male-to-female) or wire
 + AA battery holder (for 4 AA batteries)
 + 4 x AA batteries
-+ A USB battery pack (to power the Raspberry Pi) <!-- Check the amps / voltage to power Pi 4 and other models  -->
++ A USB power bank (to power the Raspberry Pi) 
 + Soldering iron and solder
 + Wire strippers
 + Scissors
 + Screwdriver
 + A small cardboard box for the chassis (can be plastic, wood, metal etc.)
+
+You can view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
 
 #### Software:
 

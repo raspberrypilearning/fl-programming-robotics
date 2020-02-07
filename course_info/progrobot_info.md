@@ -24,8 +24,8 @@ You'll also look at modern robotics, and think about how robotics affects societ
 Course syllabus:
 Provide a list of short bullet points outlining the key themes that this course covered. This will appear on the Certificate of Achievement transcript and the course description page under the heading “What topics will you cover?” Avoid using verbs and the past tense, and do not mention “learners”. If the list is long, break it up with sub-headings, based on each week’s theme – for example, “Week 1 – Introduction to Cellular Networks and their Planning”.
 
-+ The GPIOzero Python library, and how this can be used to interact with input and output components.
-+ The construction of a simple robot buggy.
++ The GPIO Zero Python library, and how this can be used to interact with input and output components
++ The construction of a simple robot buggy
 + How distance sensors work
 + Obstacle avoidance algorithms
 + Line sensors
@@ -63,6 +63,8 @@ This course requires you to have the following:
 + Screwdriver
 + A small cardboard box for the chassis (can be plastic, wood, metal etc.)
 
+You can view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
+
 #### Software:
 
 + The latest version of the Raspbian operating system
@@ -95,11 +97,11 @@ Learning outcomes - must start with one of the approved verbs:
 + Verbs that describe what students do in rethinking or reconstructing – improve, modify, reflect
 
 + Describe the advantages of using robotics to teach computer science
-+ Produce a robot buggy that can move in particular pattern, avoid obstacles, and follow a line
++ Produce a robot buggy that can move in particular patterns, avoid obstacles, and follow a line
 + Develop suitable algorithms for your robot depending on the task
-+ Demonstrate how to control a variety of components using the GPIOzero Python library
-+ Discuss  different uses of robotics and the components that they may use
++ Demonstrate how to control a variety of components using the GPIO Zero Python library
++ Discuss different uses of robotics and the components that they may use
 
 Course description for certificate: 50-300 characters including spaces. Provide a brief, past-tense description of the course, the subjects it covered and what was involved. This will be shown on the Statement of Participation and/or Certificate of Achievement.
 
-This course involved building a robot buggy based on a Raspberry Pi. It covered the use of GPIOzero to control the motors, and to receive input from line sensors and a UDS sensor. Learners used Python to program their robot to move in particular patterns, avoid obstacles, and follow a line.
+This course involved building a robot buggy based on a Raspberry Pi. It covered the use of GPIO Zero to control the motors, and to receive input from line sensors and a UDS sensor. Learners used Python to program their robot to move in particular patterns, avoid obstacles, and follow a line.
