@@ -15,6 +15,7 @@ Some examples of modifications you could make to your robot are:
 
 + Allowing the buggy to be controlled [remotely](https://projects.raspberrypi.org/en/projects/remote-control-buggy)
 + Adding a second UDS to the front of your chassis to improve object detection
++ Attaching LEDs to your robot and decorating the chassis
 + Replacing the ball caster with two more wheels
 + Using a [PID controller](https://projects.raspberrypi.org/en/projects/robotPID) to gain more precise control over your robot's  movement
 
