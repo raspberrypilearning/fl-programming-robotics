@@ -35,9 +35,9 @@ It is particularly well suited for teachers delivering lessons at GCSE level or 
 
 What software or tools do you need?
 
-This course requires you to have the following:
+#### This course requires you to have the following:
 
-#### Hardware
+##### Hardware:
 
 + Raspberry Pi 3B, 3B+, or 4
 + Motor controller board
@@ -58,12 +58,12 @@ This course requires you to have the following:
 
 You can view most of the required components on this [AliExpress wish list](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
 
-#### Software:
+##### Software:
 
 + The latest version of the Raspbian operating system
 + An IDE of your choice
 
-#### Additional extras:
+##### Additional extras:
 
 + Adhesives (duct tape / electrical tape, putty, glue, etc.)
 + Cable ties or velcro straps
