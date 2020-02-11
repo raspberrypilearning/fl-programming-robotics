@@ -12,9 +12,9 @@ New description - Max 600 characters inc spaces:
 
 On this course from the Raspberry Pi Foundation, you'll build a robot buggy controlled by a Raspberry Pi.
 
-You'll start by learning how to connect motors to your Raspberry Pi, and how to write a Python program to control them to move your buggy. As your skills increase, you'll move on to adding sensors to your robot. By writing algorithms that use the inputs from these sensors, you'll give your robot the ability to follow lines and avoid obstacles.
+You'll learn how to connect motors to your Raspberry Pi, and how to write a Python program to control them to move your buggy. As your skills increase, you'll start to add sensors to your robot. By writing algorithms that use the inputs from these sensors, you'll give your robot the ability to follow lines and avoid obstacles.
 
-You'll also look at modern robotics, and think about how robotics affects society.
+You'll also look at modern robotics, and consider the impact of robotics on society.
 
 
 Course syllabus:
@@ -56,7 +56,7 @@ This course requires you to have the following:
 + Screwdriver
 + A small cardboard box for the chassis (can be plastic, wood, metal, etc.)
 
-You can view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
+You can view most of the required components on this [AliExpress wish list](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
 
 #### Software:
 
