@@ -5,7 +5,7 @@ Develop your knowledge of robotics and algorithms through constructing and progr
 
 Title: Max 80 characters inc spaces:
 
-Build your own robot buggy
+## Build your own robot buggy
 
 
 New description - Max 600 characters inc spaces:
@@ -17,7 +17,7 @@ You'll learn how to connect motors to your Raspberry Pi, and how to write a Pyth
 You'll also look at modern robotics, and consider the impact of robotics on society.
 
 
-Course syllabus:
+#### Course syllabus:
 
 + The GPIO Zero Python library, and how this can be used to interact with input and output components
 + The construction of a simple robot buggy
@@ -27,7 +27,7 @@ Course syllabus:
 + Line following algorithms
 + The effect of robotics on society
 
-Who is this course for?
+#### Who is this course for?
 
 This course is for people with little or no experience with physical computing, who want to create their first robot. Ideally you should have some basic familiarity with Python, for example from our [Programming 101 course](https://www.futurelearn.com/courses/programming-101).
 
@@ -70,7 +70,7 @@ You can view most of the required components on this [AliExpress wish list](http
 + GPIO reference card
 
 
-Learning outcomes — must start with one of the approved verbs:
+#### Learning outcomes — must start with one of the approved verbs:
 
 + Describe the advantages of using robotics to teach computer science
 + Produce a robot buggy that can move in particular patterns, avoid obstacles, and follow a line
