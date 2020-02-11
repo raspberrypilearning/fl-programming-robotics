@@ -5,7 +5,7 @@ Develop your knowledge of robotics and algorithms through constructing and progr
 
 Title: Max 80 characters inc spaces:
 
-Build your own robot buggy.
+Build your own robot buggy
 
 
 New description - Max 600 characters inc spaces:
@@ -39,12 +39,12 @@ This course requires you to have the following:
 
 #### Hardware
 
-+ Raspberry Pi 3B, 3B+ or 4
++ Raspberry Pi 3B, 3B+, or 4
 + Motor controller board
 + 2 x 3V - 6V DC motors
 + 2 x wheels
 + Ball caster (unless using more than 2 wheels)
-+ Ultrasonic distance sensor (between 1-2)
++ Ultrasonic distance sensor (between 1 and 2)
 + 2 x line following sensors
 + Jumper leads (female-to-female and male-to-female) or wire
 + AA battery holder (for 4 AA batteries)
@@ -54,7 +54,7 @@ This course requires you to have the following:
 + Wire strippers
 + Scissors
 + Screwdriver
-+ A small cardboard box for the chassis (can be plastic, wood, metal etc.)
++ A small cardboard box for the chassis (can be plastic, wood, metal, etc.)
 
 You can view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
 
@@ -65,12 +65,12 @@ You can view most of the required components on this [AliExpress Wish List](http
 
 #### Additional extras:
 
-+ Adhesives (duct tape / electrical tape, putty, glue etc.)
++ Adhesives (duct tape / electrical tape, putty, glue, etc.)
 + Cable ties or velcro straps
 + GPIO reference card
 
 
-Learning outcomes - must start with one of the approved verbs:
+Learning outcomes — must start with one of the approved verbs:
 
 + Describe the advantages of using robotics to teach computer science
 + Produce a robot buggy that can move in particular patterns, avoid obstacles, and follow a line
