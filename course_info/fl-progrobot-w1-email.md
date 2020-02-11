@@ -1,4 +1,4 @@
-Over the next three weeks, you'll build a robot buggy and program it to allow it to:
+Over the next three weeks, you will build a robot buggy and program it to allow it to:
 
 + move autonomously
 + avoid obstacles
