@@ -9,6 +9,6 @@ The following courses may help to develop your background knowledge and inspire 
 Check out our other educational resources too:
 
 + [Projects page](https://projects.raspberrypi.org/en/)
-+ [Raspberry Pi Educational Resources](https://www.raspberrypi.org/education/)
++ [Raspberry Pi educational resources](https://www.raspberrypi.org/education/)
 
 Are you a teacher in England? You can access free face-to-face and online courses that count towards a professionally recognised qualification by signing up to the National Centre for Computing Education’s programme. Visit the [NCCE course home page](https://teachcomputing.org/courses) to browse what’s on offer for you.
