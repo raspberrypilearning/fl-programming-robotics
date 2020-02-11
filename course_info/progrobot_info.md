@@ -17,7 +17,7 @@ You'll learn how to connect motors to your Raspberry Pi, and how to write a Pyth
 You'll also look at modern robotics, and consider the impact of robotics on society.
 
 
-#### Course syllabus:
+### Course syllabus:
 
 + The GPIO Zero Python library, and how this can be used to interact with input and output components
 + The construction of a simple robot buggy
@@ -27,7 +27,7 @@ You'll also look at modern robotics, and consider the impact of robotics on soci
 + Line following algorithms
 + The effect of robotics on society
 
-#### Who is this course for?
+### Who is this course for?
 
 This course is for people with little or no experience with physical computing, who want to create their first robot. Ideally you should have some basic familiarity with Python, for example from our [Programming 101 course](https://www.futurelearn.com/courses/programming-101).
 
@@ -35,9 +35,9 @@ It is particularly well suited for teachers delivering lessons at GCSE level or 
 
 What software or tools do you need?
 
-#### This course requires you to have the following:
+### This course requires you to have the following:
 
-##### Hardware:
+#### Hardware:
 
 + Raspberry Pi 3B, 3B+, or 4
 + Motor controller board
@@ -58,19 +58,19 @@ What software or tools do you need?
 
 You can view most of the required components on this [AliExpress wish list](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered / bought anywhere, and alternatives are also available.
 
-##### Software:
+#### Software:
 
 + The latest version of the Raspbian operating system
 + An IDE of your choice
 
-##### Additional extras:
+#### Additional extras:
 
 + Adhesives (duct tape / electrical tape, putty, glue, etc.)
 + Cable ties or velcro straps
 + GPIO reference card
 
 
-#### Learning outcomes — must start with one of the approved verbs:
+### Learning outcomes — must start with one of the approved verbs:
 
 + Describe the advantages of using robotics to teach computer science
 + Produce a robot buggy that can move in particular patterns, avoid obstacles, and follow a line
