@@ -70,7 +70,7 @@ You can view most of the required components on this [AliExpress wish list](http
 + GPIO reference card
 
 
-### Learning outcomes 
+### Learning outcomes: 
 
 + Describe the advantages of using robotics to teach computer science
 + Produce a robot buggy that can move in particular patterns, avoid obstacles, and follow a line
