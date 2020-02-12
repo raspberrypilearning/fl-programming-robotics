@@ -70,7 +70,7 @@ The Raspberry Pi will need its own source of power. For testing, the Raspberry P
 
 If you are not familiar with setting up a Raspberry Pi and using it, follow this guide to [Getting started with Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started).
 
-The programming language I will be using in this course is **Python** together with a library called [**GPIO Zero**](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins.
+The programming language I will be using in this course is **Python** together with a library called [GPIO Zero](https://gpiozero.readthedocs.io/en/stable/index.html), which provides an accessible way to control components through the GPIO pins.
 
 Python and GPIO Zero will be installed by default if your Raspberry Pi is running the **Raspbian** operating system. Follow this guide to [Installing GPIO Zero](https://gpiozero.readthedocs.io/en/stable/installing.html) if you are using **Raspbian Lite** or another operating system.
 
@@ -82,6 +82,4 @@ Did you have any problems connecting the motor board to the Raspberry Pi or to t
 
 What type of power supply are you using for your Raspberry Pi?
 
-Leave your answers in the comments below. 
-
-Answer these questions in the comments section below.
+Leave your answers in the comments section below. 
