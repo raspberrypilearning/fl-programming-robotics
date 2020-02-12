@@ -13,9 +13,9 @@ Robots can vary massively, from fixed-location robots making tiny, precise movem
 
 What nearly all robots can do, though, is these three things:
 
-1. Sense
-2. Process
-3. Act
++ Sense
++ Process
++ Act
 
 ### Making sense of the environment
 
