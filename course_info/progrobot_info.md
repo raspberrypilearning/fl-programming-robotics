@@ -1,14 +1,6 @@
-Course intro.
-Max 130 characters inc spaces:
-
 Develop your knowledge of robotics and algorithms through constructing and programming a robot buggy. Supported by Google.
 
-Title: Max 80 characters inc spaces:
-
 ## Build your own robot buggy
-
-
-New description - Max 600 characters inc spaces:
 
 On this course from the Raspberry Pi Foundation, you'll build a robot buggy controlled by a Raspberry Pi.
 
@@ -78,6 +70,6 @@ You can view most of the required components on this [AliExpress wish list](http
 + Demonstrate how to control a variety of components using the GPIO Zero Python library
 + Discuss different uses of robotics and the components that they may use
 
-Course description for certificate: 50-300 characters including spaces:
+Course description for certificate:
 
 This course involved building a robot buggy based on a Raspberry Pi. It covered the use of GPIO Zero to control the motors, and to receive input from line sensors and a UDS sensor. Learners used Python to program their robot to move in particular patterns, avoid obstacles, and follow a line.
