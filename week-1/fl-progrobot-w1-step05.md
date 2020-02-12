@@ -59,7 +59,7 @@ Heat the contact on the motor with the soldering iron for a second or two. Keepi
 
 Wait for a minute or two for the solder to cool and then gently try to move the wire, to test whether it is securely attached to the contact. If the wire moves, you can either reheat the applied solder with the soldering iron and realign the wire, or apply more solder to the connection.
 
-Try not to touch with the soldering iron the plastic coating of the wires or any plastic between the two contacts, or the plastic will melt and start to smoke. More tips and guidance can be found in this [Soldering tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering).
+Try not to touch with the soldering iron the plastic coating of the wires or any plastic between the two contacts, or the plastic will melt and start to smoke. More tips and guidance can be found in this [soldering tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering).
 
 Once the wires have been soldered to the motors securely, trim the end of the wires with scissors. If the wires accidentally touch the metal casing while power is running, this can short the circuit and stop the motor from receiving consistent power.
 
