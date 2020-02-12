@@ -71,7 +71,7 @@ A ball caster is necessary if your robot has only two wheels; it will act as a t
 
 I recommend using an Integrated Development Environment (IDE) during this course to create, run, and test your Python programs.
 
-The IDE I will be using is **Mu**, which is pre-installed on most Raspberry Pis. Mu is also available at the website [Code with Mu](https://codewith.mu/) along with [instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
+The IDE I will be using is Mu, which is pre-installed on most Raspberry Pis. Mu is also available at the website [Code with Mu](https://codewith.mu/) along with [instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
 
 If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
 
