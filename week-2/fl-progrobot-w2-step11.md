@@ -43,7 +43,7 @@ Which one of these is an advantage of a UDS over other types of distance sensors
     + Week 2, step 6
 + It is quicker at calculating the time taken for a signal to be emitted and received 
     + No 
-    + A UDS is not quicker at calculating the time taken to reflect back from an object than some other types of distance sensors.
+    + A UDS is not quicker at calculating the time taken to reflect back from an object than some other types of distance sensors that use light.
     + Week 2, step 6
 + It is not effected by sound waves that interfere with the signal
     + No
@@ -62,7 +62,7 @@ What happens if an object is closer than the **minimum** range of the UDS?
 
 + A large value is output by the sensor
     + Yes 
-    + N/A
+    + The receiver might not pick up the sound when it is initially reflected off an object, and instead detect the sound once it has rebounded off another object. This results in a higher distance reading than is accurate.
     + Week 2, step 6
 + A very small value is output by the sensor
     + No 
@@ -85,8 +85,8 @@ What happens if an object is further away than the **maximum** range of the UDS?
 
 + A large value is output by the sensor
     + Yes 
-    + N/A
-    + Week 2, step 6
+    + If the receiver doesn’t detect the ultrasound after a set time, the Echo pin returns to low. This duration indicates that no objects were detected within the maximum range of the sensor.
+    + Week 2, step 8
 + A very small value is output by the sensor
     + No 
     + The receiver might not pick up the signal when it is initially reflected off an object, and instead detect the signal once it has rebounded off another object. 
