@@ -15,9 +15,9 @@ Typically, the motors and wheels used for a robot buggy aren't very good when mo
 
 ### Powering the Raspberry Pi and motor controller
 
-Power up your Raspberry Pi and the motor controller board. Remember, you will need a mobile power supply for the Pi otherwise the buggy will not be able to travel far from the mains plug.
+Power up your Raspberry Pi and the motor controller board. Remember, you will need a mobile power supply for the Pi otherwise your robot will not be able to travel far from the mains plug.
 
-If either of the wheels starts spinning continuously, chances are one of the connections between the motor controller and the Raspberry Pi has come loose or is wired up wrong. Turn off the battery pack for the motor controller or remove the power from the Raspberry Pi to stop the motors. Then, check the wiring that you connected in the steps for connecting the motors and the Raspberry Pi to the motor controller.
+If either of the wheels starts spinning continuously, chances are one of the connections between the motor controller and the Raspberry Pi has come loose or is wired up wrong. Turn off the battery pack for the motor controller or remove the power from the Pi to stop the motors. Then, check the wiring that you connected in the steps for connecting the motors and the Raspberry Pi to the motor controller.
 
 ### Testing the movement
 
@@ -69,8 +69,6 @@ When using the `.forward()` command, a positive value is sent to both motors, wh
 The `.left()` and `.right()` commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. The opposite is true to turn right; the right motor receives a negative value and the left motor a positive value.
 
 ### Connecting to a Raspberry Pi remotely
-
-
 
 Being able to connect to your Raspberry Pi remotely is useful when designing, running and testing code on the robot buggy. It means you don't have to remove the Raspberry Pi from the buggy every time you want to run or edit a program.
 

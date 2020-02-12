@@ -43,9 +43,9 @@ The line sensors will need to sit either side of the ball caster and point downw
 
 #### Making sure the components fit
 
-If you are planning on using a pre-made container for the chassis, you can try placing all the components inside to see if there is room. Bear in mind that the components can't all just be shoved in; some parts will need extra space around them so they can be accessed easily, such as the power supply which will need to be recharged. Other parts will need to be secured to certain places on the chassis; for instance the ultrasonic distance sensor must be attached to the front of the chassis so it can sense objects in front of the buggy.
+If you are planning on using a pre-made container for the chassis, you can try placing all the components inside to see if there is room. Bear in mind that the components can't all just be shoved in; some parts will need extra space around them so they can be accessed easily, such as the power supply which will need to be recharged. Other parts will need to be secured to certain places on the chassis; for instance the ultrasonic distance sensor must be attached to the front of the chassis so it can sense objects in front of the robot.
 
-It can also be useful to design the layout of the buggy on paper to make sure that all the components have enough room. Begin by making a footprint, which is the base of your buggy. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about to try out different arrangements.
+It can also be useful to design the layout of the buggy on paper to make sure that all the components have enough room. Begin by making a footprint, which is the base of your robot. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about to try out different arrangements.
 
 ![Picture of the buggy components represented in real size on paper with a cardboard container for the chassis of the buggy](images/1_8-chassis-componets-on-paper)
 
