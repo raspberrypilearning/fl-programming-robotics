@@ -40,7 +40,7 @@ The final line defines the `Robot`. You can name the variable anything you like;
 
 When initialising the `Robot` you need to give it two arguments: `left` and `right`. The `left` argument should specify the two GPIO pins on the Raspberry Pi that are connected to the pins labelled **IN1** and **IN2** on the motor controller. I chose GPIO pins 7 and 8, but yours might be different.
 
-Similarly, the `right` argument needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4** &mdash; for me that is GPIO pins 9 and 10.
+Similarly, the `right` argument needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4**; for me that is GPIO pins 9 and 10.
 
 **3.** Save your file.
 
@@ -56,7 +56,7 @@ sleep(1)
 robin.stop()
 ~~~
 
-**Note:** `robin` is the name I gave my `Robot` &mdash; if you chose a different name, make sure you change `robin`.
+**Note:** `robin` is the name I gave my `Robot`; if you chose a different name, make sure you change `robin`.
 
 Run the program and check that both motors are turning in the direction of the arrows you drew.
 
