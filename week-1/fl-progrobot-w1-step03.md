@@ -7,7 +7,7 @@ Related files:
 
 ## The world of robotics
 
-Robots are an integral part of modern life and are set to be even more prominent in the future. They come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to landing on Mars. But defining what a robot actually **is** can be tricky; ask five roboticists and you are likely to get five different answers!
+Robots are an integral part of modern life and are set to be even more prominent in the future. They come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to landing on Mars. But defining what a robot actually *is* can be tricky; ask five roboticists and you are likely to get five different answers!
 
 Robots can vary massively, from fixed-location robots making tiny, precise movements to manufacture microchips, to humanoid robots that can walk around different environments.
 
