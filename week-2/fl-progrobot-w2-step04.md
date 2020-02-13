@@ -53,7 +53,7 @@ Infrared sensors detect changes in the levels of infrared radiation captured by 
 
 #### Ultrasonic distance sensors
 
-A better sensor for robots that have to navigate around inanimate objects is the UDS (ultrasonic distance sensor). This type of sensor emits high-frequency noises that rebound off objects in the surrounding area and return to the robot. This is how bats sense the world when they are flying at night.
+A better sensor for robots that have to navigate around inanimate objects is the ultrasonic distance sensor (UDS). This type of sensor emits high-frequency noises that rebound off objects in the surrounding area and return to the robot. This is how bats sense the world when they are flying at night.
 
 You are going to use a UDS in your buggy, and in the next step you will see how they work in greater detail.
 
