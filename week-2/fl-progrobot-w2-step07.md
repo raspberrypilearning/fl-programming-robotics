@@ -43,7 +43,7 @@ Refer to the diagrams in this article or a GPIO reference guide if you aren't su
 
 2. Connect the **trig** pin on the UDS to an available GPIO pin on your Raspberry Pi; I've used **GPIO 4**.
 
-3. Then connect the **GND** pin from your UDS to a ground pin on your Raspberry Pi.
+3. Connect the **GND** pin from your UDS to a ground pin on your Raspberry Pi.
 
 The instructions for wiring the **echo** pin are different depending on whether the UDS is **3.3V-tolerant** or **5V-tolerant**.
 
