@@ -23,27 +23,27 @@ I'm going to be using a cardboard box as my chassis. If you are using a differen
 
 ![Picture of the cardboard box that will be used as the chassis for the robot buggy](images/1_9-carboard-chassis)
 
-**1.** The first step is to place your motors into the chassis.
+1. The first step is to place your motors into the chassis.
 
 Place your motors inside the box, in roughly the position you would like them to be in. Then use a pen to mark the place where the motors’ axles will need to pass through the walls of the box. Make sure you are giving your wheels enough room to spin around.
 
 ![Picture of the chassis containing the motors and a pen marking where a hole needs to be made for one of the axels of a motor](images/1_9-chassis-motor-placement)
 
-**2.** Make a hole that is big enough for the motors’ axles to fit through.
+2. Make a hole that is big enough for the motors’ axles to fit through.
 
 If your chassis is made of cardboard, use a sharp object (such as a pencil or screwdriver) to carefully poke holes through the sides of the box.
 
 ![Picture of a pencil poking out of the side of the cardboard box where the axel of a motor will protrude](images/1_9-chassis-motor-axel)
 
-**3.** You will need to secure the motors firmly to the chassis. If you don't, the motors may move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best for your prototype, as they are easy to attach and remove if necessary.
+3. You will need to secure the motors firmly to the chassis. If you don't, the motors may move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best for your prototype, as they are easy to attach and remove if necessary.
 
 ![Picture of the motors secured with cable ties to the chassis](images/1_9-motors-secured-to-chassis)
 
-**4.** Once the motors are in place you should attach the wheels to the axles.
+4. Once the motors are in place you should attach the wheels to the axles.
 
 ![Picture of the chassis with the wheels attached to the motors](images/1_9-chassis-wheels-attached)
 
-**5.** Next, you need to attach a ball caster to the front of the chassis to support the robot and act as a third wheel.
+5. Next, you need to attach a ball caster to the front of the chassis to support the robot and act as a third wheel.
 
 Start by assembling the ball caster. It is useful to work out where the screw holes for the ball caster should be on the chassis before securing it in place. Place the ball caster face down inside the chassis near the front-centre, and use a pen to mark where the screws need to go. If your chassis is made out of cardboard, use a small sharp instrument to carefully make holes in the places you marked.
 
@@ -53,7 +53,7 @@ Most ball casters come with spacers to increase the height. If the chassis dips 
 
 ![Picture of the ball caster, wooden spacers for the ball caster and the wheels of the robot buggy](images/1_9-ball-caster-secured)
 
-**6.** If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Pi inside the chassis.
+6. If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Pi inside the chassis.
 
 You won't need to secure these components to the chassis just yet. Remember that you will need to access the Raspberry Pi and parts of the chassis later in the course, to add the ultrasonic distance sensor and line-following sensor.
 
