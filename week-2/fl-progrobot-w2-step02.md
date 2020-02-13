@@ -4,7 +4,7 @@ Feedback Author: Normally lead educator
 
 ## Quiz: Mobile robotics
 
-Last week you have been learning about some of the different components that you can use to build a robot buggy. 
+Last week you learnt about some of the different components that you can use to build a robot buggy. 
 
 In this quiz, you will be able to test your knowledge of how these components connect and work together to create a mobile robot.
 
