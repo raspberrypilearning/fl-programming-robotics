@@ -67,4 +67,4 @@ Did you have any issues with attaching components to the chassis? If so, what ad
 
 What types of fastenings did you use for your robot buggy?
 
-Share your answers and a picture of your robot (hosted using [Imgur](https://imgur.com/) or another image hosting platform) in the comments below.
+Share your answers and a picture of your robot (hosted using [Imgur](https://imgur.com/) or another image-hosting platform) in the comments below.
