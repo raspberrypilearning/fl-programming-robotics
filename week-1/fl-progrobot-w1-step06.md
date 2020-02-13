@@ -62,7 +62,7 @@ If your motor board does not have a **GND** pin, use the terminal block that the
 
 ![Picture of the four IN pins from the motor controller connected to four GPIO pins on the Raspberry Pi, as well as a GND pin connected from the Pi to the motor controller](images/1_6-motor-controller-connected-to-raspberry-pi)
 
-### Powering the Pi
+### Powering the Raspberry Pi
 
 The Raspberry Pi will need its own source of power. For testing, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move, the Raspberry Pi will need a mobile source of power. A USB powerbank is a good choice, as it will be fairly light for the chassis to carry, just make sure it is capable of powering the model of Raspberry Pi that you are using.
 
