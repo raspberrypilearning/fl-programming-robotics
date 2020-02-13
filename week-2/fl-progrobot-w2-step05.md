@@ -59,7 +59,7 @@ Due to the wide range of robots in this category, this breakdown will be more ge
 
 Another use for autonomous robots is on production lines in factories.
 
-#### Discussion
+### Discussion
 
 What sensors would they use? Which tasks do they perform?
 
