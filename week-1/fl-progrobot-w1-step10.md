@@ -23,7 +23,7 @@ If either of the wheels starts spinning continuously, chances are one of the con
 
 To check whether your buggy can move in all directions, it is best to use one of the programs you created for testing the direction of the motors; just make sure it was a working program with the correct GPIO pins for the `Robot`!
 
-You need to check that the buggy can move in every direction. Therefore, a program that contains the commands `.foward()`, `.backward()`, `.left()`, and `.right()` is ideal. Remember to end the program with `.stop()` to stop the motors from turning.
+You need to check that the buggy can move in every direction. Therefore, a program that contains the commands `.forward()`, `.backward()`, `.left()`, and `.right()` is ideal. Remember to end the program with `.stop()` to stop the motors from turning.
 
 If you don't have a program that is suitable, you can copy the code below into a new Python file (adjusting the GPIO pin numbers as needed).
 
