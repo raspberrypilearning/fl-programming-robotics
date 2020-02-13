@@ -53,7 +53,7 @@ Most ball casters come with spacers to increase the height. If the chassis dips 
 
 ![Picture of the ball caster, wooden spacers for the ball caster and the wheels of the robot buggy](images/1_9-ball-caster-secured)
 
-6. If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Pi inside the chassis.
+6. If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Raspberry Pi inside the chassis.
 
 You won't need to secure these components to the chassis just yet. Remember that you will need to access the Raspberry Pi and parts of the chassis later in the course, to add the ultrasonic distance sensor and line-following sensor.
 
