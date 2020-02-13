@@ -49,7 +49,7 @@ The instructions for wiring the **echo** pin are different depending on whether 
 
 #### Wiring the echo pin on a 5V UDS
 
-If the output of the **echo** pin is **5V**, you need to reduce the output voltage to a **maximum of 3.3V**.
+If the output of the echo pin is 5V, you need to reduce the output voltage to a **maximum of 3.3V**.
 
 For the purposes of this example, I'm going to use a 330-ohm resistor and a 620-ohm resistor. You can use different resistors to these, but you must ensure that the voltage across the larger resistor has been reduced to 3.3V or just below, using the voltage divider algorithm seen previously.
 
@@ -75,9 +75,9 @@ The diagram below shows you the complete set-up for a 5V UDS:
 
 #### Wiring the echo pin on a 3.3V UDS
 
-Wiring a 3.3V UDS is fairly simple, as the output voltage of the **echo** pin does not need to be reduced.
+Wiring a 3.3V UDS is fairly simple, as the output voltage of the echo pin does not need to be reduced.
 
-The diagram below shows you the complete set-up for a 3.3V UDS, with the **echo** pin connected to **GPIO 17** on the Raspberry Pi:
+The diagram below shows you the complete set-up for a 3.3V UDS, with the echo pin connected to **GPIO 17** on the Raspberry Pi:
 
 ![Remove the vibration sensor and two connections (GP14 and GND) from the illustration. Replace the green, orange and black wires with one connection from Echo straight to GP17 and remove the two resistors](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
 
