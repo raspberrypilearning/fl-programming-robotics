@@ -27,7 +27,7 @@ Between 1966 and 1972, researchers at Stanford University developed Shakey, the 
 
 ![Shakey was the first truly mobile robot developed at Stanford University. It could map a picture of a room using it sensors and move around objects autonomously.](images/1_4-Shakey.jpg)
 
-Over the years, new and improved sensors have increased robots' abilities to understand the environment. For example, self-driving cars use light detection and ranging (Lidar) sensors, which use pulses of laser light to measure the distance to other objects in order to build a 3D model of the world. All this extra information means that robots require more processing power so that they can process data in a quick and timely manner.
+Over the years, new and improved sensors have increased robots' abilities to understand the environment. For example, self-driving cars use light detection and ranging (LIDAR) sensors, which use pulses of laser light to measure the distance to other objects in order to build a 3D model of the world. All this extra information means that robots require more processing power so that they can process data in a quick and timely manner.
 
 ### The power of processing
 
