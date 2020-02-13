@@ -53,7 +53,7 @@ You may have noticed that an object that is really close to the UDS returns a mu
 
 Take a look at the distance values that are output when an object is very close to the UDS and see if you can find a solution within the program to pick up these objects.
 
-#### Failing to detect objects that are to the side
+#### Objects that are to the side
 
 Another issue that your robot may run into is that, depending on the width of your robot, the UDS won't detect objects on either side of it that are going to be in the way.
 
