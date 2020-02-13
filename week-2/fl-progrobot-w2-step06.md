@@ -19,7 +19,7 @@ As the sound travels, the particles in the air oscillate back and forth. This is
 
 **Ultrasound** refers to any sound that has a frequency above the range of human hearing. This level varies from person to person, but on average, any sound with a frequency of 20kHz (20,000 oscillations  a second) or above is considered ultrasound.
 
-The uses of ultrasound are widespread: doctors use the sound waves to scan inside human bodies, robots can use them to navigate the world, and [engineers use them to reinforce metals](https://www.hielscher.com/ultrasonic-formulation-of-reinforced-composites.htm) by compressing the particles.
+The uses of ultrasound are many: doctors use the sound waves to scan inside human bodies, robots can use them to navigate the world, and [engineers use them to reinforce metals](https://www.hielscher.com/ultrasonic-formulation-of-reinforced-composites.htm) by compressing the particles.
 
 ### Ultrasound and ultrasonic distance sensors
 
@@ -33,24 +33,24 @@ Using a measure of the time between the outgoing burst and the returning echo, a
 
 Commonly, a UDS requires two components to do this: an emitter and a receiver. You can see this in the picture above; the two silver cylinders on the front of the sensor are the emitter and receiver.
 
-A particular advantage of these sensors over other distance measurers, specifically those that use light, is that UDSs are not effected by the colour of the object that the signal reflects off. However errors can occur if the object can reflect sound away from the receiver.
+A particular advantage of these sensors over other distance measurers, specifically those that use light, is that a UDS is not affected by the colour of the object that the signal reflects off. However, errors can occur if the object can reflect sound away from the receiver.
 
 ### How to use a UDS
 
-Now that you have a better idea of what a UDS is and how they work, you can move on to a more practical examination of how to use one with your buggy.
+Now that you have a better idea of what a UDS is and how it works, you can move on to a more practical examination of how to use one with your buggy.
 
-UDSs typically have 4 pins;
+A UDS typically has four pins:
 
-+ **VCC** needs to be connected to a 5V pin, in order to power the device.
-+ **Trig** is the pin that triggers the emission of the ultrasound burst.
-+ **Echo** is the pin that provides an output from the device. It outputs at 3.3V or 5V depending on the UDS model.
-+ **GND** is the ground pin, used to complete the circuit.
++ **VCC** needs to be connected to a 5V pin, in order to power the device
++ **Trig** is the pin that triggers the emission of the ultrasound burst
++ **Echo** is the pin that provides an output from the device; it outputs at 3.3V or 5V, depending on the UDS model
++ **GND** is the ground pin, used to complete the circuit
 
-If the UDS is 5V tolerant, this causes some issues because the **Echo** pin will output 5V and the Raspberry Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider - also known as a potential divider. Make sure to check the voltage tolerance of your UDS, the HC-SR04 sensor will need a voltage divider. Alternatively, a 3V3 tolerant sensor, such as the HC-SR04P, will work without a voltage divider.
+If the UDS is 5V-tolerant, this causes some issues because the **echo** pin will output 5V and the Raspberry Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider, also known as a potential divider. Make sure to check the voltage tolerance of your UDS; the HC-SR04 sensor will need a voltage divider. A 3V3-tolerant sensor, such as the HC-SR04P, will work without a voltage divider.
 
 #### Voltage dividers
 
-A voltage (or potential) divider can split a voltage into two smaller voltages, by using multiple resistors. The diagram below shows a single resistor connected to a 5V pin. The voltage across the resistor is 5V:
+A voltage (or potential) divider can split a voltage into two smaller voltages by using multiple resistors. The diagram below shows a single resistor connected to a 5V pin. The voltage across the resistor is 5V:
 
 ![Potential divider images taken from projects site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_2.png)
 
@@ -58,11 +58,11 @@ The diagram below shows how the voltage can be split by using two resistors wire
 
 ![Same again](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_3.png)
 
-By altering the resistors, you can tailor the voltage across any one of them to be anything we like. Here you can see that I have split the voltage to give us almost exactly 3.3V across the second resistor:
+By altering the resistors, you can tailor the voltage across any one of them to be anything you like. Here, you can see that I have split the voltage to give us almost exactly 3.3V across the second resistor:
 
-![And agaaain](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_4.png)
+![And again](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_4.png)
 
-To work out the resistors you need, you can use the code below.
+You can use the code below to work out the resistors you need:
 
 ~~~python
 R1 = 1200 # Your current resistor (alter this)
@@ -74,12 +74,12 @@ R2 = (Vout * R1) / (Vin - Vout)
 print('The resistor you need is approximately', R2)
 ~~~
 
-### Limitations of a UDS
+### The limitations of a UDS
 
-The biggest limitation of this type of sensor comes when the object that reflects the ultrasound is very close. In this case the receiver might not pick up the sound when it is initially reflected off an object, and instead detect the sound once it has rebounded off another object. This results in a higher distance reading than is accurate.
+The biggest limitation of this type of sensor comes into play when the object that reflects the ultrasound is very close. In this case, the receiver might not pick up the sound when it is initially reflected off an object, and may instead detect the sound once it has rebounded off another object. This results in an inaccurately high distance reading.
 
 ### Test your voltage divider
 
-Using the code and formula above, what size resistors could you use to limit the voltage to 1V?
+Using the code and formula above, decide what size resistors you would use to limit the voltage to 1V.
 
 Share your thinking and answers in the comments below.
