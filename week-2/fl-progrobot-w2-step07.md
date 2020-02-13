@@ -7,19 +7,19 @@ Related files:
 
 ## Attaching the UDS to the buggy
 
-Having read about how a Ultrasonic Distance Sensor (UDS) works, you are now going to connect one to the Raspberry Pi. Make sure to check whether you need a voltage divider - check the model number or post a photo in the comments if you are unsure.
+Now that you have read about how a UDS works, you are going to connect one to the Raspberry Pi. Make sure to check whether you need a voltage divider: check the model number or post a photo in the comments if you are unsure.
 
 ### What you will need
 
 For this step, you will need the following items:
 
 + Ultrasonic distance sensor
-+ 4 x female-to-male jumper leads
++ Four female-to-male jumper leads
 
 If your UDS is 5V, you will also need:
 
-+ 2 different resistors to split the voltage (e.g. a 330 Ohm resistor and a 620 Ohm resistor)
-+ 2 more female-to-male jumper leads (6 in total)
++ Two different resistors to split the voltage (e.g. a 330-ohm resistor and a 620-ohm resistor)
++ Two more female-to-male jumper leads (six in total)
 + Soldering iron and solder
 + Tape
 
@@ -27,9 +27,9 @@ If your UDS is 5V, you will also need:
 
 ### Wiring the UDS
 
-It is best to set up the UDS with the Raspberry Pi switched off, especially if your UDS is 5V. Otherwise, if make a mistake with your wiring and the Raspberry Pi is turned on, you might damage it or the UDS.
+It is best to set up the UDS with the Raspberry Pi switched off, especially if your UDS is 5V. Otherwise, if you make a mistake with your wiring and the Raspberry Pi is turned on, you might damage it or the UDS.
 
-As discussed previously, a typical UDS has 4 pins: **VCC**, **Trig**, **Echo** and **GND**. All of these pins need to be connected to your Raspberry Pi.
+As discussed previously, a typical UDS has four pins: **VCC**, **Trig**, **Echo**, and **GND**. All of these pins need to be connected to your Raspberry Pi.
 
 The **Trig** and **Echo** pins can be wired to any available GPIO pins on your Pi, though if you choose different pins to the setup below than the diagrams won't match. You'll also need to remember what pins you used and replace the pin numbers in the code.
 
