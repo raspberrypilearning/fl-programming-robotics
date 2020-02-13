@@ -50,7 +50,7 @@ robin.stop()
 
 ![Video of the buggy moving forward, right, backward and left](images/1_10-buggy-moving-all-four-directions)
 
-**Does the robot buggy move forwards, backwards, left, and right correctly, in the order you specified in the code?**
+Does the robot buggy move forwards, backwards, left, and right correctly, in the order you specified in the code?
 
 If not, check that the GPIO pins of the `left` and `right` arguments of the `Robot` are set correctly for your motors. For example, in my robot set-up I had to swap the `left` motor pins from `7,8` to `8,7`. If you are still having issues, follow the instructions that you used previously when you tested the direction of both motors.
 
