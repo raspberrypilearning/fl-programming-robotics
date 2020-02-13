@@ -5,33 +5,33 @@ Related links:
 Related files:
 )
 
-## Ultrasonic Distance Sensors
+## Ultrasonic distance sensors
 
-Your robot buggy will use an Ultrasonic Distance Sensor (UDS) to help it navigate the physical world. In this step, you'll look at how these work.
+Your robot buggy will use an ultrasonic distance sensor (UDS) to help it navigate the physical world. In this step, you'll look at how these work.
 
 ### Ultrasound
 
-Ultrasonic distance sensors (UDS) use ultrasound to measure distances. Sound travels through the air in a *wave pattern*, measurements are made by examining the properties of the pattern over space and time.
+A UDS uses ultrasound to measure distances. Sound travels through the air in a **wave pattern**; measurements are made by examining the properties of the pattern over space and time.
 
-As the sound travels the particles in the air oscillate back and forth. This is often instead represented as a wave moving up and down on a graph. A sound's frequency is the number of oscillations per second. Frequency is measured in Hertz (Hz), 1Hz corresponds to one oscillation per second.
+As the sound travels, the particles in the air oscillate back and forth. This is often represented instead as a wave moving up and down on a graph. A sound's frequency is the number of oscillations per second. Frequency is measured in hertz (Hz); 1Hz corresponds to one oscillation per second.
 
 ![A few waves showing the difference between high and low frequency sounds.](images/frequency_example.png)
 
-*Ultrasound* refers to any sound that has a frequency that is above the human range of hearing. This level changes from person to person but on average any sound with a frequency of 20kHz (20000 oscillations  a second) or above is considered ultrasound.
+**Ultrasound** refers to any sound that has a frequency above the range of human hearing. This level varies from person to person, but on average, any sound with a frequency of 20kHz (20,000 oscillations  a second) or above is considered ultrasound.
 
-The uses of ultrasound are widespread; doctors use the sound waves to scan inside human bodies, robots can use it to navigate the world and [engineers use it to reinforce metals by compressing the particles](https://www.hielscher.com/ultrasonic-formulation-of-reinforced-composites.htm).
+The uses of ultrasound are widespread: doctors use the sound waves to scan inside human bodies, robots can use them to navigate the world, and [engineers use them to reinforce metals](https://www.hielscher.com/ultrasonic-formulation-of-reinforced-composites.htm) by compressing the particles.
 
-### Ultrasonic distance sensor
+### Ultrasound and ultrasonic distance sensors
 
 ![Ultrasonic distance sensor - taken from projects site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/Ultrasonic_Distance_Sensor.png)
 
-An ultrasonic distance sensor (UDS) works by sending out a burst of ultrasound. This sound will travel through air, but reflect back (echo) off of surrounding objects. The sensor can detect the echo, when it returns.
+A UDS works by sending out a burst of ultrasound. This sound will travel through air, but reflect back (echo) off surrounding objects. The sensor can detect the echo when it returns.
 
 ![Add some images taken from the animation]()
 
-Using a measure of the time between the outgoing burst and returning echo, and the speed of sound, you can calculate how far an object is away from the sensor.
+Using a measure of the time between the outgoing burst and the returning echo, and knowing the speed of sound, you can calculate how far away an object is from the sensor.
 
-Commonly, a UDS requires 2 components to do this; an emitter and a receiver. You can see this in the picture above, the two silver cylinders on the front of the sensor are the emitter and receiver.
+Commonly, a UDS requires two components to do this: an emitter and a receiver. You can see this in the picture above; the two silver cylinders on the front of the sensor are the emitter and receiver.
 
 A particular advantage of these sensors over other distance measurers, specifically those that use light, is that UDSs are not effected by the colour of the object that the signal reflects off. However errors can occur if the object can reflect sound away from the receiver.
 
