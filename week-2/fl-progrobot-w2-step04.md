@@ -13,7 +13,7 @@ Robots, particularly autonomous ones, need to sense the world around them. In th
 
 A robot that is designed to navigate the real world and interact with physical objects, for example by picking them up, must be able to measure the force it is applying to these objects. In some cases, it might be necessary for the robot to sense external forces exerted upon it.
 
-## Force
+#### Force
 
 Force sensors are used by roboticists to measure the forces their robots, such as the robotic arm assembling mobile phones that you heard about last week, are exerting on the objects they interact with. It is important that the arm applies enough force to hold the part and not drop it, but not so much pressure that the component is damaged or crushed.
 
