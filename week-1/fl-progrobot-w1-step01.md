@@ -59,7 +59,7 @@ You can view most of the required components on this [AliExpress Wish List](http
 + Cable ties or Velcro-type straps
 + GPIO reference card
 
-**Using a soldering iron can be a bit daunting at first, but whether you are new to soldering or a veteran, this [Getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will give you  some quick tips and tricks.**
+Using a soldering iron can be a bit daunting at first, but whether you are new to soldering or a veteran, this [Getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will give you  some quick tips and tricks.
 
 A Raspberry Pi model 3B or above is recommended, as you can connect to it over WiFi or Bluetooth without an adapter; this will help when programming the robot buggy.
 
