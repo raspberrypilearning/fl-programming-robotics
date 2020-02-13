@@ -2,7 +2,7 @@
 Feedback Author: Normally lead educator
 )
 
-## Quiz: mobile robotics
+## Quiz: Mobile robotics
 
 Last week you have been learning about some of the different components that you can use to build a robot buggy. 
 
@@ -14,17 +14,17 @@ Which of these things can nearly all robots do?
 
 + Think, learn, and act
     + No
-    + Many robots aren't able to think or learn, instead they perform actions based on pre-written instructions.
+    + Many robots aren't able to think or learn, instead they perform actions based on written instructions.
     + Week 1, step 3
 + Sense, process, and learn
     + No
-    + Many robots aren't able to learn, instead they perform actions based on pre-written instructions.
+    + Many robots aren't able to learn, instead they perform actions based on written instructions.
     + Week 1, step 3
 + Think, process, and learn
     + No
-    + Many robots aren't able to think or learn, instead they perform actions based on pre-written instructions.
+    + Many robots aren't able to think or learn, instead they perform actions based on written instructions.
     + Week 1, step 3
-+ Sense, process and act
++ Sense, process, and act
     + Yes
     + N/A
     + Week 1, step 3
@@ -54,7 +54,7 @@ What is the maximum input voltage that a Raspberry Pi can handle through the GPI
 
 When testing the movement of your robot buggy, why do you need to perform the `.stop()` command before closing the Python program? 
 
-+ This switches the motor controller board off so it doesn’t use anymore power
++ This switches the motor controller board off so it doesn’t use any more power
     + No
     + The motor controller will still draw power until the battery pack and/or Raspberry Pi is switched off.
     + Week 1, step 7
