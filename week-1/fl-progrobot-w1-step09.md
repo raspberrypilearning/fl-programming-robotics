@@ -33,7 +33,7 @@ Place your motors inside the box, in roughly the position you would like them to
 
 If your chassis is made of cardboard, use a sharp object (such as a pencil or screwdriver) to carefully poke holes through the sides of the box.
 
-![Picture of a pencil poking out of the side of the cardboard box where the axel of a motor will protrude](images/1_9-chassis-motor-axel)
+![Picture of a screwdriver poking out of the side of the cardboard box where the axel of a motor will protrude](images/1_9-chassis-motor-axel)
 
 3. You will need to secure the motors firmly to the chassis. If you don't, the motors may move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best for your prototype, as they are easy to attach and remove if necessary.
 
