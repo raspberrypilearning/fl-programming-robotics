@@ -47,8 +47,6 @@ If you are planning on using a pre-made container for the chassis, you can try p
 
 It can also be useful to design the layout of the buggy on paper, to make sure that all the components have enough room. Begin by making a footprint, which is the base of your buggy. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about, so that you can try out different arrangements.
 
-![Picture of the buggy components represented in real size on paper with a cardboard container for the chassis of the buggy](images/1_8-chassis-componets-on-paper)
-
 Make sure each piece of paper is the correct size and shape for the component. You might have to measure your components, but most of them will have technical documentation online that will include their exact dimensions.
 
 #### Advanced design techniques

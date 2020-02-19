@@ -35,7 +35,7 @@ One of the sensors will be used to detect a line on the left side of the robot, 
 
 Take one of the line sensors and three female-to-female jumper leads. Then connect a jumper lead to each of the **VCC**, **GND**, and **DO** pins.
 
-![Picture of a line sensor with three female-to-female jumper leads connected to the VCC, GND, and DO pins](images/)
+![Picture of a line sensor with three female-to-female jumper leads connected to the VCC, GND, and DO pins](images/3_5-VCC-two-sensors)
 
 Connect the jumper lead from the **VCC** pin on the line sensor to either a 3V3 or 5V pin on the Raspberry Pi.
 
@@ -44,7 +44,5 @@ Then connect the **GND** pin on the sensor to a **GND** pin on the Pi.
 The **DO** pin can be connected to any numbered GPIO pin. In this example, I've used **GPIO 19** for the left sensor and **GPIO 26** for the right sensor.
 
 Repeat this process for the second line sensor so that both sensors are connected to the Raspberry Pi.
-
-![Picture of the buggy with the two line following sensors attached to the Raspberry Pi](images/3_5-buggy-two-sensors)
 
 If you had any issues, leave a comment below and one of the facilitators will be able to help you.

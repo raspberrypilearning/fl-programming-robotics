@@ -17,7 +17,6 @@ Now you are going to attach your line following sensors to the chassis and test 
 You may also need:
 
 + Screwdriver
-+ Sellotape
 
 ![Picture of the parts for building a track for the robot and testing the line following sensors - white paper, black tape, screwdriver](images/3_6-parts-for-line-testing)
 
@@ -25,7 +24,7 @@ You may also need:
 
 In order to test your robot, you'll need to prepare a track with a line for the robot robot to follow. The simple track that I made to initially test the robot consists of three pieces of A4 paper placed in a slightly curved row, with a single strip of black tape making a line through the middle of the paper, as pictured below.
 
-![Picture of a white piece of card with a black line of tape running through the center](images/)
+![Picture of a white piece of card with a black line of tape running through the center](images/3_6-black_line_on_white)
 
 This provides a really clear contrast in light levels between the white paper and the black tape so that your line sensors are able to accurately detect when the line is beneath them.
 
@@ -47,9 +46,9 @@ Align your robot so that the centre of the robot is directly over the black line
 
 Cut two small holes in the bottom of your chassis so that the infrared (IR) emitter and receiver can fit through (the blue and black components that look like LEDs). If the potentiometer and/or the tiny LED (which indicates when a line has been detected) are on the same side as the IR emitter and receiver, you will also need to include some space for these to fit through.  Ideally, the holes will be big enough so that these necessary parts can fit through without the entire sensor dropping through the hole.
 
-![Picture of one line sensor secured to the robot and a hole where the other line sensor should be placed](images/)
+![Picture of one line sensor secured to the robot and a hole where the other line sensor should be placed](images/3_6-one_sensor_in)
 
-You can then secure the sensor in place using sellotape, just make sure the tape doesn't cover the IR emitter or receiver.
+You can then secure the sensor in place using tape, just make sure the tape doesn't cover the IR emitter or receiver.
 
 ### Tuning the line sensors
 
@@ -59,11 +58,9 @@ With the line sensors attached, boot up your Raspberry Pi. Move the robot slowly
 
 Whilst a sensor is over a **light** surface, the LED on the sensor board should be **on**. Conversely, when a sensor passes over a **dark** line, the LED on the sensor should be **off**.
 
-![Video-gif of the LED on each line sensor turning on when the sensor is over the white surface and off when the sensor is over the black line](images/)
-
 Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value by adjusting the potentiometer using a screwdriver. Be careful when turning the potentiometer as it is quite a delicate component.
 
-![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/)
+![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/3_6-potentiometer-tuning)
 
 **How did you get on with testing the line sensors? Did you have any issues? Share your thoughts in the comments.**
 

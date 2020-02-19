@@ -7,23 +7,23 @@ Related files:
 
 ## Attaching the UDS to the buggy
 
-Now that you have read about how a UDS works, you are going to connect one to the Raspberry Pi. Make sure to check whether you need a voltage divider: check the model number or post a photo in the comments if you are unsure.
+Now that you have read about how a UDS works, you are going to connect one to your Raspberry Pi. Make sure to check whether you need a voltage divider: check the model number or post a photo in the comments if you are unsure.
 
 ### What you will need
 
 For this step, you will need the following items:
 
 + Ultrasonic distance sensor
-+ Four female-to-male jumper leads
++ Four female-to-femlale jumper leads
 
 If your UDS is 5V, you will also need:
 
 + Two different resistors to split the voltage (e.g. a 330-ohm resistor and a 620-ohm resistor)
-+ Two more female-to-male jumper leads (six in total)
++ Two more female-to-female (six in total)
 + Soldering iron and solder
 + Tape
 
-![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-male jumper leads, Soldering iron and solder, 330 Ohm resistor, 620 Ohm resistor, Tape](images/2_7-parts-for-the-UDS)
+![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-female jumper leads, Soldering iron and solder, 330 Ohm resistor, 620 Ohm resistor, Tape](images/2_7-parts-for-the-UDS)
 
 ### Wiring the UDS
 
@@ -39,7 +39,7 @@ Refer to the diagrams in this article or a GPIO reference guide if you aren't su
 
 #### Wiring the VCC, trig, and GND pins
 
-1. Start by connecting the **VCC** pin on your UDS to a 5V pin on your Raspberry Pi, using a female-to-male jumper lead.
+1. Start by connecting the **VCC** pin on your UDS to a 5V pin on your Raspberry Pi, using a female-to-female jumper lead.
 
 2. Connect the **trig** pin on the UDS to an available GPIO pin on your Raspberry Pi; I've used **GPIO 4**.
 
@@ -53,15 +53,13 @@ If the output of the echo pin is 5V, you need to reduce the output voltage to a 
 
 For the purposes of this example, I'm going to use a 330-ohm resistor and a 620-ohm resistor. You can use different resistors to these, but you must ensure that the voltage across the larger resistor has been reduced to 3.3V or just below, using the voltage divider algorithm seen previously.
 
-The first thing to do is to solder the pair of resistors together, and then add female jumper leads to each end of the pair. This part might be easier to do with two people.
+The first thing to do is to solder the pair of resistors together. Then you need to solder a female jumper lead to the other end of each resistor. This part might be easier to do with two people or by using a [helping hand](https://www.instructables.com/id/How-to-Make-a-Helping-Hands-for-Soldering-at-Home-/). Once the solder has cooled, add tape to secure and insulate all of the joins.
 
-![Image of two resistors soldered together with one female jumper lead soldered to the other end of each resistor - taken from project "See like a bat"](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/joined_resistors.jpg)
+![Picture of two resistors soldered together with one female jumper lead soldered to the other end of each resistor - taken from project "See like a bat"](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/joined_resistors.jpg)
 
-Next, add a third female jumper lead to the join between the two resistors.
+Next, attach a third female jumper lead to the join between the two resistors. Add tape to secure this join in place.
 
-![Image of the third female jumper lead soldered to the join between the two resistors - also taken from the project site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/t_join.jpg)
-
-Once the solder has cooled, add tape or heat-shrink it, to secure and insulate all of the joins.
+![Picture of the third female jumper lead soldered to the join between the two resistors - also taken from the project site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/t_join.jpg)
 
 Now you need to attach the jumper leads to your UDS and the Raspberry Pi.
 
@@ -95,7 +93,7 @@ Cut two holes into the chassis that are just big enough for the emitter and rece
 
 ### Checking the connections
 
-It's easy for the jumper leads to come loose from the Raspberry Pi while you are moving parts of the robot around, so double-check that all your pins are connected properly before turning on your Raspberry Pi.
+It's easy for the jumper leads to come loose from the Raspberry Pi while you are moving parts of the robot around, so double-check that all your pins are connected properly before turning on your Pi.
 
 ### Discussion
 

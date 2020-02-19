@@ -72,9 +72,7 @@ while running:
 	print (left_detect, right_detect)
 ~~~
 
-**5.** If you run the program now, you should see the binary output from the sensors:
-
-![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the line sensor output values changing on the screen changing whenever the robot is moved](images/3_9-binary-output-line-sensors)
+**5.** If you run the program now, you should see the binary output from the sensors change when you move the sensors over and off the line, in accoradance to the rules stated above. 
 
 **6.** Inside the `while` loop, use conditional statements to specify the direction of each motor depending on the line sensor readings:
 
@@ -99,9 +97,7 @@ while running:
 	print (left_mot, right_mot)    
 ~~~
 
-**7.** Run your code and test that the program outputs the correct motor values when you move the robot over the line.
-
-![Video-gif of the robot sensors being moved slowly over and off the line with a shot of the motor output values changing on the screen changing whenever the robot is moved](images/3_9-binary-output-motors)
+**7.** Run your code and test that the program outputs the correct motor values when you move the robot over and off the line.
 
 **8.** Inside the loop, remove the `print` statement and replace it with:
 

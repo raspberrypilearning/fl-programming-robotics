@@ -31,7 +31,7 @@ You may also need:
 
 **Using a soldering iron can be a bit daunting at first, but whether you are new to soldering or a veteran, this [Getting started with soldering](https://projects.raspberrypi.org/en/projects/getting-started-with-soldering) resource will give you  some quick tips and tricks.**
 
-![Picture of the robot buggy parts for this step - 2 x DC motors, Motor controller board, Jumper leads (male-to-male and female-to-male), Screwdriver, Soldering iron and solder, Wire strippers, Scissors, Tape](images/1_5-parts-for-motor-controller)
+![Picture of the robot buggy parts for this step - 2 x DC motors, Motor controller board, 4 x Jumper leads (male-to-male and female-to-male), Screwdriver, Soldering iron and solder, Wire strippers, Scissors, Tape](images/1_5-parts-for-motor-controller)
 
 ### The DC motors
 
@@ -39,9 +39,9 @@ Most DC motors do not come with wires attached to them, which means you will nee
 
 #### Preparing the wires
 
-You will need two wires for each DC motor, to connect it to the motor controller board. Alternatively, you can use wire strippers to strip two jumper leads, to expose the bare wire for attaching to each of the motors. A demonstration of how to strip a wire with wire strippers can be seen in [this video](https://www.youtube.com/watch?v=TZFTKbT4XFs).
+You will need two wires for each DC motor, to connect it to the motor controller board. Alternatively, you can use wire strippers to strip both ends of the jumper leads, to expose the bare wire for attaching to each of the motors. A demonstration of how to strip a wire with wire strippers can be seen in [this video](https://www.youtube.com/watch?v=TZFTKbT4XFs).
 
-![Picture of 4 partially stripped male-to-male jumper lead](images/1_5-stripped-male-male-jumper-leads)
+![Picture of 4 stripped male-to-male jumper leads](images/1_5-stripped-male-male-jumper-leads)
 
 Remove the soft plastic clip from the motors so that the wires can be attached. You can use a flathead screwdriver to help remove the clip.
 
@@ -56,6 +56,8 @@ Thread the bare wire through the contact on the motor. **Top tip:** It may be ea
 Turn on the soldering iron and wait for it to heat up. Clean the soldering iron tip before using it; you can use a damp sponge or damp cloth to remove any residue while the iron is hot.
 
 Heat the contact on the motor with the soldering iron for a second or two. Keeping the soldering iron on the contact, touch the end of the solder to the soldering iron tip until the solder melts. Stop applying solder once the contact and wire are connected by the solder.
+
+![Video-gif of a wire being soldered to one of the contacts on the DC motor](images/1_5-soldering-wire-to-motor)
 
 Wait for a minute or two for the solder to cool and then gently try to move the wire, to test whether it is securely attached to the contact. If the wire moves, you can either reheat the applied solder with the soldering iron and realign the wire, or apply more solder to the connection.
 

@@ -33,8 +33,6 @@ Place your motors inside the box, in roughly the position you would like them to
 
 If your chassis is made of cardboard, use a sharp object (such as a pencil or screwdriver) to carefully poke holes through the sides of the box.
 
-![Picture of a screwdriver poking out of the side of the cardboard box where the axel of a motor will protrude](images/1_9-chassis-motor-axel)
-
 3. You will need to secure the motors firmly to the chassis. If you don't, the motors may move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best for your prototype, as they are easy to attach and remove if necessary.
 
 ![Picture of the motors secured with cable ties to the chassis](images/1_9-motors-secured-to-chassis)
@@ -50,8 +48,6 @@ Start by assembling the ball caster. It is useful to work out where the screw ho
 ![Picture of the screw fastening of the ball caster inside the cardboard box](images/1_9-ball-caster-placement)
 
 Most ball casters come with spacers to increase the height. If the chassis dips towards the floor at the front, add spacers to the ball caster until the chassis is level. Otherwise, you can adjust the position of the ball caster forwards or towards the back of the chassis if the buggy is dipping where the wheels are.
-
-![Picture of the ball caster, wooden spacers for the ball caster and the wheels of the robot buggy](images/1_9-ball-caster-secured)
 
 6. If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Raspberry Pi inside the chassis.
 
