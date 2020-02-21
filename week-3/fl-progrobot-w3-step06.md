@@ -18,13 +18,13 @@ You may also need:
 
 + Screwdriver
 
-![Picture of the parts for building a track for the robot and testing the line following sensors - white paper, black tape, screwdriver](images/3_6-parts-for-line-testing)
+![Picture of the parts for building a track for the robot and testing the line following sensors - white paper, black tape, screwdriver](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-parts_for_line_testing.jpg)
 
 ### Preparing your track
 
 In order to test your robot, you'll need to prepare a track with a line for the robot robot to follow. The simple track that I made to initially test the robot consists of three pieces of A4 paper placed in a slightly curved row, with a single strip of black tape making a line through the middle of the paper, as pictured below.
 
-![Picture of a white piece of card with a black line of tape running through the center](images/3_6-black_line_on_white_paper)
+![Picture of a three white pieces of paper joined in a curve with a black line of tape running through the center](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-black_line_on_white_paper.jpg)
 
 This provides a really clear contrast in light levels between the white paper and the black tape so that your line sensors are able to accurately detect when the line is beneath them.
 
@@ -36,7 +36,7 @@ Before you modify the chassis, I recommend taking a few photos of your robot and
 
 When using two line sensors, you want them to be positioned near the front of the chassis and evenly spaced either side of the caster wheel. This is so each sensor can detect when it is over the line with minimal delay, meaning that the robot can be programmed to change course before it has drifted too far either side of the line. The smaller the gap is between the sensors, the less the robot will need to wiggle side-to-side before it is directly over the line again.
 
-![Animation from 3.4](images/3_4_Two_Sensors_Anim.gif)
+![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
 The optimal distance between the surface and the sensor is 1cm to 3cm, which should be fine for most chassis. Otherwise you may to tune the sensors using the instructions later.
 
@@ -46,7 +46,7 @@ Align your robot so that the centre of the robot is directly over the black line
 
 Cut two small holes in the bottom of your chassis so that the infrared (IR) emitter and receiver can fit through (the blue and black components that look like LEDs). If the potentiometer and/or the tiny LED (which indicates when a line has been detected) are on the same side as the IR emitter and receiver, you will also need to include some space for these to fit through.  Ideally, the holes will be big enough so that these necessary parts can fit through without the entire sensor dropping through the hole.
 
-![Picture of one line sensor in place on the chassis and a hole where the other line sensor should be placed](images/3_6-one_sensor_in)
+![Picture of one line sensor in place on the chassis and a hole where the other line sensor should be placed](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-one_line_sensor_in_place.jpg)
 
 You can then secure the sensor in place using tape, just make sure the tape doesn't cover the IR emitter or receiver.
 
@@ -60,7 +60,7 @@ Whilst a sensor is over a **light** surface, the LED on the sensor board should 
 
 Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it with as little delay as possible. If either of the sensors are not accurately picking up the changes in light between the white paper and the black line, you will need to adjust the threshold value by adjusting the potentiometer using a screwdriver. Be careful when turning the potentiometer as it is quite a delicate component.
 
-![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](images/3_6-potentiometer-tuning)
+![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-potentiometer-tuning.jpg)
 
 **How did you get on with testing the line sensors? Did you have any issues? Share your thoughts in the comments.**
 

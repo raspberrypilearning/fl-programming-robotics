@@ -15,7 +15,7 @@ A UDS uses ultrasound to measure distances. Sound travels through the air in a *
 
 As the sound travels, the particles in the air oscillate back and forth. This is often represented instead as a wave moving up and down on a graph. A sound's frequency is the number of oscillations per second. Frequency is measured in hertz (Hz); 1Hz corresponds to one oscillation per second.
 
-![A few waves showing the difference between high and low frequency sounds.](images/frequency_example.png)
+![A few waves showing the difference between high and low frequency sounds over time](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/24-2_6_wave_frequency.png)
 
 **Ultrasound** refers to any sound that has a frequency above the range of human hearing. This level varies from person to person, but on average, any sound with a frequency of 20kHz (20,000 oscillations  a second) or above is considered ultrasound.
 
@@ -23,7 +23,7 @@ The uses of ultrasound are many: doctors use the sound waves to scan inside huma
 
 ### Ultrasound and ultrasonic distance sensors
 
-![Ultrasonic distance sensor - taken from projects site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/Ultrasonic_Distance_Sensor.png)
+![An HC-SR04 ultrasonic distance sensor showing the emitter and receiver. The four pins are labelled (left to right) VCC, Trig, Echo, and GND.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/8-Distance_sensor.png)
 
 A UDS works by sending out a burst of ultrasound. This sound will travel through air, but reflect back (echo) off surrounding objects. The sensor can detect the echo when it returns.
 
@@ -52,15 +52,15 @@ If the UDS is 5V-tolerant, this causes some issues because the **echo** pin will
 
 A voltage (or potential) divider can split a voltage into two smaller voltages by using multiple resistors. The diagram below shows a single resistor connected to a 5V pin. The voltage across the resistor is 5V:
 
-![Potential divider images taken from projects site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_2.png)
+![Voltage between a 5V pin and GND pin with one 1000 ohm resistor in the middle, showing a 5V voltage across the resistor.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/25-2_6-voltage_divider_a.png)
 
 The diagram below shows how the voltage can be split by using two resistors wired in series. As both resistors are the same, the voltage is split equally between the two:
 
-![Same again](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_3.png)
+![Voltage between a 5V pin and GND pin with two 1000 ohm resistors in the middle, showing a 2.5V voltage across each resistor.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/26-2_6-voltage_divider_b.png)
 
 By altering the resistors, you can tailor the voltage across any one of them to be anything you like. Here, you can see that I have split the voltage to give us almost exactly 3.3V across the second resistor:
 
-![And again](https://projects-static.raspberrypi.org/projects/see-like-a-bat/fac1abdedade76d99cbc5231ddf6ec3da912eebc/en/images/See_Like_A_Bat_Diagram_4.png)
+![Voltage between a 5V pin and GND pin with one 1200 ohm resistor and one 2200 ohm resistor in the middle. The 1200 ohm resistor shows roughly 1.8V across it and the 2200 ohm resistor shows roughly 3.2V across each it.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/27-2_6-voltage_divider_c.png)
 
 You can use the code below to work out the resistors you need:
 

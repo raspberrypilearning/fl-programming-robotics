@@ -15,7 +15,7 @@ Line sensors detect the presence of either a black or white line by emitting inf
 
 Below you can see an example TCRT5000 line sensor, your components may be laid out differently (all being on one side for example). However, all the components I will discuss will be present on the majority of line sensors.
 
-![Like the reference image, but in a cartooney style. The pins with labels (VCC, GND, AO & DO) the potentiometer (blue box with white dial) & the two lights should be clear.](https://www.aam.com.pk/wp-content/uploads/2017/09/tcrt5000.jpg)
+![An illustration of both sides of a line sensor. The top shows three pins and a potentiometer (blue box with white dial). The bottom side shows a black and red IR emitter and receiver as well as three pins with labels VCC, GND, & DO.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/36-3_4_TCRT_Sensor_Diagram.png)
 
 In the picture above you can see these 2 components that look like LEDs on the bottom (on the right hand side of the image). The blue one is the IR emitter and the black one is the receiver. These devices also have a component called a potentiometer, that adjusts the threshold for the device. You can do this by using a screwdriver to turn the white dial you can see in the image above.
 
@@ -50,7 +50,7 @@ However, if the robot moves to the right then the left sensor will eventually cr
 
 The same applies when the robot turns too far left, the right sensor will move over the line and change its reading. The robot should then turn right to correct.
 
-![](images/3_4_Two_Sensors_Anim.gif)
+![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
 ### Even more sensors
 

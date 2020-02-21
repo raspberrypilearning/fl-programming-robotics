@@ -11,7 +11,7 @@ You are coming to the end of the first week of your journey into the world of ro
 
 ### Challenges with components
 
-![A robot buggy, with wheels and a face. Some loose cables are poking out from the top of the bot. Its eyes should look dazed and confused]()
+![A robot buggy, with wheels and a face. Some loose cables are poking out from the top of the bot. Its expression looks dazed and confused](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/18-1_12-Loose_Cables.png)
 
 #### Jumper cables and loose components
 
@@ -25,7 +25,7 @@ The numbering on the GPIO pins can be confusing; they are numbered as the proces
 
 A lot of the things you have done this week will be completely new to you, as will the components you are using. Dealing with components rather than products means you forgo some of the hand-holding that comes with a pre-built device.
 
-![A character (preferrably male) looking at a component - feel free to use the UDS or line sensor - they look confused by the device]()
+![A person holding at an ultrasonic distance sensor looking confused by the device](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/19-1_12-Confusing_Component.png)
 
 When you buy components, you have to figure out how they work and test them. If the components are new to you, this can be a challenging process, as you don't know what to look for, or how to test the component.
 
@@ -41,7 +41,7 @@ Things can go wrong if the placement of your components in the chassis doesn't a
 
 Creating a mobile robot, particularly one that uses wheels to navigate around, requires you to consider carefully the floor you test it on.
 
-![Two-wheeled robots on a carpet floor - there is smoke coming from their wheels as though they can't move. The robots should look tired and sad.]()
+![Three robots stuck on a carpet floor which look sad, confused and struggling to move](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/20_1_12-Wobbly_Floor.png)
 
 Some motors have no problem navigating carpet, linoleum, or tiles; others will not work on anything other than smooth concrete. This can cause frustration, as you may adjust the settings on the wheels, only to find out it was an uneven floor causing the issues.
 

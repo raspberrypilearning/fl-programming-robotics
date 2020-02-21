@@ -22,7 +22,7 @@ You may also need:
 
 + GPIO reference card
 
-![Picture of the robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-to-female), Screwdriver, GPIO reference card](images/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack)
+![Picture of the robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-to-female), Screwdriver, GPIO reference card](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack.jpg)
 
 ### Connect the battery pack to the motor board
 
@@ -30,11 +30,11 @@ The motors require more power than the Raspberry Pi can provide. Therefore, you 
 
 The battery pack should include two wires: one red and one black. The red wire is for the positive terminal and needs to be inserted into the **VCC** terminal block if it is present, or the 'voltage in' terminal block labelled **+12V** otherwise.
 
-![Picture of the red wire from the battery pack connected to the 12V terminal block of the motor controller](images/1_6-battery-pack-red-wire-motor-controller)
+![Picture of the red wire from the battery pack connected to the 12V terminal block of the motor controller](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-battery-pack-red-wire-motor-controller.jpg)
 
 The black wire is the ground wire and must be inserted into the **GND** terminal to complete the circuit. Make sure all the screws of the terminal blocks are tightened securely.
 
-![Picture of the black wire from the battery pack connected to the GND terminal block of the motor controller](images/1_6-battery-pack-black-wire-motor-controller)
+![Picture of the black wire from the battery pack connected to the GND terminal block of the motor controller](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-battery-pack-black-wire-motor-controller.jpg)
 
 Insert the four AA batteries into the battery pack and if it has a switch, turn it on. Most motor controllers have a red LED that lights up to show that it is powered on. If the LED is not lit up, the wires may not be connected properly. Also check that your battery pack is full, and the batteries are the right way around.
 
@@ -44,7 +44,7 @@ These instructions are for a L298N dual H-bridge DC stepper motor driver control
 
 On this motor controller board there are pins labelled **IN1**, **IN2**, **IN3**, and **IN4**. Some motor boards also have one or two **GND** (ground) pins next to the **IN** pins, but this board does not.
 
-![A L298N motor controller board with four IN screw terminals for connecting to an electric motor. The four IN terminals are circled.](images/1_6-motor-controller-board-in-circled)
+![A L298N motor controller board with four IN screw terminals for connecting to an electric motor. The four IN terminals are circled.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-motor-controller-board-in-circled.jpg)
 
 Which GPIO pins you use on your Pi is up to you; I have used **GPIO 7**, **8**, **9**, and **10**. However, if you use different GPIO pins, make sure you remember which ones, as you will need to refer to them in the code.
 
@@ -60,7 +60,7 @@ Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to 
 
 If your motor board does not have a **GND** pin, use the terminal block that the battery pack also uses. Strip the end of the wire for the **GND** pin and secure it into the **GND** terminal block that your battery pack feeds into. There will now be two wires fed into the **GND** block: one from the battery pack and one from the Raspberry Pi.
 
-![Picture of the four IN pins from the motor controller connected to four GPIO pins on the Raspberry Pi, as well as a GND pin connected from the Pi to the motor controller](images/1_6-motor-controller-connected-to-raspberry-pi)
+![Picture of the four IN pins from the motor controller connected to four GPIO pins on the Raspberry Pi, as well as a GND pin connected from the Pi to the motor controller](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-motor-controller-connected-to-raspberry-pi.jpg)
 
 ### Powering the Raspberry Pi
 

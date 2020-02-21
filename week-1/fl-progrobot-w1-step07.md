@@ -60,7 +60,7 @@ robin.stop()
 
 Run the program and check that both motors are turning in the direction of the arrows you drew.
 
-![Video-gif of the DC motors labelled with arrows showing the direction both the motors should be spinning when the forward() command is entered](images/1_7-motors-spinning-forward)
+![Video-gif of the DC motors labelled with arrows showing the direction both the motors should be spinning when the forward() command is entered](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_7-motors-spinning-forward.gif)
 
 If either motor is turning in the wrong direction, alter your program by swapping the pin numbers for that motor.
 

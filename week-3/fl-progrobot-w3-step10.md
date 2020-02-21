@@ -13,7 +13,7 @@ Robots have firmly shifted from science fiction to become science fact. Even a f
 
 Modern factories have already been transformed by robots, and our society has been equally transformed by their improved efficiency and production rates. The lifestyle you lead now has been shaped by robotics; from the food you buy in supermarkets, to the car you drive and even the books you read.
 
-![An image of a robot painting a work of art <Can borrow from the robot collection we have already?>]()
+![An illustration of a robot painting a picture of another robot.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/38-3_10-Painting_Robot.png)
 
 AI and machine learning are huge industries and these technologies are ever improving. The jobs for our muscles are already at risk, held back only by the cost of robotics. What happens when robots come for the jobs of our minds as well? More complex tasks - particularly creative ones - are the next in line for a robotic revolution. How will we handle robots that have the ability to; learn, lead whole companies and even design new robots?
 
@@ -25,7 +25,7 @@ For more discussions on the impact of technology, including automation and robot
 
 The production industry is not the only sector that will take advantage of robots. Earlier you heard about warehouse robots that assist in packing and shipping orders for large retailers. You also learned about robots being used to navigate dangerous environments - some industrial environments definitely fit this bill. Mining is a good example of this; not just for coal or oil, but also the precious metals and materials for the components inside of our mobile phones and computers.
 
-![A robot physically digging and mining - perhaps striking gold? Avoid coal or oil mining imagery]()
+![A robot that has dug a hole looking really happy because it has found gold!](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/39-3_10-Mining_Robot.png)
 
 Robots drastically improve efficiency in industry, and this can lead to large increases in production. The resources used are not bottomless and neither is the energy required, without regulation we are at risk of over consumption.
 
@@ -33,7 +33,7 @@ Robots drastically improve efficiency in industry, and this can lead to large in
 
 Surgical robots are being used to the benefit of both patients and staff. These machines are tools that the surgeon controls to perform surgeries through tiny incisions in a patients body. The robots are very small and extremely accurate, so they cause far less trauma than traditional surgeries, leading to patients showing quicker recovery times and fewer complications post-op. Looking to the future, you can see a world where AI and medical robots merge. Intelligent surgical robots could perform the surgery independently, leading to a boost in the availability of high quality medical care.
 
-![A doctor robot, attending a patient in a bed. It would be great if the patient seemed slightly uneasy]()
+![A doctor robot, attending a patient in a bed. The patient is smiling but looks slightly uneasy.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/40-3_10-Dr_Robot.png)
 
 The main downside of surgical robotics is the cost. They are currently far too pricey for every hospital to afford one. This restricts the care to wealthier areas, a drop in cost may help increase access to this resource. Lastly, there is a very important side of medicine that robots cannot currently replace - patient bedside care. The care nurses, doctors and hospital staff provide to comfort the patients - for now this remains a task that only a human can accomplish.
 
@@ -41,7 +41,7 @@ The main downside of surgical robotics is the cost. They are currently far too p
 
 Robotics as a discipline can provide enormous benefits to computing education. Robots are cool, what was once science fiction is now a reality. Robots are also technology, and they remain one of the biggest attractions to computing education, bringing fledgling roboticists to courses like this one. In order to be a successful roboticist, you need the knowledge and skills provided by computer science. Some learners enjoy getting involved in robot competitions. These offer a mixture of competitiveness and fun to engage learners, with learning as a side effect of participation in these events.
 
-![A podium - with characters on the positions standing next to their robots looking proud]()
+![A podium with people on the 1st, 2nd and 3rd positions standing next to their robots looking proud](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/41-3_10-Robo_Compettitors.png)
 
 As great as this all is, there is still work to be done to make the subject more inclusive. Robotics is still a selective subject, with relatively high entry requirements - both financially and cognitively. A lot of work has been done to improve this and robotics is more accessible now than it has ever been. As I am sure you have noticed, the subject is still quite challenging for beginners and a lot of resilience is necessary. There is an argument that this is not a bad thing, and that robotics has a place in education as a extension activity to push confident learners. However, as I said earlier, it can also work well as a hook to bring more reticent learners into formal computing education.
 

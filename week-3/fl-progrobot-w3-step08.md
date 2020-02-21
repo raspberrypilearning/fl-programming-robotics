@@ -45,7 +45,7 @@ Think about the rest of the line following algorithm:
 + **How should the robot react when the left sensor is over the line?**
 + **What about when the right sensor detects the line?**
 
-![](images/3_4_Two_Sensors_Anim.gif)
+![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
 ### Rules of the algorithm
 
@@ -105,7 +105,7 @@ You can change the number of seconds to a different value if you want to test th
 
 Here is an example of a robot running on a basic track with this algorithm:
 
-![Video-gif of the robot wiggling side to side as it follows a basic track](images/3_8-basic-line-following-robot)
+![Video-gif of the robot wiggling side to side as it follows a basic track](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_8-basic-line-following-robot.gif)
 
 Don’t worry if your robot moves off the line a bit, just observe if it follows the line. If it doesn't, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to check that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions for testing the line sensors.
 

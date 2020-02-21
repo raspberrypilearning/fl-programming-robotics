@@ -23,7 +23,7 @@ If your UDS is 5V, you will also need:
 + Soldering iron and solder
 + Tape
 
-![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-female jumper leads, Soldering iron and solder, 330 Ohm resistor, 620 Ohm resistor, Tape](images/2_7-parts-for-the-UDS)
+![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-female jumper leads, Soldering iron and solder, 330 Ohm resistor, 620 Ohm resistor, Tape](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-parts-for-the-UDS.jpg)
 
 ### Wiring the UDS
 
@@ -55,11 +55,11 @@ For the purposes of this example, I'm going to use a 330-ohm resistor and a 620-
 
 The first thing to do is to solder the pair of resistors together. Then you need to solder a female jumper lead to the other end of each resistor. This part might be easier to do with two people or by using a [helping hand](https://www.instructables.com/id/How-to-Make-a-Helping-Hands-for-Soldering-at-Home-/). Once the solder has cooled, add tape to secure and insulate all of the joins.
 
-![Picture of two resistors soldered together with one female jumper lead soldered to the other end of each resistor - taken from project "See like a bat"](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/joined_resistors.jpg)
+![Picture of two resistors soldered together with one female jumper lead soldered to the other end of each resistor - taken from project "See like a bat"](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-resistors-and-jumper-leads-soldered-together.jpg)
 
 Next, attach a third female jumper lead to the join between the two resistors. Add tape to secure this join in place.
 
-![Picture of the third female jumper lead soldered to the join between the two resistors - also taken from the project site](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/t_join.jpg)
+![Picture of the third female jumper lead soldered to the join between the two resistors - also taken from the project site](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-third-jumper-lead-soldered-to-resistors.jpg)
 
 Now you need to attach the jumper leads to your UDS and the Raspberry Pi.
 
@@ -69,7 +69,7 @@ Now you need to attach the jumper leads to your UDS and the Raspberry Pi.
 
 The diagram below shows you the complete set-up for a 5V UDS:
 
-![Remove the vibration sensor and two connections (GP14 and GND) from the image](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
+![A UDS with wires and two resistors connecting to a Raspberry Pi GPIO reference board. The VCC wire on the UDS connects to 5V, Trig connects to GP4, and GND connects to GND on the reference card. The Echo pin on the UDS connects to a 330 ohm resistor, which connects to a 620 ohm resistor and a wire that connects to GP17 on the reference card. The 620 ohm resistor also connects to GND on the reference card](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/29-2_7-wiring-5V-UDS-diagram.png)
 
 #### Wiring the echo pin on a 3.3V UDS
 
@@ -77,7 +77,7 @@ Wiring a 3.3V UDS is fairly simple, as the output voltage of the echo pin does n
 
 The diagram below shows you the complete set-up for a 3.3V UDS, with the echo pin connected to **GPIO 17** on the Raspberry Pi:
 
-![Remove the vibration sensor and two connections (GP14 and GND) from the illustration. Replace the green, orange and black wires with one connection from Echo straight to GP17 and remove the two resistors](https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/See_Like_A_Bat_Diagram_7.png)
+![A UDS with four wires connecting to a Raspberry Pi GPIO reference board. The VCC wire on the UDS connects to 5V, Trig connects to GP4, Echo connects to GP17, and GND connects to GND on the reference card.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/28-2_7-wiring-3V3-UDS-diagram.png)
 
 ### Securing the UDS to the chassis
 
@@ -85,11 +85,11 @@ Now that your UDS is connected to your Raspberry Pi, you will need to attach the
 
 Mark where you want the emitter and receiver (the two silver cylinders from the diagram above) to protrude from the chassis.
 
-![Picture of the UDS cylinders being marked on the chassis were they need to be secured](images/2_7-marking-UDS-on-the-chassis)
+![Picture of the UDS cylinders being marked on the chassis were they need to be secured](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-marking-UDS-on-the-chassis.jpg)
 
 Cut two holes into the chassis that are just big enough for the emitter and receiver to poke through, then push the cylinders through the holes. You can also add tape to attach the UDS more securely to the chassis.
 
-![Picture of the UDS attached to the chassis](images/2_7-UDS-attached-to-chassis)
+![Picture of the UDS attached to the chassis](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-UDS-attached-to-chassis.jpg)
 
 ### Checking the connections
 

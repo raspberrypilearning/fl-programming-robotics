@@ -9,7 +9,7 @@ Related files:
 
 Now that you have the motors set up, it's time to design a chassis: the physical frame of your vehicle. Your buggy will need a chassis onto which you can secure the components, such as the wheels, motors, and Raspberry Pi.
 
-![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame](images/1_8-automobile-chassis.png)
+![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/17-1_8-automobile-chassis.png)
 
 ### Choosing a material
 
@@ -39,7 +39,7 @@ You will also need to mount a pair of wheels to the axles of the motors, and add
 
 The line sensors will need to sit on either side of the ball caster and point downwards to the floor. The optimal distance between the line sensors and the floor surface is 1 cm to 3 cm, which should be fine for most buggies.
 
-![Picture of all the components that will need to be attached to the robot buggy chassis -  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, 2 line sensors, AA battery holder, USB battery pack](images/1_8-components-for-the-chassis)
+![Picture of all the components that will need to be attached to the robot buggy chassis -  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, 2 line sensors, AA battery holder, USB battery pack](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_8-components-for-the-chassis.jpg)
 
 #### Making sure the components fit
 
