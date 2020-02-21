@@ -79,7 +79,7 @@ Using a screwdriver, loosen the screws in the terminal blocks labelled **OUT1**,
 
 Strip the ends of the wires; you can snip off the ends if you need to. Insert the stripped ends of one motor into the **OUT1** and **OUT2** terminals and the stripped ends of the second motor into the **OUT3** and **OUT4** terminals. Tighten the screws so the wires are secured firmly in the terminal blocks.
 
-![A close up image of one or two motors connected to the OUT terminal blocks of a motor controller with the screws of the terminal blocks tightened. The OUT labels are clearly visible.](images/1_5-motor-controller-connected-to-motors)
+![A close up image of one or two motors connected to the OUT terminal blocks of a motor controller with the screws of the terminal blocks tightened.](images/1_5-motor-controller-out-wires)
 
 ### Discussion
 
