@@ -7,17 +7,17 @@ Related files:
 
 ## Robotics is changing our lives
 
-Robots have firmly shifted from science fiction to become science fact. Even a few years ago much of the content you have covered in this course would have been exclusively discussed in research laboratories. This shift also requires you to change the way we discuss the impact robotics will have, moving from the theoretical to the concrete.
+A few years ago, much of the content you have covered in this course would have been discussed exclusively in research laboratories, but robots have now shifted firmly from science fiction to science fact. This shift requires us to change the way we discuss the impact of robotics, moving the discussion from the theoretical to the concrete.
 
 ### Automation
 
-Modern factories have already been transformed by robots, and our society has been equally transformed by their improved efficiency and production rates. The lifestyle you lead now has been shaped by robotics; from the food you buy in supermarkets, to the car you drive and even the books you read.
+Modern factories have been transformed by robots, and our society has been transformed by the resulting improvements in efficiency and production rates. The lifestyle you lead now has been shaped by robotics, from the food you buy in supermarkets to the car you drive and even the books you read.
 
 ![An illustration of a robot painting a picture of another robot.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/38-3_10-Painting_Robot.png)
 
-AI and machine learning are huge industries and these technologies are ever improving. The jobs for our muscles are already at risk, held back only by the cost of robotics. What happens when robots come for the jobs of our minds as well? More complex tasks - particularly creative ones - are the next in line for a robotic revolution. How will we handle robots that have the ability to; learn, lead whole companies and even design new robots?
+AI and machine learning are huge industries, and these technologies are constantly improving. The jobs of our muscles are already at risk, and protected for now only by the cost of robotics. What happens when robots come for the jobs of our minds as well? More complex tasks, particularly creative ones, are next in line for a robotic revolution. How will we handle robots that have the ability to learn, lead whole companies, and even design new robots?
 
-For more discussions on the impact of technology, including automation and robotics, you can join our other course - [Impact of Technology: How to lead classroom discussions](https://www.futurelearn.com/admin/courses/impact-of-technology/)
+For more discussion on the impact of technology, including automation and robotics, you can join our other course, [Impact of technology: How to lead classroom discussions](https://www.futurelearn.com/admin/courses/impact-of-technology/).
 
 ### Impact of robotics
 
