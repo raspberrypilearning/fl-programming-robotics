@@ -51,7 +51,7 @@ Make sure each piece of paper is the correct size and shape for the component. Y
 
 #### Advanced design techniques
 
-If you want to know more about creating a physical object and using tools such as 3D modelling and 3D printing, check out our [Design and prototype embedded computer systems course](https://www.futurelearn.com/courses/embedded-systems).
+If you want to know more about creating a physical object and using tools such as 3D modelling and 3D printing, check out our [Design and Prototype Embedded Computer Systems course](https://www.futurelearn.com/courses/embedded-systems).
 
 ### Your turn
 
