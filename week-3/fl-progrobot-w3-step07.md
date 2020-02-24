@@ -17,16 +17,16 @@ This is also a perfect time to share the progress you have made and any pictures
 
 If you have any questions or are struggling with anything related to your robot buggy, leave a comment below and one of the course facilitators will provide help and support.
 
-### Next steps for your robot
+### Next steps 
 
 In the next step you are going to write an algorithm for a basic line-following robot.
 
-You already know that the line sensors can detect the difference between light and dark surfaces, and this can be translated into a digital output of 0 (for a white surface) or 1 (for a black surface).
+You already know that the line sensors can detect the difference between light and dark surfaces, and that this can be translated into a digital output of 0 (for a white surface) or 1 (for a black surface).
 
-Have a think about the line following algorithm by considering these questions:
+Think about the line-following algorithm and consider these questions:
 
-+ What do you think the line following algorithm might look like?
-+ How should your robot react when the left sensor detects the line of your track?
-+ What about when the right sensor detects the line?
++ What do you think the line-following algorithm might look like?
++ How should your robot react when the left sensor detects the line on your track?
++ How should your robot react when the right sensor detects the line?
 
-**Answer these questions in the comments section, either by writing the different stages of the algorithm as a list of instructions or by creating a flowchart and posting a link to it.**
+Answer these questions in the comments section, either by writing the different stages of the algorithm as a list of instructions, or by creating a flow chart and posting a link to it.
