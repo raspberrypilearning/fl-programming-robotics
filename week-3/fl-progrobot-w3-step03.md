@@ -55,7 +55,7 @@ Have a look online; you might be able to find a competition running near you. Yo
 
 ### Discussion
 
-Earlier, I discussed warehouse robots, one modern use of line following.
+Earlier, I discussed warehouse robots, which are one modern use of line following.
 
 What other types of work could a line-following robot do? Are there other types of work that require only simple navigation?
 
