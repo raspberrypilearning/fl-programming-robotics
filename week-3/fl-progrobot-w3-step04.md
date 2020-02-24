@@ -44,7 +44,7 @@ To solve this problem, you can use more than one sensor. If you add a second sen
 
 If the line is in the centre of the robot, both sensors will return a 0 from their digital pins, as they are both over the white background.
 
-![](images/3_4_Two_Sensors_Still.png)
+![Illustration of a robot buggy with a black line under the centre of it and two line sensors either side of the line, both outputting 0.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/35-3_4-line-sensors-not-detecting-line.png)
 
 However, if the robot moves to the right, the left sensor will eventually cross onto the line, changing its output to a 1. When this happens, the robot should correct its course and turn left. Once the sensor returns to a 0 value, we know that the line is back in the middle of the robot.
 

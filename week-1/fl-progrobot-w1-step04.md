@@ -27,11 +27,11 @@ Most models of the Raspberry Pi have a 40-pin header, as shown in the image abov
 
 Early models of the Raspberry Pi A and B have a shorter header with 26 pins, as shown below.
 
-![The GPIO pins on a Raspberry Pi 1 with a 26 pin header](images/1_4-gpio-pins-raspberry-pi-1-26-header.jpg)
+![The GPIO pins on a Raspberry Pi 1 with a 26 pin header](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_4-Raspberry-Pi-1-GPIO-header-26-pins.jpg)
 
 The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi Zero WH) so there are holes where the GPIO header is located instead of physical pins. This means you need to add a header that includes the pins yourself.  
 
-![A Raspberry Pi Zero with a solder-less header](images/1_4-raspberry-pi-zero.jpg)
+![A Raspberry Pi Zero with a solder-less header](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_4-Raspberry-Pi-Zero-solder-less-header.jpg)
 
 Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+, or 4. These models allow you to program the Raspberry Pi easily and connect it to another computer or even a smartphone by using the inbuilt WiFi or Bluetooth, rather than needing to plug the Pi physically into a screen or a keyboard and mouse.
 
