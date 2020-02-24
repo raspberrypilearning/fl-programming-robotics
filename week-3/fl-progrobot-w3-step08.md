@@ -42,8 +42,8 @@ To start with, consider what the robot should do when neither of the sensors det
 Think about the rest of the line-following algorithm:
 
 + What is the initial position of the robot in relation to the line?
-+ How should the robot react when the left sensor is detects the line?
-+ What about when the right sensor detects the line?
++ How should the robot react when the left sensor detects the line?
++ How should the robot react when the right sensor detects the line?
 
 ![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
@@ -59,9 +59,9 @@ The actions that the robot needs to take, depending on the readings it gets from
 
 To detect the state of each sensor, you are going to use two **events** from `LineSensor`, which is part of the GPIO Zero library.
 
-So far you have been writing **procedural** programs that generally run instructions from top to bottom, calling functions as they run.
+So far you have been writing **procedural** programs, which generally run instructions from top to bottom, calling functions as they run.
 
-**Event-driven** programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run are determined by events such as a button being pressed.
+**Event-driven** programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run are determined by events, such as a button being pressed.
 
 In your program, each of the line sensors will handle two events: `when_line` and `when_no_line`.
 
@@ -69,7 +69,7 @@ The `when_line` event is triggered whenever the sensor changes state from 0 (whi
 
 ### Programming the algorithm
 
-**3.** Within the Python file you set up, instruct your robot to move in a certain direction based on the rules of the algorithm.
+3. Within the Python file you set up, instruct your robot to move in a certain direction based on the rules of the algorithm.
 
 ~~~ python
 left_sensor.when_line = robin.left
@@ -78,13 +78,13 @@ left_sensor.when_no_line = robin.forward
 right_sensor.when_no_line = robin.forward
 ~~~
 
-**Note:** Unlike calling these methods during a program, you should make sure not to put brackets after the method name when using events. You are providing a *reference* to the method, not calling it. The event only needs you to provide the method name, when the event happens it will find the method and call it. If you include brackets with the method it is called immediately.
+**Note:** Unlike calling these methods during a program, when using events you should make sure not to put brackets after the method name. You are providing a reference to the method, not calling it. The event only needs you to provide the method name; when the event happens it will find the method and call it. If you include brackets with the method, it will be called immediately.
 
 ### Ensuring the program doesn't run forever
 
 Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop your robot from moving.
 
-**4.** To make sure that the robot doesn’t keep running forever, and to close all the components' connections cleanly, add the following to the end of your program:
+4. To make sure that the robot doesn’t keep running forever, and to close all the components' connections cleanly, add the following to the end of your program:
 
 ~~~ python
 sleep(10)
@@ -95,22 +95,24 @@ left_sensor.close()
 right_sensor.close()
 ~~~
 
-After 10 seconds, the `stop()` command will stop both motors. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
+After ten seconds, the `stop()` command will stop both motors. Then the `close()` command will ensure that the motors and line sensors are shut down completely.
 
 You can change the number of seconds to a different value if you want to test the robot for a different period of time.
 
 ### Testing the algorithm
 
-**5.** Try running the program with your robot on your track.
+5. Try running the program with your robot on your track.
 
 Here is an example of a robot running on a basic track with this algorithm:
 
 ![Video-gif of the robot wiggling side to side as it follows a basic track](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_8-basic-line-following-robot.gif)
 
-Don’t worry if your robot moves off the line a bit, just observe if it follows the line. If it doesn't, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to check that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions for testing the line sensors.
+Don’t worry if your robot moves off the line a bit; just observe whether it follows the line. If it doesn't, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to check that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions for testing the line sensors.
 
-**How well does your robot follow the line?**
+### Discussion
 
-**Why do you think the command `robin.forward()` is necessary before the events are defined?**
+How well does your robot follow the line?
+
+Why do you think the command `robin.forward()` is necessary before the events are defined?
 
 Share your thoughts in the comments section.
