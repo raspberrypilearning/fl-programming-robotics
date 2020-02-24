@@ -61,11 +61,11 @@ To detect the state of each sensor, you are going to use two **events** from `Li
 
 So far you have been writing **procedural** programs that generally run instructions from top to bottom, calling functions as they run.
 
-**Event-driven** programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run is determined by events like when a button is pressed.
+**Event-driven** programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run are determined by events such as a button being pressed.
 
 In your program, each of the line sensors will handle two events: `when_line` and `when_no_line`.
 
-The `when_line` event is triggered whenever the sensor changes state from 0 (white background) to 1 (black line), whilst `when_no_line` is triggered when the sensor changes state from 1 to 0.
+The `when_line` event is triggered whenever the sensor changes state from 0 (white background) to 1 (black line), while `when_no_line` is triggered when the sensor changes state from 1 to 0.
 
 ### Programming the algorithm
 
