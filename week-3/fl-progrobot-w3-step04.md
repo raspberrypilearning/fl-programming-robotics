@@ -19,9 +19,9 @@ You can see an example TCRT5000 line sensor below. Your components may be laid o
 
 On the right-hand side of the image above you can see two components that look like LEDs. The blue one is the IR emitter and the black one is the receiver. These devices also have a component called a potentiometer, which adjusts the device's threshold. This is done by using a screwdriver to turn the white dial that you can also see in the image above.
 
-The device will emit IR light and the sensor will capture the light level that is reflected from the surface underneath. Some line sensors have two types of output: analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting, but analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against a threshold level (which is adjusted by turning the potentiometer). If the sensor is not receiving enough light to surpass the threshold value, the digital output will be high (1). If enough light is received and the threshold value is surpassed, the pin will be set to low (0).
+The device will emit IR light, and the sensor will capture the light level that is reflected from the surface underneath it. Some line sensors have two types of output: analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting; analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against a threshold level that is adjusted by turning the potentiometer. If the sensor does not receive enough light to surpass the threshold value, the digital output will be high (1). If enough light is received and the threshold value is surpassed, the pin will be set to low (0).
 
-The set-up of these devices may seem a bit topsy-turvy at first, but it makes a bit more sense when you consider that the sensor is designed to detect black lines. A black line will not reflect as much light, so the output will be on when a black surface is underneath.
+The set-up of these devices may seem a bit topsy-turvy at first, but it makes more sense when you consider that the sensor is designed to detect black lines. A black line will not reflect as much light, so the output will be on when a black surface is underneath.
 
 ### How to use a line sensor
 
@@ -29,26 +29,26 @@ Now that you know a bit more how a line sensor works, you should learn how to us
 
 The line sensor also has an array of pins, some of which you will have to connect to the Raspberry Pi you are using:
 
-+ `VCC` needs to be connected to a voltage in between 3.3 and 5V, in order to power the device
++ `VCC` needs to be connected to a voltage in between 3.3 and 5V, to power the device
 + `GND` is the ground pin that is required to complete the circuit
-+ `AO` is the analogue output (will not work with a Pi)
-+ `DO` is the digital output pin (this will work with the Pi)
++ `AO` is the analogue output (this will not work with the Raspberry Pi)
++ `DO` is the digital output pin (this will work with the Raspberry Pi)
 
-The VCC pin here can take a range of voltages so potential dividers are not necessary. It is also worth noting that the `AO` pin does not feature on all line sensors, only some.
+The VCC pin here can take a range of voltages, so potential dividers are not necessary. It is also worth noting that the `AO` pin does not feature on all line sensors.
 
 ### Two sensors are better than one
 
-You can create a line following robot with only one sensor, as this is enough to detect a line underneath the robot. If the robot strays from the line, it is very difficult to work out which way to turn to find the line again.
+You can create a line-following robot with only one sensor, as this is enough to detect a line underneath the robot. If the robot strays from the line, though, it is very difficult to work out which way it needs to turn to find the line again.
 
-To solve this problem, you can use more than 1 sensor. If you add a second sensor, and spread them out so they are evenly spaced either side of the caster wheel, the information from both sensors will allow your robot to find the line again.
+To solve this problem, you can use more than one sensor. If you add a second sensor, and spread the sensors out evenly on either side of the caster wheel, the information gathered from the sensors will allow your robot to find the line again.
 
-If the line is in the centre of the robot then both sensors will return a 0 from their digital pins, as they are both over the white background.
+If the line is in the centre of the robot, both sensors will return a 0 from their digital pins, as they are both over the white background.
 
 ![](images/3_4_Two_Sensors_Still.png)
 
-However, if the robot moves to the right then the left sensor will eventually cross onto the line - changing its output to a 1. When this happens the robot should correct its course and turn left. Once the sensor returns to a 0 value, we know the line is back in the middle of the robot.
+However, if the robot moves to the right, the left sensor will eventually cross onto the line, changing its output to a 1. When this happens, the robot should correct its course and turn left. Once the sensor returns to a 0 value, we know that the line is back in the middle of the robot.
 
-The same applies when the robot turns too far left, the right sensor will move over the line and change its reading. The robot should then turn right to correct.
+The same applies when the robot turns too far left; the right sensor will move over the line and change its reading. The robot should then turn right to the right to correct itself.
 
 ![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
@@ -56,7 +56,7 @@ The same applies when the robot turns too far left, the right sensor will move o
 
 You can use even more than two sensors if you want; some designs use three or four.
 
-How would a third sensor in the center of the robot impact the way it moves?
+How would a third sensor in the centre of the robot impact the way it moves?
 
 What difference do the extra sensors make?
 
