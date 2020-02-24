@@ -23,6 +23,6 @@ You can continue learning with [other courses from the Raspberry Pi Foundation](
 
 + [Object-Oriented Programming in Python: Create Your Own Adventure Game](https://www.futurelearn.com/courses/object-oriented-principles) goes into more detail about the idea of 'classes', such as the `Robot` class that you used in this course.
 
-+ [Understanding Computer Systems](https://www.futurelearn.com/courses/computer-systems/) and [How computers work: Demystifying computation](https://www.futurelearn.com/courses/how-computers-work/) provide some background about the history of computers.
++ [Understanding Computer Systems](https://www.futurelearn.com/courses/computer-systems/) and [How Computers Work: Demystifying Computation](https://www.futurelearn.com/courses/how-computers-work/) provide some background about the history of computers.
 
 Lastly, a quick reminder for teachers from England that this course can be used as evidence for your National Centre for Computing Education certificate. Visit the [NCCE website](https://www.teachcomputing.org/?utm_source=futurelearn&utm_medium=course&utm_campaign=ncce&utm_content=completion) for more details.
