@@ -43,11 +43,11 @@ If your chassis is made of cardboard, use a sharp object (such as a pencil or sc
 
 5. Next, you need to attach a ball caster to the front of the chassis to support the robot and act as a third wheel.
 
-![Picture of the ball caster positioned at the front of the chassis so that the chassis is level with the ground](images/1_9-ball-caster-position)
+![Picture of the ball caster positioned at the front of the chassis so that the chassis is level with the ground](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_9-ball-caster-position.jpg)
 
 Start by assembling the ball caster. It is useful to work out where the screw holes for the ball caster should be on the chassis before securing it in place. Place the ball caster face down inside the chassis near the front-centre, and use a pen to mark where the screws need to go. If your chassis is made out of cardboard, use a small sharp instrument to carefully make holes in the places you marked.
 
-![Picture of the screw fastening of the ball caster inside the cardboard box](images/1_9-ball-caster-screws)
+![Picture of the holes being made for the screw fastening of the ball caster inside the chassis](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_9-ball-caster-screws.jpg)
 
 Most ball casters come with spacers to increase the height. If the chassis dips towards the floor at the front, add spacers to the ball caster until the chassis is level. Otherwise, you can adjust the position of the ball caster forwards or towards the back of the chassis if the buggy is dipping where the wheels are.
 
@@ -57,7 +57,7 @@ You won't need to secure these components to the chassis just yet. Remember that
 
 Make sure there is nothing that could disturb the jumper leads that are connected to the Raspberry Pi, as they can easily come loose.
 
-![Picture of the motors, motor controller, Raspberry Pi, AA battery holder and USB battery pack inside the chassis](images/1_9-chassis-with-basic-components-attached)
+![Picture of the motors, motor controller, Raspberry Pi, AA battery holder and USB battery pack inside the chassis](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_9-chassis-with-basic-components-attached.jpg)
 
 ### Discussion
 

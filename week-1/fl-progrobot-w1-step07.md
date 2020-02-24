@@ -17,7 +17,7 @@ The easiest way to keep track of which motor is left and which is right is to la
 + Use a marker pen to label the left-hand motor ‘left’ and draw an arrow on it to indicate which way is forward, as shown below
 + Label the other motor ‘right’ and draw an arrow on it pointing in the same direction as your first motor
 
-![Picture of two motors: one with L and an arrow pointing up, the other with R and an arrow pointing up](images/1_7-labelled-motors)
+![Picture of one motor with an L written on it for the left motor and an arrow pointing up](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_7-labelled-motor.jpg)
 
 ### Programming the motors
 

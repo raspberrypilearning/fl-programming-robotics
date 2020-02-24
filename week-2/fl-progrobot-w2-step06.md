@@ -27,7 +27,7 @@ The uses of ultrasound are many: doctors use the sound waves to scan inside huma
 
 A UDS works by sending out a burst of ultrasound. This sound will travel through air, but reflect back (echo) off surrounding objects. The sensor can detect the echo when it returns.
 
-![Add some images taken from the animation]()
+![A UDS emitting ultrasound which is reflected of an object back towards the receiver.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/2_6-UDS-emitting-sound.png)
 
 Using a measure of the time between the outgoing burst and the returning echo, and knowing the speed of sound, you can calculate how far away an object is from the sensor.
 

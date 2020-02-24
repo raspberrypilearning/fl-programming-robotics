@@ -48,7 +48,7 @@ sleep(1)
 robin.stop()
 ~~~
 
-![Video of the buggy moving forward, right, backward and left](images/1_10-buggy-moving-all-four-directions)
+![Video-gif of the buggy moving forward, right, backward and left](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_10-buggy-moving-all-four-directions.gif)
 
 Does the robot buggy move forwards, backwards, left, and right correctly, in the order you specified in the code?
 
