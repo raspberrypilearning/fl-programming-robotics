@@ -5,17 +5,17 @@ Related links:
 Related files:
 )
 
-## Program a line following algorithm
+## Program a line-following algorithm
 
-Now that you have attached the line sensors, you are going to create a basic line following algorithm using the readings from those sensors.
+Now that you have attached the line sensors, you are going to create a basic line-following algorithm using the readings from those sensors.
 
 ### Setting up the motors and line sensors
 
-First, you need to set your program with the components you'll be interacting with.
+First, you need to set up your program with the components you'll be interacting with.
 
-**1.** Create a new Python 3 file.
+1. Create a new Python 3 file.
 
-**2.** Set up the program using the code below. You should recognise the elements from your previous programs.
+2. Set up the program using the code below. You should recognise the elements from your previous programs.
 
 ~~~ python
 from gpiozero import Robot, LineSensor
@@ -35,25 +35,25 @@ The `robin.forward()` command is used to get your robot started.
 
 ### Describing the algorithm
 
-The line sensors have 2 states; the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
+The line sensors have two states: the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
 
-To start with, consider what the robot should do when neither of the sensors detect the line. If the line is in the centre of the robot, both line sensors will return a 0 as they are over the white background. In this scenario, the robot should move forwards.
+To start with, consider what the robot should do when neither of the sensors detects the line. If the line is in the centre of the robot, both line sensors will return a 0, as they are over the white background. In this scenario, the robot should move forwards.
 
-Think about the rest of the line following algorithm:
+Think about the rest of the line-following algorithm:
 
-+ **What is the initial position of the robot in relation to the line?**
-+ **How should the robot react when the left sensor is over the line?**
-+ **What about when the right sensor detects the line?**
++ What is the initial position of the robot in relation to the line?
++ How should the robot react when the left sensor is detects the line?
++ What about when the right sensor detects the line?
 
 ![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
-### Rules of the algorithm
+### The rules of the algorithm
 
-The actions that the robot needs to take depending on the readings from the line sensors are as follows:
+The actions that the robot needs to take, depending on the readings it gets from the line sensors, are as follows:
 
 + If there’s a line under the left sensor, turn left
 + If there’s a line under the right sensor, turn right
-+ If there’s no line under the left sensor **and** the right sensor, drive forwards
++ If there’s no line under either the left sensor **or** the right sensor, drive forwards
 
 ### Using events
 
