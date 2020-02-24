@@ -62,7 +62,7 @@ Why do you think there is not a rule for both the sensors outputting a `1` simul
 
 To start applying these rules, the code needs to read the outputs of the line sensors repeatedly, in a loop.
 
-4. Add a `while` loop to the program after the place where you initialised the speed and timer variables.
+4. Add a `while` loop to the program, after where you initialised the speed and timer variables.
 
 ~~~ python
 while running:
@@ -123,7 +123,7 @@ Make sure you remove any `print` statements within the loop, otherwise these wil
 
 ### Test your program
 
-10. Now run your code and test your robot over a track.
+Now run your code and test your robot over a track.
 
 Try different values for `speed` (between 0 and 1) and check how your robot runs.
 
