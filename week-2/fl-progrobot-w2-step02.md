@@ -56,7 +56,7 @@ When testing the movement of your robot buggy, why do you need to perform the `.
 
 + This switches the motor controller board off so it doesn’t use any more power
     + No
-    + The motor controller will still draw power until the battery pack and/or the Raspberry Pi is switched off.
+    + The motor controller will still draw power until the battery pack and/or the Raspberry Pi is switched off
     + Week 1, step 7
 + Otherwise the motors will continue to spin in the direction they have been instructed to
     + Yes
