@@ -7,7 +7,7 @@ Related files:
 
 ## Welcome to week three
 
-Welcome to week three of *Robotics with Raspberry Pi: Build and program your first robot buggy*. Last week you added a UDS to your robot, and programmed it to avoid obstacles.
+Welcome to week three of *Robotics with Raspberry Pi: Build and Program Your First Robot Buggy*. Last week you added a UDS to your robot, and programmed it to avoid obstacles.
 
 This week you will:
 
