@@ -5,11 +5,11 @@ Related links:
 Related files:
 )
 
-## Peer-assessment: create a new function for your robot buggy
+## Peer-assessment: Create a new function for your robot buggy
 
-This course has been all about building and programming a robot buggy using a Raspberry Pi. Over the three weeks of the course, you have been following my instructions, attaching components to your chassis and writing code to communicate with these components.
+This course has been all about building and programming a robot buggy using a Raspberry Pi. Over the three weeks of the course you have been following my instructions, attaching components to your chassis, and writing code to communicate with these components.
 
-Now it's time for you to create a new piece of functionality for your robot on your own. You'll then share what you've done with a fellow learner, so that they can provide you with feedback on it.
+Now it's time for you to create a new piece of functionality for your robot on your own. You'll then share what you've done with a fellow learner, so that they can give you feedback on it.
 
 Some examples of modifications you could make to your robot are:
 
@@ -17,9 +17,9 @@ Some examples of modifications you could make to your robot are:
 + Adding a second UDS to the front of your chassis to improve object detection
 + Attaching LEDs to your robot and decorating the chassis
 + Replacing the ball caster with two more wheels
-+ Using a [PID controller](https://projects.raspberrypi.org/en/projects/robotPID) to gain more precise control over your robot's  movement
++ Using a [PID controller](https://projects.raspberrypi.org/en/projects/robotPID) to gain more precise control over your robot's movement
 
-For this assignment you should upload images of your upgraded robot to a service such as [Imgur](https://www.imgur.com/) or to a video hosting platform such as [YouTube](https://www.youtube.com) and include the link in your assignment.
+For this assignment you should upload images of your upgraded robot to a service such as [Imgur](https://www.imgur.com/) or to a video-hosting platform such as [YouTube](https://www.youtube.com) and include the link in your assignment.
 
 Alongside this, write a short summary of your new function, including:
 
