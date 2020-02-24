@@ -7,17 +7,17 @@ Related files:
 
 ## Line sensors and how to use them
 
-In this step you will investigate how a line sensor operates and how it detects a line. I will be using the TCRT5000 IR sensor as my example, but the learning can apply to other line sensors as well. This knowledge will help you design and program a line following algorithm later in the week.
+In this step you will investigate how a line sensor operates and how it detects a line. I will be using the TCRT5000 IR sensor as my example, but the learning can apply to other line sensors as well. This knowledge will help you design and program a line-following algorithm later in the week.
 
-### IR detection
+### Infrared (IR) detection
 
-Line sensors detect the presence of either a black or white line by emitting infrared (IR) light and detecting the light levels that return to the sensor. They do so using 2 components - an emitter and a light sensor (receiver).
+Line sensors detect the presence of a black or white line by emitting infrared (IR) light and detecting the light levels that return to the sensor. They do this using two components: an emitter and a light sensor (receiver).
 
-Below you can see an example TCRT5000 line sensor, your components may be laid out differently (all being on one side for example). However, all the components I will discuss will be present on the majority of line sensors.
+You can see an example TCRT5000 line sensor below. Your components may be laid out differently (all on one side, for example), but the components I will discuss will be present on most line sensors.
 
 ![An illustration of both sides of a line sensor. The top shows three pins and a potentiometer (blue box with white dial). The bottom side shows a black and red IR emitter and receiver as well as three pins with labels VCC, GND, & DO.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/36-3_4_TCRT_Sensor_Diagram.png)
 
-In the picture above you can see these 2 components that look like LEDs on the bottom (on the right hand side of the image). The blue one is the IR emitter and the black one is the receiver. These devices also have a component called a potentiometer, that adjusts the threshold for the device. You can do this by using a screwdriver to turn the white dial you can see in the image above.
+In the picture above, you can see two components that look like LEDs on the bottom, on the right-hand side of the image. The blue one is the IR emitter and the black one is the receiver. These devices also have a component called a potentiometer, that adjusts the threshold for the device. You can do this by using a screwdriver to turn the white dial you can see in the image above.
 
 The device will emit IR light and the sensor will capture the light level that is reflected from the surface underneath. Some line sensors have 2 types of output - analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting, but analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against a threshold level (which is adjusted by turning the potentiometer). If the sensor is not receiving enough light to surpass the threshold value, the digital output will be high (1). If enough light is received and the threshold value surpassed - the pin will be set to low (0).
 
