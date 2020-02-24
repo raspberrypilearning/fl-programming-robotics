@@ -17,7 +17,7 @@ Modern factories have been transformed by robots, and our society has been trans
 
 AI and machine learning are huge industries, and these technologies are constantly improving. The jobs of our muscles are already at risk, and protected for now only by the cost of robotics. What happens when robots come for the jobs of our minds as well? More complex tasks, particularly creative ones, are next in line for a robotic revolution. How will we handle robots that have the ability to learn, lead whole companies, and even design new robots?
 
-For more discussion on the impact of technology, including automation and robotics, you can join our other course, [Impact of technology: How to lead classroom discussions](https://www.futurelearn.com/admin/courses/impact-of-technology/).
+For more discussion on the impact of technology, including automation and robotics, you can join our other course, [Impact of Technology: How to Lead Classroom Discussions](https://www.futurelearn.com/admin/courses/impact-of-technology/).
 
 ### The impact of robotics
 
