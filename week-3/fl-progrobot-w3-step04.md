@@ -11,7 +11,7 @@ In this step you will investigate how a line sensor operates and how it detects 
 
 ### Infrared (IR) detection
 
-Line sensors detect the presence of a black or white line by emitting infrared (IR) light and detecting the light levels that return to the sensor. They do this using two components: an emitter and a light sensor (receiver).
+Line sensors detect the presence of a black line by emitting infrared (IR) light and detecting the light levels that return to the sensor. They do this using two components: an emitter and a light sensor (receiver).
 
 You can see an example TCRT5000 line sensor below. Your components may be laid out differently (all on one side, for example), but the components I will discuss will be present on most line sensors.
 
@@ -21,7 +21,7 @@ On the right-hand side of the image above you can see two components that look l
 
 The device will emit IR light, and the sensor will capture the light level that is reflected from the surface underneath it. Some line sensors have two types of output: analogue and digital. The analogue output is not always present, but will return a constant reading of the light levels the sensor is detecting; analogue input does not work on the Raspberry Pi. The digital output results from a comparison of the light levels against a threshold level that is adjusted by turning the potentiometer. If the sensor does not receive enough light to surpass the threshold value, the digital output will be high (1). If enough light is received and the threshold value is surpassed, the pin will be set to low (0).
 
-The set-up of these devices may seem a bit topsy-turvy at first, but it makes more sense when you consider that the sensor is designed to detect black lines. A black line will not reflect as much light, so the output will be **on** when a black surface is underneath.
+The set-up of these devices may seem a bit topsy-turvy at first, but it makes more sense when you consider that the sensor is designed to detect black lines. A black line will not reflect as much light, so the output will be set to **high (1)** when a black surface is underneath.
 
 ### How to use a line sensor
 
