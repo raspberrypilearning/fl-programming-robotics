@@ -21,11 +21,11 @@ What nearly all robots can do, though, is these three things:
 
 Robots are able to sense the physical world, so they can perform actions accordingly. They often use sensors to detect the movement of their own components, as well as detecting other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and may use a pressure sensor to ensure it holds components with the correct force, to avoid dropping or crushing them.
 
-![A robotic arm installing a computer chip or fitting together an electronic device such as a smartphone.](images/1_4-robotic-arm-installing-computer-chip.jpg)
+![A robotic arm used for fitting together an electronic device such as a smartphone.](ihttps://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-robotic-arm.jpg)
 
 Between 1966 and 1972, researchers at Stanford University developed Shakey, the first truly mobile robot with the ability to sense its environment. It was capable of navigating around obstacles by using a TV camera and an infrared rangefinder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a preprogrammed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remembering and adjusting these actions for future tasks. This was integral to Shakey's ability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
 
-![Shakey was the first truly mobile robot developed at Stanford University. It could map a picture of a room using it sensors and move around objects autonomously.](images/1_4-Shakey.jpg)
+![Shakey was the first truly mobile robot developed at Stanford University. It could map a picture of a room using it sensors and move around objects autonomously.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-Shakey.jpg)
 
 Over the years, new and improved sensors have increased robots' abilities to understand the environment. For example, self-driving cars use light detection and ranging (LIDAR) sensors, which use pulses of laser light to measure the distance to other objects in order to build a 3D model of the world. All this extra information means that robots require more processing power so that they can process data in a quick and timely manner.
 
@@ -41,7 +41,7 @@ The ability to process data and act on this information almost instantly, with m
 
 The level of autonomy needed depends on how the robot is designed to interact with the world. Some are closely controlled by human operators, such as medical robots that assist surgeons with performing operations. These robots help surgeons to make very precise incisions that would be difficult without this assistance, and can sometimes even allow surgeons to operate remotely.
 
-![A surgeon using a robotic assistant to perform surgery on a patient.](images/1_4-robotic-surgery.jpg)
+![A surgeon using a robotic assistant to perform surgery on a patient.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-robotic-surgery.jpg)
 
 Other robots are much more autonomous and rely on minimal human interaction. A robot vacuum cleaner will use sensors to move around the room while avoiding the furniture, and will map the areas it has visited to ensure it has covered the entire room. Some even have the ability to find a charging station and empty themselves automatically into a designated bin.
 
