@@ -62,7 +62,7 @@ Ideally, the LED of each sensor should be off as soon as the black line is direc
 
 ![Picture of the potentiometer on one of the line sensors being tuned with a screwdriver](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-potentiometer-tuning.jpg)
 
-#### Discussion
+### Discussion
 
 How did you get on with testing the line sensors? Did you have any issues? Share your thoughts in the comments.
 
