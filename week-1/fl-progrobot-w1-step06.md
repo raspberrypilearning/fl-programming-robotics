@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-## Connecting the Raspberry Pi and battery pack to the motor board
+## Connecting the Raspberry Pi and battery pack to the motorboard
 
 Your next step is to connect the motor board to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motor board and control the motors using the Raspberry Pi.
 
@@ -24,7 +24,7 @@ You may also need:
 
 ![Picture of the robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-to-female), Screwdriver, GPIO reference card](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack.jpg)
 
-### Connect the battery pack to the motor board
+### Connect the battery pack to the motorboard
 
 The motors require more power than the Raspberry Pi can provide. Therefore, you will use four AA batteries to power them.
 
