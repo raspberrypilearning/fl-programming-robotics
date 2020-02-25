@@ -35,7 +35,7 @@ The `robin.forward()` command is used to get your robot started.
 
 ### Describing the algorithm
 
-The line sensors have two states: the line **is** detected or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
+The line sensors have two states: the line **is** detected, or the line **is not** detected. The current state of each sensor will help to define the rules of your algorithm.
 
 To start with, consider what the robot should do when neither of the sensors detects the line. If the line is in the centre of the robot, both line sensors will return a 0, as they are over the white background. In this scenario, the robot should move forwards.
 
@@ -78,7 +78,7 @@ left_sensor.when_no_line = robin.forward
 right_sensor.when_no_line = robin.forward
 ~~~
 
-**Note:** Unlike calling these methods during a program, when using events you should make sure not to put brackets after the method name. You are providing a reference to the method, not calling it. The event only needs you to provide the method name; when the event happens it will find the method and call it. If you include brackets with the method, it will be called immediately.
+**Note:** Unlike calling these methods during a program, when using events, you should make sure not to put brackets after the method name. You are providing a reference to the method, not calling it. The event only needs you to provide the method name; when the event happens it will find the method and call it. If you include brackets with the method, it will be called immediately.
 
 ### Ensuring the program doesn't run forever
 
