@@ -8,7 +8,7 @@ You have been learning about the functionality of a UDS this week, and have seen
 
 You will be able to test your knowledge of how a UDS functions in this quiz.
 
-#### Question 1
+### Question 1
 
 What does a UDS use to measure the time it takes for an object to be detected? 
 
@@ -31,7 +31,7 @@ What does a UDS use to measure the time it takes for an object to be detected?
     + A UDS doesn't use ultraviolet light to measure the distance of objects
     + Week 2, step 6
 
-#### Question 2
+### Question 2
 
 Which one of these is an advantage of a UDS over other types of distance sensor?
 
@@ -54,7 +54,7 @@ Which one of these is an advantage of a UDS over other types of distance sensor?
     + N/A
     + Week 2, step 6
 
-#### Question 3
+### Question 3
 
 What happens if an object is closer than the **minimum** range of the UDS?
 
@@ -77,7 +77,7 @@ What happens if an object is closer than the **minimum** range of the UDS?
     + The GPIO Zero library will output a value each time the UDS is triggered
     + Week 2, step 8
 
-#### Question 4
+### Question 4
 
 What happens if an object is further away than the **maximum** range of the UDS?
 
