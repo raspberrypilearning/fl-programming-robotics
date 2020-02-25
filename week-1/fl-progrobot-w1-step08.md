@@ -17,7 +17,7 @@ A chassis for a robot buggy can be built using all sorts of materials: cardboard
 
 When choosing a material, you need to consider aspects such as weight versus durability, cost versus strength, and difficulty to work with versus quality of the chassis. Using certain types of metal might result in a strong and durable chassis, but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap, but is less sturdy than some other materials.
 
-I recommend making a prototype of the chassis first using a low-cost material, as tweaking the design will then be much easier. Common households items, such as a cardboard box or a plastic ice-cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton that held grapes. I chose this was because it is a good-sized box that can hold the robot components without needing to be modified. It was also easy to make holes in the carton to attach the components.
+I recommend making a prototype of the chassis first using a low-cost material, as tweaking the design will then be much easier. Common household items, such as a cardboard box or a plastic ice-cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton that held grapes. I chose this was because it is a good-sized box that can hold the robot components without needing to be modified. It was also easy to make holes in the carton to attach the components.
 
 ### Planning the layout
 
