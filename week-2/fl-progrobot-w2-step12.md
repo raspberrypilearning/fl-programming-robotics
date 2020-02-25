@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-## End of week two
+## The end of week two
 
 Well done on reaching the end of week two of the course. This week, you've attached a UDS sensor to your robot and coded the robot to avoid obstacles. You've also thought about how your robot should react to obstacles, and considered its limitations.
 
