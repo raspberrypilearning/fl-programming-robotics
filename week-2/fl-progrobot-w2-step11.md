@@ -24,11 +24,11 @@ What does a UDS use to measure the time it takes for an object to be detected?
     + Week 2, step 6
 + Light
     + No
-    + A UDS doesn't use light to measure the disance of objects
+    + A UDS doesn't use light to measure the distance of objects
     + Week 2, step 6
 + Ultraviolet light
     + No
-    + A UDS doesn't use ultraviolet light to measure the disance of objects
+    + A UDS doesn't use ultraviolet light to measure the distance of objects
     + Week 2, step 6
 
 #### Question 2
