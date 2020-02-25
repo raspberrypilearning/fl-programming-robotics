@@ -51,7 +51,7 @@ Start by assembling the ball caster. It is useful to work out where the screw ho
 
 Most ball casters come with spacers to increase the height. If the chassis dips towards the floor at the front, add spacers to the ball caster until the chassis is level. Otherwise, you can adjust the position of the ball caster forwards or towards the back of the chassis if the buggy is dipping where the wheels are.
 
-6. If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motor board and Raspberry Pi inside the chassis.
+6. If you haven't done so already, place the motor controller, Raspberry Pi, and battery packs for the motorboard and Raspberry Pi inside the chassis.
 
 You won't need to secure these components to the chassis just yet. Remember that you will need to access the Raspberry Pi and parts of the chassis later in the course, to add the ultrasonic distance sensor and line-following sensor.
 
