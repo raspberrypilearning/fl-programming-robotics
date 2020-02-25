@@ -29,7 +29,7 @@ The Stanford Cart started life as a remote-controlled mobile robot. A four-wheel
 
 [Here is a video of the robot](https://youtu.be/8Mxk2L3lu9Q) following a white line on the ground.
 
-[Here is another](https://exhibits.stanford.edu/ai/catalog/jk541kq7003); the outtakes from the original video start from six seconds in.
+[Here is another](https://exhibits.stanford.edu/ai/catalog/jk541kq7003); the out-takes from the original video start from six seconds in.
 
 The robot used a camera pointing towards the ground, which tracked a white line drawn by the researchers. The robot would adjust its direction to keep the line in the middle of the picture captured by the camera. It moved at a walking pace and was reasonably successful at this task.
 
