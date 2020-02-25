@@ -17,7 +17,7 @@ A standard interface for connecting a single-board computer or microprocessor to
 
 Raspberry Pi computers are wonderfully diverse in what they can do. Among the many applications they can be used for, robotics is one of the most exciting and powerful.
 
-Each model of the Raspberry Pi has a set of general-purpose input/output (GPIO) pins along the top edge of the board. These can be used for connecting and communicating with all manner of electronic components, acting as a physical interface between the Raspberry Pi and the outside world. Using the pins, you can program the Raspberry Pi to switch components on and off (output), or receive data from sensors and switches (input).
+Each model of the Raspberry Pi has a set of General-Purpose Input/Output (GPIO) pins along the top edge of the board. These can be used for connecting and communicating with all manner of electronic components, acting as a physical interface between the Raspberry Pi and the outside world. Using the pins, you can program the Raspberry Pi to switch components on and off (output), or receive data from sensors and switches (input).
 
 ![The GPIO pins on a Raspberry Pi 4 with a 40 pin header](images/1_4-gpio-pins-raspberry-pi-4-40-header.jpg)
 
