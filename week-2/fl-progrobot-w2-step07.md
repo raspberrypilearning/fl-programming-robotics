@@ -14,7 +14,7 @@ Now that you have read about how a UDS works, you are going to connect one to yo
 For this step, you will need the following items:
 
 + Ultrasonic distance sensor
-+ Four female-to-femlale jumper leads
++ Four female-to-female jumper leads
 
 If your UDS is 5V, you will also need:
 
