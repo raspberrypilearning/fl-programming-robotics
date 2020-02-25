@@ -80,4 +80,4 @@ You can also access the command line (but not the graphical interface) of a Rasp
 
 ### Discussion
 
-Share how you got on and any issues you are having in the comments below. Post a link to a video of your robot once you have got it moving!
+Share how you got on and any issues you are having in the comments below. Post a link to a video of your robot once you have got it moving! You may need to use a video-hosting platform such as [YouTube](http://www.youtube.com).
