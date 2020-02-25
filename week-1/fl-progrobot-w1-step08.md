@@ -7,7 +7,7 @@ Related files:
 
 ## Designing the chassis
 
-Now that you have the motors set up, it's time to design a chassis: the physical frame of your vehicle. Your buggy will need a chassis onto which you can secure the components, such as the wheels, motors, and Raspberry Pi.
+Now that you have the motors set up, it's time to design a chassis &mdash; the physical frame of your vehicle. Your buggy will need a chassis onto which you can secure the components, such as the wheels, motors, and Raspberry Pi.
 
 ![The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/17-1_8-automobile-chassis.png)
 
