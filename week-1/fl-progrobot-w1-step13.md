@@ -14,7 +14,7 @@ Congratulations on reaching the end of week one! If you still haven't managed to
 + You learnt about the Raspberry Pi, and how the GPIO pins make it a good platform to use for building a robot.
 + Motors require more power than a Raspberry Pi can provide, as well as analogue signals, so you connected your motors via a motor board.
 + You designed a chassis and connected your motors to it, making sure that you knew which way around they were connected.
-+ Finally you used the `Robot` class to control your motors, and make your robot drive around.
++ Finally, you used the `Robot` class to control your motors, and make your robot drive around.
 
 Next week you'll move on to taking inputs from sensors, and use those to affect how your robot moves.
 
