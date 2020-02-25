@@ -15,7 +15,7 @@ You are coming to the end of the first week of your journey into the world of ro
 
 #### Jumper cables and loose components
 
-The jumper cables you have been using for the buggy so far have a tendency to come loose from the components or GPIO pins if you knock them. I cannot tell you how many times I have been pulling my hair out trying to find an error in my code, only to find that it was a loose jumper cable causing the problem.
+The jumper cables you have been using for the buggy so far tend to come loose from the components or GPIO pins if you knock them. I cannot tell you how many times I have been pulling my hair out trying to find an error in my code, only to find that it was a loose jumper cable causing the problem.
 
 #### GPIO pin numbers are weird
 
