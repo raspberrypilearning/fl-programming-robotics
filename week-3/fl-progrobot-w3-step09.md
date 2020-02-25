@@ -9,7 +9,7 @@ Related files:
 
 The previous line-following program is OK, but the robot can move from side to side quite a lot as it follows the line. To make the movement more elegant, you can slow down the speed of the robot, making the turns smaller and more gradual.
 
-However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed. To have more control over the robot, you can adapt your program so that it takes into account the states of the line sensors and uses these to choose the actions that are required of the motors.
+However, the `when_line` and `when_no_line` events don't allow you to modify the robot's default speed. To have more control over the robot, you can adapt your program so that it considers the states of the line sensors and uses these to choose the actions that are required of the motors.
 
 ### Setting up the program
 
