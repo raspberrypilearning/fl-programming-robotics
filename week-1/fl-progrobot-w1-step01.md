@@ -18,7 +18,7 @@ Over the next three weeks you will learn about:
 + Using the GPIO pins on the Raspberry Pi for both input and output
 + How to connect motors via a motorboard and control them using Python
 + Attaching components to a chassis
-+ Using a ultrasonic distance sensor (UDS) to detect objects
++ Using an ultrasonic distance sensor (UDS) to detect objects
 + Using inputs to control the outputs of your robot
 + How line sensors work
 + How changing an algorithm can improve the performance of your robot
