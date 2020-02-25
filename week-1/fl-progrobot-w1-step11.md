@@ -27,4 +27,4 @@ You could also include a loop in your program so that the buggy repeats a patter
 
 ### Discussion
 
-Once you’ve completed a challenge, add a comment below and share a link to your code (e.g. using [Pastebin](https://pastebin.com/)), along with any comments or questions.
+Once you’ve completed a challenge, add a comment below and share a link to your code (for example using [Pastebin](https://pastebin.com/)), along with any comments or questions.
