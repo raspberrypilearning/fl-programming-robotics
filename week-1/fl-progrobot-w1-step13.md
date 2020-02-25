@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-## End of week one
+## The end of week one
 
 Congratulations on reaching the end of week one! If you still haven't managed to get your robot moving, ask for help in the comments below. Well done if you have managed to complete all of the tasks this week and programmed your robot to drive in a particular pattern.
 
