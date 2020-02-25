@@ -52,7 +52,7 @@ You can then secure the sensor in place using tape; make sure the tape doesn't c
 
 ### Tuning the line sensors
 
-You are need to check that the line sensors can detect the difference between a white surface and a black line reliably, and tune them up using the potentiometer.
+You need to check that the line sensors can detect the difference between a white surface and a black line reliably, and tune them up using the potentiometer.
 
 With the line sensors attached, boot up your Raspberry Pi. Move the robot slowly from side to side so that each of the line sensors passes over the black line.
 
