@@ -8,7 +8,7 @@ Last week, you learnt about some of the different components that you can use to
 
 In this quiz, you will test your knowledge of how these components connect and work together to create a mobile robot.
 
-#### Question 1
+### Question 1
 
 Which of these things can nearly all robots do?
 
@@ -29,7 +29,7 @@ Which of these things can nearly all robots do?
     + N/A
     + Week 1, step 3
 
-#### Question 2
+### Question 2
 
 What is the maximum input voltage that a Raspberry Pi can handle through the GPIO pins?
 
@@ -50,7 +50,7 @@ What is the maximum input voltage that a Raspberry Pi can handle through the GPI
     + An input voltage of 5.5V is too high for a Raspberry Pi to handle through the GPIO pins and will damage it
     + Week 1, step 4
 
-#### Question 3
+### Question 3
 
 When testing the movement of your robot buggy, why do you need to perform the `.stop()` command before closing the Python program? 
 
@@ -71,7 +71,7 @@ When testing the movement of your robot buggy, why do you need to perform the `.
     + The `.stop()` command in GPIO Zero is for controlling the motors, not the motor controller or the Raspberry Pi
     + Week 1, step 7
 
-#### Question 4
+### Question 4
 
 Which series of commands could be used to instruct a robot buggy to move in an L shape?
 
