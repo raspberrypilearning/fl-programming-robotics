@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-## Challenge: Improving the obstacle avoidance program
+## Challenge: Improving the obstacle-avoidance program
 
 There are a number of modifications that will improve your robot's ability to avoid objects autonomously. Most of these require changes to the program from the previous step.
 
@@ -37,7 +37,7 @@ Another solution is to introduce random aspects into the robot's movements.
 
 Rather than turning left for a set amount of time, you can instruct the program to generate a random number of seconds within a certain range of values.
 
-To add this functionality, you will need to import the `random` library into your Python program. Use the function `random.uniform(a, b)` to return a random floating point number, where `a` is the lowest value and `b` is the highest value.
+To add this functionality, you will need to import the `random` library into your Python program. Use the function `random.uniform(a, b)` to return a random floating-point number, where `a` is the lowest value and `b` is the highest value.
 
 #### Choosing a random direction
 
