@@ -41,7 +41,7 @@ Fast-forward to current technology, and algorithms are running the show. A lot o
 
 #### Sensors and tasks
 
-Driverless cars combine a array of sensors to collect a remarkable amount of information about their surroundings.
+Driverless cars combine an array of sensors to collect a remarkable amount of information about their surroundings.
 
 **Radar sensors** around the edge of the car monitor the positions of nearby vehicles. **Video cameras** monitor less regular stimuli, such as road signs and pedestrians. **Light detection and ranging (LIDAR)** sensors, which use lasers in the same way as UDS uses ultrasound, are used to check for the edge of the road and road markings, which are typically white and reflect light well. **Ultrasonic sensors** are used near the wheels to detect kerbs and other vehicles while parking. All of the data collected by these sensors is processed by an on-board computer, which will adjust the steering, acceleration, and braking accordingly.
 
@@ -53,7 +53,7 @@ Rescue robots can be sent into disaster zones to search for life. These robots a
 
 #### Sensors and tasks
 
-Due to the wide range of robots in this category, this breakdown will be more general. These robots have a variety of sensors that are used to navigate the terrain, detecting obstacles and dangerous terrain so that they can be avoided. The movement apparatus in these robots is often one of the robot's most complex parts, making them able to roll or swim around many obstacles, or even move them if necessary. Aquatic rescue robots use propulsion systems to move through the water; land rescue robots are often equipped with treads that roll over difficult terrain much more easily than wheels do. Finally, an array of sensors are included to allow the robots to make decisions about where to investigate and how to get there; you will have seen a few of these uses in the earlier step on sensors.
+Due to the wide range of robots in this category, this breakdown will be more general. These robots have a variety of sensors that are used to navigate the terrain, detecting obstacles and dangerous terrain so that they can be avoided. The movement apparatus in these robots is often one of the robot's most complex parts, making them able to roll or swim around many obstacles, or even move them if necessary. Aquatic rescue robots use propulsion systems to move through the water; land rescue robots are often equipped with treads that roll over difficult terrain much more easily than wheels do. Finally, an array of sensors is included to allow the robots to make decisions about where to investigate and how to get there; you will have seen a few of these uses in the earlier step on sensors.
 
 ### Other autonomous robots
 
