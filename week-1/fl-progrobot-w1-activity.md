@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-# Week 1: Building a mobile robot
+# Week one: Building a mobile robot
 
 ## Introduction to robotics
 
