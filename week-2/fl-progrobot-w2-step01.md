@@ -7,7 +7,7 @@ Related files:
 
 ## Welcome to week two
 
-Welcome to week two of *Robotics with Raspberry Pi: Build and Program Your First Robot Buggy*. Last week, you started building your robot, with wheels and a chassis. You also programmed it in Python, to make it move.
+Welcome to week two of *Robotics With Raspberry Pi: Build and Program Your First Robot Buggy*. Last week, you started building your robot, with wheels and a chassis. You also programmed it in Python, to make it move.
 
 This week, you will:
 
