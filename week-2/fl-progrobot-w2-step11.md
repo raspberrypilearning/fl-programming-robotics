@@ -14,21 +14,21 @@ What does a UDS use to measure the time it takes for an object to be detected?
 
 #### Choices 
 
-+ Sound
++ Radar
     + No 
-    + It uses a specific type of sound that humans can't typically hear
+    + Radar uses radio waves to detect objects but a UDS does not
     + Week 2, step 6
 + Ultrasound
     + Yes 
     + N/A 
     + Week 2, step 6
-+ Light
++ Infrared light
     + No
-    + A UDS doesn't use light to measure the distance of objects
+    + An infrared distance sensor uses infrared light to measure the distance of an object but a UDS does not
     + Week 2, step 6
 + Ultraviolet light
     + No
-    + A UDS doesn't use ultraviolet light to measure the distance of objects
+    + An  UDS doesn't use ultraviolet light to measure the distance of objects
     + Week 2, step 6
 
 ### Question 2

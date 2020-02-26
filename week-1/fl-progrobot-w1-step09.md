@@ -31,7 +31,7 @@ Place your motors inside the box, in roughly the position you would like them to
 
 2. Make a hole that is big enough for the motors’ axles to fit through.
 
-If your chassis is made of cardboard, use a sharp object (such as a pencil or screwdriver) to carefully poke holes through the sides of the box.
+If your chassis is made of cardboard, use a sharp object (such as a pencil or screwdriver) to carefully poke holes through the sides of the box. For more durable materials, use a threading tool or drill.
 
 3. You will need to secure the motors firmly to the chassis. If you don't, the motors may move inside the chassis once the wheels are attached and the motors are powered, and this could disturb other components. Tape or cable ties might be best for your prototype, as they are easy to attach and remove if necessary.
 
@@ -45,7 +45,7 @@ If your chassis is made of cardboard, use a sharp object (such as a pencil or sc
 
 ![Picture of the ball caster positioned at the front of the chassis so that the chassis is level with the ground](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_9-ball-caster-position.jpg)
 
-Start by assembling the ball caster. It is useful to work out where the screw holes for the ball caster should be on the chassis before securing it in place. Place the ball caster face down inside the chassis near the front-centre, and use a pen to mark where the screws need to go. If your chassis is made out of cardboard, use a small sharp instrument to carefully make holes in the places you marked.
+Start by assembling the ball caster. It is useful to work out where the screw holes for the ball caster should be on the chassis before securing it in place. Place the ball caster face down inside the chassis near the front-centre, and use a pen to mark where the screws need to go. If your chassis is made out of cardboard, use a small sharp instrument to carefully make holes in the places you marked, or a threading tool or drill for more durable materials.
 
 ![Picture of the holes being made for the screw fastening of the ball caster inside the chassis](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_9-ball-caster-screws.jpg)
 

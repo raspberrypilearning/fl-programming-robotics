@@ -43,7 +43,7 @@ Fast-forward to current technology, and algorithms are running the show. A lot o
 
 Driverless cars combine an array of sensors to collect a remarkable amount of information about their surroundings.
 
-**Radar sensors** around the edge of the car monitor the positions of nearby vehicles. **Video cameras** monitor less regular stimuli, such as road signs and pedestrians. **Light detection and ranging (LIDAR)** sensors, which use lasers in the same way as UDS uses ultrasound, are used to check for the edge of the road and road markings, which are typically white and reflect light well. **Ultrasonic sensors** are used near the wheels to detect kerbs and other vehicles while parking. All of the data collected by these sensors is processed by an on-board computer, which will adjust the steering, acceleration, and braking accordingly.
+**Radar sensors** around the edge of the car monitor the positions of nearby vehicles. **Video cameras** monitor less regular stimuli, such as road signs and pedestrians. **Light detection and ranging (LIDAR)** sensors, which use lasers in the same way as UDS uses ultrasound, are used to check for the edge of the road and road markings, which are typically white and reflect light well. **Ultrasonic distance sensors** are used near the wheels to detect kerbs and other vehicles while parking. All of the data collected by these sensors is processed by an on-board computer, which will adjust the steering, acceleration, and braking accordingly.
 
 ### Rescue robots
 
@@ -57,10 +57,6 @@ Due to the wide range of robots in this category, this breakdown will be more ge
 
 ### Other autonomous robots
 
-Another use for autonomous robots is on production lines in factories.
-
-### Discussion
-
-What sensors would they use? Which tasks do they perform?
+Another use for autonomous robots is on production lines in factories. What sensors would they use? Which tasks do they perform?
 
 From your own experience, or by doing some research, answer the question above and post your thoughts in the comments section.

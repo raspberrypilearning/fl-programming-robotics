@@ -55,7 +55,7 @@ You will use the `running` variable later to specify when the program (and the r
 
 Check your program so far against my [version of the program after step 4](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/code/uds-motors-halfway.py).
 
-The last changes you are going to make are going to all be with the `while` loop.
+The last changes you are going to make are going to all be within the `while` loop.
 
 #### How should the robot behave?
 
