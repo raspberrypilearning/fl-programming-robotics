@@ -11,22 +11,22 @@ Related files:
 
 Welcome to Robotics With Raspberry Pi: Build and Program Your First Robot Buggy!
 
-![]()
+![Illustration of the buggy from the front and top-down view of all the components inside the buggy](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/2-Intro_to_robotics.png)
 
 ## Connecting and programming motors
 
 Learn how to connect motors and program them using a Raspberry Pi.
 
-![]()
+![Illustration of a soldering iron and a soldering iron stand](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/3-Connecting_motors.png)
 
 ## Building the buggy
 
 Build the chassis of your buggy and attach components to it.
 
-![]()
+![Illustraion all the individual components that will be used to build the buggy over the 3 week course](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/4-Building_buggy.png)
 
 ## End of week 1
 
 Congratulations on completing week 1 of the course!
 
-![]()
+![Illustration of the front-side of the buggy and some of it's components in the air above the buggy](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/5-End_week1.png)

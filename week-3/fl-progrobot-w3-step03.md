@@ -21,7 +21,7 @@ As you have heard already, robots are often used to explore harsh environments t
 
 To try to tackle this challenge, a team of university roboticists at Stanford created a cart.
 
-![](images/3_3_Stanford_Cart.png)
+![Still image from the video of the Stanford Cart following a line around a track with people following it.](images/3_3_Stanford_Cart.png)
 
 #### The Stanford Cart
 
