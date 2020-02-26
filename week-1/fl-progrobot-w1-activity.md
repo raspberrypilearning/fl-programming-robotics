@@ -5,9 +5,28 @@ Related links:
 Related files:
 )
 
-# Activity title
+# Week 1 - Building a mobile robot
 
-Activity description (Maximum characters allowed: 230) :
+## Introduction to robotics
 
+Welcome to Robotics With Raspberry Pi: Build and Program Your First Robot Buggy!
 
-![Description of activity image](Link to image)
+![]()
+
+## Connecting and programming motors
+
+Learn how to connect motors and program them using a Raspberry Pi.
+
+![]()
+
+## Building the buggy
+
+Build the chassis of your buggy and attach components to it.
+
+![]()
+
+## End of week 1
+
+Congratulations on completing week 1 of the course!
+
+![]()
