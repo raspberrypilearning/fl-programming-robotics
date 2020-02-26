@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-# Week 2: Automating actions using distance sensors
+# Week two: Automating actions using distance sensors
 
 ## Welcome to week two
 
@@ -23,16 +23,16 @@ Learn about how robots use sensors to understand the world around them.
 
 Learn about how ultrasonic distance sensors work and attach one to your buggy.
 
-![Illustraion of an Ultrasonic Distance Sensor (UDS)](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/8-Distance_sensor.png)
+![Illustration of an Ultrasonic Distance Sensor (UDS)](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/8-Distance_sensor.png)
 
 ## Navigating obstacles autonomously
 
 Program your robot buggy so that it can avoid obstacles.
 
-![Illustraion of a rescue robot with tracks instrad of wheels navigating rocky terrain](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/23-2_5-Rescue_Robot.png)
+![Illustration of a rescue robot with tracks instrad of wheels navigating rocky terrain](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/23-2_5-Rescue_Robot.png)
 
-## End of week 2
+## The end of week two
 
-Congratulations on completing week 2 of the course!
+Congratulations on completing week two of the course!
 
 ![Illustration of the rescue robot, UDS, voltage divider, and sound wave frequency chart](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/10-End_week2.png)
