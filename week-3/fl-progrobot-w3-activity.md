@@ -5,7 +5,7 @@ Related links:
 Related files:
 )
 
-# Week three: Allowing robots to follow lines
+# Week three: Programming robots to follow lines
 
 ## Welcome to week three
 
