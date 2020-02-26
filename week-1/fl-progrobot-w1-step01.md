@@ -7,7 +7,7 @@ Related files:
 
 ## Welcome to the course
 
-Welcome to *Robotics with Raspberry Pi: Build and Program Your First Robot Buggy*.
+Welcome to *Robotics With Raspberry Pi: Build and Program Your First Robot Buggy*.
 
 Over this course you'll develop a robot buggy and program it. You'll start by making it move about, before programming it to react to sensor readings. By the end of the course you'll be able to make your buggy avoid obstacles and follow a line on the floor.
 
