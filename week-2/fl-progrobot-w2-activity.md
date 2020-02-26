@@ -5,11 +5,11 @@ Related links:
 Related files:
 )
 
-# Week 2 - Automating actions using distance sensors
+# Week 2: Automating actions using distance sensors
 
-## Welcome to week 2
+## Welcome to week two
 
-Welcome to week 2 of the course!
+Welcome to week two of the course!
 
 ![Illustration of a UDS connected to a GPIO board, a scientific robot buggy holding a clipboard and a voltage divider](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/6-Welcome_week2.png)
 
