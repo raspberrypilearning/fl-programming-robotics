@@ -21,15 +21,13 @@ As you have heard already, robots are often used to explore harsh environments t
 
 To try to tackle this challenge, a team of university roboticists at Stanford created a cart.
 
-![Still image from the video of the Stanford Cart following a line around a track with people following it.](images/3_3_Stanford_Cart.png)
-
 #### The Stanford Cart
 
 The Stanford Cart started life as a remote-controlled mobile robot. A four-wheeled cart, its chassis consisted of a rectangular box fitted with cameras and an on-board TV system. Researchers at the university worked on the cart from 1960 to 1980; for a period in 1970 they outfitted the cart with line sensors to test autonomous navigation algorithms.
 
-[Here is a video of the robot](https://youtu.be/8Mxk2L3lu9Q) following a white line on the ground.
+[embed](https://youtu.be/8Mxk2L3lu9Q)
 
-[Here is another](https://exhibits.stanford.edu/ai/catalog/jk541kq7003); the out-takes from the original video start from six seconds in.
+[Here is another video of the cart in action](https://exhibits.stanford.edu/ai/catalog/jk541kq7003); the out-takes from the original video start from six seconds in.
 
 The robot used a camera pointing towards the ground, which tracked a white line drawn by the researchers. The robot would adjust its direction to keep the line in the middle of the picture captured by the camera. It moved at a walking pace and was reasonably successful at this task.
 
