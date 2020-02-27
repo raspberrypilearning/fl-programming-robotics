@@ -23,9 +23,9 @@ The easiest way to keep track of which motor is left and which is right is to la
 
 #### Setting up the motors in Python
 
-1. On your Raspberry Pi, open Mu or the IDE of your choice and create a new Python file.
+**1.** On your Raspberry Pi, open Mu or the IDE of your choice and create a new Python file.
 
-2. Add the following code:
+**2.** Add the following code:
 
 ~~~ python
 from gpiozero import Robot
@@ -42,13 +42,13 @@ When initialising the `Robot` you need to give it two arguments: `left` and `rig
 
 Similarly, the `right` argument needs to specify the GPIO pins that are connected to the pins labelled **IN3** and **IN4**; for me that is GPIO pins 9 and 10.
 
-3. Save your file.
+**3.** Save your file.
 
 #### Forwards and backwards
 
-You now need to test which direction is forwards on each motor.
+   You now need to test which direction is forwards on each motor.
 
-4. Add this code, which will drive both motors forward, wait one second, and then stop the motors:
+**4.** Add this code, which will drive both motors forward, wait one second, and then stop the motors:
 
 ~~~ python
 robin.forward()
@@ -73,7 +73,7 @@ robin = Robot(left=(8,7), right=(9,10))
 
 Stop the program and run it again to check how any changes you made have affected the motors.
 
-5. Test that the motors both turn backwards by adding `robin.backward()` and another `sleep` and running your program.
+**5.** Test that the motors both turn backwards by adding `robin.backward()` and another `sleep` and running your program.
 
 ~~~ python
 robin.forward()
@@ -91,7 +91,7 @@ Repeat steps 4 and 5 until both motors turn forwards and backwards correctly.
 
 Finally, you are going to test whether your program correctly identifies the left and right motors, by using the `.right()` command.
 
-6. Add the following lines of code to your program. Run the program and note which motor changes direction on the command `robin.right(0.6)`.
+**6.** Add the following lines of code to your program. Run the program and note which motor changes direction on the command `robin.right(0.6)`.
 
 ~~~ python
 robin.forward(0.6)

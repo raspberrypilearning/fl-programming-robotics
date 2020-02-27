@@ -6,16 +6,15 @@ Related files:
 )
 
 ## Program a line-following algorithm
-
 Now that you have attached the line sensors, you are going to create a basic line-following algorithm using the readings from those sensors.
 
 ### Setting up the motors and line sensors
 
 First, you need to set up your program with the components you'll be interacting with.
 
-1. Create a new Python 3 file.
+**1.** Create a new Python 3 file.
 
-2. Set up the program using the code below. You should recognise the elements from your previous programs.
+**2.** Set up the program using the code below. You should recognise the elements from your previous programs.
 
 ~~~ python
 from gpiozero import Robot, LineSensor
@@ -69,7 +68,7 @@ The `when_line` event is triggered whenever the sensor changes state from 0 (whi
 
 ### Programming the algorithm
 
-3. Within the Python file you set up, instruct your robot to move in a certain direction based on the rules of the algorithm.
+**3.** Within the Python file you set up, instruct your robot to move in a certain direction based on the rules of the algorithm.
 
 ~~~ python
 left_sensor.when_line = robin.left
@@ -84,7 +83,7 @@ right_sensor.when_no_line = robin.forward
 
 Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop your robot from moving.
 
-4. To make sure that the robot doesn’t keep running forever, and to close all the components' connections cleanly, add the following to the end of your program:
+**4.** To make sure that the robot doesn’t keep running forever, and to close all the components' connections cleanly, add the following to the end of your program:
 
 ~~~ python
 sleep(10)
@@ -101,7 +100,7 @@ You can change the number of seconds to a different value if you want to test th
 
 ### Testing the algorithm
 
-5. Try running the program with your robot on your track.
+**5.** Try running the program with your robot on your track.
 
 Here is an example of a robot running on a basic track with this algorithm:
 

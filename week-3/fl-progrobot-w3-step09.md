@@ -13,11 +13,11 @@ However, the `when_line` and `when_no_line` events don't allow you to modify the
 
 ### Setting up the program
 
-1. Copy the code from the last step into a new Python file.
+**1.** Copy the code from the last step into a new Python file.
 
-2. Remove all of the code **after** you have initialised the variables `left_sensor` and `right_sensor`.
+**2.** Remove all of the code **after** you have initialised the variables `left_sensor` and `right_sensor`.
 
-3. After those variables have been defined, initialise the variables for controlling the speed of the motors and the timer:
+**3.** After those variables have been defined, initialise the variables for controlling the speed of the motors and the timer:
 
 ~~~ python
 speed = 0.75
@@ -62,7 +62,7 @@ Why do you think there is not a rule for both the sensors outputting a `1` simul
 
 To start applying these rules, the code needs to read the outputs of the line sensors repeatedly, in a loop.
 
-4. Add a `while` loop to the program, after where you initialised the speed and timer variables.
+**4.** Add a `while` loop to the program, after where you initialised the speed and timer variables.
 
 ~~~ python
 while running:
@@ -72,9 +72,9 @@ while running:
 	print (left_detect, right_detect)
 ~~~
 
-5. If you run the program now, you should see the binary output from the sensors change when you move the sensors over and off the line, in accordance with the rules stated above. 
+**5.** If you run the program now, you should see the binary output from the sensors change when you move the sensors over and off the line, in accordance with the rules stated above.
 
-6. Inside the `while` loop, use conditional statements to specify the direction of each motor, depending on the line sensor readings:
+**6.** Inside the `while` loop, use conditional statements to specify the direction of each motor, depending on the line sensor readings:
 
 ~~~ python
 while running:
@@ -97,9 +97,9 @@ while running:
 	print (left_mot, right_mot)    
 ~~~
 
-7. Run your code and test that the program outputs the correct motor values when you move the robot over and off the line.
+**7.** Run your code and test that the program outputs the correct motor values when you move the robot over and off the line.
 
-8. Inside the loop, remove the `print` statement and replace it with:
+**8.** Inside the loop, remove the `print` statement and replace it with:
 
 ~~~ python
     robin.left_motor.value = left_mot * speed
@@ -110,7 +110,7 @@ The value for each motor will be modified by the `speed` multiplier, to slow the
 
 Make sure you remove any `print` statements within the loop, otherwise these will affect the response time of the program and the robot may overshoot the line.
 
-9. To stop the `while` loop from running forever, and to close all the component's connections cleanly, add this code inside the loop, at the end:
+**9.** To stop the `while` loop from running forever, and to close all the component's connections cleanly, add this code inside the loop, at the end:
 
 ~~~ python
     if time() >= end_time:

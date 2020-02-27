@@ -21,15 +21,15 @@ To help you begin this process, consider the different parts of the problem:
 
 #### Setting up the program
 
-1. Copy the code from the last step into a new Python file.
+**1.** Copy the code from the last step into a new Python file.
 
-2. Change the first line of code so that `Robot` is also imported from the `gpiozero` library to control the motors.
+**2.** Change the first line of code so that `Robot` is also imported from the `gpiozero` library to control the motors.
 
 ~~~ python
 from gpiozero import Robot, InputDevice, OutputDevice
 ~~~
 
-3. After the `trig` and `echo` variables have been initialised, define the `Robot` using the GPIO pins for your `left` and `right` motors.
+**3.** After the `trig` and `echo` variables have been initialised, define the `Robot` using the GPIO pins for your `left` and `right` motors.
 
 ~~~ python
 robin = Robot(left=(8,7), right=(9,10))
@@ -41,7 +41,7 @@ You can use one of your working programs from week one to check that the GPIO pi
 
 Next, you are going to create a timer so that your robot doesn't run forever, which is especially useful during the testing phases.
 
-4. Add in these three variables just after you have initialised `Robot`:
+**4.** Add in these three variables just after you have initialised `Robot`:
 
 ~~~ python
 duration = 10
@@ -55,7 +55,7 @@ You will use the `running` variable later to specify when the program (and the r
 
 Check your program so far against my [version of the program after step 4](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/code/uds-motors-halfway.py).
 
-The last changes you are going to make are going to all be with the `while` loop.
+The last changes you are going to make are going to all be within the `while` loop.
 
 #### How should the robot behave?
 
@@ -67,7 +67,7 @@ The program currently calculates the distance of an object from the UDS in metre
 
 For now, the threshold value I'm going to choose is 20 cm (0.2 metres); you can experiment with this value later.
 
-5. Inside the `while` loop and before the `sleep(0.06)` command, use a selection statement to check if an object is less than 0.2 metres away. Instruct the robot to turn left for half a second if the distance is below the threshold value, and to move forwards otherwise.
+**5.** Inside the `while` loop and before the `sleep(0.06)` command, use a selection statement to check if an object is less than 0.2 metres away. Instruct the robot to turn left for half a second if the distance is below the threshold value, and to move forwards otherwise.
 
 ~~~ python
 if distance < 0.2:
@@ -79,7 +79,7 @@ else:
 
 Using a sleep command here inside the `if` statement means that the robot will continue to turn left for a certain amount of time before checking for more obstructions. This should allow your robot enough time to turn clear of the object that was detected.
 
-6. To stop the program from running forever, add the following code inside the `while` loop before the `sleep(0.06)` command.
+**6.** To stop the program from running forever, add the following code inside the `while` loop before the `sleep(0.06)` command.
 
 ~~~ python
     if time() >= end_time:
@@ -89,7 +89,7 @@ Using a sleep command here inside the `if` statement means that the robot will c
 
 This checks if the current time is more than or equal to the `end_time` value specified at the start of the program. If so, it will change the value of `running` to `False` (which will stop the `while` loop from repeating) and then stop the motors.
 
-7. Modify the `while` loop condition so that it stops repeating once `running` is set to `False`.
+**7.** Modify the `while` loop condition so that it stops repeating once `running` is set to `False`.
 
 Change the condition from:
 
