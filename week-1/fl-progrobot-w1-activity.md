@@ -9,7 +9,7 @@ Related files:
 
 ## Introduction to robotics
 
-Welcome to *Robotics With Raspberry Pi: Build and Program Your First Robot Buggy*.
+Why is robotics important in the modern world?
 
 ![Illustration of the buggy from the front and top-down view of all the components inside the buggy](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/2-Intro_to_robotics.png)
 
