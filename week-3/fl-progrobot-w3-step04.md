@@ -47,13 +47,13 @@ To solve this problem, you can use more than one sensor. If you add a second sen
 
 If the line is in the centre of the robot, both sensors will return a 0 from their digital pins, as they are both over the white background.
 
-![Illustration of a robot buggy with a black line under the centre of it and two line sensors either side of the line, both outputting 0.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/35-3_4-line-sensors-not-detecting-line.png)
+![A robot buggy with a black line under the centre of it. The two line sensors on the buggy are either side of the line, and are both outputting 0.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/35-3_4-line-sensors-not-detecting-line.png)
 
 However, if the robot moves to the right, the left sensor will eventually cross onto the line, changing its output to a 1. When this happens, the robot should correct its course and turn left. Once the sensor returns to a 0 value, we know that the line is back in the middle of the robot.
 
 The same applies when the robot turns too far left; the right sensor will move over the line and change its reading. The robot should then turn right to the right to correct itself.
 
-![Top down animation a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
+![Top down animation of a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif)
 
 ### Discussion
 

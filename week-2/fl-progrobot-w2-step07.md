@@ -23,7 +23,7 @@ If your UDS is 5V, you will also need:
 + Soldering iron and solder
 + Tape
 
-![Picture of the robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-female jumper leads, Soldering iron and solder, 330 Ohm resistor, 620 Ohm resistor, Tape](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-parts-for-the-UDS.jpg)
+![The robot buggy parts for this step - Ultrasonic distance sensor, 6 x female-to-female jumper leads, Soldering iron and solder, 330 Ohm resistor, 620 Ohm resistor, Tape](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-parts-for-the-UDS.jpg)
 
 ### Wiring the UDS
 
@@ -36,6 +36,32 @@ The **trig** and **echo** pins can be wired to any available GPIO pins on your P
 Refer to the diagrams in this article or a GPIO reference guide if you aren't sure which pins on the Raspberry Pi to use.
 
 ![The layout of the GPIO pins on a 40-pin Raspberry Pi using GPIO numbering, which can be used as a reference guide](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
+
+|SD card end||
+|-|-|
+|3V3|5V|
+|GPIO2|5V|
+|GPIO3|GND|
+|GPIO4|GPIO14|
+|GND|GPIO15|
+|GPIO17|GPIO18|
+|GPIO27|GND|
+|GPIO22|GPIO23|
+|3V3|GPIO24|
+|GPIO10|GND|
+|GPIO9|GPIO25|
+|GPIO11|GPIO8|
+|GND|GPIO7|
+|GPIO0|GPIO1|
+|GPIO5|GND|
+|GPIO6|GPIO12|
+|GPIO13|GND|
+|GPIO19|GPIO16|
+|GPIO26|GPIO20|
+|GND|GPIO21|
+|USB port end||
+
+
 
 #### Wiring the VCC, trig, and GND pins
 
@@ -55,11 +81,11 @@ For the purposes of this example, I'm going to use a 330-ohm resistor and a 620-
 
 The first thing to do is to solder the pair of resistors together. Then you need to solder a female jumper lead to the other end of each resistor. This part might be easier to do with two people or by using a [helping hand](https://www.instructables.com/id/How-to-Make-a-Helping-Hands-for-Soldering-at-Home-/). Once the solder has cooled, add tape to secure and insulate all of the joins.
 
-![Picture of two resistors soldered together with one female jumper lead soldered to the other end of each resistor - taken from project "See like a bat"](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-resistors-and-jumper-leads-soldered-together.jpg)
+![Two resistors soldered together with one female jumper lead soldered to the other end of each resistor](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-resistors-and-jumper-leads-soldered-together.jpg)
 
 Next, attach a third female jumper lead to the join between the two resistors. Add tape to secure this join in place.
 
-![Picture of the third female jumper lead soldered to the join between the two resistors - also taken from the project site](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-third-jumper-lead-soldered-to-resistors.jpg)
+![A third female jumper lead soldered to the join between the two resistors](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-third-jumper-lead-soldered-to-resistors.jpg)
 
 Now you need to attach the jumper leads to your UDS and the Raspberry Pi.
 
@@ -85,11 +111,11 @@ Now that your UDS is connected to your Raspberry Pi, you will need to attach the
 
 Mark where you want the emitter and receiver (the two silver cylinders from the diagram above) to protrude from the chassis.
 
-![Picture of the UDS cylinders being marked on the chassis were they need to be secured](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-marking-UDS-on-the-chassis.jpg)
+![The UDS cylinders being marked on the chassis were they need to be secured](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-marking-UDS-on-the-chassis.jpg)
 
 Cut two holes into the chassis that are just big enough for the emitter and receiver to poke through, then push the cylinders through the holes. You can also add tape to attach the UDS more securely to the chassis.
 
-![Picture of the UDS attached to the chassis](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-UDS-attached-to-chassis.jpg)
+![The UDS attached to the chassis](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/2_7-UDS-attached-to-chassis.jpg)
 
 ### Checking the connections
 

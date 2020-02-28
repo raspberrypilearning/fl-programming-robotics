@@ -50,7 +50,7 @@ def get_pulse_time():
 
 As soon as the trig pin is set to low, a burst of ultrasound is sent from the emitter, and this sound starts to travel through the air.
 
-![Animation of the Trig pin being set to high for 10μs and then Trig is set low. A burst of ultrasound is emitted from the UDS as soon as the Trig pin is set to low.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
+![Animation of the Trig pin being set to high for 10μs and then set to low. A burst of ultrasound is emitted from the UDS as soon as the Trig pin is set to low.](https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png)
 
 Once the ultrasound has finished being emitted, the UDS sets the echo pin to high. At this point, you need to record the start time.
 

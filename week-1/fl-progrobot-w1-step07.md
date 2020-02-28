@@ -17,7 +17,7 @@ The easiest way to keep track of which motor is left and which is right is to la
 + Use a marker pen to label the left-hand motor ‘left’ and draw an arrow on it to indicate which way is forward, as shown below
 + Label the other motor ‘right’ and draw an arrow on it pointing in the same direction as your first motor
 
-![Picture of one motor with an L written on it for the left motor and an arrow pointing up](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_7-labelled-motor.jpg)
+![One motor with an L written on it for the left motor and an arrow pointing up](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_7-labelled-motor.jpg)
 
 ### Programming the motors
 
@@ -60,7 +60,7 @@ robin.stop()
 
 Run the program and check that both motors are turning in the direction of the arrows you drew.
 
-![Video-gif of the DC motors labelled with arrows showing the direction both the motors should be spinning when the forward() command is entered](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_7-motors-spinning-forward.gif)
+![Video of the DC motors labelled with arrows showing the direction both the motors should be spinning when the forward() command is entered](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_7-motors-spinning-forward.gif)
 
 If either motor is turning in the wrong direction, alter your program by swapping the pin numbers for that motor.
 
