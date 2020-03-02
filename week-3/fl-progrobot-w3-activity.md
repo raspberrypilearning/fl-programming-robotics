@@ -15,7 +15,7 @@ Welcome to week three of the course!
 
 ## Line-sensing robots
 
-Learn about how line sensors work, and how they are used in robotics.
+Learn about how line sensors work and how they are used in robotics.
 
 ![Illustration of a line sensor, the top on the left-hand side showing the potentiometer and the right-hand side showing the transmitter, receiver, and 3 pins labelled VCC, GND, and DO.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/36-3_4_TCRT_Sensor_Diagram.png)
 
