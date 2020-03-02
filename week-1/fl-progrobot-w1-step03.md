@@ -21,7 +21,7 @@ What nearly all robots can do, though, is these three things:
 
 Robots are able to sense the physical world, so they can perform actions accordingly. They often use sensors to detect the movement of their own components, as well as detecting other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and may use a pressure sensor to ensure it holds components with the correct force, to avoid dropping or crushing them.
 
-![A robotic arm used for fitting together an electronic device such as a smartphone.](ihttps://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-robotic-arm.jpg)
+![A robotic arm used for fitting together an electronic device such as a smartphone.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-robotic-arm.jpg)
 
 Between 1966 and 1972, researchers at Stanford University developed Shakey, the first truly mobile robot with the ability to sense its environment. It was capable of navigating around obstacles by using a TV camera and an infrared rangefinder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a preprogrammed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remembering and adjusting these actions for future tasks. This was integral to Shakey's ability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.
 

@@ -33,7 +33,7 @@ As discussed previously, a typical UDS has four pins: **VCC**, **trig**, **echo*
 
 The **trig** and **echo** pins can be wired to any available GPIO pins on your Pi, though if you choose different pins to the set-up below, the diagrams won't match. You'll also need to remember what pins you used and replace the pin numbers in the code accordingly.
 
-Refer to the diagrams in this article or a GPIO reference guide if you aren't sure which pins on the Raspberry Pi to use.
+Refer to the diagrams in this article or use a [reference board](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header_To_Scale.pdf) that fits over the GPIO pins if you aren't sure which pins on the Raspberry Pi to use.
 
 ![The layout of the GPIO pins on a 40-pin Raspberry Pi using GPIO numbering, which can be used as a reference guide](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
 
