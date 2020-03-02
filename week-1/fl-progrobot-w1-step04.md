@@ -39,9 +39,9 @@ Although it is possible to create a robot buggy with most models of Raspberry Pi
 
 When programming the GPIO pins, there are two different ways to refer to them: **GPIO numbering** and **physical numbering**. Throughout this course (and in all our resources) we will refer to the pins using the GPIO numbering scheme. These are the GPIO pins as the computer sees them.
 
-![The layout of the GPIO pins on a 40-pin Raspberry Pi using GPIO numbering, which can be used as a reference guide.](images/1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
+![The layout of the GPIO pins on a 40-pin Raspberry Pi using GPIO numbering, which can be used as a reference guide.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
 
-The numbering of the GPIO pins is not in numerical order, instead relating to the numbering on the CPU of the Raspberry Pi, so there is no easy way to remember them. However, you can use a reference board that fits over the pins, a printed reference, or a [website guide to the GPIO pins](http://pinout.xyz) to help you.
+The numbering of the GPIO pins is not in numerical order, instead relating to the numbering on the CPU of the Raspberry Pi, so there is no easy way to remember them. However, you can use a [reference board](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header_To_Scale.pdf) that fits over the pins, a printed reference (like the image above), or a [website guide to the GPIO pins](http://pinout.xyz) to help you.
 
 #### Voltages
 
