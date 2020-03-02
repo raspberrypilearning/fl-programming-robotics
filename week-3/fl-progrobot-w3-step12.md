@@ -9,6 +9,6 @@ Related files:
 
 Now that you've completed your assessment, it's time to review the work of one of your peers.
 
-You should read through their assessment, making sure to check that they've described the new functionality that they added to their buggy, and the code and components that they needed to make it work. You should also look for some evidence on how they have tested their robot.
+You should read through their assessment, making sure to check that they've described the new functionality that they added to their buggy and the code and components that they needed to make it work. You should also look for some evidence of how they tested their robot.
 
-When leaving your review, provide three specific pieces of positive feedback, each mentioning one thing that you liked about their work and why you liked it. Also provide a single constructive piece of feedback about their new piece of functionality.
+When leaving your review, provide three specific pieces of positive feedback, each mentioning one thing that you liked about their work and why you liked it. Also provide a single piece of constructive feedback about their new piece of functionality.
