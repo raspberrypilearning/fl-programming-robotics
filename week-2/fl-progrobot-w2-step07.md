@@ -37,7 +37,9 @@ Refer to the diagrams in this article or use a [reference board](https://rpf-fut
 
 ![The layout of the GPIO pins on a 40-pin Raspberry Pi using GPIO numbering, which can be used as a reference guide](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header.png)
 
-|SD card end||
+SD Card End
+
+|||
 |-|-|
 |3V3|5V|
 |GPIO2|5V|
@@ -59,7 +61,8 @@ Refer to the diagrams in this article or use a [reference board](https://rpf-fut
 |GPIO19|GPIO16|
 |GPIO26|GPIO20|
 |GND|GPIO21|
-|USB port end||
+
+USB port end
 
 
 
