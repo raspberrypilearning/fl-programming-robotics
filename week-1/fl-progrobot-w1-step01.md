@@ -46,7 +46,7 @@ This course requires you to have the following:
 + Screwdriver
 + A small cardboard box for the chassis (can be plastic, wood, metal, etc.)
 
-You can view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered and bought anywhere, and alternatives are also available.
+The hardware components (including suggested models and types) and tools are listed in [this document](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/PDFs/Robot+buggy+components+and+tools+list.pdf), although alternatives are also available. You can also view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered and bought from many other suppliers.
 
 #### Software
 
