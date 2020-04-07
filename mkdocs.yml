@@ -1,5 +1,5 @@
 site_name: Robotics
-docs_dir: .
+docs_dir: \
 nav:
   - Home: 'README.md'
   - Week 1:
