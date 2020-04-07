@@ -1,0 +1,6 @@
+site_name: Programming 102
+nav:
+  - Home: 'README.md'
+  - Week 1:
+    - 'Step 1.1' : 'week-1\fl-progrobot-w1-step01.md'
+theme: readthedocs
