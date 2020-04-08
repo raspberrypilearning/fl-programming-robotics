@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Why we call robotics challenging
 
 You are coming to the end of the first week of your journey into the world of robotics, and you may have noticed that working in this area requires you to navigate some challenges! Robotics is a complex and vast subject, which can be off-putting when you are starting out. I want to discuss some of these challenges and hear how you have overcome them.

@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Challenge: Driving in patterns
 
 So far, you have been testing that the robot buggy moves appropriately in response to the commands `.forward()`, `.backward()`, `.left()`, `.right()`, and `.stop()`. 

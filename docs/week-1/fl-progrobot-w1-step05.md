@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files: PDF of components
-)
-
 ## Connecting a motor to the motor controller
 
 [comment]: # (Need to create PDF of components for related file)

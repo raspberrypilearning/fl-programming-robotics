@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Testing the motors
 
 In this step you will label and test the motors, to help ensure that your robot will correctly go forwards, backwards, left, or right as commanded.

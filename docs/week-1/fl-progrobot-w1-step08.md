@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Designing the chassis
 
 Now that you have the motors set up, it's time to design a chassis &mdash; the physical frame of your vehicle. Your buggy will need a chassis onto which you can secure the components, such as the wheels, motors, and Raspberry Pi.

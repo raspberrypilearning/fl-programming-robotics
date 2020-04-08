@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Attaching the components to the chassis
 
 Once you have ensured that all the robot parts fit into the chassis, you need to secure some of the components in place.

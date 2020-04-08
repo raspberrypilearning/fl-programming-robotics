@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Connecting the Raspberry Pi and battery pack to the motorboard
 
 Your next step is to connect the motorboard to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motorboard and control the motors using the Raspberry Pi.

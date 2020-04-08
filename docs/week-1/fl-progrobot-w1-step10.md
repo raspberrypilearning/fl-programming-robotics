@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Making the robot move
 
 Now you are going to test whether your buggy can move forwards, backwards, left, and right, using the Python program you created for testing the motors.

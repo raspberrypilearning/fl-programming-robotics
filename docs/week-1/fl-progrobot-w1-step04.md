@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Raspberry Pi and General-Purpose Input/Output
 
 Robots are able to sense and interact with the environment through a wide range of components.

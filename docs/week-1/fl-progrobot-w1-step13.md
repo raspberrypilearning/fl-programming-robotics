@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## The end of week one
 
 Congratulations on reaching the end of week one! If you still haven't managed to get your robot moving, ask for help in the comments below. Well done if you have managed to complete all of the tasks this week and programmed your robot to drive in a particular pattern.
