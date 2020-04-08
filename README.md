@@ -8,7 +8,7 @@ Programming with Robotics course for the NCCE
 Open a command prompt / terminal and run:
 
 ```bash
-pip3 install mkdocs mkdocs-nav-enhancements
+pip3 install mkdocs mkdocs-nav-enhancements mkdocs-material
 ```
 
 ## Test and view the site
