@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w1 step06 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#connecting-the-raspberry-pi-and-battery-pack-to-the-motorboard" class="nav-link">Connecting the Raspberry Pi and battery pack to the motorboard</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="connecting-the-raspberry-pi-and-battery-pack-to-the-motorboard">Connecting the Raspberry Pi and battery pack to the motorboard</h2>
+<p>Your next step is to connect the motorboard to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motorboard and control the motors using the Raspberry Pi.</p>
+<h3 id="what-you-will-need">What you will need</h3>
+<ul>
+<li>Raspberry Pi</li>
+<li>Motor controller board (wired up to the DC motors)</li>
+<li>AA battery holder for four AA batteries</li>
+<li>Four AA batteries</li>
+<li>Five jumper leads (female-to-female)</li>
+<li>Screwdriver</li>
+</ul>
+<p>You may also need:</p>
+<ul>
+<li>GPIO reference card</li>
+</ul>
+<p><img alt="The robot buggy parts for this step - Raspberry Pi, Motor controller board (wired up to the DC motors), AA battery holder (for 4 AA batteries), 4 x AA batteries, 5 x jumper leads (female-to-female), Screwdriver, GPIO reference card" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-parts-for-motor-board-raspberry-pi-and-battery-pack.jpg" /></p>
+<h3 id="connect-the-battery-pack-to-the-motorboard">Connect the battery pack to the motorboard</h3>
+<p>The motors require more power than the Raspberry Pi can provide. Therefore, you will use four AA batteries to power them.</p>
+<p>The battery pack should include two wires: one red and one black. The red wire is for the positive terminal and needs to be inserted into the <strong>VCC</strong> terminal block if it is present, or the 'voltage in' terminal block labelled <strong>+12V</strong> otherwise.</p>
+<p><img alt="The red wire from the battery pack connected to the 12V terminal block of the motor controller" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-battery-pack-red-wire-motor-controller.jpg" /></p>
+<p>The black wire is the ground wire and must be inserted into the <strong>GND</strong> terminal to complete the circuit. Make sure all the screws of the terminal blocks are tightened securely.</p>
+<p><img alt="The black wire from the battery pack connected to the GND terminal block of the motor controller" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-battery-pack-black-wire-motor-controller.jpg" /></p>
+<p>Insert the four AA batteries into the battery pack and if it has a switch, turn it on. Most motor controllers have a red LED that lights up to show that it is powered on. If the LED is not lit up, the wires may not be connected properly. Also check that your battery pack is full, and the batteries are the right way around.</p>
+<h3 id="receiving-input">Receiving input</h3>
+<p>These instructions are for a L298N dual H-bridge DC stepper motor driver controller board, and they will be similar for most motor controller boards. Other boards may connect differently to the one that I'm using, and some boards can simply be placed onto the Raspberry Pi GPIO pins as a HAT. Check the documentation for your board if you are using a different one.</p>
+<p>On this motor controller board there are pins labelled <strong>IN1</strong>, <strong>IN2</strong>, <strong>IN3</strong>, and <strong>IN4</strong>. Some motorboards also have one or two <strong>GND</strong> (ground) pins next to the <strong>IN</strong> pins, but this board does not.</p>
+<p><img alt="A L298N motor controller board with four IN screw terminals for connecting to an electric motor. The four IN terminals are circled." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-motor-controller-board-in-circled.jpg" /></p>
+<p>Which GPIO pins you use on your Pi is up to you; I have used <strong>GPIO 7</strong>, <strong>8</strong>, <strong>9</strong>, and <strong>10</strong>. However, if you use different GPIO pins, make sure you remember which ones, as you will need to refer to them in the code.</p>
+<p>Use five female-to-female jumper leads to connect the Raspberry Pi GPIO pins to the pins on the motor controller board. Each DC motor will need to need to use two <strong>IN</strong> pins to connect to the Raspberry Pi, so that the motor can turn in both directions. You will also need one <strong>GND</strong> pin to complete the circuits; this can be the same pin for both motors.</p>
+<table>
+<thead>
+<tr>
+<th align="center">GPIO pin</th>
+<th align="center">Connects to</th>
+<th align="center">Board pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">7</td>
+<td align="center">&lt;–&gt;</td>
+<td align="center">IN1</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">&lt;–&gt;</td>
+<td align="center">IN2</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">&lt;–&gt;</td>
+<td align="center">IN3</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">&lt;–&gt;</td>
+<td align="center">IN4</td>
+</tr>
+<tr>
+<td align="center">GND</td>
+<td align="center">&lt;–&gt;</td>
+<td align="center">GND</td>
+</tr>
+</tbody>
+</table>
+<p>If your motorboard does not have a <strong>GND</strong> pin, use the terminal block that the battery pack also uses. Strip the end of the wire for the <strong>GND</strong> pin and secure it into the <strong>GND</strong> terminal block that your battery pack feeds into. There will now be two wires fed into the <strong>GND</strong> block: one from the battery pack and one from the Raspberry Pi.</p>
+<p><img alt="The four IN pins from the motor controller connected to four GPIO pins on the Raspberry Pi, as well as a GND pin connected from the Pi to the motor controller" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_6-motor-controller-connected-to-raspberry-pi.jpg" /></p>
+<h3 id="powering-the-raspberry-pi">Powering the Raspberry Pi</h3>
+<p>The Raspberry Pi will need its own source of power. For testing, the Raspberry Pi can be plugged directly into the mains power supply. However, when you come to building the body of the buggy and making it move, the Raspberry Pi will need a mobile source of power. A USB powerbank is a good choice, as it will be fairly light for the chassis to carry, just make sure it is capable of powering the model of Raspberry Pi that you are using.</p>
+<h3 id="setting-up-your-raspberry-pi">Setting up your Raspberry Pi</h3>
+<p>If you are not familiar with setting up a Raspberry Pi and using it, follow this guide to <a href="https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started">Getting started with Raspberry Pi</a>.</p>
+<p>The programming language I will be using in this course is <strong>Python</strong> together with a library called <a href="https://gpiozero.readthedocs.io/en/stable/index.html">GPIO Zero</a>, which provides an accessible way to control components through the GPIO pins.</p>
+<p>Python and GPIO Zero will be installed by default if your Raspberry Pi is running the <strong>Raspbian</strong> operating system. Follow this guide to <a href="https://gpiozero.readthedocs.io/en/stable/installing.html">Installing GPIO Zero</a> if you are using <strong>Raspbian Lite</strong> or another operating system.</p>
+<p>If you would like to control your Raspberry Pi remotely from another computer, check out our guide to <a href="https://www.raspberrypi.org/documentation/remote-access/vnc/">Creating a virtual desktop using VNC Server</a>.</p>
+<h3 id="discussion">Discussion</h3>
+<p>Did you have any problems connecting the motorboard to the Raspberry Pi or to the battery pack?</p>
+<p>What type of power supply are you using for your Raspberry Pi?</p>
+<p>Leave your answers in the comments section below.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Step - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#welcome-to-the-course" class="nav-link">Welcome to the course</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="welcome-to-the-course">Welcome to the course</h2>
+<p>Welcome to <em>Robotics With Raspberry Pi: Build and Program Your First Robot Buggy</em>.</p>
+<p>Over this course you'll develop a robot buggy and program it. You'll start by making it move about, before programming it to react to sensor readings. By the end of the course you'll be able to make your buggy avoid obstacles and follow a line on the floor.</p>
+<h3 id="what-you-will-learn">What you will learn</h3>
+<p>Over the next three weeks you will learn about:</p>
+<ul>
+<li>Using the GPIO pins on the Raspberry Pi for both input and output</li>
+<li>How to connect motors via a motorboard and control them using Python</li>
+<li>Attaching components to a chassis</li>
+<li>Using an ultrasonic distance sensor (UDS) to detect objects</li>
+<li>Using inputs to control the outputs of your robot</li>
+<li>How line sensors work</li>
+<li>How changing an algorithm can improve the performance of your robot</li>
+</ul>
+<h3 id="what-you-will-need">What you will need</h3>
+<p>This course requires you to have the following:</p>
+<h4 id="hardware">Hardware</h4>
+<ul>
+<li>Raspberry Pi 3B, 3B+, or 4</li>
+<li>Motor controller board</li>
+<li>Two 3V–6V DC motors</li>
+<li>Two wheels</li>
+<li>Ball caster (unless using more than two wheels)</li>
+<li>Ultrasonic distance sensor (one or two)</li>
+<li>Two line-following sensors</li>
+<li>Jumper leads (female-to-female and male-to-female) or wire</li>
+<li>AA battery holder (for four AA batteries)</li>
+<li>Four AA batteries</li>
+<li>A USB powerbank (to power the Raspberry Pi) </li>
+<li>Soldering iron and solder</li>
+<li>Wire strippers</li>
+<li>Scissors</li>
+<li>Screwdriver</li>
+<li>A small cardboard box for the chassis (can be plastic, wood, metal, etc.)</li>
+</ul>
+<p>The hardware components (including suggested models and types) and tools are listed in <a href="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/PDFs/Robot+buggy+components+and+tools+list.pdf">this document</a>, although alternatives are also available. You can also view most of the required components on this <a href="https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415">AliExpress Wish List</a>, but they can be ordered and bought from many other suppliers.</p>
+<h4 id="software">Software</h4>
+<ul>
+<li>The latest version of the Raspbian operating system</li>
+<li>An IDE of your choice</li>
+</ul>
+<h4 id="additional-extras">Additional extras</h4>
+<ul>
+<li>Adhesives (duct tape/electrical tape, putty, glue, etc.)</li>
+<li>Cable ties or Velcro-type straps</li>
+<li>GPIO reference card</li>
+</ul>
+<p>Using a soldering iron can be a bit daunting at first, but whether you are new to soldering or a veteran, this <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-soldering">Getting started with soldering</a> resource will give you  some quick tips and tricks.</p>
+<p>A Raspberry Pi model 3B or above is recommended, as you can connect to it over WiFi or Bluetooth without an adapter; this will help when programming the robot buggy.</p>
+<p>The ultrasonic distance sensors and line-following sensors are required for weeks two and three respectively.</p>
+<p>A ball caster is necessary if your robot has only two wheels; it will act as a third wheel so that the robot is balanced and can move freely.</p>
+<h3 id="choosing-a-programming-environment">Choosing a programming environment</h3>
+<p>I recommend using an Integrated Development Environment (IDE) during this course to create, run, and test your Python programs.</p>
+<p>The IDE I will be using is Mu, which is pre-installed on most Raspberry Pis. Mu is also available at the website <a href="https://codewith.mu/">Code with Mu</a> along with <a href="https://codewith.mu/en/howto/1.0/install_raspberry_pi">instructions on how to install Mu on a Raspberry Pi</a>.</p>
+<p>If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-mu">Getting started with Mu</a> guide.</p>
+<h3 id="week-one">Week one</h3>
+<p>In week one of the course you will attach the motors and get your robot buggy moving.</p>
+<p>What part of the course are you most looking forward to? Share your thoughts in the comments.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

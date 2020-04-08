@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w1 step04 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#raspberry-pi-and-general-purpose-inputoutput" class="nav-link">Raspberry Pi and General-Purpose Input/Output</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="raspberry-pi-and-general-purpose-inputoutput">Raspberry Pi and General-Purpose Input/Output</h2>
+<p>Robots are able to sense and interact with the environment through a wide range of components.</p>
+<p>So that a robot can make decisions and perform actions, it uses a processor to receive information from and send signals back to the other components.</p>
+<p>A standard interface for connecting a single-board computer or microprocessor to other components is through General-Purpose Input/Output (GPIO) pins.</p>
+<h3 id="controlling-robots-using-the-raspberry-pi">Controlling robots using the Raspberry Pi</h3>
+<p>Raspberry Pi computers are wonderfully diverse in what they can do. Among the many applications they can be used for, robotics is one of the most exciting and powerful.</p>
+<p>Each model of the Raspberry Pi has a set of General-Purpose Input/Output (GPIO) pins along the top edge of the board. These can be used for connecting and communicating with all manner of electronic components, acting as a physical interface between the Raspberry Pi and the outside world. Using the pins, you can program the Raspberry Pi to switch components on and off (output), or receive data from sensors and switches (input).</p>
+<p><img alt="The GPIO pins on a Raspberry Pi 4 with a 40 pin header" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_4-Raspberry-Pi-4-GPIO-header-40-pins.jpg" /></p>
+<h4 id="raspberry-pi-models">Raspberry Pi models</h4>
+<p>Most models of the Raspberry Pi have a 40-pin header, as shown in the image above. Of the 40 pins, 26 are GPIO pins and the others are power or ground pins (plus two ID EEPROM pins, which you should not play with unless you know your stuff!). Any of the GPIO pins can be designated (in software) as an input or output pin and used for a wide range of purposes; whether it is turning on an LED, driving a motor, or sending data to another device, the possibilities are almost endless.</p>
+<p>Early models of the Raspberry Pi A and B have a shorter header with 26 pins, as shown below.</p>
+<p><img alt="The GPIO pins on a Raspberry Pi 1 with a 26 pin header" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_4-Raspberry-Pi-1-GPIO-header-26-pins.jpg" /></p>
+<p>The Raspberry Pi Zero models have unpopulated pins (apart from the Raspberry Pi Zero WH) so there are holes where the GPIO header is located instead of physical pins. This means you need to add a header that includes the pins yourself.  </p>
+<p><img alt="A Raspberry Pi Zero with a solder-less header" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_4-Raspberry-Pi-Zero-solder-less-header.jpg" /></p>
+<p>Although it is possible to create a robot buggy with most models of Raspberry Pi, I recommend using a Raspberry Pi 3B, 3B+, or 4. These models allow you to program the Raspberry Pi easily and connect it to another computer or even a smartphone by using the inbuilt WiFi or Bluetooth, rather than needing to plug the Pi physically into a screen or a keyboard and mouse.</p>
+<h4 id="gpio-pin-numbering">GPIO pin numbering</h4>
+<p>When programming the GPIO pins, there are two different ways to refer to them: <strong>GPIO numbering</strong> and <strong>physical numbering</strong>. Throughout this course (and in all our resources) we will refer to the pins using the GPIO numbering scheme. These are the GPIO pins as the computer sees them.</p>
+<p><img alt="The layout of the GPIO pins on a 40-pin Raspberry Pi using GPIO numbering, which can be used as a reference guide." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header.png" /></p>
+<p>The numbering of the GPIO pins is not in numerical order, instead relating to the numbering on the CPU of the Raspberry Pi, so there is no easy way to remember them. However, you can use a <a href="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/16-1_4-gpio-numbers-raspberry-pi-40-pin-header_To_Scale.pdf">reference board</a> that fits over the pins, a printed reference (like the image above), or a <a href="http://pinout.xyz">website guide to the GPIO pins</a> to help you.</p>
+<h4 id="voltages">Voltages</h4>
+<p>The voltage of a pin is labelled on the reference guide. There are two <strong>5V</strong> pins and two <strong>3V3</strong> pins, as well as a number of ground pins (0V), which are unconfigurable. The remaining pins are all general-purpose 3V3 pins, meaning that the outputs are set to 3.3 volts and the inputs are tolerant of 3.3 volts.</p>
+<p>A GPIO pin designated as an <strong>output</strong> pin can be set to high (3.3V) or low (0V). Components are usually attached so that setting the output to high will allow current to flow to them, while setting the output to low won't.</p>
+<p>A GPIO pin that is designated as an <strong>input</strong> will allow a signal to be received by the Raspberry Pi. The threshold between a high and a low signal is around 1.8V. A voltage between 1.8V and 3.3V will be read by the Raspberry Pi as high; anything lower than 1.8V will be read as low. Do not allow an input voltage above 3.3V, or else you will fry your Pi!</p>
+<h4 id="a-word-of-caution">A word of caution</h4>
+<p>While connecting most components to the GPIO pins is perfectly safe, it's important to be careful how you wire things up, or you could damage the Raspberry Pi or the components.</p>
+<p>A few pieces of general advice:</p>
+<ul>
+<li>Do not attach 3V3 components directly to a 5V pin on the Raspberry Pi, or you may damage the component or your device</li>
+<li>Certain components, such as LEDs, should have resistors to limit the current passing through them</li>
+<li>Do not connect motors directly to the GPIO pins; instead, use a motor controller board or an H-bridge circuit</li>
+</ul>
+<p>In the next step, you will look at how to connect the motors to the motor controller board.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w1 step03 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#the-world-of-robotics" class="nav-link">The world of robotics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="the-world-of-robotics">The world of robotics</h2>
+<p>Robots are an integral part of modern life and are set to be even more prominent in the future. They come in all shapes and sizes and are able to perform a wide range of tasks, from building cars to landing on Mars. But defining what a robot actually <em>is</em> can be tricky; ask five roboticists and you are likely to get five different answers!</p>
+<p>Robots can vary massively, from fixed-location robots making tiny, precise movements to manufacture microchips, to humanoid robots that can walk around different environments.</p>
+<p>What nearly all robots can do, though, is these three things:</p>
+<ul>
+<li>Sense</li>
+<li>Process</li>
+<li>Act</li>
+</ul>
+<h3 id="making-sense-of-the-environment">Making sense of the environment</h3>
+<p>Robots are able to sense the physical world, so they can perform actions accordingly. They often use sensors to detect the movement of their own components, as well as detecting other objects nearby. For example, a robotic arm in a smartphone factory may use a motion sensor to keep track of its position, and may use a pressure sensor to ensure it holds components with the correct force, to avoid dropping or crushing them.</p>
+<p><img alt="A robotic arm used for fitting together an electronic device such as a smartphone." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-robotic-arm.jpg" /></p>
+<p>Between 1966 and 1972, researchers at Stanford University developed Shakey, the first truly mobile robot with the ability to sense its environment. It was capable of navigating around obstacles by using a TV camera and an infrared rangefinder to scan items in front of it. Shakey also had whisker-like feelers to determine if it was touching another object. Instead of relying on a preprogrammed set of instructions, Shakey could piece together simple commands to perform more complex tasks, as well as remembering and adjusting these actions for future tasks. This was integral to Shakey's ability to navigate spaces effectively, which in turn helped to advance artificial intelligence and pathfinding.</p>
+<p><img alt="The Shakey mobile robot, with its TV camera, range finder and bump detectors labelled." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-Shakey.jpg" /></p>
+<p>Over the years, new and improved sensors have increased robots' abilities to understand the environment. For example, self-driving cars use light detection and ranging (LIDAR) sensors, which use pulses of laser light to measure the distance to other objects in order to build a 3D model of the world. All this extra information means that robots require more processing power so that they can process data in a quick and timely manner.</p>
+<h3 id="the-power-of-processing">The power of processing</h3>
+<p>Nearly all robots need a device, such as a computer or microcontroller, to receive data from sensors and other components. This device will need to process the data into meaningful information that can then be used to communicate instructions.</p>
+<p>In this course your buggy will be based around a Raspberry Pi, a single-board computer that allows a wide range of components to be connected to it. You'll attach the different components of the buggy to the Raspberry Pi and program it to run autonomously.</p>
+<h3 id="automation-in-action">Automation in action</h3>
+<p>The ability to process data and act on this information almost instantly, with minimal human interaction, is one of the major advancements of robotics, and indeed technology, in the last few decades. Most robots will be able to perform some actions autonomously, from a robotic arm that twists the lids onto jars of jam in an assembly line to a drone that is able to return to the location it took off from.  </p>
+<p>The level of autonomy needed depends on how the robot is designed to interact with the world. Some are closely controlled by human operators, such as medical robots that assist surgeons with performing operations. These robots help surgeons to make very precise incisions that would be difficult without this assistance, and can sometimes even allow surgeons to operate remotely.</p>
+<p><img alt="A surgeon using a robotic assistant to perform surgery on a patient." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_3-robotic-surgery.jpg" /></p>
+<p>Other robots are much more autonomous and rely on minimal human interaction. A robot vacuum cleaner will use sensors to move around the room while avoiding the furniture, and will map the areas it has visited to ensure it has covered the entire room. Some even have the ability to find a charging station and empty themselves automatically into a designated bin.</p>
+<p>Many robots are somewhere in the middle, having the ability to automate some tasks, but also requiring a small amount of human interaction. These semi-autonomous robots are optimal for activities such as navigating contaminated places that would be dangerous for people. It is possible for operators to take over the decision-making from the robot and perform certain actions remotely that the robot may not be programmed to perform.</p>
+<h3 id="discussion">Discussion</h3>
+<ul>
+<li>
+<p>What are some of the robots that you interact with, either directly or indirectly?</p>
+</li>
+<li>
+<p>Which area do you think robotics will have the biggest impact on in the future? Why is that?</p>
+</li>
+</ul>
+<p>Share your thoughts in the comments section below.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

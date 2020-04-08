@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w2 step09 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#avoiding-obstacles-autonomously" class="nav-link">Avoiding obstacles autonomously</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="avoiding-obstacles-autonomously">Avoiding obstacles autonomously</h2>
+<p>So far, you have created programs for moving the robot buggy and detecting objects at different distances. Now you are going to create a program for detecting and navigating around objects autonomously.</p>
+<h3 id="programming-the-motors-and-the-uds">Programming the motors and the UDS</h3>
+<p>For this program, you will need to bring together some of the code you have written during the course to solve a new problem.</p>
+<p>To help you begin this process, consider the different parts of the problem:</p>
+<ul>
+<li>What components does your program need to interact with?</li>
+<li>What should the robot do if an object is <em>not</em> too close to it?</li>
+<li>How should the robot behave when an object <em>is</em> too close?</li>
+</ul>
+<h4 id="setting-up-the-program">Setting up the program</h4>
+<p><strong>1.</strong> Copy the code from the last step into a new Python file.</p>
+<p><strong>2.</strong> Change the first line of code so that <code>Robot</code> is also imported from the <code>gpiozero</code> library to control the motors.</p>
+<pre><code class="python">from gpiozero import Robot, InputDevice, OutputDevice
+</code></pre>
+
+<p><strong>3.</strong> After the <code>trig</code> and <code>echo</code> variables have been initialised, define the <code>Robot</code> using the GPIO pins for your <code>left</code> and <code>right</code> motors.</p>
+<pre><code class="python">robin = Robot(left=(8,7), right=(9,10))
+</code></pre>
+
+<p>You can use one of your working programs from week one to check that the GPIO pins of your motors are set correctly, as they may be different to the ones I've used above.</p>
+<h4 id="setting-up-a-timer">Setting up a timer</h4>
+<p>Next, you are going to create a timer so that your robot doesn't run forever, which is especially useful during the testing phases.</p>
+<p><strong>4.</strong> Add in these three variables just after you have initialised <code>Robot</code>:</p>
+<pre><code class="python">duration = 10
+end_time = time() + duration
+running = True
+</code></pre>
+
+<p>The value of <code>duration</code> is the number of seconds that the timer will run for. Calculate <code>end_time</code> by adding <code>duration</code> to the current time, which is obtained using the <code>time()</code> function.</p>
+<p>You will use the <code>running</code> variable later to specify when the program (and the robot) should stop running.</p>
+<p>Check your program so far against my <a href="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/code/uds-motors-halfway.py">version of the program after step 4</a>.</p>
+<p>The last changes you are going to make are going to all be within the <code>while</code> loop.</p>
+<h4 id="how-should-the-robot-behave">How should the robot behave?</h4>
+<p>The robot should, by default, move forwards, unless it detects an object that is too close. If an object is detected within a certain distance of the UDS, the robot should turn left or right to avoid the obstacle in front of it.</p>
+<p><strong>How close is too close?</strong></p>
+<p>The program currently calculates the distance of an object from the UDS in metres. You need to specify the threshold, in metres, at which an object is too close to the robot.</p>
+<p>For now, the threshold value I'm going to choose is 20 cm (0.2 metres); you can experiment with this value later.</p>
+<p><strong>5.</strong> Inside the <code>while</code> loop and before the <code>sleep(0.06)</code> command, use a selection statement to check if an object is less than 0.2 metres away. Instruct the robot to turn left for half a second if the distance is below the threshold value, and to move forwards otherwise.</p>
+<pre><code class="python">if distance &lt; 0.2:
+    robin.left()
+    sleep(0.5)
+else:
+    robin.forward()
+</code></pre>
+
+<p>Using a sleep command here inside the <code>if</code> statement means that the robot will continue to turn left for a certain amount of time before checking for more obstructions. This should allow your robot enough time to turn clear of the object that was detected.</p>
+<p><strong>6.</strong> To stop the program from running forever, add the following code inside the <code>while</code> loop before the <code>sleep(0.06)</code> command.</p>
+<pre><code class="python">    if time() &gt;= end_time:
+        running = False
+        robin.stop()
+</code></pre>
+
+<p>This checks if the current time is more than or equal to the <code>end_time</code> value specified at the start of the program. If so, it will change the value of <code>running</code> to <code>False</code> (which will stop the <code>while</code> loop from repeating) and then stop the motors.</p>
+<p><strong>7.</strong> Modify the <code>while</code> loop condition so that it stops repeating once <code>running</code> is set to <code>False</code>.</p>
+<p>Change the condition from:</p>
+<pre><code class="python">while True:
+</code></pre>
+
+<p>to:</p>
+<pre><code class="python">while running:
+</code></pre>
+
+<p>Your final code for the <code>while</code> loop should be:</p>
+<pre><code class="python">while running:
+    duration = get_pulse_time()
+    distance = calculate_distance(duration)
+
+    if distance &lt; 0.2:
+        robin.left()
+        sleep(0.5)
+    else:
+        robin.forward()
+
+    if time() &gt;= end_time:
+        running = False
+        robin.stop()
+
+    sleep(0.06)
+</code></pre>
+
+<h3 id="testing-the-program">Testing the program</h3>
+<p>Try running the program, with the robot on a suitable surface.</p>
+<p>If the buggy is not behaving as expected, check that all the connections to the GPIO pins are correct before trying the code again.</p>
+<p>It may also be beneficial to run an earlier program that you know was working, to test whether the motors and UDS are still working as expected.</p>
+<h3 id="discussion">Discussion</h3>
+<p>How effective is your robot at avoiding objects?</p>
+<p>Can you think of any modifications that might help?</p>
+<p>Share your answers in the comments below, or let us know if you are having any issues.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

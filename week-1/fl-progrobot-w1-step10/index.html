@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w1 step10 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#making-the-robot-move" class="nav-link">Making the robot move</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="making-the-robot-move">Making the robot move</h2>
+<p>Now you are going to test whether your buggy can move forwards, backwards, left, and right, using the Python program you created for testing the motors.</p>
+<h3 id="finding-a-suitable-surface">Finding a suitable surface</h3>
+<p>Typically, the motors and wheels used for a robot buggy aren't very good at moving on certain surfaces, such as carpet. If possible, I recommend testing the buggy on a large wooden surface or a tiled floor.</p>
+<h3 id="powering-the-raspberry-pi-and-motor-controller">Powering the Raspberry Pi and motor controller</h3>
+<p>Power up your Raspberry Pi and the motor controller board. Remember, you will need a mobile power supply for the Pi, or your robot will not be able to travel far from the mains plug.</p>
+<p>If either of the wheels starts spinning continuously, chances are one of the connections between the motor controller and the Raspberry Pi has come loose, or is wired up wrongly. Turn off the battery pack for the motor controller or remove the power from the Pi to stop the motors. Then check the wiring that you connected in the steps for connecting the motors and the Raspberry Pi to the motor controller.</p>
+<h3 id="testing-the-movement">Testing the movement</h3>
+<p>To check whether your buggy can move in all directions, it is best to use one of the programs you created for testing the direction of the motors; just make sure it was a working program with the correct GPIO pins for the <code>Robot</code>!</p>
+<p>You need to check that the buggy can move in every direction. Therefore, a program that contains the commands <code>.forward()</code>, <code>.backward()</code>, <code>.left()</code>, and <code>.right()</code> is ideal. Remember to end the program with <code>.stop()</code> to stop the motors from turning.</p>
+<p>If you don't have a program that is suitable, you can copy the code below into a new Python file (adjusting the GPIO pin numbers as needed).</p>
+<pre><code class="python">from gpiozero import Robot
+from time import sleep
+
+robin = Robot(left=(8,7), right=(9,10))
+
+robin.forward()
+sleep(1)
+
+robin.right(0.8)
+sleep(1)
+
+robin.backward(0.9)
+sleep(1)
+
+robin.left(0.7)
+sleep(1)
+
+robin.stop()
+</code></pre>
+
+<p><img alt="Video of the buggy moving forward, right, backward and left" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_10-buggy-moving-all-four-directions.gif" /></p>
+<p>Does the robot buggy move forwards, backwards, left, and right correctly, in the order you specified in the code?</p>
+<p>If not, check that the GPIO pins of the <code>left</code> and <code>right</code> arguments of the <code>Robot</code> are set correctly for your motors. For example, in my robot set-up I had to swap the <code>left</code> motor pins from <code>7,8</code> to <code>8,7</code>. If you are still having issues, follow the instructions that you used previously when you tested the direction of both motors.</p>
+<p>If your buggy moves for some but not all of the commands, try adjusting the number given in the brackets, which controls the speed of the motors.</p>
+<h3 id="understanding-how-the-forward-left-right-and-backward-commands-work">Understanding how the .forward(), .left(), .right(), and .backward() commands work</h3>
+<p>Using <code>Robot</code> from the GPIO Zero library allows you to set the direction of the motors without worrying too much about the signals being sent to the motors.</p>
+<p>As useful as this is, it's also important to understand how these signals are interpreted by the motor controller board to produce the output you want.</p>
+<p>The motors work on a range of <code>-1</code> to <code>1</code>; positive values tell the motor to run forwards, and negative values tell the motor to run in reverse. The size of the value adjusts the speed of the motors.</p>
+<p>When using the <code>.forward()</code> command, a positive value is sent to both motors, while the <code>.backward()</code> command sends a negative value to both.</p>
+<p>The <code>.left()</code> and <code>.right()</code> commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. The opposite is true to turn right; the right motor needs to receive a negative value and the left motor a positive value.</p>
+<h3 id="connecting-to-a-raspberry-pi-remotely">Connecting to a Raspberry Pi remotely</h3>
+<p>Being able to connect to your Raspberry Pi remotely is useful when designing, running, and testing code on the robot buggy. It means you don't have to remove the Raspberry Pi from the buggy every time you want to run or edit a program.</p>
+<p>To use your Raspberry Pi without physically connecting it to a monitor, mouse, or keyboard, you can remotely access the Pi via VNC (Virtual Network Computing) or SSH (Secure Shell).</p>
+<p>VNC is a system that allows you to control remotely the graphical desktop interface of one computer (running VNC Server) from another computer or mobile device (running VNC Viewer). For more information, read our guide on <a href="https://www.raspberrypi.org/documentation/remote-access/vnc/README.md">Connecting to your Raspberry Pi with VNC Viewer</a>.</p>
+<p>You can also access the command line (but not the graphical interface) of a Raspberry Pi remotely from another device on the same network, using SSH. Our guide on <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/">Connecting to Raspberry Pi via SSH</a> contains the details of how to do this.</p>
+<h3 id="discussion">Discussion</h3>
+<p>Share how you got on and any issues you are having in the comments below. Post a link to a video of your robot once you have got it moving! You may need to use a video-hosting platform such as <a href="http://www.youtube.com">YouTube</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

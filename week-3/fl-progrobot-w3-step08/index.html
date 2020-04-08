@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w3 step08 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#program-a-line-following-algorithm" class="nav-link">Program a line-following algorithm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="program-a-line-following-algorithm">Program a line-following algorithm</h2>
+<p>Now that you have attached the line sensors, you are going to create a basic line-following algorithm using the readings from those sensors.</p>
+<h3 id="setting-up-the-motors-and-line-sensors">Setting up the motors and line sensors</h3>
+<p>First, you need to set up your program with the components you'll be interacting with.</p>
+<p><strong>1.</strong> Create a new Python 3 file.</p>
+<p><strong>2.</strong> Set up the program using the code below. You should recognise the elements from your previous programs.</p>
+<pre><code class="python">from gpiozero import Robot, LineSensor
+from time import sleep, time
+
+robin = Robot(left=(8, 7), right=(9, 10))
+
+left_sensor = LineSensor(19)
+right_sensor= LineSensor(26)
+
+robin.forward()
+</code></pre>
+
+<p>Don’t forget to adjust the pin numbers if you’ve used different GPIO pins for the motors or line sensors.</p>
+<p>The <code>robin.forward()</code> command is used to get your robot started.</p>
+<h3 id="describing-the-algorithm">Describing the algorithm</h3>
+<p>The line sensors have two states: the line <strong>is</strong> detected, or the line <strong>is not</strong> detected. The current state of each sensor will help to define the rules of your algorithm.</p>
+<p>To start with, consider what the robot should do when neither of the sensors detects the line. If the line is in the centre of the robot, both line sensors will return a 0, as they are over the white background. In this scenario, the robot should move forwards.</p>
+<p>Think about the rest of the line-following algorithm:</p>
+<ul>
+<li>What is the initial position of the robot in relation to the line?</li>
+<li>How should the robot react when the left sensor detects the line?</li>
+<li>How should the robot react when the right sensor detects the line?</li>
+</ul>
+<p><img alt="Top down animation of a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif" /></p>
+<h3 id="the-rules-of-the-algorithm">The rules of the algorithm</h3>
+<p>The actions that the robot needs to take, depending on the readings it gets from the line sensors, are as follows:</p>
+<ul>
+<li>If there’s a line under the left sensor, turn left</li>
+<li>If there’s a line under the right sensor, turn right</li>
+<li>If there’s no line under either the left sensor <strong>or</strong> the right sensor, drive forwards</li>
+</ul>
+<h3 id="using-events">Using events</h3>
+<p>To detect the state of each sensor, you are going to use two <strong>events</strong> from <code>LineSensor</code>, which is part of the GPIO Zero library.</p>
+<p>So far you have been writing <strong>procedural</strong> programs, which generally run instructions from top to bottom, calling functions as they run.</p>
+<p><strong>Event-driven</strong> programs operate somewhat differently. The main difference is that in an event-driven program, the flow of the program and the order in which instructions are run are determined by events, such as a button being pressed.</p>
+<p>In your program, each of the line sensors will handle two events: <code>when_line</code> and <code>when_no_line</code>.</p>
+<p>The <code>when_line</code> event is triggered whenever the sensor changes state from 0 (white background) to 1 (black line), while <code>when_no_line</code> is triggered when the sensor changes state from 1 to 0.</p>
+<h3 id="programming-the-algorithm">Programming the algorithm</h3>
+<p><strong>3.</strong> Within the Python file you set up, instruct your robot to move in a certain direction based on the rules of the algorithm.</p>
+<pre><code class="python">left_sensor.when_line = robin.left
+right_sensor.when_line = robin.right
+left_sensor.when_no_line = robin.forward
+right_sensor.when_no_line = robin.forward
+</code></pre>
+
+<p><strong>Note:</strong> Unlike calling these methods during a program, when using events, you should make sure not to put brackets after the method name. You are providing a reference to the method, not calling it. The event only needs you to provide the method name; when the event happens it will find the method and call it. If you include brackets with the method, it will be called immediately.</p>
+<h3 id="ensuring-the-program-doesnt-run-forever">Ensuring the program doesn't run forever</h3>
+<p>Currently, the motors will continue to run even after you close the program. If you ran the program at the moment, you would probably need to turn off the Raspberry Pi to stop your robot from moving.</p>
+<p><strong>4.</strong> To make sure that the robot doesn’t keep running forever, and to close all the components' connections cleanly, add the following to the end of your program:</p>
+<pre><code class="python">sleep(10)
+
+robin.stop()
+robin.close()
+left_sensor.close()
+right_sensor.close()
+</code></pre>
+
+<p>After ten seconds, the <code>stop()</code> command will stop both motors. Then the <code>close()</code> command will ensure that the motors and line sensors are shut down completely.</p>
+<p>You can change the number of seconds to a different value if you want to test the robot for a different period of time.</p>
+<h3 id="testing-the-algorithm">Testing the algorithm</h3>
+<p><strong>5.</strong> Try running the program with your robot on your track.</p>
+<p>Here is an example of a robot running on a basic track with this algorithm:</p>
+<p><img alt="Video-gif of the robot wiggling side to side as it follows a basic track" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_8-basic-line-following-robot.gif" /></p>
+<p>Don’t worry if your robot moves off the line a bit; just observe whether it follows the line. If it doesn't, check that the algorithm and the GPIO pin numbers you have specified in the program are correct. You may also need to check that the line sensors are accurately detecting the difference between the white surface and black line, using the instructions for testing the line sensors.</p>
+<h3 id="discussion">Discussion</h3>
+<p>How well does your robot follow the line?</p>
+<p>Why do you think the command <code>robin.forward()</code> is necessary before the events are defined?</p>
+<p>Share your thoughts in the comments section.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

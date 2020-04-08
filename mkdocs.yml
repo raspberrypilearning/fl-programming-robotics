@@ -1,6 +1,0 @@
-site_name: Robotics
-nav:
-  - Home: index.md
-  - A Step: week-1/fl-progrobot-w1-step02.md
-  - Week 1:
-    - Step: week-1/fl-progrobot-w1-step01.md

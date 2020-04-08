@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w1 step05 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#connecting-a-motor-to-the-motor-controller" class="nav-link">Connecting a motor to the motor controller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><a href="#" title="Need to create PDF of components for related file">comment</a>: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files: PDF of components
+)</p>
+<h2 id="connecting-a-motor-to-the-motor-controller">Connecting a motor to the motor controller</h2>
+<p>In this step you will start by connecting the motors to the motor controller board, before connecting the battery holder to the motor controller.</p>
+<p>The instructions are for a L298N dual H-bridge DC stepper motor driver controller board, and they will be similar for most motor controller boards. Check the documentation for your board if you are using a different one.</p>
+<h3 id="what-you-will-need">What you will need</h3>
+<p>For this step you will need the following items:</p>
+<ul>
+<li>Motor controller board</li>
+<li>Two 3V-6V DC motors</li>
+<li>Four jumper leads (male-to-male or female-to-male) or wire</li>
+<li>Screwdriver</li>
+</ul>
+<p>You may also need:</p>
+<ul>
+<li>Soldering iron and solder</li>
+<li>Wire strippers</li>
+<li>Scissors</li>
+<li>Tape</li>
+</ul>
+<p><strong>Using a soldering iron can be a bit daunting at first, but whether you are new to soldering or a veteran, this <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-soldering">Getting started with soldering</a> resource will give you  some quick tips and tricks.</strong></p>
+<p><img alt="The robot buggy parts for this step - 2 x DC motors, Motor controller board, 4 x Jumper leads (male-to-male and female-to-male), Screwdriver, Soldering iron and solder, Wire strippers, Scissors, Tape" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_5-parts-for-motor-controller.jpg" /></p>
+<h3 id="the-dc-motors">The DC motors</h3>
+<p>Most DC motors do not come with wires attached to them, which means you will need to attach your own, using solder.</p>
+<h4 id="preparing-the-wires">Preparing the wires</h4>
+<p>You will need two wires for each DC motor, to connect it to the motor controller board. Alternatively, you can use wire strippers to strip both ends of the jumper leads, to expose the bare wire for attaching to each of the motors. A demonstration of how to strip a wire with wire strippers can be seen in <a href="https://www.youtube.com/watch?v=TZFTKbT4XFs">this video</a>.</p>
+<p><img alt="4 stripped male-to-male jumper leads" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_5-stripped-male-male-jumper-leads.jpg" /></p>
+<p>Remove the soft plastic clip from the motors so that the wires can be attached. You can use a flathead screwdriver to help remove the clip.</p>
+<p>Thread the bare wire through the contact on the motor. <strong>Top tip:</strong> It may be easier to solder the wire to the contact on the motor if you bend the wire once it has passed through the contact.</p>
+<p><img alt="The wire bent through the contact on the motor" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_5-wire-through-motor-contact.jpg" /></p>
+<h4 id="soldering-the-wires">Soldering the wires</h4>
+<p>Turn on the soldering iron and wait for it to heat up. Clean the soldering iron tip before using it; you can use a damp sponge or damp cloth to remove any residue while the iron is hot.</p>
+<p>Heat the contact on the motor with the soldering iron for a second or two. Keeping the soldering iron on the contact, touch the end of the solder to the soldering iron tip until the solder melts. Stop applying solder once the contact and wire are connected by the solder.</p>
+<p><img alt="Video of a wire being soldered to one of the contacts on the DC motor" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_5-soldering-wire-to-motor.gif" /></p>
+<p>Wait for a minute or two for the solder to cool and then gently try to move the wire, to test whether it is securely attached to the contact. If the wire moves, you can either reheat the applied solder with the soldering iron and realign the wire, or apply more solder to the connection.</p>
+<p>Try not to touch with the soldering iron the plastic coating of the wires or any plastic between the two contacts, or the plastic will melt and start to smoke. More tips and guidance can be found in this <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-soldering">soldering tutorial</a>.</p>
+<p>Once the wires have been soldered to the motors securely, trim the end of the wires with scissors. If the wires accidentally touch the metal casing while power is running, this can short the circuit and stop the motor from receiving consistent power.</p>
+<p>Reattach the plastic clips to the motors. It's also a good idea to wrap the end of the motors where you attached the wire in tape, to protect the connection and help keep the solder in good condition.</p>
+<h3 id="connect-the-motors-to-the-motor-controller-board">Connect the motors to the motor controller board</h3>
+<p>A motor controller board will usually have screw terminals for connecting a motor to it. A DC motor needs two screw terminals for it to work, and a servo motor needs four terminals. The four OUT terminals on the board I am using are circled in green below.</p>
+<p><img alt="A L298N motor controller board with four OUT screw terminals for connecting to an electric motor. The four OUT terminals are circled." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_5-motor-controller-board-out-circled.jpg" /></p>
+<p>A DC motor needs to use two wires so that it can turn forwards and backwards. Sending a high signal to one wire and a low signal to the other wire will turn the motor in one direction, and swapping the signals around will turn the motor in the other direction.</p>
+<p>Using a screwdriver, loosen the screws in the terminal blocks labelled <strong>OUT1</strong>, <strong>OUT2</strong>, <strong>OUT3</strong>, and <strong>OUT4</strong>. Have a look at the documentation for your board if your labels are different.</p>
+<p>Strip the ends of the wires; you can snip off the ends if you need to. Insert the stripped ends of one motor into the <strong>OUT1</strong> and <strong>OUT2</strong> terminals and the stripped ends of the second motor into the <strong>OUT3</strong> and <strong>OUT4</strong> terminals. Tighten the screws so the wires are secured firmly in the terminal blocks.</p>
+<p><img alt="A close up image of one or two motors connected to the OUT terminal blocks of a motor controller with the screws of the terminal blocks tightened." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_5-motor-controller-out-wires.jpg" /></p>
+<h3 id="discussion">Discussion</h3>
+<p>Did you have any issues connecting the motors to the motor controller?</p>
+<p>Do you need help with anything that isn't working properly?</p>
+<p>If so, let us know in the comments below.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

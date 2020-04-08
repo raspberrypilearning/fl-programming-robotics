@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w2 step06 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#ultrasonic-distance-sensors" class="nav-link">Ultrasonic distance sensors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="ultrasonic-distance-sensors">Ultrasonic distance sensors</h2>
+<p>Your robot buggy will use an ultrasonic distance sensor (UDS) to help it navigate the physical world. In this step, you'll look at how these work.</p>
+<h3 id="ultrasound">Ultrasound</h3>
+<p>A UDS uses ultrasound to measure distances. Sound travels through the air in a <strong>wave pattern</strong>; measurements are made by examining the properties of the pattern over space and time.</p>
+<p>As the sound travels, the particles in the air oscillate back and forth. This is often represented instead as a wave moving up and down on a graph. A sound's frequency is the number of oscillations per second. Frequency is measured in hertz (Hz); 1Hz corresponds to one oscillation per second.</p>
+<p><img alt="A few sinusoidal waves showing the difference between high and low frequency sounds over time. Over the same amount of time, the higher frequency sounds undergo more cycles." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/24-2_6_wave_frequency.png" /></p>
+<p><strong>Ultrasound</strong> refers to any sound that has a frequency above the range of human hearing. This level varies from person to person, but on average, any sound with a frequency of 20kHz (20,000 oscillations  a second) or above is considered ultrasound.</p>
+<p>The uses of ultrasound are many: doctors use the sound waves to scan inside human bodies, robots can use them to navigate the world, and <a href="https://www.hielscher.com/ultrasonic-formulation-of-reinforced-composites.htm">engineers use them to reinforce metals</a> by compressing the particles.</p>
+<h3 id="ultrasound-and-ultrasonic-distance-sensors">Ultrasound and ultrasonic distance sensors</h3>
+<p><img alt="An HC-SR04 ultrasonic distance sensor showing the emitter and receiver. The four pins are labelled (left to right) VCC, Trig, Echo, and GND." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/8-Distance_sensor.png" /></p>
+<p>A UDS works by sending out a burst of ultrasound. This sound will travel through air, but reflect back (echo) off surrounding objects. The sensor can detect the echo when it returns.</p>
+<p><img alt="A UDS emitting ultrasound which is reflected of an object back towards the receiver." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/2_6-UDS-emitting-sound.png" /></p>
+<p>Using a measure of the time between the outgoing burst and the returning echo, and knowing the speed of sound, you can calculate how far away an object is from the sensor.</p>
+<p>Commonly, a UDS requires two components to do this: an emitter and a receiver. You can see this in the picture above; the two silver cylinders on the front of the sensor are the emitter and receiver.</p>
+<p>A particular advantage of these sensors over other distance measurers, specifically those that use light, is that a UDS is not affected by the colour of the object that the signal reflects off. However, errors can occur if the object can reflect sound away from the receiver.</p>
+<h3 id="how-to-use-a-uds">How to use a UDS</h3>
+<p>Now that you have a better idea of what a UDS is and how it works, you can move on to a more practical examination of how to use one with your buggy.</p>
+<p>A UDS typically has four pins:</p>
+<ul>
+<li><strong>VCC</strong> needs to be connected to a 5V pin, in order to power the device</li>
+<li><strong>Trig</strong> is the pin that triggers the emission of the ultrasound burst</li>
+<li><strong>Echo</strong> is the pin that provides an output from the device; it outputs at 3.3V or 5V, depending on the UDS model</li>
+<li><strong>GND</strong> is the ground pin, used to complete the circuit</li>
+</ul>
+<p>If the UDS is 5V-tolerant, this causes some issues because the <strong>echo</strong> pin will output 5V and the Raspberry Pi can only handle 3.3V. This means you will have to use some resistors to create a voltage divider, also known as a potential divider. Make sure to check the voltage tolerance of your UDS; the HC-SR04 sensor will need a voltage divider. A 3V3-tolerant sensor, such as the HC-SR04P, will work without a voltage divider.</p>
+<h4 id="voltage-dividers">Voltage dividers</h4>
+<p>A voltage (or potential) divider can split a voltage into two smaller voltages by using multiple resistors. The diagram below shows a single resistor connected to a 5V pin. The voltage across the resistor is 5V:</p>
+<p><img alt="A circuit consisting of a 1000 ohm resistor  between a 5V pin and a GND pin. A 5V voltage is shown across the resistor." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/25-2_6-voltage_divider_a.png" /></p>
+<p>The diagram below shows how the voltage can be split by using two resistors wired in series. As both resistors are the same, the voltage is split equally between the two:</p>
+<p><img alt="A circuit consisting of two 1000 ohm resistors  between a 5V pin and a GND pin. A 2.5V voltage is shown across each resistor." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/26-2_6-voltage_divider_b.png" /></p>
+<p>By altering the resistors, you can tailor the voltage across any one of them to be anything you like. Here, you can see that I have split the voltage to give us almost exactly 3.3V across the second resistor:</p>
+<p><img alt="A circuit consisting of one 1200 ohm resistor and one 2200 ohm resistor connected in series between a 5V pin and a GND pin. The 1200 ohm resistor shows roughly 1.8V across it and the 2200 ohm resistor shows roughly 3.2V across each it." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/27-2_6-voltage_divider_c.png" /></p>
+<p>You can use the code below to work out the resistors you need:</p>
+<pre><code class="python">R1 = 1200 # Your current resistor (alter this)
+Vout = 3.3 # The voltage you are trying to achieve (always 3.3) across the resistor R2
+Vin = 5 # The input voltage (always 5)
+
+R2 = (Vout * R1) / (Vin - Vout)
+
+print('The resistor you need is approximately', R2)
+</code></pre>
+
+<h3 id="the-limitations-of-a-uds">The limitations of a UDS</h3>
+<p>The biggest limitation of this type of sensor comes into play when the object that reflects the ultrasound is very close. In this case, the receiver might not pick up the sound when it is initially reflected off an object, and may instead detect the sound once it has rebounded off another object. This results in an inaccurately high distance reading.</p>
+<h3 id="test-your-voltage-divider">Test your voltage divider</h3>
+<p>Using the code and formula above, decide what size resistors you would use to limit the voltage to 1V.</p>
+<p>Share your thinking and answers in the comments below.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

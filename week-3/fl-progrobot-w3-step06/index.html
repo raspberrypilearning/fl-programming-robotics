@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w3 step06 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#testing-the-line-sensors" class="nav-link">Testing the line sensors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="testing-the-line-sensors">Testing the line sensors</h2>
+<p>You are now going to attach your line-following sensors to the chassis and test whether they are picking up the difference between light and dark surfaces.</p>
+<h3 id="what-you-will-need">What you will need</h3>
+<ul>
+<li>White paper or card (at least three sheets of A4)</li>
+<li>Black tape (a black marker pen would also work)</li>
+</ul>
+<p>You may also need:</p>
+<ul>
+<li>A screwdriver</li>
+</ul>
+<p><img alt="The parts for building a track for the robot and testing the line following sensors - white paper, black tape, screwdriver" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-parts_for_line_testing.jpg" /></p>
+<h3 id="preparing-your-track">Preparing your track</h3>
+<p>To test your robot, you'll need to prepare a track with a line for it to follow. I made a simple track out of three pieces of A4 paper placed in a slightly curved row, with a single strip of black tape making a line through the middle of the paper, as pictured below.</p>
+<p><img alt="Three white pieces of paper joined in a curve with a black line of tape running through the center" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-black_line_on_white_paper.jpg" /></p>
+<p>This provides a clear contrast in light levels between the white paper and the black tape, so your line sensors should be able to detect accurately when the line is beneath them.</p>
+<h3 id="attaching-the-sensors-to-the-chassis">Attaching the sensors to the chassis</h3>
+<p>Before you modify the chassis, I recommend taking a few photos of your robot and the connections between the pins on the Raspberry Pi and the components. It is quite likely that a few of the jumper leads will come loose while you are attaching the line sensors to the chassis. You can use the photo of the robot, and/or the steps covered in the previous two weeks of this course, to help you check the leads and reconnect them correctly if necessary.</p>
+<h4 id="positioning-the-line-sensors">Positioning the line sensors</h4>
+<p>When using two line sensors, you want them to be positioned near the front of the chassis, and evenly spaced on either side of the caster wheel. This is so that each sensor can detect when it is over the line with minimal delay, so that the robot can be programmed to change course before it has drifted too far to either side of the line. The smaller the gap is between the sensors, the less the robot will need to wiggle from side to side before it is positioned directly over the line again.</p>
+<p><img alt="Top down animation of a robot buggy following a black line. The buggy moves forwards and turns right if the right sensor detects the line, and turns left if the left sensor detects the line." src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Animation/3_4-line-following-buggy-animation.gif" /></p>
+<p>The optimal distance between the surface and the sensor is from 1 cm to 3 cm, which should be fine for most chassis. If not, you may need to tune the sensors later, using the instructions below.</p>
+<p>Align your robot so that the centre of the robot is directly over the black line on your track. On the chassis, mark where you want to position the line sensors so that the sensors will be on either side of the line.</p>
+<h4 id="securing-the-sensors-to-the-chassis">Securing the sensors to the chassis</h4>
+<p>Cut two small holes in the bottom of your chassis so that the infrared (IR) emitter and receiver (the blue and black components that look like LEDs) can fit through. If the potentiometer and/or the tiny LED (which indicates when a line has been detected) are on the same side as the IR emitter and receiver, you will also need to include some space for these to fit through. Ideally, the holes will be big enough so that these parts can fit through them without the entire sensor dropping through the hole!</p>
+<p><img alt="Picture of one line sensor in place on the chassis and a hole where the other line sensor should be placed" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-one_line_sensor_in_place.jpg" /></p>
+<p>You can then secure the sensor in place using tape; make sure the tape doesn't cover the IR emitter or receiver.</p>
+<h3 id="tuning-the-line-sensors">Tuning the line sensors</h3>
+<p>You need to check that the line sensors can detect the difference between a white surface and a black line reliably, and tune them up using the potentiometer.</p>
+<p>With the line sensors attached, boot up your Raspberry Pi. Move the robot slowly from side to side so that each of the line sensors passes over the black line.</p>
+<p>When a sensor is over a <strong>light</strong> surface, the LED on the sensor board should be <strong>on</strong>. Conversely, when a sensor passes over a <strong>dark</strong> line, the LED on the sensor should be <strong>off</strong>.</p>
+<p>Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it, with as little delay as possible. If either of the sensors is not picking up the changes in light between the white paper and the black line accurately, you will need to adjust the threshold value by adjusting the potentiometer using a screwdriver. Be careful when turning the potentiometer, as it is quite a delicate component.</p>
+<p><img alt="The potentiometer on one of the line sensors being tuned with a screwdriver" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-potentiometer-tuning.jpg" /></p>
+<h3 id="discussion">Discussion</h3>
+<p>How did you get on with testing the line sensors? Did you have any issues? Share your thoughts in the comments.</p>
+<p>In the next step you will have an opportunity to reflect on how you have got on in the course so far.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

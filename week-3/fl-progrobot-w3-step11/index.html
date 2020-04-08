@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w3 step11 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#peer-assessment-create-a-new-function-for-your-robot-buggy" class="nav-link">Peer-assessment: Create a new function for your robot buggy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="peer-assessment-create-a-new-function-for-your-robot-buggy">Peer-assessment: Create a new function for your robot buggy</h2>
+<p>This course has been all about building and programming a robot buggy using a Raspberry Pi. Over the three weeks of the course you have been following my instructions, attaching components to your chassis, and writing code to communicate with these components.</p>
+<p>Now it's time for you to create a new piece of functionality for your robot on your own. You'll then share what you've done with a fellow learner, so that they can give you feedback on it.</p>
+<p>Some examples of modifications you could make to your robot are:</p>
+<ul>
+<li>Allowing the buggy to be controlled <a href="https://projects.raspberrypi.org/en/projects/remote-control-buggy">remotely</a></li>
+<li>Adding a second UDS to the front of your chassis to improve object detection</li>
+<li>Attaching LEDs to your robot and decorating the chassis</li>
+<li>Replacing the ball caster with two more wheels</li>
+<li>Using a <a href="https://projects.raspberrypi.org/en/projects/robotPID">PID controller</a> to gain more precise control over your robot's movement</li>
+</ul>
+<p>For this assignment you should upload images of your upgraded robot to an image-hosting platform such as <a href="https://www.imgur.com/">Imgur</a> or a video-hosting platform such as <a href="https://www.youtube.com">YouTube</a> and include the link in your assignment.</p>
+<p>Alongside this, write a short summary of your new function, including:</p>
+<ul>
+<li>The original idea and why you chose it</li>
+<li>The components you used and any modifications you had to make to your robot</li>
+<li>A copy of your code and a description of how you designed and tested your program</li>
+<li>The challenges you had while adding the new functionality, as well as the successes you are proud of</li>
+</ul>
+<p>This assignment is peer assessed: once you have submitted your assignment, it will be reviewed by another learner on the course. In turn, you will be asked to assess another learner’s work.</p>
+<p>There is a free-form text box for you to use below, but please feel free to include links to any online content you produce. You could use any cloud-based storage or office solution, such as:</p>
+<ul>
+<li><a href="https://www.dropbox.com">Dropbox</a></li>
+<li><a href="https://drive.google.com">Google Drive</a></li>
+</ul>
+<p>Remember that you also need to include links to the photos or videos of your robot that I've asked you to include.</p>
+<p><strong>Warning:</strong> Once you submit your assignment, you cannot edit it again. It will be sent to another learner for feedback. Please be sure to read over your submission carefully before you send it off.</p>
+<h3 id="assignment-guidelines">Assignment guidelines</h3>
+<p>You must give three assignment guidelines in the form of questions for the peer reviewer to answer, for example:</p>
+<ul>
+<li>What new piece of functionality has the author added?</li>
+<li>How well have they documented the components used and the code developed?</li>
+<li>How thoroughly has the author tested their robot?</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

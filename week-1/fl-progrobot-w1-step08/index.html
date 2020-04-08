@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w1 step08 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#designing-the-chassis" class="nav-link">Designing the chassis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="designing-the-chassis">Designing the chassis</h2>
+<p>Now that you have the motors set up, it's time to design a chassis &mdash; the physical frame of your vehicle. Your buggy will need a chassis onto which you can secure the components, such as the wheels, motors, and Raspberry Pi.</p>
+<p><img alt="The chassis of an automobile showing the wheels, axels and steering wheel attached to the frame" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/17-1_8-automobile-chassis.png" /></p>
+<h3 id="choosing-a-material">Choosing a material</h3>
+<p>A chassis for a robot buggy can be built using all sorts of materials: cardboard, plastic, or metal to name a few. The material that works best for you depends on the weight of the components, cost, the skill of the maker, and the tools available.</p>
+<p>When choosing a material, you need to consider aspects such as weight versus durability, cost versus strength, and difficulty to work with versus quality of the chassis. Using certain types of metal might result in a strong and durable chassis, but will be more difficult to modify than cardboard. A cardboard chassis will be light and cheap, but is less sturdy than some other materials.</p>
+<p>I recommend making a prototype of the chassis first using a low-cost material, as tweaking the design will then be much easier. Common household items, such as a cardboard box or a plastic ice-cream tub, are perfect for experimenting with the design. The robot buggy that is built throughout the videos in this course uses a chassis made out of a cardboard carton that held grapes. I chose this was because it is a good-sized box that can hold the robot components without needing to be modified. It was also easy to make holes in the carton to attach the components.</p>
+<h3 id="planning-the-layout">Planning the layout</h3>
+<h4 id="what-needs-to-be-attached-to-the-chassis">What needs to be attached to the chassis</h4>
+<p>There is no right way to build your prototype robot chassis, but there are a few things to bear in mind.</p>
+<p>At the very minimum, the chassis needs to house the following components:</p>
+<ul>
+<li>Raspberry Pi</li>
+<li>Motor controller board</li>
+<li>Two DC motors</li>
+<li>Ultrasonic distance sensor</li>
+<li>Two line sensors</li>
+<li>AA battery holder (to power the motor controller board)</li>
+<li>USB battery pack (for powering the Raspberry Pi)</li>
+</ul>
+<p>You will also need to mount a pair of wheels to the axles of the motors, and add a ball caster to the front of the chassis that will act as a third wheel.</p>
+<p>The line sensors will need to sit on either side of the ball caster and point downwards to the floor. The optimal distance between the line sensors and the floor surface is 1 cm to 3 cm, which should be fine for most buggies.</p>
+<p><img alt="The components that will need to be attached to the robot buggy chassis -  Raspberry Pi, motor controller board, 2 DC motors, ultrasonic distance sensor, 2 line sensors, AA battery holder, USB battery pack" src="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/1_8-components-for-the-chassis.jpg" /></p>
+<h4 id="making-sure-the-components-fit">Making sure the components fit</h4>
+<p>If you are planning on using a pre-made container for the chassis, you can try placing all the components inside to see if there is room. Bear in mind that the components can't all just be shoved in; some parts will need extra space around them so that they can be accessed easily, such as the power supply, which will need to be recharged. Other parts will need to be secured to certain places on the chassis; for instance, the ultrasonic distance sensor must be attached to the front of the chassis so that it can sense objects in front of the buggy.</p>
+<p>It can also be useful to design the layout of the buggy on paper, to make sure that all the components have enough room. Begin by making a footprint, which is the base of your buggy. You need to ensure that all the components can fit inside the footprint appropriately. A good method is to represent each component with a piece of paper that you can easily move about, so that you can try out different arrangements.</p>
+<p>Make sure each piece of paper is the correct size and shape for the component. You might have to measure your components, but most of them will have technical documentation online that will include their exact dimensions.</p>
+<h4 id="advanced-design-techniques">Advanced design techniques</h4>
+<p>If you want to know more about creating a physical object and using tools such as 3D modelling and 3D printing, check out our <a href="https://www.futurelearn.com/courses/embedded-systems"><em>Design and Prototype Embedded Computer Systems</em> course</a>.</p>
+<h3 id="your-turn">Your turn</h3>
+<p>Now it is time for you to design a chassis for your robot buggy and make sure all the components fit:</p>
+<ul>
+<li>Find a container that you can use for the prototype of the chassis</li>
+<li>Check that all the components will fit, either by using the actual components, or by mapping them out on paper</li>
+<li>Check that there is a bit of extra room around the components to account for things such as wiring</li>
+</ul>
+<h3 id="discussion">Discussion</h3>
+<p>What type of container have you used for your chassis? What material is it made out of?</p>
+<p>How did you check that all the components will fit?</p>
+<p>Share your answers in the comments below. You can also include a link to an image of your chassis by using <a href="https://imgur.com/">Imgur</a> or another image-hosting platform.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w2 step10 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#challenge-improving-the-obstacle-avoidance-program" class="nav-link">Challenge: Improving the obstacle-avoidance program</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="challenge-improving-the-obstacle-avoidance-program">Challenge: Improving the obstacle-avoidance program</h2>
+<p>There are a number of modifications that will improve your robot's ability to avoid objects autonomously. Most of these require changes to the program from the previous step.</p>
+<p>First, I suggest making a copy of your program before modifying any of the code, in case something you try doesn't work out.</p>
+<h3 id="changing-some-of-the-values">Changing some of the values</h3>
+<p>Begin by experimenting with different distance thresholds and sleep values, to see how that affects the performance of the robot.</p>
+<p>For example, the distance threshold of 0.2 metres used in the previous program may need to be increased slightly if your robot does not start to turn out of the way of an obstacle in time.</p>
+<p>You can also change the sleep value of 0.5 seconds, so that the robot continues turning for more or less time once the threshold value has been met.</p>
+<h3 id="changing-the-robots-behaviour">Changing the robot's behaviour</h3>
+<p>Currently, the robot turns left for a set amount of time whenever an object is detected as being too close. </p>
+<p>This predictable behaviour has the potential to cause issues. One problem is that the robot might get stuck in an obstacle avoidance loop when turning by a fixed amount each time. In this situation, the robot keeps detecting the same obstacles over and over again, seemingly with no way to escape!</p>
+<p>There are a number of changes you can make to the robot's behaviour.</p>
+<h4 id="two-steps-forward-one-step-back">Two steps forward, one step back</h4>
+<p>One modification you can make is to instruct the robot to move backwards for a period of time before turning to avoid an object. This will give your robot a chance to avoid obstacles if it has found itself in a dead end.</p>
+<p>Another solution is to introduce random aspects into the robot's movements.</p>
+<h4 id="randomising-the-amount-of-time-the-robot-turns">Randomising the amount of time the robot turns</h4>
+<p>Rather than turning left for a set amount of time, you can instruct the program to generate a random number of seconds within a certain range of values.</p>
+<p>To add this functionality, you will need to import the <code>random</code> library into your Python program. Use the function <code>random.uniform(a, b)</code> to return a random floating-point number, where <code>a</code> is the lowest value and <code>b</code> is the highest value.</p>
+<h4 id="choosing-a-random-direction">Choosing a random direction</h4>
+<p>Another modification to the robot's behaviour is to allow the program to choose a random direction to turn once an obstacle has been detected. Instead of always turning left, the robot could be instructed to turn <em>either</em> left or right. How might you code this?</p>
+<h3 id="limitations-of-the-uds">Limitations of the UDS</h3>
+<p>There are some limitations it is important to be aware of when using a UDS. Finding workarounds to these problems will ensure that your program is robust.</p>
+<h4 id="objects-that-are-too-close">Objects that are too close</h4>
+<p>You may have noticed that an object that is really close to the UDS returns a much larger distance than expected. This occurs if an object is closer than the minimum distance a UDS can detect accurately; for the HC-SR04 and HC-SR04P models, the detection distance is from about 2 cm to 500 cm.</p>
+<p>Take a look at the distance values that are output when an object is very close to the UDS and see if you can find a solution within the program to pick up these objects.</p>
+<h4 id="objects-that-are-to-the-side">Objects that are to the side</h4>
+<p>Another issue that your robot may run into is that, depending on the width of your robot, the UDS won't detect objects on either side of it that are going to be in the way.</p>
+<p>One solution to this would be to add an extra UDS to the front of the robot, so that there is one on each side of the chassis. This modification would also require the program to be adapted so that it is able to work with two UDSs.</p>
+<h3 id="what-improvements-will-you-make">What improvements will you make?</h3>
+<p>Improve your program using one of the ideas in this step:</p>
+<ul>
+<li>Change the distance threshold and/or sleep values</li>
+<li>Once your robot has detected an obstacle:<ul>
+<li>Instruct it to move backwards before turning left</li>
+<li>Generate a random number of seconds for the robot to turn for</li>
+<li>Get the program to choose a random direction for the robot to turn in</li>
+</ul>
+</li>
+<li>Find a solution for detecting objects that are closer than the minimum detection distance of your UDS</li>
+<li>Attach another UDS to the chassis and modify your program so it works with two UDSs</li>
+</ul>
+<h3 id="discussion">Discussion</h3>
+<p>Can you think of any other improvements that you could make?</p>
+<p>In the comments below, share the changes you made and add a link to your new code using <a href="https://pastebin.com/">Pastebin</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

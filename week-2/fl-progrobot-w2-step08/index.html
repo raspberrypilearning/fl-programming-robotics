@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fl progrobot w2 step08 - Robotics</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Robotics</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../week-1/fl-progrobot-w1-step02.md" class="nav-link">A Step</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Week 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../week-1/fl-progrobot-w1-step01/" class="dropdown-item">Step</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#programming-the-uds" class="nav-link">Programming the UDS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[comment]: # (
+Is this step open? Y/N
+If so, short description of this step:
+Related links:
+Related files:
+)</p>
+<h2 id="programming-the-uds">Programming the UDS</h2>
+<p>Now that you've attached the ultrasonic distance sensor (UDS), you need to test that it can detect objects that are directly in front of it at different distances.</p>
+<h3 id="testing-the-uds">Testing the UDS</h3>
+<p>First, you need to check that the UDS is working correctly while the robot is stationary. To interact with the UDS, you will be using the GPIO Zero library.</p>
+<h4 id="setting-up-the-program">Setting up the program</h4>
+<p><strong>1.</strong> In a new Python 3 file, import the libraries required for this program.</p>
+<pre><code class="python">from gpiozero import InputDevice, OutputDevice
+from time import sleep, time
+</code></pre>
+
+<p><code>InputDevice</code> and <code>OutputDevice</code> will be used to communicate with the trig and echo pins. You will also need <code>time</code> and <code>sleep</code> to calculate the time taken for the ultrasound to be emitted and received.</p>
+<p><strong>2.</strong> Set up the trig and echo pins using the GPIO pins you connected them to on your Raspberry Pi. I used pins 4 and 17 respectively, but you may have used different pins.</p>
+<pre><code class="python">trig = OutputDevice(4)
+echo = InputDevice(17)
+
+sleep(2)
+</code></pre>
+
+<p>The <code>sleep(2)</code> is there to let the sensor settle when the program starts, so that the readings are accurate.</p>
+<h4 id="transmitting-and-receiving-the-ultrasound">Transmitting and receiving the ultrasound</h4>
+<p><strong>3.</strong> Create a function that will be used to calculate how long it takes for the ultrasound to be transmitted and received.</p>
+<p>Start by setting the trig pin to high for 10μs (microseconds), which prepares the internal clock of the UDS.</p>
+<pre><code class="python">def get_pulse_time():
+   trig.on()
+   sleep(0.00001)
+   trig.off()
+</code></pre>
+
+<p>As soon as the trig pin is set to low, a burst of ultrasound is sent from the emitter, and this sound starts to travel through the air.</p>
+<p><img alt="Animation of the Trig pin being set to high for 10μs and then set to low. A burst of ultrasound is emitted from the UDS as soon as the Trig pin is set to low." src="https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png" /></p>
+<p>Once the ultrasound has finished being emitted, the UDS sets the echo pin to high. At this point, you need to record the start time.</p>
+<p><strong>4.</strong> Use a <code>while</code> loop inside the function to record the start time.</p>
+<pre><code class="python">    while echo.is_active == False:
+        pulse_start = time()
+</code></pre>
+
+<p>You can use the <code>is_active</code> command to check if a pin is set to high (which returns <code>True</code>) or low (which returns <code>False</code>).</p>
+<p>The above code works by repeatedly replacing the value of <code>pulse_start</code> with the current time until the echo pin is active. This means that the final value of <code>pulse_start</code> is the time at which the echo pin is set to high.</p>
+<p><img alt="Animation showing that once the ultrasound has finished being transmitted, the Echo pin is set to high and the start time is recorded." src="https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png" /></p>
+<p>If the ultrasound hits an object, it is reflected back to the sensor. As soon as the receiver picks up the ultrasound, the echo pin is set to low and the program must record the end time.</p>
+<p><strong>5.</strong> Inside the function, create another <code>while</code> loop that keeps replacing the end time until the echo pin is set to low.</p>
+<pre><code class="python">    while echo.is_active == True:
+        pulse_end = time()
+</code></pre>
+
+<p><img alt="Animation showing that if the ultrasound hits an object, it is reflected back to the sensor. As soon as the receiver picks up the ultrasound, the Echo pin is set to low and the end time is recorded. " src="https://howtomechatronics.com/wp-content/uploads/2015/07/Ultrasonic-Sensor-Diagram.png" /></p>
+<p><strong>6.</strong> Finally, the function should return the amount of time it took for the pulse of ultrasound to be sent and received.</p>
+<pre><code class="python">    return pulse_end - pulse_start
+</code></pre>
+
+<p>All of the code from steps 3 to 6 should be inside the function you created called <code>get_pulse_time()</code>.</p>
+<p><strong>7.</strong> Test the program by running it and then typing the following into the Python shell (known as the REPL if you are using Mu).</p>
+<pre><code class="python">print(get_pulse_time())
+</code></pre>
+
+<p>Try typing the above line of code when your hand is at different distances from the front of the UDS. You should get smaller values as your hand approaches the sensor.</p>
+<h3 id="calculating-the-distance">Calculating the distance</h3>
+<p>You can use a formula to calculate the distance the sensor is from an object, starting with the speed equation:</p>
+<p><img alt="speed = distance / time" src="https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/speed.png" /></p>
+<p>This can be rearranged to make:</p>
+<p><img alt="distance = speed * time" src="https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/distance.png" /></p>
+<p>but as the sound has to travel to the object <strong>and</strong> back, you need to divide this distance by 2:</p>
+<p><img alt="distance = speed * time / 2" src="https://projects-static.raspberrypi.org/projects/see-like-a-bat/88c95cc4c253c700132e4c26f23373c277241549/en/images/distance2.png" /></p>
+<p>The speed of sound in air will vary depending on the conditions, but it tends to hover at around 343 metres per second.</p>
+<h4 id="putting-the-formula-into-practice">Putting the formula into practice</h4>
+<p><strong>8.</strong> Create another function to calculate the distance.</p>
+<pre><code class="python">def calculate_distance(duration):
+    speed = 343
+    distance = speed * duration / 2
+    # calculate distance in metres
+    return distance
+</code></pre>
+
+<p>Using a different function to calculate this distance is good coding practice, as this function can be tested separately, and can easily be reused multiple times within the program.</p>
+<p><strong>9.</strong> Add an infinite loop to the bottom of the program to test that everything works.</p>
+<pre><code class="python">while True:
+    duration = get_pulse_time()
+    distance = calculate_distance(duration)
+
+    sleep(0.06)
+    print(distance)
+</code></pre>
+
+<p>You need the <code>sleep</code> command, as the UDS requires a short wait before it can be used again.</p>
+<h3 id="the-final-program">The final program</h3>
+<p>Your full code should now look similar to <a href="https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/code/uds-detect-objects.py">this finished program</a>.</p>
+<p><strong>10</strong>. Run your code and you should see a stream of numbers showing you the distance of an object from the sensor in metres. Test this by moving a large, flat object such as a book closer to and further from the distance sensor.</p>
+<h3 id="testing-the-distances">Testing the distances</h3>
+<p>What range of values is your program outputting?</p>
+<p>What happens if you place an object really close to, or far away from, the UDS?</p>
+<p>Share your answers in the comments below.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
