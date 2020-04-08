@@ -46,7 +46,7 @@ Align your robot so that the centre of the robot is directly over the black line
 
 Cut two small holes in the bottom of your chassis so that the infrared (IR) emitter and receiver (the blue and black components that look like LEDs) can fit through. If the potentiometer and/or the tiny LED (which indicates when a line has been detected) are on the same side as the IR emitter and receiver, you will also need to include some space for these to fit through. Ideally, the holes will be big enough so that these parts can fit through them without the entire sensor dropping through the hole!
 
-![Picture of one line sensor in place on the chassis and a hole where the other line sensor should be placed](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-one_line_sensor_in_place.jpg)
+![One line sensor in place on the chassis and a hole where the other line sensor should be placed](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Photographs/3_6-one_line_sensor_in_place.jpg)
 
 You can then secure the sensor in place using tape; make sure the tape doesn't cover the IR emitter or receiver.
 
