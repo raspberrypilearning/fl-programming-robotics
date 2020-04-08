@@ -1,18 +1,52 @@
 site_name: Robotics
+
+theme: readthedocs
+
+markdown_extensions:
+  - admonition
+
+plugins:
+  - mkdocs-nav-enhancements
+
 nav:
   - Home: index.md
   - Building a mobile robot:
-    - Welcome to the course: week-1/fl-progrobot-w1-step01.md
-    - Meet the team and your fellow learners: week-1/fl-progrobot-w1-step02.md
-    - The world of robotics: week-1/fl-progrobot-w1-step03.md
-    - Raspberry Pi and General-Purpose Input/Output: week-1/fl-progrobot-w1-step04.md
-    - Connecting a motor to the motor controller: week-1/fl-progrobot-w1-step05.md
-    - Connecting the Raspberry Pi and battery pack to the motorboard: week-1/fl-progrobot-w1-step06.md
-    - Testing the motors: week-1/fl-progrobot-w1-step07.md
-    - Designing the chassis: week-1/fl-progrobot-w1-step08.md
-    - Attaching the components to the chassis: week-1/fl-progrobot-w1-step09.md
-    - Making the robot move: week-1/fl-progrobot-w1-step10.md
-    - "Challenge: Driving in patterns": week-1/fl-progrobot-w1-step11.md
-    - Why we call robotics challenging: week-1/fl-progrobot-w1-step12.md
-    - The end of week one: week-1/fl-progrobot-w1-step13.md
-theme: readthedocs
+    - week-1/fl-progrobot-w1-step01.md
+    - week-1/fl-progrobot-w1-step02.md
+    - week-1/fl-progrobot-w1-step03.md
+    - week-1/fl-progrobot-w1-step04.md
+    - week-1/fl-progrobot-w1-step05.md
+    - week-1/fl-progrobot-w1-step06.md
+    - week-1/fl-progrobot-w1-step07.md
+    - week-1/fl-progrobot-w1-step08.md
+    - week-1/fl-progrobot-w1-step09.md
+    - week-1/fl-progrobot-w1-step10.md
+    - week-1/fl-progrobot-w1-step11.md
+    - week-1/fl-progrobot-w1-step12.md
+    - week-1/fl-progrobot-w1-step13.md
+  - Automating actions using distance sensors:
+    - week-2/fl-progrobot-w2-step01.md
+    - week-2/fl-progrobot-w2-step02.md
+    - week-2/fl-progrobot-w2-step03.md
+    - week-2/fl-progrobot-w2-step04.md
+    - week-2/fl-progrobot-w2-step05.md
+    - week-2/fl-progrobot-w2-step06.md
+    - week-2/fl-progrobot-w2-step07.md
+    - week-2/fl-progrobot-w2-step08.md
+    - week-2/fl-progrobot-w2-step09.md
+    - week-2/fl-progrobot-w2-step10.md
+    - week-2/fl-progrobot-w2-step11.md
+    - week-2/fl-progrobot-w2-step12.md
+  - Allowing Robots to follow lines:
+    - week-3/fl-progrobot-w3-step01.md
+    - week-3/fl-progrobot-w3-step03.md
+    - week-3/fl-progrobot-w3-step04.md
+    - week-3/fl-progrobot-w3-step05.md
+    - week-3/fl-progrobot-w3-step06.md
+    - week-3/fl-progrobot-w3-step07.md
+    - week-3/fl-progrobot-w3-step08.md
+    - week-3/fl-progrobot-w3-step09.md
+    - week-3/fl-progrobot-w3-step10.md
+    - week-3/fl-progrobot-w3-step11.md
+    - week-3/fl-progrobot-w3-step12.md
+    - week-3/fl-progrobot-w3-step14.md
