@@ -1,12 +1,13 @@
 # Robotics With Raspberry Pi: Build and Program Your First Robot Buggy
 
-![https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/SIGN_UP-progwithrobotics.png](Several images representing parts of the course, including a Raspberry Pi, an ultrasonic distance sensor, a robot buggy, and electronics)
+![Several images representing parts of the course, including a Raspberry Pi, an ultrasonic distance sensor, a robot buggy, and electronics](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/SIGN_UP-progwithrobotics.png)
 
 **Build and program your first robot buggy using a Raspberry Pi, learning how to connect motors, add sensors and write algorithms.**
 
 This site is a mirror of the Raspberry Pi Foundation's ***"Robotics With Raspberry Pi: Build and Program Your First Robot Buggy"*** course on FutureLearn.
 
 We recommend that you take the free course on FutureLearn in order to access more features such as discussions about the course material, assistance from our course facilitators, and quizzes.
+
 + If you are a teacher in England, [sign up for *Robotics With Raspberry Pi* through teachcomputing.org](https://teachcomputing.org/courses/CO224/robotics-with-raspberry-pi-build-and-program-your-first-robot-buggy?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=oop-11) to access a free upgrade, including unlimited access to the course and the ability to use the course as part of certification from the [National Centre for Computing Education](https://teachcomputing.org/)
 + If you are not a teacher in England, [sign up for *Robotics With Raspberry Pi* on FutureLearn](https://www.futurelearn.com/courses/robotics-with-raspberry-pi)
 
