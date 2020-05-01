@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Autonomous robots
 
 So far this week you have been exploring *how* robots sense the world around them. In this step you are going to look at *why* it benefits robots to sense the world around them, and explore the world of autonomous robots.

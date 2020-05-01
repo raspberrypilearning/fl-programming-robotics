@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Reviewing your peer's work
 
 Now that you've completed your assessment, it's time to review the work of one of your peers.

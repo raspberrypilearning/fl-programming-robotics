@@ -1,3 +1,8 @@
+!!! Resources
+
+    + [Video](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Videos/Robotics_Week_1.9.mp4)
+    + [Video subtitles](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Subtitles/Robotics_Week_1_9.vtt)
+
 ## Attaching the components to the chassis
 
 Once you have ensured that all the robot parts fit into the chassis, you need to secure some of the components in place.

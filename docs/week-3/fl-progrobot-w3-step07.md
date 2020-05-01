@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Sharing your progress
 
 You have made incredible progress with your robot buggy, turning it from an inanimate object into a robot that is able to sense the world around it and act upon this information.
@@ -17,7 +10,7 @@ This is also a perfect time to share the progress you have made and any pictures
 
 If you have any questions or are struggling with anything related to your robot buggy, leave a comment below and one of the course facilitators will provide help and support.
 
-### Next steps 
+### Next steps
 
 In the next step you are going to write an algorithm for a basic line-following robot.
 

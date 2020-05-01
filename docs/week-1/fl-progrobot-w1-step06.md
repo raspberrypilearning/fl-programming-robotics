@@ -1,3 +1,8 @@
+!!! Resources
+
+    + [Video](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Videos/Robotics_Week_1.6.mp4)
+    + [Video subtitles](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Subtitles/Robotics_Week_1_6.vtt)
+
 ## Connecting the Raspberry Pi and battery pack to the motorboard
 
 Your next step is to connect the motorboard to the GPIO pins on the Raspberry Pi, and to the battery pack. This will allow you to power the motorboard and control the motors using the Raspberry Pi.

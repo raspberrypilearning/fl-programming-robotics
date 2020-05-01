@@ -1,3 +1,8 @@
+!!! Resources
+
+    + [Video](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Videos/Robotics_Week_1.7.mp4)
+    + [Video subtitles](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Subtitles/Robotics_Week_1_7.vtt)
+
 ## Testing the motors
 
 In this step you will label and test the motors, to help ensure that your robot will correctly go forwards, backwards, left, or right as commanded.

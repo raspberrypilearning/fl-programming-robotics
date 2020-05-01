@@ -1,3 +1,8 @@
+!!! Resources
+
+    + [Video](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Videos/Robotics_Week_1.10.mp4)
+    + [Video subtitles](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Subtitles/Robotics_Week_1_10.vtt)
+
 ## Making the robot move
 
 Now you are going to test whether your buggy can move forwards, backwards, left, and right, using the Python program you created for testing the motors.

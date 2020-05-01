@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Ultrasonic distance sensors
 
 Your robot buggy will use an ultrasonic distance sensor (UDS) to help it navigate the physical world. In this step, you'll look at how these work.

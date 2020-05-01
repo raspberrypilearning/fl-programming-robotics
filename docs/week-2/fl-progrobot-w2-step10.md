@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Challenge: Improving the obstacle-avoidance program
 
 There are a number of modifications that will improve your robot's ability to avoid objects autonomously. Most of these require changes to the program from the previous step.
@@ -21,7 +14,7 @@ You can also change the sleep value of 0.5 seconds, so that the robot continues 
 
 ### Changing the robot's behaviour
 
-Currently, the robot turns left for a set amount of time whenever an object is detected as being too close. 
+Currently, the robot turns left for a set amount of time whenever an object is detected as being too close.
 
 This predictable behaviour has the potential to cause issues. One problem is that the robot might get stuck in an obstacle avoidance loop when turning by a fixed amount each time. In this situation, the robot keeps detecting the same obstacles over and over again, seemingly with no way to escape!
 

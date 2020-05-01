@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Improving the line following
 
 The previous line-following program is OK, but the robot can move from side to side quite a lot as it follows the line. To make the movement more elegant, you can slow down the speed of the robot, making the turns smaller and more gradual.

@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Peer-assessment: Create a new function for your robot buggy
 
 This course has been all about building and programming a robot buggy using a Raspberry Pi. Over the three weeks of the course you have been following my instructions, attaching components to your chassis, and writing code to communicate with these components.

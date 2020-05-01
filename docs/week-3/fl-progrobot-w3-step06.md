@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Testing the line sensors
 
 You are now going to attach your line-following sensors to the chassis and test whether they are picking up the difference between light and dark surfaces.

@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Line sensors and how to use them
 
 In this step you will investigate how a line sensor operates and how it detects a line. I will be using the TCRT5000 IR sensor as my example, but the learning can apply to other line sensors as well. This knowledge will help you design and program a line-following algorithm later in the week.

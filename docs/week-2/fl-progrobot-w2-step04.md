@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Robotic sensors
 
 Robots, particularly autonomous ones, need to sense the world around them. In this step, I will take you through a few of the many options available to add sensing to your buggy.

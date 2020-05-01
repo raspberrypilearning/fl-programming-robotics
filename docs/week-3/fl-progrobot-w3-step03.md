@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Line-sensing robots
 
 This week you will be attaching a line sensor to your buggy and turning it into a line-following robot. This type of robot is very popular with beginner roboticists, as it lets you experience both the software and hardware aspects of robotics. However, line-following robots are much more than a learning tool, and have a rich history going all the way back to the 1960s.
@@ -39,7 +32,7 @@ Line-following robots excel in situations in which the tasks they need to comple
 
 #### Warehouse robots
 
-A good example is robots working in a warehouse; the movements they need to make require them to follow preset paths to collect pallets. Warehouses, particularly those of large internet shopping companies (think Amazon or Alibaba), need a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up cages containing items that have either just arrived or are being prepared for dispatch. Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power on navigation. 
+A good example is robots working in a warehouse; the movements they need to make require them to follow preset paths to collect pallets. Warehouses, particularly those of large internet shopping companies (think Amazon or Alibaba), need a lot of stock to be moved around the massive buildings. The stock robots move around the warehouses to pick up cages containing items that have either just arrived or are being prepared for dispatch. Lines on the floor allow the robots to navigate the busy warehouse space without wasting too much computational power on navigation.
 
 #### Competitions
 

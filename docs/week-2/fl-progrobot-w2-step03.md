@@ -1,13 +1,6 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## How could you improve the functionality of the buggy?
 
-Now that you have created a buggy that can move in various directions, have a think about what improvements you could make. 
+Now that you have created a buggy that can move in various directions, have a think about what improvements you could make.
 
 For example, what components could you add to your robot buggy to make it sense the world around it? How should your buggy act, based on this new information? What algorithms could you use to make it behave differently?  
 

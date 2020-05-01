@@ -1,3 +1,8 @@
+!!! Resources
+
+    + [Video](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Videos/Robotics_EoW1.mp4)
+    + [Video subtitles](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Subtitles/Robotics_EoW1.vtt)
+
 ## The end of week one
 
 Congratulations on reaching the end of week one! If you still haven't managed to get your robot moving, ask for help in the comments below. Well done if you have managed to complete all of the tasks this week and programmed your robot to drive in a particular pattern.

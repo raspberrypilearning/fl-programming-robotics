@@ -37,7 +37,7 @@ This course requires you to have the following:
 + Jumper leads (female-to-female and male-to-female) or wire
 + AA battery holder (for four AA batteries)
 + Four AA batteries
-+ A USB powerbank (to power the Raspberry Pi) 
++ A USB powerbank (to power the Raspberry Pi)
 + Soldering iron and solder
 + Wire strippers
 + Scissors

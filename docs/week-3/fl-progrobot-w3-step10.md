@@ -1,10 +1,3 @@
-[comment]: # (
-Is this step open? Y/N
-If so, short description of this step:
-Related links:
-Related files:
-)
-
 ## Robotics is changing our lives
 
 A few years ago, much of the content you have covered in this course would have been discussed exclusively in research laboratories, but robots have now shifted firmly from science fiction to science fact. This shift requires us to change the way we discuss the impact of robotics, moving the discussion from the theoretical to the concrete.
@@ -43,7 +36,7 @@ Robotics provides enormous benefits to computing education. Robots are cool, and
 
 ![A podium with people on the 1st, 2nd and 3rd positions standing next to their robots looking proud](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/41-3_10-Robo_Compettitors.png)
 
-There is still work to be done to make the subject more inclusive. Robotics is still a selective subject, with relatively high entry requirements, both financially and cognitively. A lot of work has been done to improve this, and robotics is more accessible now than ever before. As I am sure you have noticed, the subject is still quite challenging for beginners, and a lot of resilience is necessary. There is an argument that this is not a bad thing, and that robotics also has a place in education as an extension activity to push more confident learners. 
+There is still work to be done to make the subject more inclusive. Robotics is still a selective subject, with relatively high entry requirements, both financially and cognitively. A lot of work has been done to improve this, and robotics is more accessible now than ever before. As I am sure you have noticed, the subject is still quite challenging for beginners, and a lot of resilience is necessary. There is an argument that this is not a bad thing, and that robotics also has a place in education as an extension activity to push more confident learners.
 
 ### Robotics in your life
 
