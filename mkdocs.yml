@@ -28,7 +28,6 @@ nav:
     - week-1/fl-progrobot-w1-step13.md
   - Automating actions using distance sensors:
     - week-2/fl-progrobot-w2-step01.md
-    - week-2/fl-progrobot-w2-step02.md
     - week-2/fl-progrobot-w2-step03.md
     - week-2/fl-progrobot-w2-step04.md
     - week-2/fl-progrobot-w2-step05.md
@@ -37,7 +36,6 @@ nav:
     - week-2/fl-progrobot-w2-step08.md
     - week-2/fl-progrobot-w2-step09.md
     - week-2/fl-progrobot-w2-step10.md
-    - week-2/fl-progrobot-w2-step11.md
     - week-2/fl-progrobot-w2-step12.md
   - Allowing Robots to follow lines:
     - week-3/fl-progrobot-w3-step01.md
@@ -49,6 +47,4 @@ nav:
     - week-3/fl-progrobot-w3-step08.md
     - week-3/fl-progrobot-w3-step09.md
     - week-3/fl-progrobot-w3-step10.md
-    - week-3/fl-progrobot-w3-step11.md
-    - week-3/fl-progrobot-w3-step12.md
     - week-3/fl-progrobot-w3-step14.md
