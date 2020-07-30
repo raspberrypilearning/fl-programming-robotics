@@ -35,15 +35,17 @@ The `sleep(2)` is there to let the sensor settle when the program starts, so tha
 
 #### Transmitting and receiving the ultrasound
 
-**3.** Create a function that will be used to calculate how long it takes for the ultrasound to be transmitted and received.
+**3.** Create a function that will be used to calculate how long it takes for the ultrasound to be transmitted and received i.e. one pulse.
 
-Start by setting the trig pin to high for 10μs (microseconds), which prepares the internal clock of the UDS.
+Initialise the variables for storing the start and end duration of a pulse. Then set the trig pin to high for 10μs (microseconds), which prepares the internal clock of the UDS.
 
 ~~~ python
 def get_pulse_time():
-   trig.on()
-   sleep(0.00001)
-   trig.off()
+    pulse_start, pulse_end = 0, 0
+    
+    trig.on()
+    sleep(0.00001)
+    trig.off()
 ~~~
 
 As soon as the trig pin is set to low, a burst of ultrasound is sent from the emitter, and this sound starts to travel through the air.
