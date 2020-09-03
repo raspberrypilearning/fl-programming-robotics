@@ -9,6 +9,11 @@ markdown_extensions:
 plugins:
   - mkdocs-nav-enhancements
   - search
+  - autozip:
+      source_zip_nav_description: Download course material (zip)
+      source_zip_file_name: robotics.zip
+      download_images: false
+      verbose: true
 
 nav:
   - Home: index.md
