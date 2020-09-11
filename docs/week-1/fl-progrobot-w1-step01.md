@@ -19,6 +19,7 @@ Over the next three weeks you will learn about:
 + Using an ultrasonic distance sensor (UDS) to detect objects
 + Using inputs to control the outputs of your robot
 + How line sensors work
++ Using line sensors with your robot to detect and follow a line 
 + How changing an algorithm can improve the performance of your robot
 
 ### What you will need
@@ -32,7 +33,8 @@ This course requires you to have the following:
 + Two 3V–6V DC motors
 + Two wheels
 + Ball caster (unless using more than two wheels)
-+ Ultrasonic distance sensor (one or two)
++ An Ultrasonic Distance Sensor (UDS)
++ Two resistors for splitting the voltage if the UDS is 5V (e.g. a 1200 and a 2200 Ohm resistor)
 + Two line-following sensors
 + Jumper leads (female-to-female and male-to-female) or wire
 + AA battery holder (for four AA batteries)
@@ -42,7 +44,8 @@ This course requires you to have the following:
 + Wire strippers
 + Scissors
 + Screwdriver
-+ A small cardboard box for the chassis (can be plastic, wood, metal, etc.)
++ A small cardboard box for the chassis (it can also be plastic, wood, metal, etc.)
++ Black tape and white paper or card (to make a track with a black line for the line-following robot)
 
 The hardware components (including suggested models and types) and tools are listed in [this document](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/PDFs/Robot+buggy+components+and+tools+list.pdf), although alternatives are also available. You can also view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered and bought from many other suppliers.
 
@@ -61,7 +64,9 @@ Using a soldering iron can be a bit daunting at first, but whether you are new t
 
 A Raspberry Pi model 3B or above is recommended, as you can connect to it over WiFi or Bluetooth without an adapter; this will help when programming the robot buggy.
 
-The ultrasonic distance sensors and line-following sensors are required for weeks two and three respectively.
+The Ultrasonic Distance Sensor (UDS) and line-following sensors are required for weeks two and three respectively. 
+
+If the UDS is 5V, you will need two resistors to split the voltage so that it can operate safely with the Raspberry Pi at 3.3V e.g. by using a 1200 and a 2200 Ohm resistor. Full instructions on how to do this are in week two of the course.
 
 A ball caster is necessary if your robot has only two wheels; it will act as a third wheel so that the robot is balanced and can move freely.
 
