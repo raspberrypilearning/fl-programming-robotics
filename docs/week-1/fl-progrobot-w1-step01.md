@@ -78,3 +78,5 @@ If you experience problems or would just like to know more about Mu, have a look
 In week one of the course you will attach the motors and get your robot buggy moving.
 
 What part of the course are you most looking forward to? Share your thoughts in the comments.
+
+**Important note for teachers in England**: In order to get free upgraded access to this course, and to use it towards your National Centre for Computing Education certification, you must have joined the course through a link from the [Teach Computing](https://teachcomputing.org/courses) website. If you have not, [please join the course on this page](https://teachcomputing.org/courses/CO224/robotics-with-raspberry-pi-build-and-program-your-first-robot-buggy) and accept the invite on the next page. Failure to do this will mean that you will lose access to the course and it will not be counted towards the certification. Your eligibility for bursary payments may also be affected.
