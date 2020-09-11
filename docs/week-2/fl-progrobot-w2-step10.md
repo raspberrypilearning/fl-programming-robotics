@@ -24,7 +24,7 @@ There are a number of changes you can make to the robot's behaviour.
 
 One modification you can make is to instruct the robot to move backwards for a period of time before turning to avoid an object. This will give your robot a chance to avoid obstacles if it has found itself in a dead end.
 
-Another solution is to introduce random aspects into the robot's movements.
+Another solution is to introduce random aspects into the robot's movements. For example, you could import the `random` library into your Python program and use the function `random.randint(0,1)` to return a random integer that's either 0 or 1. How might you adapt your program so it chooses a direction based on this random value?
 
 #### Randomising the amount of time the robot turns
 
