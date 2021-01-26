@@ -35,7 +35,7 @@ You could use any cloud-based storage or office solution, such as:
 
 - [Dropbox](https://www.dropbox.com/basic)
 - [Google Drive](https://drive.google.com)
-- [Microsoft OneDrive/](https://onedrive.live.com/)
+- [Microsoft OneDrive/](https://onedrive.live.com)
 
 Remember that you also need to include links to the photos or videos of your robot that I've asked you to include. To do this you may want to use a service like [Imgur](https://imgur.com/) or [YouTube](https://www.youtube.com/).
 
@@ -46,7 +46,7 @@ Once you've completed your assignment and shared it, I'd like you to take a look
 1. Something that you liked about the new functionality of the robot
 2. How the documentation met or failed to meet the **guidelines** set out above
 
-Writing well-considered feedback will not only help the author of that website, but will also help you to consider how you can improve your own website.
+Writing well-considered feedback will not only help the author of that assignment, but will also help you to reflect on your own work too.
 
 ### Improving your robot
 
