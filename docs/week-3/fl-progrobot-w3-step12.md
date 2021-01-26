@@ -1,7 +1,11 @@
-## Reviewing your peer's work
+## Building awesome robots
 
-Now that you've completed your assessment, it's time to review the work of one of your peers.
+Now that you've had the chance to look at the robots that your peers have produced, it's time to think about building hobby robots in general.
 
-You should read through their assessment, making sure to check that they've described the new functionality that they added to their buggy and the code and components that they needed to make it work. You should also look for some evidence of how they tested their robot.
+Try to think about what elements of a robot that made you prefer some robots to others. It could be a piece of functionality that you hadn't considered before, or a design choice that you particularly admired.
 
-When leaving your review, provide three specific pieces of positive feedback, each mentioning one thing that you liked about their work and why you liked it. Also provide a single piece of constructive feedback about their new piece of functionality.
+- Did any of them give you inspirationg for a future robotics project?
+- Do you think that the design of any of the robots might be particularly attractive for a particular person or group of people you know, for example a friend or the students you teach?
+- Have you learnt how to avoid a potential problem by looking at any of these robots.
+
+**Discuss your thoughts about these questions in the comments section.**
