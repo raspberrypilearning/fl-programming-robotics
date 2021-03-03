@@ -22,15 +22,31 @@ If you are not a teacher in England, you can [join the other courses from the Ra
 In particular, the following courses may help to develop your background knowledge and inspire further discussion:
 
 + ***Design and Prototype Embedded Systems***: Improve your project design skills and learn about the embedded systems that are used in the world around you
-    + If you are a teacher in England, [sign up for *Design and Prototype Embedded Computer Systems* through teachcomputing.org](https://teachcomputing.org/courses/CO218/design-and-prototype-embedded-computer-systems?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=robot-1) to access your free upgrade
+    + If you are a teacher in England, [sign up for *Design and Prototype Embedded Computer Systems* through teachcomputing.org](https://teachcomputing.org/courses/CO218/design-and-prototype-embedded-computer-systems?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=robot) to access your free upgrade
     + If you are not a teacher in England, [sign up for *Design and Prototype Embedded Computer Systems* on FutureLearn](https://www.futurelearn.com/courses/embedded-systems/)
 
 
 + ***Object-Oriented Programming in Python: Create Your Own Adventure Game***: Learn more about the idea of 'classes', such as the `Robot` class that you used in this course.
-   + If you are a teacher in England, [sign up for *Object-Oriented Programming in Python* through teachcomputing.org](https://teachcomputing.org/courses/CO210/object-oriented-programming-in-python-create-your-own-adventure-game?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=robot-1) to access your free upgrade
+   + If you are a teacher in England, [sign up for *Object-Oriented Programming in Python* through teachcomputing.org](https://teachcomputing.org/courses/CO210/object-oriented-programming-in-python-create-your-own-adventure-game?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=robot) to access your free upgrade
    + If you are not a teacher in England, [sign up for *Object-Oriented Programming in Python* on FutureLearn](https://www.futurelearn.com/courses/object-oriented-principles)
 
 
 + ***Understanding Computer Systems***: This course provides some background about the history of computation
-    + If you are a teacher in England, [sign up for *Understanding Computer Systems* through teachcomputing.org](https://teachcomputing.org/courses/CO212/understanding-computer-systems?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=robot-1) to access your free upgrade
+    + If you are a teacher in England, [sign up for *Understanding Computer Systems* through teachcomputing.org](https://teachcomputing.org/courses/CO212/understanding-computer-systems?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=endofcourse&utm_content=robot) to access your free upgrade
     + If you are not a teacher in England, [sign up for *Understanding Computer Systems* on FutureLearn](https://www.futurelearn.com/courses/computer-systems/)
+
+### Teaching this course material
+
+For those of you who are teachers, support and materials for teaching the topics covered in this course can be found in the [**Year 9 Physical Computing**](https://teachcomputing.org/curriculum/key-stage-3/physical-computing?utm_source=FutureLearn&utm_medium=LearningPlatform&utm_campaign=TCC_link&utm_content=robot) unit of the Teach Computing Curriculum.
+
+The Teach Computing Curriculum contains everything you need to teach computing at key stages 1 to 4, including lesson plans, slides, worksheets, homework and assessment.
+
+All of the content is completely free to access, and has been created by subject experts, based on the latest pedagogical research and teacher feedback. It  provides an innovative progression framework where computing content (concepts, knowledge, skills, and objectives) have been organised into interconnected networks called learning graphs.
+
+### Using the course content
+
+Remember that this course content is free for you to download, adapt, and use with your classes. 
+
+Unless otherwise specified, the material contained within this course is free for you to copy and adapt under the [Open Government Licence v3.0.](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), so long as you attribute the Raspberry Pi Foundation as follows: **This text/image/video was created by the Raspberry Pi Foundation and is licensed under the [Open Government Licence v3.0.](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)**.
+
+For more information about this course content and how it can be used, contact [onlinelearning@raspberrypi.org](mailto:onlinelearning@raspberrypi.org).
