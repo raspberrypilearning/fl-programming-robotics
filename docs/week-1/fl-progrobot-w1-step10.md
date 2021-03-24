@@ -5,7 +5,17 @@
 
 ## Making the robot move
 
-Now you are going to test whether your buggy can move forwards, backwards, left, and right, using the Python program you created for testing the motors.
+Now you are going to connect to your Raspberry Pi remotely and test whether your buggy can move forwards, backwards, left, and right, using the Python program you created for testing the motors.
+
+### Connecting to a Raspberry Pi remotely
+
+Being able to connect to your Raspberry Pi remotely is useful when designing, running, and testing code on the robot buggy. It means you don't have to remove the Raspberry Pi from the buggy every time you want to run or edit a program.
+
+To use your Raspberry Pi without physically connecting it to a monitor, mouse, or keyboard, you can remotely access the Pi via VNC (Virtual Network Computing) or SSH (Secure Shell).
+
+VNC is a system that allows you to control remotely the graphical desktop interface of one computer (running VNC Server) from another computer or mobile device (running VNC Viewer). For more information, read our guide on [Connecting to your Raspberry Pi with VNC Viewer](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md).
+
+You can also access the command line (but not the graphical interface) of a Raspberry Pi remotely from another device on the same network, using SSH. Our guide on [Connecting to Raspberry Pi via SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) contains the details of how to do this.
 
 ### Finding a suitable surface
 
@@ -66,15 +76,6 @@ When using the `.forward()` command, a positive value is sent to both motors, wh
 
 The `.left()` and `.right()` commands work a bit differently. To turn left, the left motor needs to run backwards (a negative signal is needed), while the right motor should run forwards. The opposite is true to turn right; the right motor needs to receive a negative value and the left motor a positive value.
 
-### Connecting to a Raspberry Pi remotely
-
-Being able to connect to your Raspberry Pi remotely is useful when designing, running, and testing code on the robot buggy. It means you don't have to remove the Raspberry Pi from the buggy every time you want to run or edit a program.
-
-To use your Raspberry Pi without physically connecting it to a monitor, mouse, or keyboard, you can remotely access the Pi via VNC (Virtual Network Computing) or SSH (Secure Shell).
-
-VNC is a system that allows you to control remotely the graphical desktop interface of one computer (running VNC Server) from another computer or mobile device (running VNC Viewer). For more information, read our guide on [Connecting to your Raspberry Pi with VNC Viewer](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md).
-
-You can also access the command line (but not the graphical interface) of a Raspberry Pi remotely from another device on the same network, using SSH. Our guide on [Connecting to Raspberry Pi via SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/) contains the details of how to do this.
 
 ### Discussion
 
