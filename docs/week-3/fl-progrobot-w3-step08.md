@@ -21,7 +21,7 @@ from time import sleep, time
 robin = Robot(left=(8, 7), right=(9, 10))
 
 left_sensor = LineSensor(19)
-right_sensor= LineSensor(26)
+right_sensor = LineSensor(26)
 
 robin.forward()
 ~~~
