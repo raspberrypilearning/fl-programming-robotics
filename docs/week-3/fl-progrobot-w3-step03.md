@@ -20,8 +20,6 @@ The Stanford Cart started life as a remote-controlled mobile robot. A four-wheel
 
 [embed](https://youtu.be/8Mxk2L3lu9Q)
 
-[Here is another video of the cart in action](https://exhibits.stanford.edu/ai/catalog/jk541kq7003); the out-takes from the original video start from six seconds in.
-
 The robot used a camera pointing towards the ground, which tracked a white line drawn by the researchers. The robot would adjust its direction to keep the line in the middle of the picture captured by the camera. It moved at a walking pace and was reasonably successful at this task.
 
 Later, the cart would be turned into a fully autonomous vehicle; for a time, it was at the cutting edge of vision-controlled robots. The team would famously let the robot roam the campus unaccompanied, and created a sign that read "CAUTION ROBOT VEHICLE" to hang on it when it was out and about. This sign caused the lead researcher a lot of headaches, as he kept having to get it remade after it was repeatedly stolen.
