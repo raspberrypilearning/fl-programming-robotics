@@ -40,7 +40,7 @@ This course requires you to have the following:
 + A small cardboard box for the chassis (can be plastic, wood, metal, etc.)
 + Black tape and white paper or card (to make a track with a black line for the line-following robot)
 
-The hardware components and tools are listed in [this document](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/PDFs/Robot+buggy+components+and+tools+list.pdf). This list includes suggested models, types and pictures of each component, although alternatives are also available. You can also view most of the required components on this [AliExpress Wish List](https://my.aliexpress.com/wishlist/shared.htm?groupId=100000018016415), but they can be ordered and bought from many other suppliers.
+The hardware components and tools are listed in [this document](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/PDFs/Robot+buggy+components+and+tools+list.pdf). This list includes suggested models, types and pictures of each component, although alternatives are also available.
 
 #### Software
 
@@ -69,7 +69,7 @@ I recommend using an Integrated Development Environment (IDE) during this course
 
 The IDE I will be using is Mu, which is pre-installed on most Raspberry Pis. Mu is also available at the website [Code with Mu](https://codewith.mu/) along with [instructions on how to install Mu on a Raspberry Pi](https://codewith.mu/en/howto/1.0/install_raspberry_pi).
 
-If you experience problems or would just like to know more about Mu, have a look at Raspberry Pi’s [Getting started with Mu](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) guide.
+If you experience problems or would just like to know more about programming environments, have a look at Raspberry Pi’s [Choosing a programming environment](https://projects.raspberrypi.org/en/projects/getting-started-with-mu) project guide.
 
 ### Week one
 
