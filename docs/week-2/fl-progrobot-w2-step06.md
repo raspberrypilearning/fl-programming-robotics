@@ -55,7 +55,7 @@ By altering the resistors, you can tailor the voltage across any one of them to 
 
 ![A circuit consisting of one 1200 ohm resistor and one 2200 ohm resistor connected in series between a 5V pin and a GND pin. The 1200 ohm resistor shows roughly 1.8V across it and the 2200 ohm resistor shows roughly 3.2V across each it.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/27-2_6-voltage_divider_c.png)
 
-You can open a new Python file in MU and use the Python code below to work out the resistors you need:
+You can open a new Python file and use the Python code below to work out the resistors you need:
 
 ~~~python
 R1 = 1200 # Your current resistor (alter this)
