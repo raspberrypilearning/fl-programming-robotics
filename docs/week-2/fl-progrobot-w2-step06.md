@@ -43,11 +43,11 @@ If the UDS is 5V-tolerant, this causes some issues because the **echo** pin will
 
 #### Voltage dividers
 
-A voltage (or potential) divider can split a voltage into two smaller voltages by using multiple resistors. The diagram below shows a single resistor connected to a 5V pin. The voltage across the resistor is 5V:
+A voltage (or potential) divider splits a voltage into two smaller voltages by using multiple resistors. The diagram below shows a single resistor connected to a 5V pin. The voltage across the resistor is 5V:
 
 ![A circuit consisting of a 1000 ohm resistor  between a 5V pin and a GND pin. A 5V voltage is shown across the resistor.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/25-2_6-voltage_divider_a.png)
 
-The diagram below shows how the voltage can be split by using two resistors wired in series. As both resistors are the same, the voltage is split equally between the two:
+The diagram below shows how the voltage can be split by using two resistors wired in series. As both resistors are the same, the voltage of 5V is equally split to give 2.5V across each resistor:
 
 ![A circuit consisting of two 1000 ohm resistors  between a 5V pin and a GND pin. A 2.5V voltage is shown across each resistor.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/26-2_6-voltage_divider_b.png)
 
@@ -55,7 +55,7 @@ By altering the resistors, you can tailor the voltage across any one of them to 
 
 ![A circuit consisting of one 1200 ohm resistor and one 2200 ohm resistor connected in series between a 5V pin and a GND pin. The 1200 ohm resistor shows roughly 1.8V across it and the 2200 ohm resistor shows roughly 3.2V across each it.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Robotics+-+Robot+Buggy/Illustration/27-2_6-voltage_divider_c.png)
 
-You can use the code below to work out the resistors you need:
+You can open a new Python file and use the Python code below to work out the resistors you need:
 
 ~~~python
 R1 = 1200 # Your current resistor (alter this)

@@ -49,7 +49,7 @@ You need to check that the line sensors can detect the difference between a whit
 
 With the line sensors attached, boot up your Raspberry Pi. Move the robot slowly from side to side so that each of the line sensors passes over the black line.
 
-When a sensor is over a **light** surface, the LED on the sensor board should be **on**. Conversely, when a sensor passes over a **dark** line, the LED on the sensor should be **off**.
+When a sensor is over a **light** surface, an LED on the sensor board should be **on**. Conversely, when a sensor passes over a **dark** line, the same LED on the sensor should be **off**.
 
 Ideally, the LED of each sensor should be off as soon as the black line is directly underneath it, with as little delay as possible. If either of the sensors is not picking up the changes in light between the white paper and the black line accurately, you will need to adjust the threshold value by adjusting the potentiometer using a screwdriver. Be careful when turning the potentiometer, as it is quite a delicate component.
 
