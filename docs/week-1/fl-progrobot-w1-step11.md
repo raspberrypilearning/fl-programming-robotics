@@ -20,4 +20,17 @@ You could also include a loop in your program so that the buggy repeats a patter
 
 ### Discussion
 
-Once you’ve completed a challenge, add a comment below and share a link to your code (for example using [Pastebin](https://pastebin.com/)), along with any comments or questions.
+Once you’ve completed a challenge, share your code below, along with any comments or questions.
+
+To include code in comments, you will have to use three tilde characters (`~~~`) before and after your code, as in this example comment text:
+
+<pre><code>I created this program.
+
+~~~
+print("This is my code")
+~~~
+</code></pre>
+
+![The above comment text in a FutureLearn comment box showing three tilde characters before and after the code.](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/all+courses+/code-in-comments.png)
+
+Refer to our ['Sharing code on FutureLearn' guide](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/all+courses+/Sharing+code+on+FutureLearn.pdf) for more information.
