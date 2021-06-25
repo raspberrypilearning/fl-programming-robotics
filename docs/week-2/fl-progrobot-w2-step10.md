@@ -68,4 +68,15 @@ Improve your program using one of the ideas in this step:
 
 Can you think of any other improvements that you could make?
 
-In the comments below, share the changes you made and add a link to your new code using [Pastebin](https://pastebin.com/).
+In the comments below share the changes you made and your new code.
+
+Remember to use three tilde characters (`~~~`) at the start and end of your code, as in this example comment text:
+
+<pre><code>I created this program.
+
+~~~
+print("This is my code")
+~~~
+</code></pre>
+
+Refer to our ['Sharing code on FutureLearn' guide](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/all+courses+/Sharing+code+on+FutureLearn.pdf) for more information.
